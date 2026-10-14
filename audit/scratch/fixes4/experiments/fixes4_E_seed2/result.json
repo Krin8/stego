@@ -1,0 +1,46 @@
+{
+  "candidate": "E",
+  "seed": 2,
+  "name": "fixes4_E_seed2",
+  "batches": 500,
+  "optimizer_steps": 1500,
+  "early_stopped": false,
+  "monitors": {
+    "code_std": 0.11720306842620058,
+    "cross_image_cosine": 0.011956284182975644,
+    "cluster_usage": [
+      0.12332791962123833,
+      0.15608866113315029,
+      0.0835048341701617,
+      0.17252968702708837,
+      0.10102194512603771,
+      0.10520277943672172,
+      0.0741222253599533,
+      0.18420194812564855
+    ],
+    "cluster_entropy": 2.0314937241393487,
+    "consecutive_bad_checks": 0
+  },
+  "checkpoints": {
+    "100": "/Users/navneetbavineni/STEGO/audit/scratch/fixes4/experiments/fixes4_E_seed2/checkpoints/batch_000100.ckpt",
+    "250": "/Users/navneetbavineni/STEGO/audit/scratch/fixes4/experiments/fixes4_E_seed2/checkpoints/batch_000250.ckpt",
+    "500": "/Users/navneetbavineni/STEGO/audit/scratch/fixes4/experiments/fixes4_E_seed2/checkpoints/batch_000500.ckpt"
+  },
+  "overlay": "/Users/navneetbavineni/STEGO/audit/scratch/fixes4/experiments/fixes4_E_seed2/fixed_slices_batch_000500.png",
+  "fixed_samples": [
+    "CT_5_0048",
+    "CT_6_0047",
+    "CT_8_0059",
+    "CT_30_0139"
+  ],
+  "evaluated_images": 472,
+  "linear_parameters_unchanged": true,
+  "train_mask_reads": 0,
+  "shifts": {
+    "pos_intra_shift": 0.8634735345840454,
+    "pos_inter_shift": 0.8470812439918518,
+    "neg_inter_shift": 0.8234664797782898
+  },
+  "scheduler_T_max": 5000,
+  "elapsed_seconds": 722.7278556250094
+}

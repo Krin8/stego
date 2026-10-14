@@ -1,0 +1,8 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/improve/soft_weights.py",
+  "seed": 0,
+  "parent": "B2_448",
+  "temperature": 0.12770491122950264,
+  "labels_used": "None for distances, temperature or weights; parent selection itself used LOPO labels",
+  "elapsed_seconds": 11.904442083003232
+}

@@ -1,0 +1,187 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/diag_affinity.py",
+  "block": 9,
+  "mean_subtracted": true,
+  "seed": 20260930,
+  "current_shifts_intra_inter_neg": [
+    0.18,
+    0.12,
+    0.46
+  ],
+  "normalization": "raw normalized-block tokens, optionally train-mean subtracted; actual project sample then helper normalization/centering",
+  "quantiles": {
+    "intra": {
+      "image_pair_count": 200,
+      "patch_pair_count": 2928200,
+      "mean_affinity": 0.08378399386095159,
+      "quantiles": {
+        "5": -0.3248548910021782,
+        "25": -0.1726839728653431,
+        "50": 0.02649948187172413,
+        "75": 0.2778494134545326,
+        "90": 0.5446296274662018,
+        "95": 0.7158308506011959,
+        "99": 0.9769990330934514
+      },
+      "attraction_current_intra_inter_neg": [
+        0.3386390956901851,
+        0.3997032306536439,
+        0.13531828427020012
+      ]
+    },
+    "knn": {
+      "image_pair_count": 55,
+      "patch_pair_count": 805255,
+      "mean_affinity": 0.0584668509785926,
+      "quantiles": {
+        "5": -0.3306341886520386,
+        "25": -0.18906690180301666,
+        "50": 0.00046241283416748047,
+        "75": 0.24934189766645432,
+        "90": 0.5080964326858518,
+        "95": 0.6600374698638914,
+        "99": 0.888132880926132
+      },
+      "attraction_current_intra_inter_neg": [
+        0.3121619859547597,
+        0.3717878187654842,
+        0.12009736046345568
+      ]
+    },
+    "random": {
+      "image_pair_count": 200,
+      "patch_pair_count": 2928200,
+      "mean_affinity": 0.0002465052863108283,
+      "quantiles": {
+        "5": -0.3455654427409172,
+        "25": -0.20624972507357597,
+        "50": -0.03779719956219196,
+        "75": 0.16360051929950714,
+        "90": 0.35862558484077467,
+        "95": 0.4903314247727394,
+        "99": 0.7397434258460995
+      },
+      "attraction_current_intra_inter_neg": [
+        0.23276210641349634,
+        0.2993934840516358,
+        0.059219657127245404
+      ]
+    },
+    "cross_patient": {
+      "image_pair_count": 200,
+      "patch_pair_count": 2928200,
+      "mean_affinity": 0.0010567391327157962,
+      "quantiles": {
+        "5": -0.3483950898051262,
+        "25": -0.20922516658902168,
+        "50": -0.037479598075151443,
+        "75": 0.16741475835442543,
+        "90": 0.365215677022934,
+        "95": 0.49812759906053516,
+        "99": 0.747142733335495
+      },
+      "attraction_current_intra_inter_neg": [
+        0.2368205723652756,
+        0.30285602076360907,
+        0.06158322518953623
+      ]
+    }
+  },
+  "candidates": [
+    {
+      "target_random_attraction": 0.2,
+      "shifts_intra_inter_neg": [
+        -0.1726839691400528,
+        -0.18906690180301666,
+        0.21363765001296997
+      ],
+      "constant_code_correspondence_loss": -0.09928055065136757,
+      "attraction": {
+        "intra": [
+          0.75,
+          0.7744839833344717,
+          0.30634826856089065
+        ],
+        "knn": [
+          0.7244202147145935,
+          0.7499996895393385,
+          0.2809731078974983
+        ],
+        "random": [
+          0.6952028549962435,
+          0.7216532340687112,
+          0.2
+        ],
+        "cross_patient": [
+          0.6908998702274435,
+          0.717079434464859,
+          0.20401850966464039
+        ]
+      }
+    },
+    {
+      "target_random_attraction": 0.15,
+      "shifts_intra_inter_neg": [
+        -0.1726839691400528,
+        -0.18906690180301666,
+        0.275166779756546
+      ],
+      "constant_code_correspondence_loss": -0.060517198912071496,
+      "attraction": {
+        "intra": [
+          0.75,
+          0.7744839833344717,
+          0.25222013523666414
+        ],
+        "knn": [
+          0.7244202147145935,
+          0.7499996895393385,
+          0.22946023309386468
+        ],
+        "random": [
+          0.6952028549962435,
+          0.7216532340687112,
+          0.15
+        ],
+        "cross_patient": [
+          0.6908998702274435,
+          0.717079434464859,
+          0.15357011133119322
+        ]
+      }
+    },
+    {
+      "target_random_attraction": 0.1,
+      "shifts_intra_inter_neg": [
+        -0.1726839691400528,
+        -0.18906690180301666,
+        0.358625590801239
+      ],
+      "constant_code_correspondence_loss": -0.007938147948676338,
+      "attraction": {
+        "intra": [
+          0.75,
+          0.7744839833344717,
+          0.1910480841472577
+        ],
+        "knn": [
+          0.7244202147145935,
+          0.7499996895393385,
+          0.17263723913542914
+        ],
+        "random": [
+          0.6952028549962435,
+          0.7216532340687112,
+          0.1
+        ],
+        "cross_patient": [
+          0.6908998702274435,
+          0.717079434464859,
+          0.10322006693531863
+        ]
+      }
+    }
+  ],
+  "heuristic": "User-proposed starting heuristic, NOT Paper A: intra/inter shift at corresponding25th percentile; negative at random80th/85th/90th percentile. No labels used. Separate role-specific shifts do not prove feature distributions separable or training stable.",
+  "elapsed_seconds": 3.01
+}

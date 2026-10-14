@@ -1,0 +1,11 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/improve/checks.py",
+  "labels_used": false,
+  "live_feature_max_abs_differences": {
+    "train": 0.0,
+    "val": 0.0
+  },
+  "synthetic_crop_roundtrip": true,
+  "outside_crop_false_negatives_preserved": true,
+  "elapsed_seconds": 7.11672454199288
+}

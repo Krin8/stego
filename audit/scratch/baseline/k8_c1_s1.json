@@ -1,0 +1,448 @@
+{
+  "confusion": [
+    [
+      4366594,
+      55550
+    ],
+    [
+      4135760,
+      201648
+    ],
+    [
+      1242091,
+      21
+    ],
+    [
+      2748928,
+      0
+    ],
+    [
+      3501773,
+      2355
+    ],
+    [
+      1370496,
+      1550208
+    ],
+    [
+      2103808,
+      0
+    ],
+    [
+      2403840,
+      0
+    ]
+  ],
+  "pixels": 23683072,
+  "liver_pixels": 1809782,
+  "clusters": [
+    {
+      "cluster": 0,
+      "pixel_fraction": 0.18672172258734002,
+      "liver_pixels": 55550,
+      "background_pixels": 4366594,
+      "precision": 0.012561779987264095,
+      "recall": 0.030694304617904254
+    },
+    {
+      "cluster": 1,
+      "pixel_fraction": 0.18314380837080596,
+      "liver_pixels": 201648,
+      "background_pixels": 4135760,
+      "precision": 0.04649043852918609,
+      "recall": 0.11142115459210004
+    },
+    {
+      "cluster": 2,
+      "pixel_fraction": 0.052447250086475265,
+      "liver_pixels": 21,
+      "background_pixels": 1242091,
+      "precision": 1.6906687963726298e-05,
+      "recall": 1.1603607506318441e-05
+    },
+    {
+      "cluster": 3,
+      "pixel_fraction": 0.11607142857142858,
+      "liver_pixels": 0,
+      "background_pixels": 2748928,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    {
+      "cluster": 4,
+      "pixel_fraction": 0.14795918367346939,
+      "liver_pixels": 2355,
+      "background_pixels": 3501773,
+      "precision": 0.0006720644907948568,
+      "recall": 0.0013012616989228538
+    },
+    {
+      "cluster": 5,
+      "pixel_fraction": 0.12332454168107922,
+      "liver_pixels": 1550208,
+      "background_pixels": 1370496,
+      "precision": 0.5307651853799632,
+      "recall": 0.8565716754835665
+    },
+    {
+      "cluster": 6,
+      "pixel_fraction": 0.0888317191283293,
+      "liver_pixels": 0,
+      "background_pixels": 2103808,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    {
+      "cluster": 7,
+      "pixel_fraction": 0.10150034590107229,
+      "liver_pixels": 0,
+      "background_pixels": 2403840,
+      "precision": 0.0,
+      "recall": 0.0
+    }
+  ],
+  "majority": {
+    "clusters": [
+      5
+    ],
+    "iou": 0.4874441794082153,
+    "dice": 0.655411727251703,
+    "precision": 0.5307651853799632,
+    "recall": 0.8565716754835665,
+    "tp": 1550208,
+    "fp": 1370496,
+    "fn": 259574
+  },
+  "optimal": {
+    "clusters": [
+      5
+    ],
+    "iou": 0.4874441794082153,
+    "dice": 0.655411727251703,
+    "precision": 0.5307651853799632,
+    "recall": 0.8565716754835665,
+    "tp": 1550208,
+    "fp": 1370496,
+    "fn": 259574
+  },
+  "thresholds": {
+    "10": {
+      "clusters": [
+        5
+      ],
+      "iou": 0.4874441794082153,
+      "dice": 0.655411727251703,
+      "precision": 0.5307651853799632,
+      "recall": 0.8565716754835665,
+      "tp": 1550208,
+      "fp": 1370496,
+      "fn": 259574
+    },
+    "20": {
+      "clusters": [
+        5
+      ],
+      "iou": 0.4874441794082153,
+      "dice": 0.655411727251703,
+      "precision": 0.5307651853799632,
+      "recall": 0.8565716754835665,
+      "tp": 1550208,
+      "fp": 1370496,
+      "fn": 259574
+    },
+    "30": {
+      "clusters": [
+        5
+      ],
+      "iou": 0.4874441794082153,
+      "dice": 0.655411727251703,
+      "precision": 0.5307651853799632,
+      "recall": 0.8565716754835665,
+      "tp": 1550208,
+      "fp": 1370496,
+      "fn": 259574
+    },
+    "40": {
+      "clusters": [
+        5
+      ],
+      "iou": 0.4874441794082153,
+      "dice": 0.655411727251703,
+      "precision": 0.5307651853799632,
+      "recall": 0.8565716754835665,
+      "tp": 1550208,
+      "fp": 1370496,
+      "fn": 259574
+    }
+  },
+  "best_single": {
+    "clusters": [
+      5
+    ],
+    "iou": 0.4874441794082153,
+    "dice": 0.655411727251703,
+    "precision": 0.5307651853799632,
+    "recall": 0.8565716754835665,
+    "tp": 1550208,
+    "fp": 1370496,
+    "fn": 259574
+  },
+  "active": 8,
+  "patient_confusions": {
+    "5": [
+      [
+        690568,
+        9336
+      ],
+      [
+        923164,
+        54756
+      ],
+      [
+        219904,
+        0
+      ],
+      [
+        513536,
+        0
+      ],
+      [
+        764343,
+        841
+      ],
+      [
+        329382,
+        351834
+      ],
+      [
+        445952,
+        0
+      ],
+      [
+        463104,
+        0
+      ]
+    ],
+    "6": [
+      [
+        533347,
+        17821
+      ],
+      [
+        573125,
+        46139
+      ],
+      [
+        262400,
+        0
+      ],
+      [
+        471296,
+        0
+      ],
+      [
+        560202,
+        438
+      ],
+      [
+        271693,
+        416947
+      ],
+      [
+        544512,
+        0
+      ],
+      [
+        416512,
+        0
+      ]
+    ],
+    "8": [
+      [
+        540021,
+        6795
+      ],
+      [
+        1023723,
+        35861
+      ],
+      [
+        281344,
+        0
+      ],
+      [
+        574720,
+        0
+      ],
+      [
+        655432,
+        184
+      ],
+      [
+        304826,
+        319046
+      ],
+      [
+        515584,
+        0
+      ],
+      [
+        659712,
+        0
+      ]
+    ],
+    "30": [
+      [
+        2602658,
+        21598
+      ],
+      [
+        1615748,
+        64892
+      ],
+      [
+        478443,
+        21
+      ],
+      [
+        1189376,
+        0
+      ],
+      [
+        1521796,
+        892
+      ],
+      [
+        464595,
+        462381
+      ],
+      [
+        597760,
+        0
+      ],
+      [
+        864512,
+        0
+      ]
+    ]
+  },
+  "lopo": {
+    "5": {
+      "mapping_fit_patients": [
+        "6",
+        "8",
+        "30"
+      ],
+      "mapping_fit_iou": 0.49232148337249176,
+      "heldout": {
+        "clusters": [
+          5
+        ],
+        "iou": 0.47153316562777675,
+        "dice": 0.6408733104246604,
+        "precision": 0.5164793545659526,
+        "recall": 0.8441983170452555,
+        "tp": 351834,
+        "fp": 329382,
+        "fn": 64933
+      }
+    },
+    "6": {
+      "mapping_fit_patients": [
+        "5",
+        "8",
+        "30"
+      ],
+      "mapping_fit_iou": 0.46689284949160365,
+      "heldout": {
+        "clusters": [
+          5
+        ],
+        "iou": 0.5536865337473009,
+        "dice": 0.7127390522100711,
+        "precision": 0.6054643935873606,
+        "recall": 0.866212384048863,
+        "tp": 416947,
+        "fp": 271693,
+        "fn": 64398
+      }
+    },
+    "8": {
+      "mapping_fit_patients": [
+        "5",
+        "6",
+        "30"
+      ],
+      "mapping_fit_iou": 0.48980691177394986,
+      "heldout": {
+        "clusters": [
+          5
+        ],
+        "iou": 0.4785364595207526,
+        "dice": 0.6473110033091286,
+        "precision": 0.5113965685268773,
+        "recall": 0.8816201787303184,
+        "tp": 319046,
+        "fp": 304826,
+        "fn": 42840
+      }
+    },
+    "30": {
+      "mapping_fit_patients": [
+        "5",
+        "6",
+        "8"
+      ],
+      "mapping_fit_iou": 0.5022519517299745,
+      "heldout": {
+        "clusters": [
+          5
+        ],
+        "iou": 0.4558266683359967,
+        "dice": 0.6262100815298356,
+        "precision": 0.4988057943247722,
+        "recall": 0.841023019949653,
+        "tp": 462381,
+        "fp": 464595,
+        "fn": 87403
+      }
+    }
+  },
+  "lopo_summary": {
+    "iou": {
+      "mean": 0.4898957068079568,
+      "min": 0.4558266683359967
+    },
+    "dice": {
+      "mean": 0.656783361868424,
+      "min": 0.6262100815298356
+    }
+  },
+  "lopo_pooled": {
+    "iou": 0.4874441794082153,
+    "dice": 0.655411727251703,
+    "tp": 1550208,
+    "fp": 1370496,
+    "fn": 259574
+  },
+  "method": "Frozen K-means + train mean subtraction",
+  "K": 8,
+  "seed": 1,
+  "centered": true,
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/baseline/kmeans.py",
+  "command": "python3 -B audit/scratch/baseline/kmeans.py --k 8 --center 1 --seed 1",
+  "train_slices": 1869,
+  "fit_patches": 366324,
+  "val_slices": 472,
+  "n_init": 3,
+  "max_iter": 100,
+  "iterations": 33,
+  "inertia": 171286.0,
+  "tolerance": 0.0001,
+  "algorithm": "lloyd",
+  "mapping_search": "exhaustive all 2^K subsets; FORENSICS scores and definitions",
+  "labels": "No labels for fit/mean/assignment. Global mappings fit+score all472 val labels; LOPO mapping fit three val patients, score held-out patient.",
+  "warnings": [],
+  "fit_elapsed_seconds": 12.17265849999967,
+  "elapsed_seconds": 12.364843208008097
+}

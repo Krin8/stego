@@ -1,0 +1,15 @@
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino/fit_score.py --k 8 --seed 0
+# Initial completed commands
+PYTHONDONTWRITEBYTECODE=1 python3 audit/dino/prepare.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/dino/extract.py
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino/fit_score.py --k 8 --seed 1
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino/fit_score.py --k 8 --seed 2
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino/fit_score.py --k 2 --seed 0
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino/fit_score.py --k 2 --seed 1
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino/fit_score.py --k 2 --seed 2
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino/pair_affinities.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/dino/pair_affinities.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/dino/pair_score.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/dino/figures.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/dino/report.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/dino/validate.py

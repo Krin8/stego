@@ -1,0 +1,4 @@
+{
+  "base": "pipeline.yaml",
+  "output": "src2/runs/p1_seed0_fit"
+}

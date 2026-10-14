@@ -1,0 +1,14 @@
+{
+  "fixed_objective_reproduced": true,
+  "tolerance": 1e-07,
+  "plan_sha256": "e7951e90f2583848ed1bf66e0d919cc0d543e256ba59511ac66048d2ca8e76ec",
+  "labels_only_validation_png": true,
+  "script": "report.py",
+  "scripts_sha256": {
+    "batch_shifts.py": "60ac4e039f3ef833ef370846a5d4f3d2b37b55e8bb75496b7788c0c473e0e245",
+    "pair_plan.py": "50d3142680f8a66c6dfa1228d9e0d26771fb499b5175ef09a63d95fe058fef8c",
+    "common.py": "ecab4631d34a5d867b124e262a4e2342db76dc83eb6eadc273c2e0a89fe16a3e",
+    "report.py": "3d8dd999b84677df9af60eb8bd0e17f2ba5da3effde6a04eb53cd40853894aeb",
+    "score.py": "7b01b5b3699e5c0cf93f4138dba1c74940e262161b53b782e90b727cdb0eaf4f"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "producer": "final_verify.py",
+  "function_provenance_exact": true,
+  "f2_physical_order_prediction_exact": true,
+  "all_artifact_digests_verified": true,
+  "all_check_seeds_pass": true,
+  "source_state": {
+    "git_commit": "15f44f639fc15eca2500754c67471f0f1654afa2",
+    "git_diff": "",
+    "git_status": "?? \"Handoff label-free CT liver segmentation on CHAOS with frozen BiomedCLIP (STEGO adaptation).md\"\n?? audit/colocated/verify2/\n?? audit/dino/\n?? audit/dino2/\n?? audit/final_pipeline/\n?? audit/final_pipeline_n3/\n?? audit/improve/\n?? audit/improve2/\n?? audit/naming/\n?? audit/preflight/\n?? audit/stego_ideas/\n?? experiments/dense_stego_biomedclip/\n?? experiments/self_training/\n?? experiments/stego_biomedclip/\n?? experiments/stego_calibrated/training.lock\n?? experiments/stego_masked/\n?? experiments/stego_residual/\n?? log0.txt\n?? log0_check.txt\n?? log1.txt\n?? log1_check.txt\n?? log2.txt\n?? log2_check.txt\n",
+    "source_file_sha256": {
+      "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/chaos.py": "f6cdfafdcdd4e4d7301c9121ca344a37e99a6a4f5422a7498df2893a6482b58b",
+      "src/chaos_preprocessing.py": "91404a4c9a3d1eb54b27d93e6ebe6e7788d8352ece913fa00e6a2288a6f51a83",
+      "src/chaos_splits.py": "e05846b0ff86d224f66071c4d3c20b61b1ddc6515eae34af70364e294a28dd1e",
+      "src/collapse_monitor.py": "5a56c7c53c8199ea7fa39340e61ddcb917df4551ca959e55fa4e527f886674bf",
+      "src/count_empty_labels.py": "bbac17fc14064ca979c1e023eb9a14ea931ebea6f3ac17c34f9416302f8ee32b",
+      "src/crf.py": "b2b118b12f188b3a555c956b64d96f996786d3f14983368039b78d2e77659ee2",
+      "src/crop_datasets.py": "0d4022cf6450763a84e5bb8bbd131cd41cf33f513bb9579d830e94d54241c67f",
+      "src/data.py": "a07d09889b565d0ceca6b2f8224d5af3620c0c73b582dd445ae9edec460efdc2",
+      "src/demo_segmentation.py": "c4e328dda3f42bdac42d58af2bc28e32ff88e5b5de9e49d4a4f924b667afe055",
+      "src/download_datasets.py": "09b7e2cf7fa4f84ef326a4592189390171b5690f9cb5cded26949b804a53343a",
+      "src/download_models.py": "ff1edc26805eb71a27bf3e146d0edfda03d87f92f54bad4ada308da009b17be6",
+      "src/eval_segmentation.py": "c8097c0b740ee5bec95c94e2dbab3a5e3fad0a8dda7138a8016a3bed347c3b1c",
+      "src/knn_cache.py": "ab2c4b447e8bf163b8df5ac0d6c335bbe5cc1ae5196fb4c932d20bdf2baee606",
+      "src/modules.py": "c0306a6df692bdd242ecc229c51c6cf5f05cc922b9c8b7eb7ecb2ac09ede61ea",
+      "src/plot_dino_correspondence.py": "5ad5879cfcbd740cf2c95f30aedf8cc1da45e1a1f2f2eea0e3f32b46bf937195",
+      "src/plot_potsdam.py": "3322b018522944e397ce01dfcfe500afeb412a56b44b2ce53c4ade07df55ec77",
+      "src/plot_pr_curves.py": "7116b85821fb67ed1dda3461920c6fa530202f8dab0801bee502a5e14a34f5e6",
+      "src/precompute_knns.py": "1975b6b7287c2fd6211993d1f6a25c2e5293e60ad0d5e03781a6e276b99370d0",
+      "src/preprocess.py": "852c397bcadea530985a1be72472fa8f30141a40dd40be10b37c3facbc9ec8af",
+      "src/show_rgb.py": "6afd78ff1e40c4518ffbe2e5c7048233d726e7df2105b9dd61c757ae19bba6e2",
+      "src/test_biomedclip.py": "55fed757221a42b0700715328a86f737c81a3d1211cc175b46cf797d0c1a9e68",
+      "src/test_timm.py": "b0868cbc5becc9ef457d0eb3a817ed252049a050d39590f890ae656c9db0b6b9",
+      "src/train_crf.py": "4c87c386371783fab4fed3efad3aa2035b7968883288a8265c68d82f02405fa6",
+      "src/train_segmentation.py": "5f4b14d87b1b4bd277b4472d38fc5c93d8fa13bc6b778fd2b7df304462db53d9",
+      "src/unlabeled_training.py": "df925bbfb383073b76ddd5ac1f064c9d4f6b0564ecaf5a4ccd71c696813fc38c",
+      "src/utils.py": "3de6a030fa735cf3e16b9e01e2e0efea08ef50c2ba951d3ecad237c38da079c0",
+      "src/validation_visuals.py": "ce53f9107157458c748d485bf0ddba041deed1445abe3a75b3df898b00e1d05e",
+      "src/vis_corr.py": "a1299d85c9cb05d715f029f111701bd04a1eec3fd36971b28c110e1ad5a55dfe"
+    }
+  }
+}

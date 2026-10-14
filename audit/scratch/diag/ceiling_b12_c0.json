@@ -1,0 +1,169 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/diag_ceiling.py",
+  "block": 12,
+  "mean_subtracted": false,
+  "seed": 20260930,
+  "train_patch_count": 39200,
+  "val_patch_count": 19600,
+  "normalization": "LayerNorm tokens; optional training mean subtraction; then per-patch L2",
+  "kmeans": {
+    "2": {
+      "majority_oracle": {
+        "liver_iou": 0.0,
+        "liver_dice": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 421619
+      },
+      "majority_map": [
+        0,
+        0
+      ],
+      "confusion_cluster_by_label": [
+        [
+          1978872,
+          420104
+        ],
+        [
+          2617109,
+          1515
+        ]
+      ],
+      "iterations": 9,
+      "inertia": 15524.1015625,
+      "hungarian_oracle": {
+        "liver_iou": 0.17500752970954692,
+        "liver_dice": 0.29788324803809124,
+        "tp": 420104,
+        "fp": 1978872,
+        "fn": 1515
+      },
+      "hungarian_map": [
+        1,
+        0
+      ]
+    },
+    "4": {
+      "majority_oracle": {
+        "liver_iou": 0.0,
+        "liver_dice": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 421619
+      },
+      "majority_map": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "confusion_cluster_by_label": [
+        [
+          1445701,
+          417467
+        ],
+        [
+          1000704,
+          0
+        ],
+        [
+          1882056,
+          4152
+        ],
+        [
+          267520,
+          0
+        ]
+      ],
+      "iterations": 31,
+      "inertia": 11403.8876953125
+    },
+    "8": {
+      "majority_oracle": {
+        "liver_iou": 0.6415832021275188,
+        "liver_dice": 0.7816639464829032,
+        "tp": 290949,
+        "fp": 31867,
+        "fn": 130670
+      },
+      "majority_map": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "confusion_cluster_by_label": [
+        [
+          1283164,
+          164
+        ],
+        [
+          209331,
+          589
+        ],
+        [
+          267520,
+          0
+        ],
+        [
+          947712,
+          0
+        ],
+        [
+          630524,
+          55556
+        ],
+        [
+          31867,
+          290949
+        ],
+        [
+          844861,
+          11715
+        ],
+        [
+          381002,
+          62646
+        ]
+      ],
+      "iterations": 19,
+      "inertia": 8906.48046875
+    }
+  },
+  "linear": {
+    "liver_iou": 0.6088963926787744,
+    "liver_dice": 0.7569118750586249,
+    "tp": 387333,
+    "fp": 214504,
+    "fn": 34286,
+    "iterations": [
+      48
+    ],
+    "fit_patch_count": 39200,
+    "fit_liver_patches": 3092,
+    "class_weight": "balanced",
+    "C": 1.0,
+    "threshold": 0.0,
+    "model_saved": false
+  },
+  "pca": {
+    "explained_variance_ratio": [
+      0.27224335074424744,
+      0.14968842267990112,
+      0.08395089209079742
+    ],
+    "paths": [
+      "audit/scratch/diag/pca_b12_c0_CT_5_0046.png",
+      "audit/scratch/diag/pca_b12_c0_CT_6_0043.png",
+      "audit/scratch/diag/pca_b12_c0_CT_8_0058.png",
+      "audit/scratch/diag/pca_b12_c0_CT_30_0134.png"
+    ],
+    "fit": "train-only PCA and train-only1/99percentile color bounds"
+  },
+  "warnings": [],
+  "elapsed_seconds": 3.6
+}

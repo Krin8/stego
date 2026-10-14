@@ -1,0 +1,201 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/diag_collapse.py",
+  "checkpoint": "checkpoints/chaos/chaos_chaos_v2_ct_date_Sep30_15-52-07/checkpoint-epoch=10-step=3600-mIoU=test/cluster/mIoU=46.1792.ckpt",
+  "checkpoint_global_step": 3600,
+  "slice_count": 20,
+  "patient_count": 4,
+  "patients": [
+    "5",
+    "6",
+    "8",
+    "30"
+  ],
+  "requirement_ten_patients": "UNVERIFIED / impossible in current CT validation split: only four exist",
+  "cluster_usage": [
+    1003520,
+    0
+  ],
+  "cluster_fractions": [
+    1.0,
+    0.0
+  ],
+  "cross_image_code_cosine": 0.9999127984046936,
+  "cross_patient_code_cosine": 0.999912440776825,
+  "raw_code_pixel_std": {
+    "global_per_channel_mean": 9.118496894836426,
+    "global_per_channel_min": 3.4154646396636963,
+    "global_per_channel_max": 13.025422096252441,
+    "within_image_per_channel_mean": 9.010177612304688
+  },
+  "unit_code_pixel_std": {
+    "global_per_channel_mean": 0.0011053604539483786,
+    "global_per_channel_min": 0.0009224582463502884,
+    "global_per_channel_max": 0.0013089915737509727,
+    "within_image_per_channel_mean": 0.0009753894992172718
+  },
+  "code_norm_mean": 439.62506103515625,
+  "finite": true,
+  "per_slice": [
+    {
+      "sample": "CT_5_0093",
+      "patient": "5",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_5_0073",
+      "patient": "5",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_5_0052",
+      "patient": "5",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_5_0032",
+      "patient": "5",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_5_0015",
+      "patient": "5",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_6_0086",
+      "patient": "6",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_6_0066",
+      "patient": "6",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_6_0049",
+      "patient": "6",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_6_0035",
+      "patient": "6",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_6_0020",
+      "patient": "6",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_8_0107",
+      "patient": "8",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_8_0086",
+      "patient": "8",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_8_0067",
+      "patient": "8",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_8_0046",
+      "patient": "8",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_8_0025",
+      "patient": "8",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_30_0235",
+      "patient": "30",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_30_0196",
+      "patient": "30",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_30_0155",
+      "patient": "30",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_30_0113",
+      "patient": "30",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    },
+    {
+      "sample": "CT_30_0073",
+      "patient": "30",
+      "cluster_counts": [
+        50176,
+        0
+      ]
+    }
+  ],
+  "elapsed_seconds": 5.68
+}

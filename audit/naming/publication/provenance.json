@@ -1,0 +1,87 @@
+{
+  "producer": "publication/finalize.py",
+  "inputs": {
+    "/Users/navneetbavineni/STEGO/audit/improve/B2_448_features.npy": {
+      "sha256": "2542fe4a1a09af63b6d85ffdb9c6f9475b48203ecc0b98bfc9974ecd15ff2413",
+      "size_bytes": 5638176896
+    },
+    "/Users/navneetbavineni/STEGO/audit/naming/stageA_manifest.json": {
+      "sha256": "ceb1f5e236980247444416469c03c86339348d4e73e51c2208de39f2d430416b",
+      "size_bytes": 11437
+    },
+    "/Users/navneetbavineni/STEGO/audit/naming/PARAMETERS.json": {
+      "sha256": "6ed396dd8d68c82d88711f14d82aaec781fa0f0ffab24fa4589810fd7a528477",
+      "size_bytes": 6091
+    },
+    "/Users/navneetbavineni/STEGO/audit/naming/common.py": {
+      "sha256": "379652f4fbdcbbc9fe1a821aa061661dba50511c0104e580ff4d4272fc8c05cb",
+      "size_bytes": 3960
+    },
+    "/Users/navneetbavineni/STEGO/audit/naming/stage_b.py": {
+      "sha256": "58a7229cdf9e7130302c3d0c2a0744947321b0b642975abf524c3f9d9681d118",
+      "size_bytes": 6220
+    },
+    "/Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py": {
+      "sha256": "0981de7d626a962749f1f59b131d1a434418380c7cffaecda043ca8febe2dc9e",
+      "size_bytes": 12250
+    },
+    "/Users/navneetbavineni/STEGO/src/modules.py": {
+      "sha256": "c0306a6df692bdd242ecc229c51c6cf5f05cc922b9c8b7eb7ecb2ac09ede61ea",
+      "size_bytes": 25758
+    },
+    "/Users/navneetbavineni/STEGO/src/chaos_preprocessing.py": {
+      "sha256": "91404a4c9a3d1eb54b27d93e6ebe6e7788d8352ece913fa00e6a2288a6f51a83",
+      "size_bytes": 11254
+    },
+    "/Users/navneetbavineni/STEGO/audit/scratch/baseline/heads.json": {
+      "sha256": "ef62e66c78a07ef17d85557b24de691d462b7b7cab477145f4f9c6616d7ec445",
+      "size_bytes": 45284
+    },
+    "/Users/navneetbavineni/STEGO/audit/scratch/final_baseline/summary.json": {
+      "sha256": "a46265fad453b8596fd577d7c9d417350d2cfdabca9b2bb00dcfacad6fc9c72e",
+      "size_bytes": 9679
+    },
+    "/Users/navneetbavineni/STEGO/audit/final_pipeline/inductive_seed0_centers.npy": {
+      "sha256": "5f288520877d4ea6349b4ba705b689ed7babc823b694e61335cbad2a3db172d7",
+      "size_bytes": 24704
+    },
+    "/Users/navneetbavineni/STEGO/audit/final_pipeline/inductive_seed1_centers.npy": {
+      "sha256": "24e18c4d8314703d4f343cda32c1022cb7a5c416ad09c8446714cbe671a2c70c",
+      "size_bytes": 24704
+    },
+    "/Users/navneetbavineni/STEGO/audit/final_pipeline/inductive_seed2_centers.npy": {
+      "sha256": "da9eb725dce9e525c288b5304b75f6a23ce50db702220fe096a4b14668a63019",
+      "size_bytes": 24704
+    },
+    "/Users/navneetbavineni/STEGO/audit/final_pipeline/all20_seed0_centers.npy": {
+      "sha256": "7cf7cc0cb65d2fda9252345d479cb4dbd460395ec552a14ad0dfb42983f0a643",
+      "size_bytes": 24704
+    },
+    "/Users/navneetbavineni/STEGO/audit/final_pipeline/all20_seed1_centers.npy": {
+      "sha256": "62e4f7bf4e8393a65633c2d12175ece7acde11e3237b408e3cca17442bad5ee4",
+      "size_bytes": 24704
+    },
+    "/Users/navneetbavineni/STEGO/audit/final_pipeline/all20_seed2_centers.npy": {
+      "sha256": "1894db4a603b5dcb136986f6b0d7d49132e1b5a250f15c0a14ea08312134b90e",
+      "size_bytes": 24704
+    }
+  },
+  "versions": {
+    "numpy": "2.4.4",
+    "torch": "2.10.0",
+    "torchvision": "0.25.0",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "open-clip-torch": "3.3.0",
+    "pydicom": "3.0.1"
+  },
+  "git": {
+    "commit": "6f6f326a3d4c8ebe56900d75a9c7ad8eb27137f2",
+    "diff": "",
+    "status": "?? audit/dino/\n?? audit/dino2/\n?? audit/final_pipeline/\n?? audit/improve/\n?? audit/improve2/\n?? audit/naming/\n"
+  },
+  "all42_stageA_hashes_match": true,
+  "all_six_reproduced_exactly": true,
+  "no_original_outputs_overwritten": true,
+  "note": "A syntax-only error in the new stability diagnostic was corrected before that script executed; no method, naming parameter, sealed artifact or score was changed. stability.log retains the initial diagnostic parse error. Empty-slice FP mean is N/A because there are no empty-GT slices; no zeros substituted in final reporting."
+}

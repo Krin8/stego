@@ -1,0 +1,49 @@
+{
+  "producer": "pair_affinities.py",
+  "labels_used": false,
+  "rows": 3304,
+  "pairs_per_row": 2048,
+  "pairs_per_source": 6766592,
+  "sources": [
+    "D1",
+    "BiomedCLIP_B2_448"
+  ],
+  "thresholds": {
+    "D1": [
+      {
+        "budget": 0.05,
+        "threshold": 0.7534567922353743,
+        "attraction": 0.050000059113952784
+      },
+      {
+        "budget": 0.1,
+        "threshold": 0.6165334582328799,
+        "attraction": 0.10000011822790557
+      },
+      {
+        "budget": 0.2,
+        "threshold": 0.42587846517562866,
+        "attraction": 0.19999994088604722
+      }
+    ],
+    "BiomedCLIP_B2_448": [
+      {
+        "budget": 0.05,
+        "threshold": 0.9141591787338257,
+        "attraction": 0.04999991132907082
+      },
+      {
+        "budget": 0.1,
+        "threshold": 0.8663409233093262,
+        "attraction": 0.10000011822790557
+      },
+      {
+        "budget": 0.2,
+        "threshold": 0.7954046726226807,
+        "attraction": 0.19999994088604722
+      }
+    ]
+  },
+  "selectivity_anchor_order_exact": true,
+  "seconds": 21.44733150000684
+}

@@ -1,0 +1,9 @@
+?? audit/run_records/fixes3_C_seed_validation/
+?? audit/run_records/fixes3_full_C/
+?? audit/scratch/fixes3/experiments/
+?? audit/scratch/fixes3/fixed_selection_synthetic.png
+?? audit/scratch/fixes3/fixes3_C_seed1_final.png
+?? audit/scratch/fixes3/fixes3_C_seed1_result.json
+?? audit/scratch/fixes3/fixes3_C_seed2_final.png
+?? audit/scratch/fixes3/fixes3_C_seed2_result.json
+?? audit/scratch/fixes3/mpl/

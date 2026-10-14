@@ -1,0 +1,38 @@
+{
+  "command": [
+    "audit/scratch/fixes4/run.py",
+    "--candidate",
+    "D",
+    "--seed",
+    "2"
+  ],
+  "commit": "bdef827636ca6020dd1d27ab80b76488df19224c",
+  "reference_config_differences": {
+    "experiment_name": {
+      "old": "fixes3_C_seed1",
+      "new": "fixes4_D_seed2"
+    },
+    "neg_inter_shift": {
+      "old": 0.7459585666656494,
+      "new": 0.7791634202003479
+    },
+    "output_root": {
+      "old": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed1",
+      "new": "/Users/navneetbavineni/STEGO/audit/scratch/fixes4/experiments/fixes4_D_seed2"
+    },
+    "seed": {
+      "old": 1,
+      "new": 2
+    },
+    "pos_intra_shift": {
+      "old": 0.4584466218948364,
+      "new": 0.7965070605278015
+    },
+    "pos_inter_shift": {
+      "old": 0.45247218012809753,
+      "new": 0.7820567488670349
+    }
+  },
+  "runner_sha256": "81cc7f0879ce86bef1ab2d0455c29fe1ae5b64bbe0e6d21935796ab301c85008",
+  "calibration_sha256": "3d17a022266912ebb5c33e9ca11202b126d36ad014e7ee6ab67070c9b4df5ef8"
+}

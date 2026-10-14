@@ -1,0 +1,28 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/fixes4/verify_scoring.py",
+  "baseline_mapping_and_lopo_exact_match": true,
+  "majority": {
+    "clusters": [
+      5
+    ],
+    "iou": 0.6413521631902697,
+    "dice": 0.7814924518619866,
+    "precision": 0.8994690953038674,
+    "recall": 0.6908754756097696,
+    "tp": 1250334,
+    "fp": 139746,
+    "fn": 559448
+  },
+  "lopo_summary": {
+    "iou": {
+      "mean": 0.6402005421100732,
+      "min": 0.6090252561522045
+    },
+    "dice": {
+      "mean": 0.7804533929534181,
+      "min": 0.7570114313912226
+    }
+  },
+  "labels": "Only existing472 val annotations; no training labels",
+  "training_launched": false
+}

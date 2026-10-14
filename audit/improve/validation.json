@@ -1,0 +1,20 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/improve/validate.py",
+  "all_checks_pass": true,
+  "summary_rows": 40,
+  "heldout_labels_excluded_from_mapping": true,
+  "all_pixels_scored": true,
+  "original_source_features_scoring_helpers_sha256_unchanged": {
+    "audit/scratch/baseline/train_features.npy": true,
+    "audit/scratch/forensics/val_features.npy": true,
+    "audit/scratch/baseline/samples.json": true,
+    "src/modules.py": true,
+    "src/chaos_preprocessing.py": true,
+    "src/data.py": true,
+    "audit/scratch/baseline/kmeans.py": true,
+    "audit/scratch/baseline/common.py": true,
+    "audit/scratch/forensics/common.py": true,
+    "audit/scratch/forensics/task1.py": true
+  },
+  "elapsed_seconds": 3.466792791004991
+}

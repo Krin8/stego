@@ -1,0 +1,11 @@
+{
+  "base": "pipeline.yaml",
+  "evaluation_dir": "src2/runs/p1_seed0_evaluation",
+  "output": "src2/runs/p1_seed0_visualizations",
+  "fixed_indices": [
+    1916,
+    2005,
+    2095,
+    2242
+  ]
+}

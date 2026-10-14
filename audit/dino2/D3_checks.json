@@ -1,0 +1,37 @@
+{
+  "arm": "D3",
+  "producer": "extract.py",
+  "strict_loading_info": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "tensors": 223,
+  "weight_sha256": "d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841",
+  "model_eval": true,
+  "all_parameters_frozen": true,
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "shape": [
+    8,
+    784,
+    768
+  ],
+  "including_CLS_shape": [
+    8,
+    785,
+    768
+  ],
+  "final_LayerNorm_hook_exact": true,
+  "deterministic_exact": true,
+  "max_abs_difference": 0.0,
+  "batch8_preprocessing_seconds": 0.019655292009701952,
+  "batch8_forward_seconds": 0.6648166250088252,
+  "projected_full_seconds": 200.2935947175465,
+  "attention_backend": "sdpa",
+  "layer_norm_eps": 1e-06,
+  "transformers_version": "5.8.1",
+  "feature_tap_comparison": "D1 post-final-LayerNorm, CLS excluded and patch L2: same semantic tap",
+  "labels_used": false
+}

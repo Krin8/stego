@@ -1,0 +1,18 @@
+{
+  "images": 200,
+  "threads": 2,
+  "device": "cpu",
+  "seconds": 23.881927583017386,
+  "trainable_parameters": 0,
+  "eval": true,
+  "deterministic_max_error": 0.0,
+  "final_cached_max_error": 0.0,
+  "body_boxes_agree": true,
+  "layers_one_based": [
+    9,
+    11,
+    12
+  ],
+  "normalization": "shared final LayerNorm, CLS excluded, then patch L2",
+  "backbone_sha256": "52cc993c5c5ff962bd0c60931874bc001e7e9b41666a385530f4a036294576be"
+}

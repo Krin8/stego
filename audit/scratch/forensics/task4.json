@@ -1,0 +1,3523 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/forensics/task4.py",
+  "seed": 20260930,
+  "protocol": "16 fixed batches of16 train images; same top7 verified-cache kNN draws; real correspondence forward/helper with restored global mean; dropout off/eval; all16 negatives use nonzero batch shifts; no training masks opened; raw mean(fd*cd) and clamped mean(fd*max(cd,0)) reported.",
+  "results": {
+    "best600": {
+      "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=05-step=1800-mIoU=test/cluster/mIoU=69.3704.ckpt",
+      "batches": [
+        {
+          "batch": 0,
+          "anchor_indices": [
+            211,
+            276,
+            214,
+            534,
+            863,
+            1385,
+            1539,
+            1626,
+            1089,
+            319,
+            1273,
+            1636,
+            784,
+            662,
+            1151,
+            1796
+          ],
+          "loss_seed": 20260930,
+          "pos_intra": -0.15008364617824554,
+          "pos_inter": -0.14863136410713196,
+          "neg_inter": 0.009424720890820026,
+          "weighted_correspondence": -0.1317763098049909,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.39255979657173157,
+              "clamped_affinity_weighted_similarity": 0.4034191370010376,
+              "mean_code_similarity": 0.5318511128425598,
+              "mean_affinity": 0.6030600666999817,
+              "mean_shifted_weighted_similarity": 0.14863136410713196
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.02415892055432778,
+              "clamped_affinity_weighted_similarity": 0.1196956061758101,
+              "mean_code_similarity": -0.038323498505633324,
+              "mean_affinity": 0.5461830571293831,
+              "mean_shifted_weighted_similarity": -0.009424720657989383
+            }
+          }
+        },
+        {
+          "batch": 1,
+          "anchor_indices": [
+            1830,
+            928,
+            1523,
+            1155,
+            1133,
+            63,
+            1203,
+            250,
+            1288,
+            59,
+            1348,
+            230,
+            688,
+            1464,
+            1504,
+            268
+          ],
+          "loss_seed": 20260931,
+          "pos_intra": -0.1516106128692627,
+          "pos_inter": -0.14589394629001617,
+          "neg_inter": 0.012609687633812428,
+          "weighted_correspondence": -0.13010849398560823,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.39310422539711,
+              "clamped_affinity_weighted_similarity": 0.4020977020263672,
+              "mean_code_similarity": 0.5405709147453308,
+              "mean_affinity": 0.5995796918869019,
+              "mean_shifted_weighted_similarity": 0.14589394629001617
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.015733971493318677,
+              "clamped_affinity_weighted_similarity": 0.11692829057574272,
+              "mean_code_similarity": -0.04382578702643514,
+              "mean_affinity": 0.5436652302742004,
+              "mean_shifted_weighted_similarity": -0.01260968716815114
+            }
+          }
+        },
+        {
+          "batch": 2,
+          "anchor_indices": [
+            686,
+            1390,
+            1042,
+            8,
+            1460,
+            795,
+            246,
+            383,
+            27,
+            1684,
+            1776,
+            1224,
+            1222,
+            535,
+            869,
+            1003
+          ],
+          "loss_seed": 20260932,
+          "pos_intra": -0.1437424123287201,
+          "pos_inter": -0.1413930505514145,
+          "neg_inter": 0.00843868125230074,
+          "weighted_correspondence": -0.12633930970914664,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.3689451515674591,
+              "clamped_affinity_weighted_similarity": 0.3814588785171509,
+              "mean_code_similarity": 0.4938417077064514,
+              "mean_affinity": 0.5924413204193115,
+              "mean_shifted_weighted_similarity": 0.1413930505514145
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.0398083899053745,
+              "clamped_affinity_weighted_similarity": 0.12850877549499273,
+              "mean_code_similarity": -0.01900775750982575,
+              "mean_affinity": 0.5472541376948357,
+              "mean_shifted_weighted_similarity": -0.008438681659754366
+            }
+          }
+        },
+        {
+          "batch": 3,
+          "anchor_indices": [
+            482,
+            283,
+            1548,
+            280,
+            1064,
+            1813,
+            1557,
+            86,
+            296,
+            1166,
+            974,
+            1447,
+            734,
+            1477,
+            1190,
+            1811
+          ],
+          "loss_seed": 20260933,
+          "pos_intra": -0.15715168416500092,
+          "pos_inter": -0.1542726457118988,
+          "neg_inter": 0.013588237576186657,
+          "weighted_correspondence": -0.13529920014552774,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.4124245345592499,
+              "clamped_affinity_weighted_similarity": 0.4179023504257202,
+              "mean_code_similarity": 0.5664156079292297,
+              "mean_affinity": 0.6055461764335632,
+              "mean_shifted_weighted_similarity": 0.1542726457118988
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.015471317630726844,
+              "clamped_affinity_weighted_similarity": 0.1163895814679563,
+              "mean_code_similarity": -0.04516451118979603,
+              "mean_affinity": 0.5430682562291622,
+              "mean_shifted_weighted_similarity": -0.013588236761279404
+            }
+          }
+        },
+        {
+          "batch": 4,
+          "anchor_indices": [
+            1785,
+            147,
+            1061,
+            1804,
+            1750,
+            84,
+            1118,
+            584,
+            375,
+            733,
+            1289,
+            1153,
+            865,
+            1584,
+            1485,
+            558
+          ],
+          "loss_seed": 20260934,
+          "pos_intra": -0.15424849092960358,
+          "pos_inter": -0.14876556396484375,
+          "neg_inter": 0.010529148392379284,
+          "weighted_correspondence": -0.1339045164268464,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.39147689938545227,
+              "clamped_affinity_weighted_similarity": 0.40087616443634033,
+              "mean_code_similarity": 0.5290322303771973,
+              "mean_affinity": 0.5962605476379395,
+              "mean_shifted_weighted_similarity": 0.14876556396484375
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.029317311302293092,
+              "clamped_affinity_weighted_similarity": 0.11868900852277875,
+              "mean_code_similarity": -0.02916560642188415,
+              "mean_affinity": 0.537399098277092,
+              "mean_shifted_weighted_similarity": -0.010529148305067793
+            }
+          }
+        },
+        {
+          "batch": 5,
+          "anchor_indices": [
+            1646,
+            1756,
+            710,
+            1152,
+            1066,
+            53,
+            1283,
+            1339,
+            982,
+            947,
+            273,
+            289,
+            1181,
+            1230,
+            1274,
+            894
+          ],
+          "loss_seed": 20260935,
+          "pos_intra": -0.15325616300106049,
+          "pos_inter": -0.15049904584884644,
+          "neg_inter": 0.012071502394974232,
+          "weighted_correspondence": -0.13270134416408838,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.3987322449684143,
+              "clamped_affinity_weighted_similarity": 0.4070509970188141,
+              "mean_code_similarity": 0.5424332618713379,
+              "mean_affinity": 0.6031336784362793,
+              "mean_shifted_weighted_similarity": 0.15049904584884644
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.02356010305811651,
+              "clamped_affinity_weighted_similarity": 0.12240287521854043,
+              "mean_code_similarity": -0.035991034004837275,
+              "mean_affinity": 0.5382770150899887,
+              "mean_shifted_weighted_similarity": -0.012071502162143588
+            }
+          }
+        },
+        {
+          "batch": 6,
+          "anchor_indices": [
+            798,
+            1771,
+            592,
+            1322,
+            1382,
+            943,
+            1747,
+            553,
+            949,
+            1043,
+            1809,
+            259,
+            1299,
+            189,
+            598,
+            1658
+          ],
+          "loss_seed": 20260936,
+          "pos_intra": -0.15699556469917297,
+          "pos_inter": -0.15350157022476196,
+          "neg_inter": 0.01281330082565546,
+          "weighted_correspondence": -0.13549004138447346,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.40704119205474854,
+              "clamped_affinity_weighted_similarity": 0.4159809947013855,
+              "mean_code_similarity": 0.5535293817520142,
+              "mean_affinity": 0.6051740646362305,
+              "mean_shifted_weighted_similarity": 0.15350157022476196
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.04188925954076694,
+              "clamped_affinity_weighted_similarity": 0.1311977608129382,
+              "mean_code_similarity": -0.0015032156079541892,
+              "mean_affinity": 0.5430025197565556,
+              "mean_shifted_weighted_similarity": -0.012813301349524409
+            }
+          }
+        },
+        {
+          "batch": 7,
+          "anchor_indices": [
+            41,
+            1413,
+            632,
+            1654,
+            1119,
+            752,
+            426,
+            1502,
+            514,
+            148,
+            1596,
+            1769,
+            1305,
+            836,
+            328,
+            204
+          ],
+          "loss_seed": 20260937,
+          "pos_intra": -0.14983509480953217,
+          "pos_inter": -0.14748165011405945,
+          "neg_inter": 0.008709864690899849,
+          "weighted_correspondence": -0.13177271129563453,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.3916214108467102,
+              "clamped_affinity_weighted_similarity": 0.40124398469924927,
+              "mean_code_similarity": 0.5332355499267578,
+              "mean_affinity": 0.6026299595832825,
+              "mean_shifted_weighted_similarity": 0.14748165011405945
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.03132238970283652,
+              "clamped_affinity_weighted_similarity": 0.1216305079869926,
+              "mean_code_similarity": -0.026809994247741997,
+              "mean_affinity": 0.5512701869010925,
+              "mean_shifted_weighted_similarity": -0.008709864923730493
+            }
+          }
+        },
+        {
+          "batch": 8,
+          "anchor_indices": [
+            1327,
+            1466,
+            1547,
+            858,
+            933,
+            4,
+            7,
+            373,
+            741,
+            1140,
+            700,
+            1807,
+            1063,
+            314,
+            32,
+            1078
+          ],
+          "loss_seed": 20260938,
+          "pos_intra": -0.14554455876350403,
+          "pos_inter": -0.14089258015155792,
+          "neg_inter": 0.013638002797961235,
+          "weighted_correspondence": -0.12414605764672162,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.3775143027305603,
+              "clamped_affinity_weighted_similarity": 0.3871469795703888,
+              "mean_code_similarity": 0.5159814357757568,
+              "mean_affinity": 0.5894331336021423,
+              "mean_shifted_weighted_similarity": 0.14089258015155792
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.07709238945972174,
+              "clamped_affinity_weighted_similarity": 0.15287266997620463,
+              "mean_code_similarity": 0.05285828001797199,
+              "mean_affinity": 0.5427743196487427,
+              "mean_shifted_weighted_similarity": -0.013638002856168896
+            }
+          }
+        },
+        {
+          "batch": 9,
+          "anchor_indices": [
+            105,
+            1221,
+            1209,
+            1777,
+            823,
+            691,
+            1812,
+            152,
+            1306,
+            1401,
+            574,
+            270,
+            719,
+            629,
+            1582,
+            684
+          ],
+          "loss_seed": 20260939,
+          "pos_intra": -0.149261936545372,
+          "pos_inter": -0.14921584725379944,
+          "neg_inter": 0.011253636330366135,
+          "weighted_correspondence": -0.13021966841071844,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.40058860182762146,
+              "clamped_affinity_weighted_similarity": 0.40812036395072937,
+              "mean_code_similarity": 0.5500749349594116,
+              "mean_affinity": 0.5996878743171692,
+              "mean_shifted_weighted_similarity": 0.14921584725379944
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.030019276455277577,
+              "clamped_affinity_weighted_similarity": 0.11670976551249623,
+              "mean_code_similarity": -0.022940661656321026,
+              "mean_affinity": 0.5398416854441166,
+              "mean_shifted_weighted_similarity": -0.011253637057961896
+            }
+          }
+        },
+        {
+          "batch": 10,
+          "anchor_indices": [
+            327,
+            961,
+            1752,
+            1130,
+            96,
+            1773,
+            460,
+            620,
+            1631,
+            1628,
+            1071,
+            658,
+            616,
+            630,
+            258,
+            1277
+          ],
+          "loss_seed": 20260940,
+          "pos_intra": -0.15266190469264984,
+          "pos_inter": -0.15129978954792023,
+          "neg_inter": 0.010377636179327965,
+          "weighted_correspondence": -0.13357051273807885,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.4018363952636719,
+              "clamped_affinity_weighted_similarity": 0.41058894991874695,
+              "mean_code_similarity": 0.54774010181427,
+              "mean_affinity": 0.6036264896392822,
+              "mean_shifted_weighted_similarity": 0.15129978954792023
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.03754592966288328,
+              "clamped_affinity_weighted_similarity": 0.12288377061486244,
+              "mean_code_similarity": -0.012444525607861578,
+              "mean_affinity": 0.5439249351620674,
+              "mean_shifted_weighted_similarity": -0.01037763585918583
+            }
+          }
+        },
+        {
+          "batch": 11,
+          "anchor_indices": [
+            134,
+            1387,
+            735,
+            1354,
+            737,
+            1431,
+            824,
+            317,
+            201,
+            713,
+            461,
+            144,
+            843,
+            787,
+            1194,
+            1757
+          ],
+          "loss_seed": 20260941,
+          "pos_intra": -0.15030983090400696,
+          "pos_inter": -0.14922210574150085,
+          "neg_inter": 0.010917051695287228,
+          "weighted_correspondence": -0.13113537057302893,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.3964037001132965,
+              "clamped_affinity_weighted_similarity": 0.4059629440307617,
+              "mean_code_similarity": 0.53981614112854,
+              "mean_affinity": 0.6004858016967773,
+              "mean_shifted_weighted_similarity": 0.14922210574150085
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.05385005380958319,
+              "clamped_affinity_weighted_similarity": 0.1347526810131967,
+              "mean_code_similarity": 0.009852576506091282,
+              "mean_affinity": 0.5472347401082516,
+              "mean_shifted_weighted_similarity": -0.01091705117141828
+            }
+          }
+        },
+        {
+          "batch": 12,
+          "anchor_indices": [
+            1494,
+            365,
+            403,
+            1189,
+            1070,
+            1144,
+            803,
+            1555,
+            844,
+            1108,
+            378,
+            1758,
+            1702,
+            625,
+            9,
+            586
+          ],
+          "loss_seed": 20260942,
+          "pos_intra": -0.15230196714401245,
+          "pos_inter": -0.14972229301929474,
+          "neg_inter": 0.010176695883274078,
+          "weighted_correspondence": -0.13306157283484935,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.38824865221977234,
+              "clamped_affinity_weighted_similarity": 0.40037909150123596,
+              "mean_code_similarity": 0.5193871259689331,
+              "mean_affinity": 0.6044377088546753,
+              "mean_shifted_weighted_similarity": 0.14972229301929474
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.013119223369358224,
+              "clamped_affinity_weighted_similarity": 0.11774122947826982,
+              "mean_code_similarity": -0.053812599973753095,
+              "mean_affinity": 0.548583373427391,
+              "mean_shifted_weighted_similarity": -0.01017669661086984
+            }
+          }
+        },
+        {
+          "batch": 13,
+          "anchor_indices": [
+            709,
+            188,
+            1278,
+            1296,
+            608,
+            1312,
+            516,
+            628,
+            261,
+            223,
+            68,
+            637,
+            490,
+            1380,
+            1355,
+            1534
+          ],
+          "loss_seed": 20260943,
+          "pos_intra": -0.15082624554634094,
+          "pos_inter": -0.14806132018566132,
+          "neg_inter": 0.012387203983962536,
+          "weighted_correspondence": -0.1302649760525674,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.40063804388046265,
+              "clamped_affinity_weighted_similarity": 0.4094061255455017,
+              "mean_code_similarity": 0.5530161261558533,
+              "mean_affinity": 0.606852114200592,
+              "mean_shifted_weighted_similarity": 0.14806132018566132
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.033772747963666916,
+              "clamped_affinity_weighted_similarity": 0.12846186012029648,
+              "mean_code_similarity": -0.013298129430040717,
+              "mean_affinity": 0.550968948751688,
+              "mean_shifted_weighted_similarity": -0.012387204420519993
+            }
+          }
+        },
+        {
+          "batch": 14,
+          "anchor_indices": [
+            60,
+            1358,
+            1698,
+            1397,
+            599,
+            1135,
+            384,
+            596,
+            1533,
+            696,
+            689,
+            1245,
+            1732,
+            135,
+            79,
+            1096
+          ],
+          "loss_seed": 20260944,
+          "pos_intra": -0.15003922581672668,
+          "pos_inter": -0.14648012816905975,
+          "neg_inter": 0.008675483986735344,
+          "weighted_correspondence": -0.13168075842782853,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.381007581949234,
+              "clamped_affinity_weighted_similarity": 0.39275220036506653,
+              "mean_code_similarity": 0.5097364187240601,
+              "mean_affinity": 0.5977575182914734,
+              "mean_shifted_weighted_similarity": 0.14648012816905975
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.04927502443752019,
+              "clamped_affinity_weighted_similarity": 0.13893606327474117,
+              "mean_code_similarity": -0.0032549448660574853,
+              "mean_affinity": 0.5508958473801613,
+              "mean_shifted_weighted_similarity": -0.008675483899423853
+            }
+          }
+        },
+        {
+          "batch": 15,
+          "anchor_indices": [
+            777,
+            1303,
+            44,
+            699,
+            1783,
+            1657,
+            712,
+            576,
+            989,
+            474,
+            766,
+            875,
+            1697,
+            1243,
+            1147,
+            980
+          ],
+          "loss_seed": 20260945,
+          "pos_intra": -0.15344201028347015,
+          "pos_inter": -0.1478906273841858,
+          "neg_inter": 0.009805993176996708,
+          "weighted_correspondence": -0.13360102803446353,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.3852843642234802,
+              "clamped_affinity_weighted_similarity": 0.39523765444755554,
+              "mean_code_similarity": 0.5167153477668762,
+              "mean_affinity": 0.5980113744735718,
+              "mean_shifted_weighted_similarity": 0.1478906273841858
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.06464410782791674,
+              "clamped_affinity_weighted_similarity": 0.14856035448610783,
+              "mean_code_similarity": 0.026300921861547977,
+              "mean_affinity": 0.5514902174472809,
+              "mean_shifted_weighted_similarity": -0.009805993118789047
+            }
+          }
+        }
+      ],
+      "anchor_positive_indices": [
+        [
+          [
+            211,
+            210
+          ],
+          [
+            276,
+            278
+          ],
+          [
+            214,
+            212
+          ],
+          [
+            534,
+            538
+          ],
+          [
+            863,
+            862
+          ],
+          [
+            1385,
+            1384
+          ],
+          [
+            1539,
+            1535
+          ],
+          [
+            1626,
+            1632
+          ],
+          [
+            1089,
+            1087
+          ],
+          [
+            319,
+            317
+          ],
+          [
+            1273,
+            1269
+          ],
+          [
+            1636,
+            1640
+          ],
+          [
+            784,
+            789
+          ],
+          [
+            662,
+            664
+          ],
+          [
+            1151,
+            1150
+          ],
+          [
+            1796,
+            1798
+          ]
+        ],
+        [
+          [
+            1830,
+            1833
+          ],
+          [
+            928,
+            927
+          ],
+          [
+            1523,
+            1520
+          ],
+          [
+            1155,
+            1152
+          ],
+          [
+            1133,
+            1136
+          ],
+          [
+            63,
+            59
+          ],
+          [
+            1203,
+            1204
+          ],
+          [
+            250,
+            253
+          ],
+          [
+            1288,
+            1286
+          ],
+          [
+            59,
+            55
+          ],
+          [
+            1348,
+            1352
+          ],
+          [
+            230,
+            231
+          ],
+          [
+            688,
+            691
+          ],
+          [
+            1464,
+            1462
+          ],
+          [
+            1504,
+            1505
+          ],
+          [
+            268,
+            270
+          ]
+        ],
+        [
+          [
+            686,
+            689
+          ],
+          [
+            1390,
+            1388
+          ],
+          [
+            1042,
+            1039
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            1460,
+            1457
+          ],
+          [
+            795,
+            791
+          ],
+          [
+            246,
+            249
+          ],
+          [
+            383,
+            388
+          ],
+          [
+            27,
+            28
+          ],
+          [
+            1684,
+            1685
+          ],
+          [
+            1776,
+            1779
+          ],
+          [
+            1224,
+            1221
+          ],
+          [
+            1222,
+            1221
+          ],
+          [
+            535,
+            536
+          ],
+          [
+            869,
+            871
+          ],
+          [
+            1003,
+            999
+          ]
+        ],
+        [
+          [
+            482,
+            478
+          ],
+          [
+            283,
+            287
+          ],
+          [
+            1548,
+            1545
+          ],
+          [
+            280,
+            277
+          ],
+          [
+            1064,
+            1066
+          ],
+          [
+            1813,
+            1816
+          ],
+          [
+            1557,
+            1556
+          ],
+          [
+            86,
+            88
+          ],
+          [
+            296,
+            294
+          ],
+          [
+            1166,
+            1161
+          ],
+          [
+            974,
+            978
+          ],
+          [
+            1447,
+            1451
+          ],
+          [
+            734,
+            735
+          ],
+          [
+            1477,
+            1476
+          ],
+          [
+            1190,
+            1194
+          ],
+          [
+            1811,
+            1810
+          ]
+        ],
+        [
+          [
+            1785,
+            1784
+          ],
+          [
+            147,
+            151
+          ],
+          [
+            1061,
+            1059
+          ],
+          [
+            1804,
+            1803
+          ],
+          [
+            1750,
+            1751
+          ],
+          [
+            84,
+            81
+          ],
+          [
+            1118,
+            1117
+          ],
+          [
+            584,
+            583
+          ],
+          [
+            375,
+            381
+          ],
+          [
+            733,
+            735
+          ],
+          [
+            1289,
+            1287
+          ],
+          [
+            1153,
+            1151
+          ],
+          [
+            865,
+            864
+          ],
+          [
+            1584,
+            1583
+          ],
+          [
+            1485,
+            1482
+          ],
+          [
+            558,
+            554
+          ]
+        ],
+        [
+          [
+            1646,
+            1648
+          ],
+          [
+            1756,
+            1758
+          ],
+          [
+            710,
+            707
+          ],
+          [
+            1152,
+            1155
+          ],
+          [
+            1066,
+            1069
+          ],
+          [
+            53,
+            55
+          ],
+          [
+            1283,
+            1284
+          ],
+          [
+            1339,
+            1340
+          ],
+          [
+            982,
+            983
+          ],
+          [
+            947,
+            948
+          ],
+          [
+            273,
+            270
+          ],
+          [
+            289,
+            288
+          ],
+          [
+            1181,
+            1182
+          ],
+          [
+            1230,
+            1232
+          ],
+          [
+            1274,
+            1271
+          ],
+          [
+            894,
+            896
+          ]
+        ],
+        [
+          [
+            798,
+            795
+          ],
+          [
+            1771,
+            1774
+          ],
+          [
+            592,
+            594
+          ],
+          [
+            1322,
+            1320
+          ],
+          [
+            1382,
+            1380
+          ],
+          [
+            943,
+            942
+          ],
+          [
+            1747,
+            1749
+          ],
+          [
+            553,
+            555
+          ],
+          [
+            949,
+            946
+          ],
+          [
+            1043,
+            1038
+          ],
+          [
+            1809,
+            1806
+          ],
+          [
+            259,
+            260
+          ],
+          [
+            1299,
+            1298
+          ],
+          [
+            189,
+            193
+          ],
+          [
+            598,
+            596
+          ],
+          [
+            1658,
+            1657
+          ]
+        ],
+        [
+          [
+            41,
+            39
+          ],
+          [
+            1413,
+            1416
+          ],
+          [
+            632,
+            630
+          ],
+          [
+            1654,
+            1653
+          ],
+          [
+            1119,
+            1115
+          ],
+          [
+            752,
+            750
+          ],
+          [
+            426,
+            431
+          ],
+          [
+            1502,
+            1503
+          ],
+          [
+            514,
+            515
+          ],
+          [
+            148,
+            150
+          ],
+          [
+            1596,
+            1595
+          ],
+          [
+            1769,
+            1772
+          ],
+          [
+            1305,
+            1313
+          ],
+          [
+            836,
+            833
+          ],
+          [
+            328,
+            327
+          ],
+          [
+            204,
+            205
+          ]
+        ],
+        [
+          [
+            1327,
+            1333
+          ],
+          [
+            1466,
+            1467
+          ],
+          [
+            1547,
+            1544
+          ],
+          [
+            858,
+            861
+          ],
+          [
+            933,
+            937
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            373,
+            371
+          ],
+          [
+            741,
+            743
+          ],
+          [
+            1140,
+            1146
+          ],
+          [
+            700,
+            698
+          ],
+          [
+            1807,
+            1803
+          ],
+          [
+            1063,
+            1064
+          ],
+          [
+            314,
+            316
+          ],
+          [
+            32,
+            33
+          ],
+          [
+            1078,
+            1075
+          ]
+        ],
+        [
+          [
+            105,
+            108
+          ],
+          [
+            1221,
+            1223
+          ],
+          [
+            1209,
+            1212
+          ],
+          [
+            1777,
+            1773
+          ],
+          [
+            823,
+            826
+          ],
+          [
+            691,
+            690
+          ],
+          [
+            1812,
+            1813
+          ],
+          [
+            152,
+            151
+          ],
+          [
+            1306,
+            1304
+          ],
+          [
+            1401,
+            1400
+          ],
+          [
+            574,
+            576
+          ],
+          [
+            270,
+            271
+          ],
+          [
+            719,
+            721
+          ],
+          [
+            629,
+            632
+          ],
+          [
+            1582,
+            1581
+          ],
+          [
+            684,
+            685
+          ]
+        ],
+        [
+          [
+            327,
+            328
+          ],
+          [
+            961,
+            962
+          ],
+          [
+            1752,
+            1750
+          ],
+          [
+            1130,
+            1127
+          ],
+          [
+            96,
+            101
+          ],
+          [
+            1773,
+            1770
+          ],
+          [
+            460,
+            1424
+          ],
+          [
+            620,
+            618
+          ],
+          [
+            1631,
+            1630
+          ],
+          [
+            1628,
+            1632
+          ],
+          [
+            1071,
+            1072
+          ],
+          [
+            658,
+            656
+          ],
+          [
+            616,
+            617
+          ],
+          [
+            630,
+            633
+          ],
+          [
+            258,
+            260
+          ],
+          [
+            1277,
+            1280
+          ]
+        ],
+        [
+          [
+            134,
+            135
+          ],
+          [
+            1387,
+            1385
+          ],
+          [
+            735,
+            737
+          ],
+          [
+            1354,
+            1351
+          ],
+          [
+            737,
+            740
+          ],
+          [
+            1431,
+            1433
+          ],
+          [
+            824,
+            817
+          ],
+          [
+            317,
+            313
+          ],
+          [
+            201,
+            199
+          ],
+          [
+            713,
+            712
+          ],
+          [
+            461,
+            462
+          ],
+          [
+            144,
+            143
+          ],
+          [
+            843,
+            841
+          ],
+          [
+            787,
+            790
+          ],
+          [
+            1194,
+            1193
+          ],
+          [
+            1757,
+            1760
+          ]
+        ],
+        [
+          [
+            1494,
+            1497
+          ],
+          [
+            365,
+            366
+          ],
+          [
+            403,
+            396
+          ],
+          [
+            1189,
+            1188
+          ],
+          [
+            1070,
+            1072
+          ],
+          [
+            1144,
+            1141
+          ],
+          [
+            803,
+            802
+          ],
+          [
+            1555,
+            1552
+          ],
+          [
+            844,
+            846
+          ],
+          [
+            1108,
+            1105
+          ],
+          [
+            378,
+            382
+          ],
+          [
+            1758,
+            1761
+          ],
+          [
+            1702,
+            1701
+          ],
+          [
+            625,
+            623
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            586,
+            590
+          ]
+        ],
+        [
+          [
+            709,
+            711
+          ],
+          [
+            188,
+            190
+          ],
+          [
+            1278,
+            1281
+          ],
+          [
+            1296,
+            1300
+          ],
+          [
+            608,
+            609
+          ],
+          [
+            1312,
+            1311
+          ],
+          [
+            516,
+            515
+          ],
+          [
+            628,
+            627
+          ],
+          [
+            261,
+            259
+          ],
+          [
+            223,
+            225
+          ],
+          [
+            68,
+            67
+          ],
+          [
+            637,
+            635
+          ],
+          [
+            490,
+            492
+          ],
+          [
+            1380,
+            1384
+          ],
+          [
+            1355,
+            1350
+          ],
+          [
+            1534,
+            1537
+          ]
+        ],
+        [
+          [
+            60,
+            59
+          ],
+          [
+            1358,
+            1356
+          ],
+          [
+            1698,
+            1700
+          ],
+          [
+            1397,
+            1396
+          ],
+          [
+            599,
+            600
+          ],
+          [
+            1135,
+            1132
+          ],
+          [
+            384,
+            382
+          ],
+          [
+            596,
+            594
+          ],
+          [
+            1533,
+            1531
+          ],
+          [
+            696,
+            695
+          ],
+          [
+            689,
+            688
+          ],
+          [
+            1245,
+            1246
+          ],
+          [
+            1732,
+            1736
+          ],
+          [
+            135,
+            137
+          ],
+          [
+            79,
+            81
+          ],
+          [
+            1096,
+            1098
+          ]
+        ],
+        [
+          [
+            777,
+            780
+          ],
+          [
+            1303,
+            1296
+          ],
+          [
+            44,
+            40
+          ],
+          [
+            699,
+            704
+          ],
+          [
+            1783,
+            1787
+          ],
+          [
+            1657,
+            1661
+          ],
+          [
+            712,
+            715
+          ],
+          [
+            576,
+            578
+          ],
+          [
+            989,
+            992
+          ],
+          [
+            474,
+            470
+          ],
+          [
+            766,
+            769
+          ],
+          [
+            875,
+            876
+          ],
+          [
+            1697,
+            1696
+          ],
+          [
+            1243,
+            1239
+          ],
+          [
+            1147,
+            1148
+          ],
+          [
+            980,
+            983
+          ]
+        ]
+      ],
+      "summary": {
+        "pos_intra": -0.1513319592922926,
+        "pos_inter": -0.14832647051662207,
+        "neg_inter": 0.010963552980683744,
+        "weighted_correspondence": -0.1315669919771608
+      },
+      "pair_means": {
+        "knn": {
+          "raw_affinity_weighted_similarity": 0.39296419359743595,
+          "clamped_affinity_weighted_similarity": 0.4024765323847532,
+          "mean_code_similarity": 0.5339610874652863,
+          "mean_affinity": 0.6005073450505733,
+          "mean_shifted_weighted_similarity": 0.14832647051662207
+        },
+        "random": {
+          "raw_affinity_weighted_similarity": 0.036286276010855545,
+          "clamped_affinity_weighted_similarity": 0.12727255004574545,
+          "mean_code_similarity": -0.016033155478908157,
+          "mean_affinity": 0.5453645980451256,
+          "mean_shifted_weighted_similarity": -0.010963552998873638
+        }
+      },
+      "elapsed_seconds": 21.842966167008854
+    },
+    "final": {
+      "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=42-step=15000-mIoU=test/cluster/mIoU=46.1792.ckpt",
+      "batches": [
+        {
+          "batch": 0,
+          "anchor_indices": [
+            211,
+            276,
+            214,
+            534,
+            863,
+            1385,
+            1539,
+            1626,
+            1089,
+            319,
+            1273,
+            1636,
+            784,
+            662,
+            1151,
+            1796
+          ],
+          "loss_seed": 20260930,
+          "pos_intra": -0.15289711952209473,
+          "pos_inter": -0.15025508403778076,
+          "neg_inter": 0.005874823313206434,
+          "weighted_correspondence": -0.1363037024019286,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.4094180464744568,
+              "clamped_affinity_weighted_similarity": 0.4155665636062622,
+              "mean_code_similarity": 0.5679678320884705,
+              "mean_affinity": 0.6030600666999817,
+              "mean_shifted_weighted_similarity": 0.15025508403778076
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.007285140483872965,
+              "clamped_affinity_weighted_similarity": 0.07513669063337147,
+              "mean_code_similarity": -0.030677029979415238,
+              "mean_affinity": 0.5461830571293831,
+              "mean_shifted_weighted_similarity": -0.005874823225894943
+            }
+          }
+        },
+        {
+          "batch": 1,
+          "anchor_indices": [
+            1830,
+            928,
+            1523,
+            1155,
+            1133,
+            63,
+            1203,
+            250,
+            1288,
+            59,
+            1348,
+            230,
+            688,
+            1464,
+            1504,
+            268
+          ],
+          "loss_seed": 20260931,
+          "pos_intra": -0.15474088490009308,
+          "pos_inter": -0.14801125228405,
+          "neg_inter": 0.009081459604203701,
+          "weighted_correspondence": -0.1349578864034265,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.4111887216567993,
+              "clamped_affinity_weighted_similarity": 0.4163375794887543,
+              "mean_code_similarity": 0.5773782730102539,
+              "mean_affinity": 0.5995796918869019,
+              "mean_shifted_weighted_similarity": 0.14801125228405
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": -4.1708030039444566e-05,
+              "clamped_affinity_weighted_similarity": 0.0737095414660871,
+              "mean_code_similarity": -0.03524615045171231,
+              "mean_affinity": 0.5436652302742004,
+              "mean_shifted_weighted_similarity": -0.009081459837034345
+            }
+          }
+        },
+        {
+          "batch": 2,
+          "anchor_indices": [
+            686,
+            1390,
+            1042,
+            8,
+            1460,
+            795,
+            246,
+            383,
+            27,
+            1684,
+            1776,
+            1224,
+            1222,
+            535,
+            869,
+            1003
+          ],
+          "loss_seed": 20260932,
+          "pos_intra": -0.14759917557239532,
+          "pos_inter": -0.1452460139989853,
+          "neg_inter": 0.006953753996640444,
+          "weighted_correspondence": -0.13082208611536772,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.40675345063209534,
+              "clamped_affinity_weighted_similarity": 0.4108346402645111,
+              "mean_code_similarity": 0.574072539806366,
+              "mean_affinity": 0.5924413204193115,
+              "mean_shifted_weighted_similarity": 0.1452460139989853
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.014426637149881572,
+              "clamped_affinity_weighted_similarity": 0.08343890169635415,
+              "mean_code_similarity": -0.0232724295638036,
+              "mean_affinity": 0.5472541376948357,
+              "mean_shifted_weighted_similarity": -0.006953754491405562
+            }
+          }
+        },
+        {
+          "batch": 3,
+          "anchor_indices": [
+            482,
+            283,
+            1548,
+            280,
+            1064,
+            1813,
+            1557,
+            86,
+            296,
+            1166,
+            974,
+            1447,
+            734,
+            1477,
+            1190,
+            1811
+          ],
+          "loss_seed": 20260933,
+          "pos_intra": -0.1588604599237442,
+          "pos_inter": -0.15559536218643188,
+          "neg_inter": 0.008801103569567204,
+          "weighted_correspondence": -0.13979065344668926,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.4179578125476837,
+              "clamped_affinity_weighted_similarity": 0.4230768084526062,
+              "mean_code_similarity": 0.5762960910797119,
+              "mean_affinity": 0.6055461764335632,
+              "mean_shifted_weighted_similarity": 0.15559536218643188
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.020863690704572946,
+              "clamped_affinity_weighted_similarity": 0.08368006581440568,
+              "mean_code_similarity": 9.482062887400389e-05,
+              "mean_affinity": 0.5430682562291622,
+              "mean_shifted_weighted_similarity": -0.008801104180747643
+            }
+          }
+        },
+        {
+          "batch": 4,
+          "anchor_indices": [
+            1785,
+            147,
+            1061,
+            1804,
+            1750,
+            84,
+            1118,
+            584,
+            375,
+            733,
+            1289,
+            1153,
+            865,
+            1584,
+            1485,
+            558
+          ],
+          "loss_seed": 20260934,
+          "pos_intra": -0.15644676983356476,
+          "pos_inter": -0.14989207684993744,
+          "neg_inter": 0.006502507720142603,
+          "weighted_correspondence": -0.13819577513728293,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.4053751826286316,
+              "clamped_affinity_weighted_similarity": 0.4119105935096741,
+              "mean_code_similarity": 0.5592554211616516,
+              "mean_affinity": 0.5962605476379395,
+              "mean_shifted_weighted_similarity": 0.14989207684993744
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.009015574149088934,
+              "clamped_affinity_weighted_similarity": 0.07524988427758217,
+              "mean_code_similarity": -0.02909431461011991,
+              "mean_affinity": 0.537399098277092,
+              "mean_shifted_weighted_similarity": -0.006502507923869416
+            }
+          }
+        },
+        {
+          "batch": 5,
+          "anchor_indices": [
+            1646,
+            1756,
+            710,
+            1152,
+            1066,
+            53,
+            1283,
+            1339,
+            982,
+            947,
+            273,
+            289,
+            1181,
+            1230,
+            1274,
+            894
+          ],
+          "loss_seed": 20260935,
+          "pos_intra": -0.15573522448539734,
+          "pos_inter": -0.1528061479330063,
+          "neg_inter": 0.007629465777426958,
+          "weighted_correspondence": -0.13773757394868882,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.41661563515663147,
+              "clamped_affinity_weighted_similarity": 0.4219358265399933,
+              "mean_code_similarity": 0.579188883304596,
+              "mean_affinity": 0.6031336784362793,
+              "mean_shifted_weighted_similarity": 0.1528061479330063
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.009772060060640797,
+              "clamped_affinity_weighted_similarity": 0.07937869639135897,
+              "mean_code_similarity": -0.025050987780559808,
+              "mean_affinity": 0.5382770150899887,
+              "mean_shifted_weighted_similarity": -0.00762946525355801
+            }
+          }
+        },
+        {
+          "batch": 6,
+          "anchor_indices": [
+            798,
+            1771,
+            592,
+            1322,
+            1382,
+            943,
+            1747,
+            553,
+            949,
+            1043,
+            1809,
+            259,
+            1299,
+            189,
+            598,
+            1658
+          ],
+          "loss_seed": 20260936,
+          "pos_intra": -0.15987199544906616,
+          "pos_inter": -0.15580709278583527,
+          "neg_inter": 0.00846847239881754,
+          "weighted_correspondence": -0.14073087253607813,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.4238773584365845,
+              "clamped_affinity_weighted_similarity": 0.4285946786403656,
+              "mean_code_similarity": 0.5884456634521484,
+              "mean_affinity": 0.6051740646362305,
+              "mean_shifted_weighted_similarity": 0.15580709278583527
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.024245865301054437,
+              "clamped_affinity_weighted_similarity": 0.08781852945685387,
+              "mean_code_similarity": 0.0005673264968208969,
+              "mean_affinity": 0.5430025197565556,
+              "mean_shifted_weighted_similarity": -0.00846847239881754
+            }
+          }
+        },
+        {
+          "batch": 7,
+          "anchor_indices": [
+            41,
+            1413,
+            632,
+            1654,
+            1119,
+            752,
+            426,
+            1502,
+            514,
+            148,
+            1596,
+            1769,
+            1305,
+            836,
+            328,
+            204
+          ],
+          "loss_seed": 20260937,
+          "pos_intra": -0.15292119979858398,
+          "pos_inter": -0.14990727603435516,
+          "neg_inter": 0.005873019807040691,
+          "weighted_correspondence": -0.13623402039520444,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.41281384229660034,
+              "clamped_affinity_weighted_similarity": 0.417524516582489,
+              "mean_code_similarity": 0.5775802135467529,
+              "mean_affinity": 0.6026299595832825,
+              "mean_shifted_weighted_similarity": 0.14990727603435516
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.008372002601390705,
+              "clamped_affinity_weighted_similarity": 0.07377702672965825,
+              "mean_code_similarity": -0.027633354999125004,
+              "mean_affinity": 0.5512701869010925,
+              "mean_shifted_weighted_similarity": -0.005873020090803038
+            }
+          }
+        },
+        {
+          "batch": 8,
+          "anchor_indices": [
+            1327,
+            1466,
+            1547,
+            858,
+            933,
+            4,
+            7,
+            373,
+            741,
+            1140,
+            700,
+            1807,
+            1063,
+            314,
+            32,
+            1078
+          ],
+          "loss_seed": 20260938,
+          "pos_intra": -0.14786067605018616,
+          "pos_inter": -0.14183349907398224,
+          "neg_inter": 0.008619621396064758,
+          "weighted_correspondence": -0.12909466624259947,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.39562955498695374,
+              "clamped_affinity_weighted_similarity": 0.4018428325653076,
+              "mean_code_similarity": 0.5560157895088196,
+              "mean_affinity": 0.5894331336021423,
+              "mean_shifted_weighted_similarity": 0.14183349907398224
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.03384007815111545,
+              "clamped_affinity_weighted_similarity": 0.09619070938788354,
+              "mean_code_similarity": 0.010106755409651669,
+              "mean_affinity": 0.5427743196487427,
+              "mean_shifted_weighted_similarity": -0.008619621425168589
+            }
+          }
+        },
+        {
+          "batch": 9,
+          "anchor_indices": [
+            105,
+            1221,
+            1209,
+            1777,
+            823,
+            691,
+            1812,
+            152,
+            1306,
+            1401,
+            574,
+            270,
+            719,
+            629,
+            1582,
+            684
+          ],
+          "loss_seed": 20260939,
+          "pos_intra": -0.15153264999389648,
+          "pos_inter": -0.15143471956253052,
+          "neg_inter": 0.008777220733463764,
+          "weighted_correspondence": -0.13385590632446112,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.4218127727508545,
+              "clamped_affinity_weighted_similarity": 0.4257439076900482,
+              "mean_code_similarity": 0.594031035900116,
+              "mean_affinity": 0.5996878743171692,
+              "mean_shifted_weighted_similarity": 0.15143471956253052
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.012188933658762835,
+              "clamped_affinity_weighted_similarity": 0.07665460114367306,
+              "mean_code_similarity": -0.01971094636246562,
+              "mean_affinity": 0.5398416854441166,
+              "mean_shifted_weighted_similarity": -0.008777220733463764
+            }
+          }
+        },
+        {
+          "batch": 10,
+          "anchor_indices": [
+            327,
+            961,
+            1752,
+            1130,
+            96,
+            1773,
+            460,
+            620,
+            1631,
+            1628,
+            1071,
+            658,
+            616,
+            630,
+            258,
+            1277
+          ],
+          "loss_seed": 20260940,
+          "pos_intra": -0.15491032600402832,
+          "pos_inter": -0.152250736951828,
+          "neg_inter": 0.007321841549128294,
+          "weighted_correspondence": -0.13723984248470514,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.4098845422267914,
+              "clamped_affinity_weighted_similarity": 0.41525936126708984,
+              "mean_code_similarity": 0.5656557083129883,
+              "mean_affinity": 0.6036264896392822,
+              "mean_shifted_weighted_similarity": 0.152250736951828
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.02500933187548071,
+              "clamped_affinity_weighted_similarity": 0.084098557010293,
+              "mean_code_similarity": 0.001568120438605547,
+              "mean_affinity": 0.5439249351620674,
+              "mean_shifted_weighted_similarity": -0.007321841374505311
+            }
+          }
+        },
+        {
+          "batch": 11,
+          "anchor_indices": [
+            134,
+            1387,
+            735,
+            1354,
+            737,
+            1431,
+            824,
+            317,
+            201,
+            713,
+            461,
+            144,
+            843,
+            787,
+            1194,
+            1757
+          ],
+          "loss_seed": 20260941,
+          "pos_intra": -0.15333722531795502,
+          "pos_inter": -0.15112565457820892,
+          "neg_inter": 0.008502623997628689,
+          "weighted_correspondence": -0.135160701489076,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.41851916909217834,
+              "clamped_affinity_weighted_similarity": 0.4237423241138458,
+              "mean_code_similarity": 0.5867547392845154,
+              "mean_affinity": 0.6004858016967773,
+              "mean_shifted_weighted_similarity": 0.15112565457820892
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.031134747143369168,
+              "clamped_affinity_weighted_similarity": 0.08675450691953301,
+              "mean_code_similarity": 0.011105419500381686,
+              "mean_affinity": 0.5472347401082516,
+              "mean_shifted_weighted_similarity": -0.008502623997628689
+            }
+          }
+        },
+        {
+          "batch": 12,
+          "anchor_indices": [
+            1494,
+            365,
+            403,
+            1189,
+            1070,
+            1144,
+            803,
+            1555,
+            844,
+            1108,
+            378,
+            1758,
+            1702,
+            625,
+            9,
+            586
+          ],
+          "loss_seed": 20260942,
+          "pos_intra": -0.15474919974803925,
+          "pos_inter": -0.15017461776733398,
+          "neg_inter": 0.006387598346918821,
+          "weighted_correspondence": -0.13720143131446094,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.39811936020851135,
+              "clamped_affinity_weighted_similarity": 0.406311571598053,
+              "mean_code_similarity": 0.5420948266983032,
+              "mean_affinity": 0.6044377088546753,
+              "mean_shifted_weighted_similarity": 0.15017461776733398
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.0005768778501078486,
+              "clamped_affinity_weighted_similarity": 0.0785964576061815,
+              "mean_code_similarity": -0.041875163064105436,
+              "mean_affinity": 0.548583373427391,
+              "mean_shifted_weighted_similarity": -0.006387598652509041
+            }
+          }
+        },
+        {
+          "batch": 13,
+          "anchor_indices": [
+            709,
+            188,
+            1278,
+            1296,
+            608,
+            1312,
+            516,
+            628,
+            261,
+            223,
+            68,
+            637,
+            490,
+            1380,
+            1355,
+            1534
+          ],
+          "loss_seed": 20260943,
+          "pos_intra": -0.15393675863742828,
+          "pos_inter": -0.14998003840446472,
+          "neg_inter": 0.008508194237947464,
+          "weighted_correspondence": -0.13527247551828622,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.41913020610809326,
+              "clamped_affinity_weighted_similarity": 0.4240916669368744,
+              "mean_code_similarity": 0.5917682647705078,
+              "mean_affinity": 0.606852114200592,
+              "mean_shifted_weighted_similarity": 0.14998003840446472
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.013282532396260649,
+              "clamped_affinity_weighted_similarity": 0.0857127180788666,
+              "mean_code_similarity": -0.01564737467560917,
+              "mean_affinity": 0.550968948751688,
+              "mean_shifted_weighted_similarity": -0.00850819467450492
+            }
+          }
+        },
+        {
+          "batch": 14,
+          "anchor_indices": [
+            60,
+            1358,
+            1698,
+            1397,
+            599,
+            1135,
+            384,
+            596,
+            1533,
+            696,
+            689,
+            1245,
+            1732,
+            135,
+            79,
+            1096
+          ],
+          "loss_seed": 20260944,
+          "pos_intra": -0.15380233526229858,
+          "pos_inter": -0.14925925433635712,
+          "neg_inter": 0.007245291024446487,
+          "weighted_correspondence": -0.13579784486442803,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.4097355008125305,
+              "clamped_affinity_weighted_similarity": 0.4150388538837433,
+              "mean_code_similarity": 0.5712627172470093,
+              "mean_affinity": 0.5977575182914734,
+              "mean_shifted_weighted_similarity": 0.14925925433635712
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.023564379604067653,
+              "clamped_affinity_weighted_similarity": 0.09132514102384448,
+              "mean_code_similarity": -0.008167492342181504,
+              "mean_affinity": 0.5508958473801613,
+              "mean_shifted_weighted_similarity": -0.007245291359140538
+            }
+          }
+        },
+        {
+          "batch": 15,
+          "anchor_indices": [
+            777,
+            1303,
+            44,
+            699,
+            1783,
+            1657,
+            712,
+            576,
+            989,
+            474,
+            766,
+            875,
+            1697,
+            1243,
+            1147,
+            980
+          ],
+          "loss_seed": 20260945,
+          "pos_intra": -0.15764625370502472,
+          "pos_inter": -0.15085017681121826,
+          "neg_inter": 0.007125379052013159,
+          "weighted_correspondence": -0.13884654538240285,
+          "pairs": {
+            "knn": {
+              "raw_affinity_weighted_similarity": 0.42003756761550903,
+              "clamped_affinity_weighted_similarity": 0.42348456382751465,
+              "mean_code_similarity": 0.5915700793266296,
+              "mean_affinity": 0.5980113744735718,
+              "mean_shifted_weighted_similarity": 0.15085017681121826
+            },
+            "random": {
+              "raw_affinity_weighted_similarity": 0.02051163651049137,
+              "clamped_affinity_weighted_similarity": 0.0898558096960187,
+              "mean_code_similarity": -0.01363567030057311,
+              "mean_affinity": 0.5514902174472809,
+              "mean_shifted_weighted_similarity": -0.007125379052013159
+            }
+          }
+        }
+      ],
+      "anchor_positive_indices": [
+        [
+          [
+            211,
+            210
+          ],
+          [
+            276,
+            278
+          ],
+          [
+            214,
+            212
+          ],
+          [
+            534,
+            538
+          ],
+          [
+            863,
+            862
+          ],
+          [
+            1385,
+            1384
+          ],
+          [
+            1539,
+            1535
+          ],
+          [
+            1626,
+            1632
+          ],
+          [
+            1089,
+            1087
+          ],
+          [
+            319,
+            317
+          ],
+          [
+            1273,
+            1269
+          ],
+          [
+            1636,
+            1640
+          ],
+          [
+            784,
+            789
+          ],
+          [
+            662,
+            664
+          ],
+          [
+            1151,
+            1150
+          ],
+          [
+            1796,
+            1798
+          ]
+        ],
+        [
+          [
+            1830,
+            1833
+          ],
+          [
+            928,
+            927
+          ],
+          [
+            1523,
+            1520
+          ],
+          [
+            1155,
+            1152
+          ],
+          [
+            1133,
+            1136
+          ],
+          [
+            63,
+            59
+          ],
+          [
+            1203,
+            1204
+          ],
+          [
+            250,
+            253
+          ],
+          [
+            1288,
+            1286
+          ],
+          [
+            59,
+            55
+          ],
+          [
+            1348,
+            1352
+          ],
+          [
+            230,
+            231
+          ],
+          [
+            688,
+            691
+          ],
+          [
+            1464,
+            1462
+          ],
+          [
+            1504,
+            1505
+          ],
+          [
+            268,
+            270
+          ]
+        ],
+        [
+          [
+            686,
+            689
+          ],
+          [
+            1390,
+            1388
+          ],
+          [
+            1042,
+            1039
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            1460,
+            1457
+          ],
+          [
+            795,
+            791
+          ],
+          [
+            246,
+            249
+          ],
+          [
+            383,
+            388
+          ],
+          [
+            27,
+            28
+          ],
+          [
+            1684,
+            1685
+          ],
+          [
+            1776,
+            1779
+          ],
+          [
+            1224,
+            1221
+          ],
+          [
+            1222,
+            1221
+          ],
+          [
+            535,
+            536
+          ],
+          [
+            869,
+            871
+          ],
+          [
+            1003,
+            999
+          ]
+        ],
+        [
+          [
+            482,
+            478
+          ],
+          [
+            283,
+            287
+          ],
+          [
+            1548,
+            1545
+          ],
+          [
+            280,
+            277
+          ],
+          [
+            1064,
+            1066
+          ],
+          [
+            1813,
+            1816
+          ],
+          [
+            1557,
+            1556
+          ],
+          [
+            86,
+            88
+          ],
+          [
+            296,
+            294
+          ],
+          [
+            1166,
+            1161
+          ],
+          [
+            974,
+            978
+          ],
+          [
+            1447,
+            1451
+          ],
+          [
+            734,
+            735
+          ],
+          [
+            1477,
+            1476
+          ],
+          [
+            1190,
+            1194
+          ],
+          [
+            1811,
+            1810
+          ]
+        ],
+        [
+          [
+            1785,
+            1784
+          ],
+          [
+            147,
+            151
+          ],
+          [
+            1061,
+            1059
+          ],
+          [
+            1804,
+            1803
+          ],
+          [
+            1750,
+            1751
+          ],
+          [
+            84,
+            81
+          ],
+          [
+            1118,
+            1117
+          ],
+          [
+            584,
+            583
+          ],
+          [
+            375,
+            381
+          ],
+          [
+            733,
+            735
+          ],
+          [
+            1289,
+            1287
+          ],
+          [
+            1153,
+            1151
+          ],
+          [
+            865,
+            864
+          ],
+          [
+            1584,
+            1583
+          ],
+          [
+            1485,
+            1482
+          ],
+          [
+            558,
+            554
+          ]
+        ],
+        [
+          [
+            1646,
+            1648
+          ],
+          [
+            1756,
+            1758
+          ],
+          [
+            710,
+            707
+          ],
+          [
+            1152,
+            1155
+          ],
+          [
+            1066,
+            1069
+          ],
+          [
+            53,
+            55
+          ],
+          [
+            1283,
+            1284
+          ],
+          [
+            1339,
+            1340
+          ],
+          [
+            982,
+            983
+          ],
+          [
+            947,
+            948
+          ],
+          [
+            273,
+            270
+          ],
+          [
+            289,
+            288
+          ],
+          [
+            1181,
+            1182
+          ],
+          [
+            1230,
+            1232
+          ],
+          [
+            1274,
+            1271
+          ],
+          [
+            894,
+            896
+          ]
+        ],
+        [
+          [
+            798,
+            795
+          ],
+          [
+            1771,
+            1774
+          ],
+          [
+            592,
+            594
+          ],
+          [
+            1322,
+            1320
+          ],
+          [
+            1382,
+            1380
+          ],
+          [
+            943,
+            942
+          ],
+          [
+            1747,
+            1749
+          ],
+          [
+            553,
+            555
+          ],
+          [
+            949,
+            946
+          ],
+          [
+            1043,
+            1038
+          ],
+          [
+            1809,
+            1806
+          ],
+          [
+            259,
+            260
+          ],
+          [
+            1299,
+            1298
+          ],
+          [
+            189,
+            193
+          ],
+          [
+            598,
+            596
+          ],
+          [
+            1658,
+            1657
+          ]
+        ],
+        [
+          [
+            41,
+            39
+          ],
+          [
+            1413,
+            1416
+          ],
+          [
+            632,
+            630
+          ],
+          [
+            1654,
+            1653
+          ],
+          [
+            1119,
+            1115
+          ],
+          [
+            752,
+            750
+          ],
+          [
+            426,
+            431
+          ],
+          [
+            1502,
+            1503
+          ],
+          [
+            514,
+            515
+          ],
+          [
+            148,
+            150
+          ],
+          [
+            1596,
+            1595
+          ],
+          [
+            1769,
+            1772
+          ],
+          [
+            1305,
+            1313
+          ],
+          [
+            836,
+            833
+          ],
+          [
+            328,
+            327
+          ],
+          [
+            204,
+            205
+          ]
+        ],
+        [
+          [
+            1327,
+            1333
+          ],
+          [
+            1466,
+            1467
+          ],
+          [
+            1547,
+            1544
+          ],
+          [
+            858,
+            861
+          ],
+          [
+            933,
+            937
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            373,
+            371
+          ],
+          [
+            741,
+            743
+          ],
+          [
+            1140,
+            1146
+          ],
+          [
+            700,
+            698
+          ],
+          [
+            1807,
+            1803
+          ],
+          [
+            1063,
+            1064
+          ],
+          [
+            314,
+            316
+          ],
+          [
+            32,
+            33
+          ],
+          [
+            1078,
+            1075
+          ]
+        ],
+        [
+          [
+            105,
+            108
+          ],
+          [
+            1221,
+            1223
+          ],
+          [
+            1209,
+            1212
+          ],
+          [
+            1777,
+            1773
+          ],
+          [
+            823,
+            826
+          ],
+          [
+            691,
+            690
+          ],
+          [
+            1812,
+            1813
+          ],
+          [
+            152,
+            151
+          ],
+          [
+            1306,
+            1304
+          ],
+          [
+            1401,
+            1400
+          ],
+          [
+            574,
+            576
+          ],
+          [
+            270,
+            271
+          ],
+          [
+            719,
+            721
+          ],
+          [
+            629,
+            632
+          ],
+          [
+            1582,
+            1581
+          ],
+          [
+            684,
+            685
+          ]
+        ],
+        [
+          [
+            327,
+            328
+          ],
+          [
+            961,
+            962
+          ],
+          [
+            1752,
+            1750
+          ],
+          [
+            1130,
+            1127
+          ],
+          [
+            96,
+            101
+          ],
+          [
+            1773,
+            1770
+          ],
+          [
+            460,
+            1424
+          ],
+          [
+            620,
+            618
+          ],
+          [
+            1631,
+            1630
+          ],
+          [
+            1628,
+            1632
+          ],
+          [
+            1071,
+            1072
+          ],
+          [
+            658,
+            656
+          ],
+          [
+            616,
+            617
+          ],
+          [
+            630,
+            633
+          ],
+          [
+            258,
+            260
+          ],
+          [
+            1277,
+            1280
+          ]
+        ],
+        [
+          [
+            134,
+            135
+          ],
+          [
+            1387,
+            1385
+          ],
+          [
+            735,
+            737
+          ],
+          [
+            1354,
+            1351
+          ],
+          [
+            737,
+            740
+          ],
+          [
+            1431,
+            1433
+          ],
+          [
+            824,
+            817
+          ],
+          [
+            317,
+            313
+          ],
+          [
+            201,
+            199
+          ],
+          [
+            713,
+            712
+          ],
+          [
+            461,
+            462
+          ],
+          [
+            144,
+            143
+          ],
+          [
+            843,
+            841
+          ],
+          [
+            787,
+            790
+          ],
+          [
+            1194,
+            1193
+          ],
+          [
+            1757,
+            1760
+          ]
+        ],
+        [
+          [
+            1494,
+            1497
+          ],
+          [
+            365,
+            366
+          ],
+          [
+            403,
+            396
+          ],
+          [
+            1189,
+            1188
+          ],
+          [
+            1070,
+            1072
+          ],
+          [
+            1144,
+            1141
+          ],
+          [
+            803,
+            802
+          ],
+          [
+            1555,
+            1552
+          ],
+          [
+            844,
+            846
+          ],
+          [
+            1108,
+            1105
+          ],
+          [
+            378,
+            382
+          ],
+          [
+            1758,
+            1761
+          ],
+          [
+            1702,
+            1701
+          ],
+          [
+            625,
+            623
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            586,
+            590
+          ]
+        ],
+        [
+          [
+            709,
+            711
+          ],
+          [
+            188,
+            190
+          ],
+          [
+            1278,
+            1281
+          ],
+          [
+            1296,
+            1300
+          ],
+          [
+            608,
+            609
+          ],
+          [
+            1312,
+            1311
+          ],
+          [
+            516,
+            515
+          ],
+          [
+            628,
+            627
+          ],
+          [
+            261,
+            259
+          ],
+          [
+            223,
+            225
+          ],
+          [
+            68,
+            67
+          ],
+          [
+            637,
+            635
+          ],
+          [
+            490,
+            492
+          ],
+          [
+            1380,
+            1384
+          ],
+          [
+            1355,
+            1350
+          ],
+          [
+            1534,
+            1537
+          ]
+        ],
+        [
+          [
+            60,
+            59
+          ],
+          [
+            1358,
+            1356
+          ],
+          [
+            1698,
+            1700
+          ],
+          [
+            1397,
+            1396
+          ],
+          [
+            599,
+            600
+          ],
+          [
+            1135,
+            1132
+          ],
+          [
+            384,
+            382
+          ],
+          [
+            596,
+            594
+          ],
+          [
+            1533,
+            1531
+          ],
+          [
+            696,
+            695
+          ],
+          [
+            689,
+            688
+          ],
+          [
+            1245,
+            1246
+          ],
+          [
+            1732,
+            1736
+          ],
+          [
+            135,
+            137
+          ],
+          [
+            79,
+            81
+          ],
+          [
+            1096,
+            1098
+          ]
+        ],
+        [
+          [
+            777,
+            780
+          ],
+          [
+            1303,
+            1296
+          ],
+          [
+            44,
+            40
+          ],
+          [
+            699,
+            704
+          ],
+          [
+            1783,
+            1787
+          ],
+          [
+            1657,
+            1661
+          ],
+          [
+            712,
+            715
+          ],
+          [
+            576,
+            578
+          ],
+          [
+            989,
+            992
+          ],
+          [
+            474,
+            470
+          ],
+          [
+            766,
+            769
+          ],
+          [
+            875,
+            876
+          ],
+          [
+            1697,
+            1696
+          ],
+          [
+            1243,
+            1239
+          ],
+          [
+            1147,
+            1148
+          ],
+          [
+            980,
+            983
+          ]
+        ]
+      ],
+      "summary": {
+        "pos_intra": -0.15417801588773727,
+        "pos_inter": -0.15027681272476912,
+        "neg_inter": 0.007604523532791063,
+        "weighted_correspondence": -0.13607762400031786
+      },
+      "pair_means": {
+        "knn": {
+          "raw_affinity_weighted_similarity": 0.41230429522693157,
+          "clamped_affinity_weighted_similarity": 0.4175810180604458,
+          "mean_code_similarity": 0.5749586299061775,
+          "mean_affinity": 0.6005073450505733,
+          "mean_shifted_weighted_similarity": 0.15027681272476912
+        },
+        "random": {
+          "raw_affinity_weighted_similarity": 0.015877986225632412,
+          "clamped_affinity_weighted_similarity": 0.08258611483324785,
+          "mean_code_similarity": -0.015410529478458557,
+          "mean_affinity": 0.5453645980451256,
+          "mean_shifted_weighted_similarity": -0.007604523666941532
+        }
+      },
+      "elapsed_seconds": 38.41123658401193
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "seed": 1,
+  "tolerance": 0.0001,
+  "samples": [
+    {
+      "stem": "CT_5_0048",
+      "iou": 0.6810978169605374,
+      "expected_iou": 0.6810978169605374,
+      "absolute_error": 0.0
+    },
+    {
+      "stem": "CT_6_0047",
+      "iou": 0.905367231638418,
+      "expected_iou": 0.905367231638418,
+      "absolute_error": 0.0
+    },
+    {
+      "stem": "CT_8_0059",
+      "iou": 0.817942470921094,
+      "expected_iou": 0.817942470921094,
+      "absolute_error": 0.0
+    },
+    {
+      "stem": "CT_30_0139",
+      "iou": 0.748618452666987,
+      "expected_iou": 0.748618452666987,
+      "absolute_error": 0.0
+    },
+    {
+      "stem": "CT_5_0095",
+      "iou": 0.23540372670807452,
+      "expected_iou": 0.23540372670807452,
+      "absolute_error": 0.0
+    }
+  ]
+}

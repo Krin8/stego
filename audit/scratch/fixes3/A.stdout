@@ -1,0 +1,256 @@
+/Users/navneetbavineni/STEGO/src/train_segmentation.py:584: UserWarning: 
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="configs", config_name="train_config.yaml")
+AUTHORIZED LIMIT500 BATCHES; CPU; labels only in evaluation; no supervised fitting
+Seed set to 0
+output_root: /Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_A_seed0
+pytorch_data_dir: /Users/navneetbavineni/STEGO/src/pytorch_data_dir
+experiment_name: fixes3_A_seed0
+log_dir: chaos
+azureml_logging: false
+submitting_to_aml: false
+num_workers: 0
+max_steps: 5000
+batch_size: 16
+chaos_modality: CT
+chaos_n_classes: 2
+num_neighbors: 7
+knn_k: 30
+archive_existing_cache: false
+dataset_name: chaos
+use_preprocessed_data: true
+dir_dataset_name: null
+dir_dataset_n_classes: 5
+has_labels: true
+crop_type: five
+crop_ratio: 0.75
+res: 224
+loader_crop_type: center
+extra_clusters: 6
+use_true_labels: false
+use_recalibrator: false
+model_type: vit_base
+arch: biomedclip
+use_text_prompts: false
+text_align_weight: 0.0
+shallow_layer_n: 2
+dino_feat_type: feat
+projection_type: nonlinear
+dino_patch_size: 16
+granularity: 1
+continuous: true
+dim: 70
+dropout: true
+zero_clamp: true
+spatial_weight: 0
+lr: 0.0001
+pretrained_weights: null
+use_salience: false
+stabalize: false
+pointwise: true
+feature_samples: 11
+neg_samples: 20
+aug_alignment_weight: 0.0
+correspondence_weight: 1.0
+neg_inter_weight: 0.63
+pos_inter_weight: 0.25
+pos_intra_weight: 0.67
+neg_inter_shift: 0.46
+pos_inter_shift: 0.12
+pos_intra_shift: 0.18
+rec_weight: 0.0
+crf_weight: 0.0
+alpha: 0.5
+beta: 0.1
+gamma: 0.05
+w1: 10.0
+w2: 3.0
+shift: 0.0
+crf_samples: 2000
+color_space: rgb
+n_images: 5
+scalar_log_freq: 10
+val_freq: 50
+hist_freq: 100
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+collapse_early_stop: true
+collapse_cosine_threshold: 0.99
+collapse_std_threshold: 0.01
+train_linear_probe: false
+
+/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_A_seed0/data
+/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_A_seed0
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+Exception in thread Thread-1:
+Loaded verified KNN neighbors from /Users/navneetbavineni/STEGO/src/pytorch_data_dir/nns/nns_chaos_v2_train_af7eb1c9b4b1f0ef0fa2328fdabb30c9ed455cd55cef7a3b85bc7c673e0ec793.npz, shape=torch.Size([1869, 30])
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/Users/navneetbavineni/STEGO/audit/scratch/fixes3_experiment.py", line 50, in <module>
+    os.chdir(ROOT/'src');training.my_app.__wrapped__(cfg)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/pytorch_lightning/trainer/trainer.py", line 630, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/navneetbavineni/STEGO/src/train_segmentation.py", line 708, in my_app
+    trainer.fit(model, combined_train_loader, val_loader)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/pytorch_lightning/trainer/trainer.py", line 1039, in _run
+    call._call_setup_hook(self)  # allow user to set up LightningModule in accelerator environment
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/pytorch_lightning/trainer/trainer.py", line 584, in fit
+    call._call_and_handle_interrupt(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<6 lines>...
+        weights_only,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/pytorch_lightning/trainer/call.py", line 102, in _call_setup_hook
+    if hasattr(logger, "experiment"):
+       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/lightning_fabric/loggers/logger.py", line 118, in experiment
+    return fn(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/pytorch_lightning/trainer/trainer.py", line 630, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/lightning_fabric/loggers/tensorboard.py", line 195, in experiment
+    self._experiment = SummaryWriter(log_dir=self.log_dir, **self._kwargs)
+                       ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/pytorch_lightning/trainer/trainer.py", line 1039, in _run
+    call._call_setup_hook(self)  # allow user to set up LightningModule in accelerator environment
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/torch/utils/tensorboard/writer.py", line 251, in __init__
+    self._get_file_writer()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/pytorch_lightning/trainer/call.py", line 102, in _call_setup_hook
+    if hasattr(logger, "experiment"):
+       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/torch/utils/tensorboard/writer.py", line 269, in _get_file_writer
+    self.file_writer = FileWriter(
+                       ~~~~~~~~~~^
+        self.log_dir, self.max_queue, self.flush_secs, self.filename_suffix
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/lightning_fabric/loggers/logger.py", line 118, in experiment
+    return fn(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/torch/utils/tensorboard/writer.py", line 76, in __init__
+    self.event_writer = EventFileWriter(
+                        ~~~~~~~~~~~~~~~^
+        log_dir, max_queue, flush_secs, filename_suffix
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/lightning_fabric/loggers/tensorboard.py", line 195, in experiment
+    self._experiment = SummaryWriter(log_dir=self.log_dir, **self._kwargs)
+                       ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/summary/writer/event_file_writer.py", line 100, in __init__
+    self.flush()
+    ~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/torch/utils/tensorboard/writer.py", line 251, in __init__
+    self._get_file_writer()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/summary/writer/event_file_writer.py", line 125, in flush
+    self._async_writer.flush()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/torch/utils/tensorboard/writer.py", line 269, in _get_file_writer
+    self.file_writer = FileWriter(
+                       ~~~~~~~~~~^
+        self.log_dir, self.max_queue, self.flush_secs, self.filename_suffix
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/summary/writer/event_file_writer.py", line 194, in flush
+    self._check_worker_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/torch/utils/tensorboard/writer.py", line 76, in __init__
+    self.event_writer = EventFileWriter(
+                        ~~~~~~~~~~~~~~~^
+        log_dir, max_queue, flush_secs, filename_suffix
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/summary/writer/event_file_writer.py", line 212, in _check_worker_status
+    raise exception
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/summary/writer/event_file_writer.py", line 100, in __init__
+    self.flush()
+    ~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1081, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/summary/writer/event_file_writer.py", line 125, in flush
+    self._async_writer.flush()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/summary/writer/event_file_writer.py", line 244, in run
+    self._run()
+    ~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/summary/writer/event_file_writer.py", line 194, in flush
+    self._check_worker_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/summary/writer/event_file_writer.py", line 275, in _run
+    self._record_writer.write(data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/summary/writer/event_file_writer.py", line 212, in _check_worker_status
+    raise exception
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/summary/writer/record_writer.py", line 40, in write
+    self._writer.write(header + header_crc + data + footer_crc)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1081, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 770, in write
+    self.fs.write(self.filename, file_content, self.binary_mode)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/summary/writer/event_file_writer.py", line 244, in run
+    self._run()
+    ~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 157, in write
+    self._write(filename, file_content, "wb" if binary_mode else "w")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/summary/writer/event_file_writer.py", line 275, in _run
+    self._record_writer.write(data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 171, in _write
+    with io.open(filename, mode, encoding=encoding) as f:
+         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/summary/writer/record_writer.py", line 40, in write
+    self._writer.write(header + header_crc + data + footer_crc)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/navneetbavineni/STEGO/audit/scratch/fixes3_common.py", line 13, in guard
+    p=Path(path).resolve()
+      ~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 770, in write
+    self.fs.write(self.filename, file_content, self.binary_mode)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 150, in __init__
+    raise TypeError(
+    ...<2 lines>...
+        f"not {type(path).__name__!r}")
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 157, in write
+    self._write(filename, file_content, "wb" if binary_mode else "w")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'bytes'
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 171, in _write
+    with io.open(filename, mode, encoding=encoding) as f:
+         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/navneetbavineni/STEGO/audit/scratch/fixes3_common.py", line 13, in guard
+    p=Path(path).resolve()
+      ~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 150, in __init__
+    raise TypeError(
+    ...<2 lines>...
+        f"not {type(path).__name__!r}")
+TypeError: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'bytes'

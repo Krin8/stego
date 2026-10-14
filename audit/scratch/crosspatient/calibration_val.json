@@ -1,0 +1,122 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/crosspatient/calibrate.py",
+  "split": "val",
+  "k_nonself": 30,
+  "anchor_count": 472,
+  "anchor_patients": 4,
+  "labels_used": false,
+  "sampling": "Actual PAIRS/project forward with common anchors/batches/coordinates/random rolls across variants. Retain512 fixed uniformly selected entries of each121x121 affinity matrix; negative calibration retains the first nonzero roll per batch. Positive cross-only uses actual sample/helper on the SAME coordinates. Calibration coordinate seeds offset100000 from purity evaluation.",
+  "calibration": {
+    "intra": {
+      "shift": 0.4797927141189575,
+      "quantile": 0.25,
+      "affinity_samples": 7249920,
+      "sample_attraction": 0.749999724134887
+    },
+    "positive_current": {
+      "shift": 0.47439178824424744,
+      "quantile": 0.25,
+      "affinity_samples": 7249920,
+      "sample_attraction": 0.7499998620674435
+    },
+    "positive_cross": {
+      "shift": 0.4618484675884247,
+      "quantile": 0.25,
+      "affinity_samples": 7249920,
+      "sample_attraction": 0.7499998620674435
+    },
+    "negative": {
+      "shift": 0.7471718192100525,
+      "quantile": 0.85,
+      "affinity_samples": 7249920,
+      "sample_attraction": 0.15
+    }
+  },
+  "prefix_calibration": {
+    "7": {
+      "intra": {
+        "shift": 0.4805009961128235,
+        "quantile": 0.25,
+        "affinity_samples": 1691648,
+        "sample_attraction": 0.75
+      },
+      "positive_current": {
+        "shift": 0.47785699367523193,
+        "quantile": 0.25,
+        "affinity_samples": 1691648,
+        "sample_attraction": 0.7499994088604721
+      },
+      "positive_cross": {
+        "shift": 0.46242454648017883,
+        "quantile": 0.25,
+        "affinity_samples": 1691648,
+        "sample_attraction": 0.75
+      },
+      "negative": {
+        "shift": 0.7470506429672241,
+        "quantile": 0.85,
+        "affinity_samples": 1691648,
+        "sample_attraction": 0.14999988177209442
+      }
+    },
+    "29": {
+      "intra": {
+        "shift": 0.4797838628292084,
+        "quantile": 0.25,
+        "affinity_samples": 7008256,
+        "sample_attraction": 0.7499998573111485
+      },
+      "positive_current": {
+        "shift": 0.47446760535240173,
+        "quantile": 0.25,
+        "affinity_samples": 7008256,
+        "sample_attraction": 0.75
+      },
+      "positive_cross": {
+        "shift": 0.4618241786956787,
+        "quantile": 0.25,
+        "affinity_samples": 7008256,
+        "sample_attraction": 0.75
+      },
+      "negative": {
+        "shift": 0.7471152544021606,
+        "quantile": 0.85,
+        "affinity_samples": 7008256,
+        "sample_attraction": 0.14999994292445937
+      }
+    },
+    "30": {
+      "intra": {
+        "shift": 0.4797927141189575,
+        "quantile": 0.25,
+        "affinity_samples": 7249920,
+        "sample_attraction": 0.749999724134887
+      },
+      "positive_current": {
+        "shift": 0.47439178824424744,
+        "quantile": 0.25,
+        "affinity_samples": 7249920,
+        "sample_attraction": 0.7499998620674435
+      },
+      "positive_cross": {
+        "shift": 0.4618484675884247,
+        "quantile": 0.25,
+        "affinity_samples": 7249920,
+        "sample_attraction": 0.7499998620674435
+      },
+      "negative": {
+        "shift": 0.7471718192100525,
+        "quantile": 0.85,
+        "affinity_samples": 7249920,
+        "sample_attraction": 0.15
+      }
+    }
+  },
+  "original_C_shifts": {
+    "pos_intra_shift": 0.4584466218948364,
+    "pos_inter_shift": 0.45247218012809753,
+    "neg_inter_shift": 0.7459585666656494
+  },
+  "rule": "C heuristic, not Paper A: positive and intra25th percentile; common random-negative85th percentile. No labels. Exact quantiles of the retained Monte Carlo sample, not exhaustive affinity quantiles.",
+  "elapsed_seconds": 91.72963262499252
+}

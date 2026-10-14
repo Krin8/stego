@@ -1,0 +1,175 @@
+{
+  "total_files": 134420,
+  "total_bytes": 241232184494,
+  "categories": {
+    "config/metadata/results": {
+      "files": 1340,
+      "bytes": 339319757
+    },
+    "dataset/derivative": {
+      "files": 55520,
+      "bytes": 9077727991
+    },
+    "environment/dependency": {
+      "files": 29168,
+      "bytes": 938433018
+    },
+    "feature/prediction/metric-array": {
+      "files": 570,
+      "bytes": 115825520705
+    },
+    "figure/image": {
+      "files": 4229,
+      "bytes": 1455929744
+    },
+    "generated-runtime-cache": {
+      "files": 102,
+      "bytes": 28590889
+    },
+    "git-internal": {
+      "files": 41173,
+      "bytes": 29674291930
+    },
+    "log/text": {
+      "files": 1244,
+      "bytes": 116763452
+    },
+    "other": {
+      "files": 521,
+      "bytes": 1919631452
+    },
+    "project-python": {
+      "files": 352,
+      "bytes": 1859897
+    },
+    "report/document": {
+      "files": 62,
+      "bytes": 18421868
+    },
+    "weights/checkpoint": {
+      "files": 139,
+      "bytes": 81835693791
+    }
+  },
+  "project_python_files": 350,
+  "project_python_lines": 29049,
+  "syntax_errors": [
+    {
+      "path": "audit/ensemble/verify4/naming_logic.py",
+      "error": "unexpected indent (naming_logic.py, line 1)"
+    },
+    {
+      "path": "audit/final_pipeline_n3/name_clusters.py",
+      "error": "'(' was never closed (name_clusters.py, line 168)"
+    }
+  ],
+  "identical_python_groups": [
+    [
+      "experiments/stego_calibrated/runtime.py",
+      "experiments/self_training/runtime.py",
+      "experiments/stego_residual/runtime.py",
+      "experiments/stego_masked/runtime.py",
+      "experiments/stego_colocated/runtime.py"
+    ],
+    [
+      "experiments/stego_calibrated/model.py",
+      "experiments/stego_colocated/model.py",
+      "experiments/stego_biomedclip/model.py"
+    ],
+    [
+      "experiments/stego_calibrated/reference_loss.py",
+      "experiments/stego_residual/reference_loss.py",
+      "experiments/stego_masked/reference_loss.py",
+      "experiments/stego_colocated/reference_loss.py",
+      "experiments/stego_biomedclip/reference_loss.py"
+    ],
+    [
+      "experiments/stego_calibrated/seal_predictions.py",
+      "experiments/stego_residual/seal_predictions.py",
+      "experiments/stego_masked/seal_predictions.py",
+      "experiments/stego_biomedclip/seal_predictions.py"
+    ],
+    [
+      "experiments/stego_calibrated/check_state.py",
+      "experiments/stego_residual/check_state.py",
+      "experiments/stego_masked/check_state.py"
+    ],
+    [
+      "experiments/stego_calibrated/evaluate.py",
+      "experiments/self_training/evaluate.py",
+      "experiments/stego_residual/evaluate.py",
+      "experiments/stego_masked/evaluate.py",
+      "experiments/stego_colocated/evaluate.py"
+    ],
+    [
+      "experiments/stego_calibrated/seal_all.py",
+      "experiments/stego_colocated/seal_all.py"
+    ],
+    [
+      "experiments/stego_calibrated/state.py",
+      "experiments/stego_residual/state.py",
+      "experiments/stego_masked/state.py",
+      "experiments/stego_colocated/state.py"
+    ],
+    [
+      "experiments/stego_residual/stages.py",
+      "experiments/stego_masked/stages.py"
+    ],
+    [
+      "experiments/stego_residual/seal_all.py",
+      "experiments/stego_masked/seal_all.py"
+    ],
+    [
+      "picie/fpn.py",
+      "src/picie/fpn.py"
+    ],
+    [
+      "picie/backbone.py",
+      "src/picie/backbone.py"
+    ],
+    [
+      "dino/vision_transformer.py",
+      "src/dino/vision_transformer.py"
+    ],
+    [
+      "dino/utils.py",
+      "src/dino/utils.py"
+    ],
+    [
+      "audit/final_pipeline_n3/package_check.py",
+      "audit/final_pipeline/package_check.py"
+    ],
+    [
+      "audit/final_pipeline_n3/verify_cli.py",
+      "audit/final_pipeline/verify_cli.py"
+    ],
+    [
+      "audit/final_pipeline_n3/run_remaining.py",
+      "audit/final_pipeline/run_remaining.py"
+    ],
+    [
+      "audit/final_pipeline_n3/write_readme.py",
+      "audit/final_pipeline/write_readme.py"
+    ],
+    [
+      "audit/final_pipeline_n3/build_scripts.py",
+      "audit/final_pipeline/build_scripts.py"
+    ],
+    [
+      "audit/final_pipeline_n3/final_verify.py",
+      "audit/final_pipeline/final_verify.py"
+    ],
+    [
+      "audit/final_pipeline_n3/report.py",
+      "audit/final_pipeline/report.py"
+    ],
+    [
+      "audit/final_pipeline_n3/study.py",
+      "audit/final_pipeline/study.py"
+    ],
+    [
+      "audit/dino/pair_score.py",
+      "audit/dino2/pair_score.py"
+    ]
+  ]
+}

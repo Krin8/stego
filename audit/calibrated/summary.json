@@ -1,0 +1,13 @@
+{
+  "stage1": {
+    "0": true,
+    "1": true,
+    "2": true
+  },
+  "stage2_completed": [
+    "0",
+    "1",
+    "2"
+  ],
+  "stageB_complete": true
+}

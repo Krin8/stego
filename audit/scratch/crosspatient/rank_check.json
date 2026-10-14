@@ -1,0 +1,131 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/crosspatient/rank_check.py",
+  "labels_used": false,
+  "result": {
+    "val": {
+      "rows": 1,
+      "changed_rank_entries": 2,
+      "details": [
+        {
+          "anchor": 160,
+          "rank": 16,
+          "recomputed": 250,
+          "stored": 165,
+          "recomputed_similarity": 0.982318639755249,
+          "stored_similarity": 0.9823185205459595,
+          "absolute_difference": 1.1920928955078125e-07
+        },
+        {
+          "anchor": 160,
+          "rank": 17,
+          "recomputed": 165,
+          "stored": 250,
+          "recomputed_similarity": 0.9823185205459595,
+          "stored_similarity": 0.982318639755249,
+          "absolute_difference": 1.1920928955078125e-07
+        }
+      ],
+      "max_similarity_difference": 1.1920928955078125e-07,
+      "same_all29_neighbour_sets": true
+    },
+    "train": {
+      "rows": 5,
+      "changed_rank_entries": 10,
+      "details": [
+        {
+          "anchor": 263,
+          "rank": 24,
+          "recomputed": 1078,
+          "stored": 1189,
+          "recomputed_similarity": 0.9812432527542114,
+          "stored_similarity": 0.9812432527542114,
+          "absolute_difference": 0.0
+        },
+        {
+          "anchor": 263,
+          "rank": 25,
+          "recomputed": 1189,
+          "stored": 1078,
+          "recomputed_similarity": 0.9812432527542114,
+          "stored_similarity": 0.9812432527542114,
+          "absolute_difference": 0.0
+        },
+        {
+          "anchor": 386,
+          "rank": 20,
+          "recomputed": 390,
+          "stored": 398,
+          "recomputed_similarity": 0.986537516117096,
+          "stored_similarity": 0.9865374565124512,
+          "absolute_difference": 5.960464477539063e-08
+        },
+        {
+          "anchor": 386,
+          "rank": 21,
+          "recomputed": 398,
+          "stored": 390,
+          "recomputed_similarity": 0.9865374565124512,
+          "stored_similarity": 0.986537516117096,
+          "absolute_difference": 5.960464477539063e-08
+        },
+        {
+          "anchor": 765,
+          "rank": 24,
+          "recomputed": 751,
+          "stored": 750,
+          "recomputed_similarity": 0.9868146777153015,
+          "stored_similarity": 0.986814558506012,
+          "absolute_difference": 1.1920928955078125e-07
+        },
+        {
+          "anchor": 765,
+          "rank": 25,
+          "recomputed": 750,
+          "stored": 751,
+          "recomputed_similarity": 0.986814558506012,
+          "stored_similarity": 0.9868146777153015,
+          "absolute_difference": 1.1920928955078125e-07
+        },
+        {
+          "anchor": 1564,
+          "rank": 28,
+          "recomputed": 439,
+          "stored": 434,
+          "recomputed_similarity": 0.9877468943595886,
+          "stored_similarity": 0.9877467155456543,
+          "absolute_difference": 1.7881393432617188e-07
+        },
+        {
+          "anchor": 1564,
+          "rank": 29,
+          "recomputed": 434,
+          "stored": 439,
+          "recomputed_similarity": 0.9877467155456543,
+          "stored_similarity": 0.9877468943595886,
+          "absolute_difference": 1.7881393432617188e-07
+        },
+        {
+          "anchor": 1587,
+          "rank": 4,
+          "recomputed": 1589,
+          "stored": 1584,
+          "recomputed_similarity": 0.9950523972511292,
+          "stored_similarity": 0.9950523376464844,
+          "absolute_difference": 5.960464477539063e-08
+        },
+        {
+          "anchor": 1587,
+          "rank": 5,
+          "recomputed": 1584,
+          "stored": 1589,
+          "recomputed_similarity": 0.9950523376464844,
+          "stored_similarity": 0.9950523972511292,
+          "absolute_difference": 5.960464477539063e-08
+        }
+      ],
+      "max_similarity_difference": 1.7881393432617188e-07,
+      "same_all29_neighbour_sets": true
+    }
+  },
+  "elapsed_seconds": 4.022193666998646
+}

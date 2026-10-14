@@ -1,0 +1,39 @@
+{
+  "monitor_global_indices": [
+    22,
+    108,
+    202,
+    297,
+    393,
+    562,
+    577,
+    794,
+    866,
+    1079,
+    1153,
+    1309,
+    1331,
+    1571,
+    1650,
+    1768
+  ],
+  "rows": [
+    {
+      "seed": 0,
+      "code_std": 0.04131733998656273,
+      "cross_image_cosine": 0.8602396845817566
+    },
+    {
+      "seed": 1,
+      "code_std": 0.04575163498520851,
+      "cross_image_cosine": 0.8294805288314819
+    },
+    {
+      "seed": 2,
+      "code_std": 0.05203552171587944,
+      "cross_image_cosine": 0.7803108096122742
+    }
+  ],
+  "reset_parameters_source": "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/torch/nn/modules/conv.py",
+  "reset_parameters_line": 182
+}

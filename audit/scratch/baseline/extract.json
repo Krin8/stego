@@ -1,0 +1,40 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/baseline/extract.py",
+  "train_slices": 1869,
+  "train_patches": 366324,
+  "val_slices": 472,
+  "train_patients": {
+    "1": 93,
+    "2": 81,
+    "10": 107,
+    "14": 93,
+    "16": 89,
+    "18": 106,
+    "19": 90,
+    "21": 170,
+    "22": 101,
+    "23": 180,
+    "24": 96,
+    "25": 118,
+    "26": 107,
+    "27": 182,
+    "28": 102,
+    "29": 154
+  },
+  "val_patients": {
+    "5": 95,
+    "6": 82,
+    "8": 98,
+    "30": 197
+  },
+  "val_feature_max_abs_difference": 0.0,
+  "all_val_labels_match_forensics": true,
+  "train_labels_opened": false,
+  "source_checkpoint": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed0/checkpoints/last.ckpt",
+  "feature_shape": [
+    1869,
+    196,
+    768
+  ],
+  "elapsed_seconds": 80.30977087499923
+}

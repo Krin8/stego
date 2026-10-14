@@ -1,0 +1,18 @@
+{
+  "producer": "report.py",
+  "indices": [
+    1916,
+    2005,
+    2095,
+    2242,
+    1922,
+    2017,
+    2122,
+    2296
+  ],
+  "paths": [
+    "/Users/navneetbavineni/STEGO/audit/naming/N1_eight_slices.png",
+    "/Users/navneetbavineni/STEGO/audit/naming/N2_eight_slices.png",
+    "/Users/navneetbavineni/STEGO/audit/naming/N3_eight_slices.png"
+  ]
+}

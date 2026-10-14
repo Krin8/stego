@@ -1,0 +1,22 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/baseline/final_checks.py",
+  "status": "PASS",
+  "fit_rows": 12,
+  "head_rows": 5,
+  "proxy_checkpoints": 50,
+  "proxy_chunk_runtimes": [
+    134.013781792004,
+    121.65445183299016,
+    122.27462341700448,
+    122.31309133300965,
+    122.60829212499084
+  ],
+  "max_feature_error": 0.0,
+  "max_code_error": 0.0,
+  "best600_final_loss_reproduction_errors": {
+    "600": 0.0,
+    "5000": 0.0
+  },
+  "tracked_source_changes": false,
+  "elapsed_seconds": 2.6224197080009617
+}

@@ -1,0 +1,22 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/improve2/validate.py",
+  "reference_reproduction_exact": true,
+  "all_patient_statistics_verified": true,
+  "temporal_filter_independent_check": true,
+  "surface_distance_synthetic_check": true,
+  "forward_passes": 0,
+  "kmeans_fits": 0,
+  "input_sha256": {
+    "/Users/navneetbavineni/STEGO/audit/improve/B2_448_s0_scores.json": "aa569439312a5dabce2ec15dc5280ea52025b858bbeade7fed42448c2e5051ad",
+    "/Users/navneetbavineni/STEGO/audit/improve/B2_448_s1_scores.json": "0f4b17ed158a4a377f1f88603401980e9ed271e2234a6d90c3e80b7b86b88e26",
+    "/Users/navneetbavineni/STEGO/audit/improve/B2_448_s2_scores.json": "f525a68ccae5629bbd5ead01d30c62a6f1eabbecdf94f378530ac9e950ae48f8",
+    "/Users/navneetbavineni/STEGO/audit/improve/B4_s0_weights.npy": "6db996f7b6520ec209ce3bb1ce412f53a9692ddd5c3d305d42f8dd360f0c23e7",
+    "/Users/navneetbavineni/STEGO/audit/improve/B4_s1_weights.npy": "65b34e3e469a6666888f34e4db363a71dcc14ff7e5058f68f98264487485b126",
+    "/Users/navneetbavineni/STEGO/audit/improve/B4_s2_weights.npy": "3ddd1be08d1f4e23a0715c21ee28684d9f24871a35705072bfcc6d19f409f411",
+    "/Users/navneetbavineni/STEGO/audit/improve/postprocess.py": "08043ad4f8524263e95d78b1fd54f2196b411cee0b15e87b7befd9b092c0bbca",
+    "/Users/navneetbavineni/STEGO/audit/improve/pipeline.py": "fd3b3f4f878a4c93e0aa6a28213b1104408dcb5501ed1a8c123c020fa4fe80a5",
+    "/Users/navneetbavineni/STEGO/audit/improve/scoring_masks_native.npy": "6867155f8867ab8410f5e21ab7b3313cbfef9a2e285d7be15c6dc67b797de75c",
+    "/Users/navneetbavineni/STEGO/audit/improve/scoring_masks_224.npy": "2219b605e37a26bb65eeabd57c2ddff3c594c5559e7cc0e44393d0ec06778b47"
+  },
+  "elapsed_seconds": 4.229619958001422
+}

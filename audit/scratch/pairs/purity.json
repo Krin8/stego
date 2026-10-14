@@ -1,0 +1,1008 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/pairs/purity.py",
+  "seed": 20260930,
+  "protocol": "Seven passes enumerate every top7 non-self validation image-cache edge; each pass shuffles all472 images in batches16 (last8). Actual loss.forward samples11x11 coordinates and min(20,batch) nonzero rolls. Baseline is all unfiltered uniformly sampled patch pairs of identical image-pair type. Positive scalar ID codes expose the exact helper affinity; no learned-code gradient gate is assessed.",
+  "labels": "Only all472 validation masks; 16x16 pixel block majority labels, ties background, nearest sampled at actual feature coordinates. No labels choose images, neighbours, shifts or sampled coordinates.",
+  "shifts": {
+    "pos_intra_shift": 0.4584466218948364,
+    "pos_inter_shift": 0.45247218012809753,
+    "neg_inter_shift": 0.7459585666656494
+  },
+  "patch_label_occupancy": {
+    "liver_fraction": 0.07408768683671951,
+    "mixed_occupancy_patch_fraction": 0.09363109618425369
+  },
+  "summary": {
+    "intra/all": {
+      "image_pair_draws": 3304,
+      "attraction_rate": 0.7852590605538561,
+      "random_unfiltered": {
+        "pairs": 48373864,
+        "same_label": 0.8536096268844681,
+        "liver_liver": 0.011643126131085993,
+        "mixed": 0.14639037311553196,
+        "background_background": 0.8419665007533821,
+        "target_liver_given_anchor_liver": 0.137239011032523,
+        "anchor_liver_pairs": 4103957,
+        "counts_BB_BL_LB_LL": [
+          40729173,
+          3540734,
+          3540734,
+          563223
+        ]
+      },
+      "attracted": {
+        "pairs": 37986015,
+        "same_label": 0.8799960195877351,
+        "liver_liver": 0.01481263565025181,
+        "mixed": 0.12000398041226489,
+        "background_background": 0.8651833839374833,
+        "target_liver_given_anchor_liver": 0.16942980686423886,
+        "anchor_liver_pairs": 3320980,
+        "counts_BB_BL_LB_LL": [
+          32864869,
+          1800166,
+          2758307,
+          562673
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.806912259180907,
+        "BL": 0.5084160515870438,
+        "LB": 0.7790212424881394,
+        "LL": 0.9990234773792974
+      }
+    },
+    "intra/same_patient": {
+      "image_pair_draws": 3304,
+      "attraction_rate": 0.7852590605538561,
+      "random_unfiltered": {
+        "pairs": 48373864,
+        "same_label": 0.8536096268844681,
+        "liver_liver": 0.011643126131085993,
+        "mixed": 0.14639037311553196,
+        "background_background": 0.8419665007533821,
+        "target_liver_given_anchor_liver": 0.137239011032523,
+        "anchor_liver_pairs": 4103957,
+        "counts_BB_BL_LB_LL": [
+          40729173,
+          3540734,
+          3540734,
+          563223
+        ]
+      },
+      "attracted": {
+        "pairs": 37986015,
+        "same_label": 0.8799960195877351,
+        "liver_liver": 0.01481263565025181,
+        "mixed": 0.12000398041226489,
+        "background_background": 0.8651833839374833,
+        "target_liver_given_anchor_liver": 0.16942980686423886,
+        "anchor_liver_pairs": 3320980,
+        "counts_BB_BL_LB_LL": [
+          32864869,
+          1800166,
+          2758307,
+          562673
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.806912259180907,
+        "BL": 0.5084160515870438,
+        "LB": 0.7790212424881394,
+        "LL": 0.9990234773792974
+      }
+    },
+    "intra/cross_patient": {
+      "image_pair_draws": 0,
+      "attraction_rate": null,
+      "random_unfiltered": {
+        "pairs": 0,
+        "same_label": null,
+        "liver_liver": null,
+        "mixed": null,
+        "background_background": null,
+        "target_liver_given_anchor_liver": null,
+        "anchor_liver_pairs": 0,
+        "counts_BB_BL_LB_LL": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "attracted": {
+        "pairs": 0,
+        "same_label": null,
+        "liver_liver": null,
+        "mixed": null,
+        "background_background": null,
+        "target_liver_given_anchor_liver": null,
+        "anchor_liver_pairs": 0,
+        "counts_BB_BL_LB_LL": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": null,
+        "BL": null,
+        "LB": null,
+        "LL": null
+      }
+    },
+    "intra/same_slice": {
+      "image_pair_draws": 3304,
+      "attraction_rate": 0.7852590605538561,
+      "random_unfiltered": {
+        "pairs": 48373864,
+        "same_label": 0.8536096268844681,
+        "liver_liver": 0.011643126131085993,
+        "mixed": 0.14639037311553196,
+        "background_background": 0.8419665007533821,
+        "target_liver_given_anchor_liver": 0.137239011032523,
+        "anchor_liver_pairs": 4103957,
+        "counts_BB_BL_LB_LL": [
+          40729173,
+          3540734,
+          3540734,
+          563223
+        ]
+      },
+      "attracted": {
+        "pairs": 37986015,
+        "same_label": 0.8799960195877351,
+        "liver_liver": 0.01481263565025181,
+        "mixed": 0.12000398041226489,
+        "background_background": 0.8651833839374833,
+        "target_liver_given_anchor_liver": 0.16942980686423886,
+        "anchor_liver_pairs": 3320980,
+        "counts_BB_BL_LB_LL": [
+          32864869,
+          1800166,
+          2758307,
+          562673
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.806912259180907,
+        "BL": 0.5084160515870438,
+        "LB": 0.7790212424881394,
+        "LL": 0.9990234773792974
+      }
+    },
+    "intra/adjacent_slice": {
+      "image_pair_draws": 0,
+      "attraction_rate": null,
+      "random_unfiltered": {
+        "pairs": 0,
+        "same_label": null,
+        "liver_liver": null,
+        "mixed": null,
+        "background_background": null,
+        "target_liver_given_anchor_liver": null,
+        "anchor_liver_pairs": 0,
+        "counts_BB_BL_LB_LL": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "attracted": {
+        "pairs": 0,
+        "same_label": null,
+        "liver_liver": null,
+        "mixed": null,
+        "background_background": null,
+        "target_liver_given_anchor_liver": null,
+        "anchor_liver_pairs": 0,
+        "counts_BB_BL_LB_LL": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": null,
+        "BL": null,
+        "LB": null,
+        "LL": null
+      }
+    },
+    "intra/same_or_adjacent": {
+      "image_pair_draws": 3304,
+      "attraction_rate": 0.7852590605538561,
+      "random_unfiltered": {
+        "pairs": 48373864,
+        "same_label": 0.8536096268844681,
+        "liver_liver": 0.011643126131085993,
+        "mixed": 0.14639037311553196,
+        "background_background": 0.8419665007533821,
+        "target_liver_given_anchor_liver": 0.137239011032523,
+        "anchor_liver_pairs": 4103957,
+        "counts_BB_BL_LB_LL": [
+          40729173,
+          3540734,
+          3540734,
+          563223
+        ]
+      },
+      "attracted": {
+        "pairs": 37986015,
+        "same_label": 0.8799960195877351,
+        "liver_liver": 0.01481263565025181,
+        "mixed": 0.12000398041226489,
+        "background_background": 0.8651833839374833,
+        "target_liver_given_anchor_liver": 0.16942980686423886,
+        "anchor_liver_pairs": 3320980,
+        "counts_BB_BL_LB_LL": [
+          32864869,
+          1800166,
+          2758307,
+          562673
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.806912259180907,
+        "BL": 0.5084160515870438,
+        "LB": 0.7790212424881394,
+        "LL": 0.9990234773792974
+      }
+    },
+    "intra/within_3_slices": {
+      "image_pair_draws": 3304,
+      "attraction_rate": 0.7852590605538561,
+      "random_unfiltered": {
+        "pairs": 48373864,
+        "same_label": 0.8536096268844681,
+        "liver_liver": 0.011643126131085993,
+        "mixed": 0.14639037311553196,
+        "background_background": 0.8419665007533821,
+        "target_liver_given_anchor_liver": 0.137239011032523,
+        "anchor_liver_pairs": 4103957,
+        "counts_BB_BL_LB_LL": [
+          40729173,
+          3540734,
+          3540734,
+          563223
+        ]
+      },
+      "attracted": {
+        "pairs": 37986015,
+        "same_label": 0.8799960195877351,
+        "liver_liver": 0.01481263565025181,
+        "mixed": 0.12000398041226489,
+        "background_background": 0.8651833839374833,
+        "target_liver_given_anchor_liver": 0.16942980686423886,
+        "anchor_liver_pairs": 3320980,
+        "counts_BB_BL_LB_LL": [
+          32864869,
+          1800166,
+          2758307,
+          562673
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.806912259180907,
+        "BL": 0.5084160515870438,
+        "LB": 0.7790212424881394,
+        "LL": 0.9990234773792974
+      }
+    },
+    "intra/same_patient_beyond_3": {
+      "image_pair_draws": 0,
+      "attraction_rate": null,
+      "random_unfiltered": {
+        "pairs": 0,
+        "same_label": null,
+        "liver_liver": null,
+        "mixed": null,
+        "background_background": null,
+        "target_liver_given_anchor_liver": null,
+        "anchor_liver_pairs": 0,
+        "counts_BB_BL_LB_LL": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "attracted": {
+        "pairs": 0,
+        "same_label": null,
+        "liver_liver": null,
+        "mixed": null,
+        "background_background": null,
+        "target_liver_given_anchor_liver": null,
+        "anchor_liver_pairs": 0,
+        "counts_BB_BL_LB_LL": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": null,
+        "BL": null,
+        "LB": null,
+        "LL": null
+      }
+    },
+    "knn/all": {
+      "image_pair_draws": 3304,
+      "attraction_rate": 0.7891864706114856,
+      "random_unfiltered": {
+        "pairs": 48373864,
+        "same_label": 0.8509716734640012,
+        "liver_liver": 0.0110795573411295,
+        "mixed": 0.14902832653599887,
+        "background_background": 0.8398921161228716,
+        "target_liver_given_anchor_liver": 0.13059615390707066,
+        "anchor_liver_pairs": 4103957,
+        "counts_BB_BL_LB_LL": [
+          40628827,
+          3641080,
+          3567996,
+          535961
+        ]
+      },
+      "attracted": {
+        "pairs": 38175999,
+        "same_label": 0.8768713295492281,
+        "liver_liver": 0.014026771113442244,
+        "mixed": 0.12312867045077196,
+        "background_background": 0.8628445584357858,
+        "target_liver_given_anchor_liver": 0.15961824160782545,
+        "anchor_liver_pairs": 3354792,
+        "counts_BB_BL_LB_LL": [
+          32939953,
+          1881254,
+          2819306,
+          535486
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.8107532368581549,
+        "BL": 0.516674722884419,
+        "LB": 0.7901651235035017,
+        "LL": 0.9991137414849215
+      }
+    },
+    "knn/same_patient": {
+      "image_pair_draws": 3293,
+      "attraction_rate": 0.7891766862887672,
+      "random_unfiltered": {
+        "pairs": 48212813,
+        "same_label": 0.8506910808128951,
+        "liver_liver": 0.011095930038348934,
+        "mixed": 0.1493089191871049,
+        "background_background": 0.8395951507745462,
+        "target_liver_given_anchor_liver": 0.13058085567872432,
+        "anchor_liver_pairs": 4096818,
+        "counts_BB_BL_LB_LL": [
+          40479244,
+          3636751,
+          3561852,
+          534966
+        ]
+      },
+      "attracted": {
+        "pairs": 38048428,
+        "same_label": 0.8766433661858514,
+        "liver_liver": 0.014047650010665356,
+        "mixed": 0.12335663381414864,
+        "background_background": 0.862595716175186,
+        "target_liver_given_anchor_liver": 0.15959681195147937,
+        "anchor_liver_pairs": 3349008,
+        "counts_BB_BL_LB_LL": [
+          32820411,
+          1879009,
+          2814517,
+          534491
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.8107960464874294,
+        "BL": 0.5166724364687052,
+        "LB": 0.7901835898852619,
+        "LL": 0.9991120931049824
+      }
+    },
+    "knn/cross_patient": {
+      "image_pair_draws": 11,
+      "attraction_rate": 0.7921155410397949,
+      "random_unfiltered": {
+        "pairs": 161051,
+        "same_label": 0.9349709098360147,
+        "liver_liver": 0.006178167164438594,
+        "mixed": 0.06502909016398532,
+        "background_background": 0.9287927426715761,
+        "target_liver_given_anchor_liver": 0.1393752626418266,
+        "anchor_liver_pairs": 7139,
+        "counts_BB_BL_LB_LL": [
+          149583,
+          4329,
+          6144,
+          995
+        ]
+      },
+      "attracted": {
+        "pairs": 127571,
+        "same_label": 0.9448620768042894,
+        "liver_liver": 0.007799578274059151,
+        "mixed": 0.05513792319571063,
+        "background_background": 0.9370624985302303,
+        "target_liver_given_anchor_liver": 0.17202627939142462,
+        "anchor_liver_pairs": 5784,
+        "counts_BB_BL_LB_LL": [
+          119542,
+          2245,
+          4789,
+          995
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.7991683546927124,
+        "BL": 0.5185955185955186,
+        "LB": 0.7794596354166666,
+        "LL": 1.0
+      }
+    },
+    "knn/same_slice": {
+      "image_pair_draws": 0,
+      "attraction_rate": null,
+      "random_unfiltered": {
+        "pairs": 0,
+        "same_label": null,
+        "liver_liver": null,
+        "mixed": null,
+        "background_background": null,
+        "target_liver_given_anchor_liver": null,
+        "anchor_liver_pairs": 0,
+        "counts_BB_BL_LB_LL": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "attracted": {
+        "pairs": 0,
+        "same_label": null,
+        "liver_liver": null,
+        "mixed": null,
+        "background_background": null,
+        "target_liver_given_anchor_liver": null,
+        "anchor_liver_pairs": 0,
+        "counts_BB_BL_LB_LL": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": null,
+        "BL": null,
+        "LB": null,
+        "LL": null
+      }
+    },
+    "knn/adjacent_slice": {
+      "image_pair_draws": 935,
+      "attraction_rate": 0.7901562785920573,
+      "random_unfiltered": {
+        "pairs": 13689335,
+        "same_label": 0.850912115161182,
+        "liver_liver": 0.01107942789039789,
+        "mixed": 0.14908788483881796,
+        "background_background": 0.8398326872707842,
+        "target_liver_given_anchor_liver": 0.13180558090222558,
+        "anchor_liver_pairs": 1150710,
+        "counts_BB_BL_LB_LL": [
+          11496751,
+          1041874,
+          999040,
+          151670
+        ]
+      },
+      "attracted": {
+        "pairs": 10816714,
+        "same_label": 0.8769900914455167,
+        "liver_liver": 0.014009984917785568,
+        "mixed": 0.12300990855448336,
+        "background_background": 0.862980106527731,
+        "target_liver_given_anchor_liver": 0.16100798123262872,
+        "anchor_liver_pairs": 941208,
+        "counts_BB_BL_LB_LL": [
+          9334609,
+          540897,
+          789666,
+          151542
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.8119345195873164,
+        "BL": 0.5191577868341085,
+        "LB": 0.7904248078155028,
+        "LL": 0.9991560625041208
+      }
+    },
+    "knn/same_or_adjacent": {
+      "image_pair_draws": 935,
+      "attraction_rate": 0.7901562785920573,
+      "random_unfiltered": {
+        "pairs": 13689335,
+        "same_label": 0.850912115161182,
+        "liver_liver": 0.01107942789039789,
+        "mixed": 0.14908788483881796,
+        "background_background": 0.8398326872707842,
+        "target_liver_given_anchor_liver": 0.13180558090222558,
+        "anchor_liver_pairs": 1150710,
+        "counts_BB_BL_LB_LL": [
+          11496751,
+          1041874,
+          999040,
+          151670
+        ]
+      },
+      "attracted": {
+        "pairs": 10816714,
+        "same_label": 0.8769900914455167,
+        "liver_liver": 0.014009984917785568,
+        "mixed": 0.12300990855448336,
+        "background_background": 0.862980106527731,
+        "target_liver_given_anchor_liver": 0.16100798123262872,
+        "anchor_liver_pairs": 941208,
+        "counts_BB_BL_LB_LL": [
+          9334609,
+          540897,
+          789666,
+          151542
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.8119345195873164,
+        "BL": 0.5191577868341085,
+        "LB": 0.7904248078155028,
+        "LL": 0.9991560625041208
+      }
+    },
+    "knn/within_3_slices": {
+      "image_pair_draws": 2584,
+      "attraction_rate": 0.7893368700601792,
+      "random_unfiltered": {
+        "pairs": 37832344,
+        "same_label": 0.8468593169907738,
+        "liver_liver": 0.011564205485126695,
+        "mixed": 0.15314068300922618,
+        "background_background": 0.8352951115056472,
+        "target_liver_given_anchor_liver": 0.13218215777588846,
+        "anchor_liver_pairs": 3309834,
+        "counts_BB_BL_LB_LL": [
+          31601172,
+          2921338,
+          2872333,
+          437501
+        ]
+      },
+      "attracted": {
+        "pairs": 29862464,
+        "same_label": 0.8736169259174327,
+        "liver_liver": 0.01463686988454804,
+        "mixed": 0.12638307408256733,
+        "background_background": 0.8589800560328846,
+        "target_liver_given_anchor_liver": 0.1615944089139728,
+        "anchor_liver_pairs": 2704877,
+        "counts_BB_BL_LB_LL": [
+          25651261,
+          1506326,
+          2267784,
+          437093
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.8117186603079152,
+        "BL": 0.5156287974893696,
+        "LB": 0.7895268410730929,
+        "LL": 0.9990674307030155
+      }
+    },
+    "knn/same_patient_beyond_3": {
+      "image_pair_draws": 709,
+      "attraction_rate": 0.7885928853503633,
+      "random_unfiltered": {
+        "pairs": 10380469,
+        "same_label": 0.8646562115835036,
+        "liver_liver": 0.009389267479147619,
+        "mixed": 0.1353437884164964,
+        "background_background": 0.855266944104356,
+        "target_liver_given_anchor_liver": 0.1238462281317028,
+        "anchor_liver_pairs": 786984,
+        "counts_BB_BL_LB_LL": [
+          8878072,
+          715413,
+          689519,
+          97465
+        ]
+      },
+      "attracted": {
+        "pairs": 8185964,
+        "same_label": 0.8876838451769394,
+        "liver_liver": 0.011898171064519706,
+        "mixed": 0.11231615482306055,
+        "background_background": 0.8757856741124197,
+        "target_liver_given_anchor_liver": 0.15120837221000077,
+        "anchor_liver_pairs": 644131,
+        "counts_BB_BL_LB_LL": [
+          7169150,
+          372683,
+          546733,
+          97398
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.8075120363970916,
+        "BL": 0.5209340618635669,
+        "LB": 0.7929194119378872,
+        "LL": 0.9993125737444211
+      }
+    },
+    "negative/all": {
+      "image_pair_draws": 52416,
+      "attraction_rate": 0.15290100322500774,
+      "random_unfiltered": {
+        "pairs": 767422656,
+        "same_label": 0.8440187567253683,
+        "liver_liver": 0.007270865612807762,
+        "mixed": 0.1559812432746317,
+        "background_background": 0.8367478911125605,
+        "target_liver_given_anchor_liver": 0.08570534057286365,
+        "anchor_liver_pairs": 65104776,
+        "counts_BB_BL_LB_LL": [
+          642139289,
+          60178591,
+          59524949,
+          5579827
+        ]
+      },
+      "attracted": {
+        "pairs": 117339694,
+        "same_label": 0.9509703766570246,
+        "liver_liver": 0.03412540857657256,
+        "mixed": 0.04902962334297548,
+        "background_background": 0.9168449680804519,
+        "target_liver_given_anchor_liver": 0.5519793228224348,
+        "anchor_liver_pairs": 7254375,
+        "counts_BB_BL_LB_LL": [
+          107582308,
+          2503011,
+          3250110,
+          4004265
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.16753733939491125,
+        "BL": 0.041593047600599356,
+        "LB": 0.05460080276591249,
+        "LL": 0.717632464232314
+      }
+    },
+    "negative/same_patient": {
+      "image_pair_draws": 14833,
+      "attraction_rate": 0.15355349365480592,
+      "random_unfiltered": {
+        "pairs": 217169953,
+        "same_label": 0.8604692657459847,
+        "liver_liver": 0.006360124782087142,
+        "mixed": 0.13953073425401533,
+        "background_background": 0.8541091409638976,
+        "target_liver_given_anchor_liver": 0.08400626591811051,
+        "anchor_liver_pairs": 16441964,
+        "counts_BB_BL_LB_LL": [
+          185486842,
+          15241147,
+          15060736,
+          1381228
+        ]
+      },
+      "attracted": {
+        "pairs": 33347205,
+        "same_label": 0.9545050327306291,
+        "liver_liver": 0.03035204899481081,
+        "mixed": 0.04549496726937085,
+        "background_background": 0.9241529837358183,
+        "target_liver_given_anchor_liver": 0.5394304449828443,
+        "anchor_liver_pairs": 1876342,
+        "counts_BB_BL_LB_LL": [
+          30817919,
+          652944,
+          864186,
+          1012156
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.16614611941045393,
+        "BL": 0.0428408701786027,
+        "LB": 0.05738006429433462,
+        "LL": 0.7327942960901459
+      }
+    },
+    "negative/cross_patient": {
+      "image_pair_draws": 37583,
+      "attraction_rate": 0.1526434827890341,
+      "random_unfiltered": {
+        "pairs": 550252703,
+        "same_label": 0.8375261829472558,
+        "liver_liver": 0.007630310541155125,
+        "mixed": 0.16247381705274422,
+        "background_background": 0.8298958724061006,
+        "target_liver_given_anchor_liver": 0.0862794159942915,
+        "anchor_liver_pairs": 48662812,
+        "counts_BB_BL_LB_LL": [
+          456652447,
+          44937444,
+          44464213,
+          4198599
+        ]
+      },
+      "attracted": {
+        "pairs": 83992489,
+        "same_label": 0.9495670261658754,
+        "liver_liver": 0.03562353057545419,
+        "mixed": 0.05043297383412462,
+        "background_background": 0.9139434955904212,
+        "target_liver_given_anchor_liver": 0.5563575009673611,
+        "anchor_liver_pairs": 5378033,
+        "counts_BB_BL_LB_LL": [
+          76764389,
+          1850067,
+          2385924,
+          2992109
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.16810243655608836,
+        "BL": 0.041169831555172565,
+        "LB": 0.05365942269123261,
+        "LL": 0.7126446226467448
+      }
+    },
+    "negative/same_slice": {
+      "image_pair_draws": 0,
+      "attraction_rate": null,
+      "random_unfiltered": {
+        "pairs": 0,
+        "same_label": null,
+        "liver_liver": null,
+        "mixed": null,
+        "background_background": null,
+        "target_liver_given_anchor_liver": null,
+        "anchor_liver_pairs": 0,
+        "counts_BB_BL_LB_LL": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "attracted": {
+        "pairs": 0,
+        "same_label": null,
+        "liver_liver": null,
+        "mixed": null,
+        "background_background": null,
+        "target_liver_given_anchor_liver": null,
+        "anchor_liver_pairs": 0,
+        "counts_BB_BL_LB_LL": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": null,
+        "BL": null,
+        "LB": null,
+        "LL": null
+      }
+    },
+    "negative/adjacent_slice": {
+      "image_pair_draws": 205,
+      "attraction_rate": 0.19015194550552159,
+      "random_unfiltered": {
+        "pairs": 3001405,
+        "same_label": 0.8509234841682479,
+        "liver_liver": 0.011553255891823995,
+        "mixed": 0.14907651583175213,
+        "background_background": 0.8393702282764238,
+        "target_liver_given_anchor_liver": 0.13659604976010212,
+        "anchor_liver_pairs": 253858,
+        "counts_BB_BL_LB_LL": [
+          2519290,
+          228257,
+          219182,
+          34676
+        ]
+      },
+      "attracted": {
+        "pairs": 570723,
+        "same_label": 0.9421715963786285,
+        "liver_liver": 0.04805483570839093,
+        "mixed": 0.05782840362137149,
+        "background_background": 0.8941167606702376,
+        "target_liver_given_anchor_liver": 0.5927638972940261,
+        "anchor_liver_pairs": 46268,
+        "counts_BB_BL_LB_LL": [
+          510293,
+          14162,
+          18842,
+          27426
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.20255429108994993,
+        "BL": 0.06204409941425674,
+        "LB": 0.08596508837404532,
+        "LL": 0.7909216749336717
+      }
+    },
+    "negative/same_or_adjacent": {
+      "image_pair_draws": 205,
+      "attraction_rate": 0.19015194550552159,
+      "random_unfiltered": {
+        "pairs": 3001405,
+        "same_label": 0.8509234841682479,
+        "liver_liver": 0.011553255891823995,
+        "mixed": 0.14907651583175213,
+        "background_background": 0.8393702282764238,
+        "target_liver_given_anchor_liver": 0.13659604976010212,
+        "anchor_liver_pairs": 253858,
+        "counts_BB_BL_LB_LL": [
+          2519290,
+          228257,
+          219182,
+          34676
+        ]
+      },
+      "attracted": {
+        "pairs": 570723,
+        "same_label": 0.9421715963786285,
+        "liver_liver": 0.04805483570839093,
+        "mixed": 0.05782840362137149,
+        "background_background": 0.8941167606702376,
+        "target_liver_given_anchor_liver": 0.5927638972940261,
+        "anchor_liver_pairs": 46268,
+        "counts_BB_BL_LB_LL": [
+          510293,
+          14162,
+          18842,
+          27426
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.20255429108994993,
+        "BL": 0.06204409941425674,
+        "LB": 0.08596508837404532,
+        "LL": 0.7909216749336717
+      }
+    },
+    "negative/within_3_slices": {
+      "image_pair_draws": 668,
+      "attraction_rate": 0.19211706359836847,
+      "random_unfiltered": {
+        "pairs": 9780188,
+        "same_label": 0.8465372035793177,
+        "liver_liver": 0.012018787368913562,
+        "mixed": 0.1534627964206823,
+        "background_background": 0.8345184162104041,
+        "target_liver_given_anchor_liver": 0.13455049106018635,
+        "anchor_liver_pairs": 873620,
+        "counts_BB_BL_LB_LL": [
+          8161747,
+          744821,
+          756074,
+          117546
+        ]
+      },
+      "attracted": {
+        "pairs": 1878941,
+        "same_label": 0.9405574735981598,
+        "liver_liver": 0.04886795274572219,
+        "mixed": 0.05944252640184019,
+        "background_background": 0.8916895208524376,
+        "target_liver_given_anchor_liver": 0.5908280730202241,
+        "anchor_liver_pairs": 155409,
+        "counts_BB_BL_LB_LL": [
+          1675432,
+          48100,
+          63589,
+          91820
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.2052786002800626,
+        "BL": 0.06457927475192025,
+        "LB": 0.08410420144059973,
+        "LL": 0.7811410001191023
+      }
+    },
+    "negative/same_patient_beyond_3": {
+      "image_pair_draws": 14165,
+      "attraction_rate": 0.15173489395679676,
+      "random_unfiltered": {
+        "pairs": 207389765,
+        "same_label": 0.8611262807496792,
+        "liver_liver": 0.006093270803407294,
+        "mixed": 0.13887371925032077,
+        "background_background": 0.855033009946272,
+        "target_liver_given_anchor_liver": 0.08116996900890679,
+        "anchor_liver_pairs": 15568344,
+        "counts_BB_BL_LB_LL": [
+          177325095,
+          14496326,
+          14304662,
+          1263682
+        ]
+      },
+      "attracted": {
+        "pairs": 31468264,
+        "same_label": 0.9553378286136153,
+        "liver_liver": 0.029246481470982955,
+        "mixed": 0.04466217138638471,
+        "background_background": 0.9260913471426323,
+        "target_liver_given_anchor_liver": 0.5347889778393464,
+        "anchor_liver_pairs": 1720933,
+        "counts_BB_BL_LB_LL": [
+          29142487,
+          604844,
+          800597,
+          920336
+        ]
+      },
+      "attraction_given_label_pair": {
+        "BB": 0.1643449676426227,
+        "BL": 0.041723951296349156,
+        "LB": 0.05596755798913669,
+        "LL": 0.728297150707219
+      }
+    }
+  },
+  "cache_locality": {
+    "image_edges": 3304,
+    "unweighted": {
+      "all": 1.0,
+      "same_patient": 0.9966707021791767,
+      "cross_patient": 0.0033292978208232446,
+      "same_slice": 0.0,
+      "adjacent_slice": 0.28299031476997577,
+      "same_or_adjacent": 0.28299031476997577,
+      "within_3_slices": 0.7820823244552058,
+      "same_patient_beyond_3": 0.21458837772397094
+    },
+    "liver_anchor_weighted": {
+      "all": 1.0,
+      "same_patient": 0.9985201550710743,
+      "cross_patient": 0.0014798449289257576,
+      "same_slice": 0.0,
+      "adjacent_slice": 0.28542248530576514,
+      "same_or_adjacent": 0.28542248530576514,
+      "within_3_slices": 0.80609862853808,
+      "same_patient_beyond_3": 0.1924215265329943
+    },
+    "liver_patch_anchor_image_edges": 47978,
+    "liver_patch_count": 6854,
+    "total_patch_count": 92512,
+    "neighbour_image_contains_any_liver": 0.9983117262078453,
+    "target_liver_patch_fraction_uniform_all_patches": 0.11231774172005707,
+    "all_patch_pairs_LL": 1056201,
+    "all_liver_anchor_patch_pairs": 9403688
+  },
+  "elapsed_seconds": 32.06529199999932
+}

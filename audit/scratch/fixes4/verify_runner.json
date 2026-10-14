@@ -1,0 +1,160 @@
+{
+  "before": "Existing FIXES3 runner saves terminal checkpoint only; requested intermediate saves absent",
+  "after": "Scheduled100/250/500 saves and independent500-batch cap pass synthetic callback test; all6 configs differ from FIXES3 only by seed, shifts and output names",
+  "saved_batches": [
+    100,
+    250,
+    500
+  ],
+  "config_differences": {
+    "D0": {
+      "output_root": {
+        "old": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed1",
+        "new": "/Users/navneetbavineni/STEGO/audit/scratch/fixes4/experiments/fixes4_D_seed0"
+      },
+      "pos_intra_shift": {
+        "old": 0.4584466218948364,
+        "new": 0.7965070605278015
+      },
+      "pos_inter_shift": {
+        "old": 0.45247218012809753,
+        "new": 0.7820567488670349
+      },
+      "experiment_name": {
+        "old": "fixes3_C_seed1",
+        "new": "fixes4_D_seed0"
+      },
+      "neg_inter_shift": {
+        "old": 0.7459585666656494,
+        "new": 0.7791634202003479
+      },
+      "seed": {
+        "old": 1,
+        "new": 0
+      }
+    },
+    "D1": {
+      "output_root": {
+        "old": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed1",
+        "new": "/Users/navneetbavineni/STEGO/audit/scratch/fixes4/experiments/fixes4_D_seed1"
+      },
+      "pos_intra_shift": {
+        "old": 0.4584466218948364,
+        "new": 0.7965070605278015
+      },
+      "pos_inter_shift": {
+        "old": 0.45247218012809753,
+        "new": 0.7820567488670349
+      },
+      "experiment_name": {
+        "old": "fixes3_C_seed1",
+        "new": "fixes4_D_seed1"
+      },
+      "neg_inter_shift": {
+        "old": 0.7459585666656494,
+        "new": 0.7791634202003479
+      }
+    },
+    "D2": {
+      "output_root": {
+        "old": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed1",
+        "new": "/Users/navneetbavineni/STEGO/audit/scratch/fixes4/experiments/fixes4_D_seed2"
+      },
+      "pos_intra_shift": {
+        "old": 0.4584466218948364,
+        "new": 0.7965070605278015
+      },
+      "pos_inter_shift": {
+        "old": 0.45247218012809753,
+        "new": 0.7820567488670349
+      },
+      "experiment_name": {
+        "old": "fixes3_C_seed1",
+        "new": "fixes4_D_seed2"
+      },
+      "neg_inter_shift": {
+        "old": 0.7459585666656494,
+        "new": 0.7791634202003479
+      },
+      "seed": {
+        "old": 1,
+        "new": 2
+      }
+    },
+    "E0": {
+      "output_root": {
+        "old": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed1",
+        "new": "/Users/navneetbavineni/STEGO/audit/scratch/fixes4/experiments/fixes4_E_seed0"
+      },
+      "pos_intra_shift": {
+        "old": 0.4584466218948364,
+        "new": 0.8634735345840454
+      },
+      "pos_inter_shift": {
+        "old": 0.45247218012809753,
+        "new": 0.8470812439918518
+      },
+      "experiment_name": {
+        "old": "fixes3_C_seed1",
+        "new": "fixes4_E_seed0"
+      },
+      "neg_inter_shift": {
+        "old": 0.7459585666656494,
+        "new": 0.8234664797782898
+      },
+      "seed": {
+        "old": 1,
+        "new": 0
+      }
+    },
+    "E1": {
+      "output_root": {
+        "old": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed1",
+        "new": "/Users/navneetbavineni/STEGO/audit/scratch/fixes4/experiments/fixes4_E_seed1"
+      },
+      "pos_intra_shift": {
+        "old": 0.4584466218948364,
+        "new": 0.8634735345840454
+      },
+      "pos_inter_shift": {
+        "old": 0.45247218012809753,
+        "new": 0.8470812439918518
+      },
+      "experiment_name": {
+        "old": "fixes3_C_seed1",
+        "new": "fixes4_E_seed1"
+      },
+      "neg_inter_shift": {
+        "old": 0.7459585666656494,
+        "new": 0.8234664797782898
+      }
+    },
+    "E2": {
+      "output_root": {
+        "old": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed1",
+        "new": "/Users/navneetbavineni/STEGO/audit/scratch/fixes4/experiments/fixes4_E_seed2"
+      },
+      "pos_intra_shift": {
+        "old": 0.4584466218948364,
+        "new": 0.8634735345840454
+      },
+      "pos_inter_shift": {
+        "old": 0.45247218012809753,
+        "new": 0.8470812439918518
+      },
+      "experiment_name": {
+        "old": "fixes3_C_seed1",
+        "new": "fixes4_E_seed2"
+      },
+      "neg_inter_shift": {
+        "old": 0.7459585666656494,
+        "new": 0.8234664797782898
+      },
+      "seed": {
+        "old": 1,
+        "new": 2
+      }
+    }
+  },
+  "training_launched": false
+}

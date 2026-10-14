@@ -1,0 +1,27 @@
+{
+  "arm": "D3",
+  "producer": "extract.py",
+  "labels_used": false,
+  "shape": [
+    2341,
+    784,
+    768
+  ],
+  "forward_extraction_seconds": 199.80259470900637,
+  "total_seconds": 205.1698587090068,
+  "checks_file": "D3_checks.json",
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "application_count": 1
+  },
+  "ordered_ids_sha256": "c4627f32d57cff2998de5befc349e1bd5b4340ce94a2bfe84332a750c7995c76"
+}

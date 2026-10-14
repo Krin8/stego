@@ -1,0 +1,25 @@
+{
+  "producer": "figures.py",
+  "indices": [
+    1916,
+    2005,
+    2095,
+    2242,
+    1922,
+    2017,
+    2122,
+    2296
+  ],
+  "path": "/Users/navneetbavineni/STEGO/audit/dino/D1_eight_slices_PCA.png",
+  "PCA_labels_used": false,
+  "GT_labels": "display only; inherited fixed largest-liver slice selection used labels historically",
+  "explained_variance_ratio": [
+    0.18725717067718506,
+    0.06739143282175064,
+    0.041336365044116974
+  ],
+  "scale_percentiles": [
+    1,
+    99
+  ]
+}

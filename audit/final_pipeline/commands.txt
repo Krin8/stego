@@ -1,0 +1,29 @@
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/final_pipeline/study.py mapping --seed 0 --scope inductive
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/final_pipeline/study.py evaluate --seed 0 --scope inductive
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/final_pipeline/study.py mapping --seed 0 --scope all20
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/final_pipeline/study.py fit --seed 1 --scope inductive
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/final_pipeline/study.py mapping --seed 1 --scope inductive
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/final_pipeline/study.py evaluate --seed 1 --scope inductive
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/final_pipeline/study.py mapping --seed 1 --scope all20
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/final_pipeline/study.py fit --seed 2 --scope inductive
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/final_pipeline/study.py mapping --seed 2 --scope inductive
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/final_pipeline/study.py evaluate --seed 2 --scope inductive
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/final_pipeline/study.py mapping --seed 2 --scope all20
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -B /Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py --check --seed 0
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -B /Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py --check --seed 0
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -B /Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py --check --seed 1
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -B /Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py --check --seed 2
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -B /Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py --input /Users/navneetbavineni/STEGO/audit/final_pipeline/cli_test_verified/png_input --output /Users/navneetbavineni/STEGO/audit/final_pipeline/cli_test_verified/png_output
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -B /Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py --input /Users/navneetbavineni/STEGO/audit/final_pipeline/cli_test_verified/dicom_input --output /Users/navneetbavineni/STEGO/audit/final_pipeline/cli_test_verified/dicom_output
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -B /Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py --input /Users/navneetbavineni/STEGO/audit/final_pipeline/cli_test_verified/png_input --output /Users/navneetbavineni/STEGO/audit/final_pipeline/cli_test_verified/png_output
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -B /Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py --input /Users/navneetbavineni/STEGO/audit/final_pipeline/cli_test_verified/f2_input --output /Users/navneetbavineni/STEGO/audit/final_pipeline/cli_test_verified/f2_output --f2 --order-manifest /Users/navneetbavineni/STEGO/audit/final_pipeline/cli_test_verified/order.json
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -B /Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py --input /Users/navneetbavineni/STEGO/audit/final_pipeline/cli_test_verified/f2_input --output /Users/navneetbavineni/STEGO/audit/final_pipeline/cli_test_verified/f2_invalid_output --f2
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -B /Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py --input /Users/navneetbavineni/STEGO/audit/final_pipeline/cli_test_verified/bad_png --output /Users/navneetbavineni/STEGO/audit/final_pipeline/cli_test_verified/bad_png_output
+
+# Additional executed study/verification commands (recorded after completion)
+PYTHONDONTWRITEBYTECODE=1 python3 audit/final_pipeline/study.py fit --seed 0
+PYTHONDONTWRITEBYTECODE=1 python3 audit/final_pipeline/package_check.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/final_pipeline/report.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/final_pipeline/write_readme.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/final_pipeline/verify_cli.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/final_pipeline/final_verify.py

@@ -1,0 +1,82 @@
+{
+  "DINO_v1_ViT_B8": {
+    "status": "FOUND",
+    "files": [
+      {
+        "path": "/Users/navneetbavineni/.cache/torch/hub/checkpoints/dino_vitbase8_pretrain.pth",
+        "bytes": 343279349,
+        "mtime": "2026-04-02T20:06:47.801978+00:00",
+        "sha256": "575f0efc4838938314afa09897a62ed2b87919928b5edcd133abb907328995eb",
+        "patch_embed_shape": [
+          768,
+          3,
+          8,
+          8
+        ],
+        "keys": 150
+      }
+    ]
+  },
+  "DINO_v1_ViT_B16": {
+    "status": "MISSING",
+    "files": []
+  },
+  "DINO_v1_ViT_S8": {
+    "status": "FOUND",
+    "files": [
+      {
+        "path": "/Users/navneetbavineni/.cache/torch/hub/checkpoints/dino_deitsmall8_pretrain.pth",
+        "bytes": 86728949,
+        "mtime": "2026-05-26T08:19:48.019355+00:00",
+        "sha256": "55c8b267f479b614ec20858947ce361ba804846c193e20be74263a096bb6d75e",
+        "patch_embed_shape": [
+          384,
+          3,
+          8,
+          8
+        ],
+        "keys": 150
+      },
+      {
+        "path": "/Users/navneetbavineni/.cache/torch/hub/checkpoints/dino_deitsmall8_300ep_pretrain.pth",
+        "bytes": 86728949,
+        "mtime": "2026-03-31T11:10:58.643313+00:00",
+        "sha256": "10fee18a0e7714de9005f9d56975ca8993d5fb87dab867868e528132d2be176c",
+        "patch_embed_shape": [
+          384,
+          3,
+          8,
+          8
+        ],
+        "keys": 150
+      }
+    ]
+  },
+  "DINOv2_ViT_B14": {
+    "status": "MISSING",
+    "files": []
+  },
+  "DINOv2_ViT_L14": {
+    "status": "FOUND",
+    "files": [
+      {
+        "path": "/Users/navneetbavineni/.cache/torch/hub/checkpoints/dinov2_vitl14_pretrain.pth",
+        "bytes": 1217586395,
+        "mtime": "2026-03-29T14:58:49.620239+00:00",
+        "sha256": "d5383ea8f4877b2472eb973e0fd72d557c7da5d3611bd527ceeb1d7162cbf428",
+        "patch_embed_shape": [
+          1024,
+          3,
+          14,
+          14
+        ],
+        "keys": 343
+      }
+    ]
+  },
+  "other_project_checkpoint": {
+    "path": "/Users/navneetbavineni/STEGO/models/model_epoch_0720_iter_085000.pth",
+    "status": "UNVERIFIED unreadable checkpoint",
+    "error": "PytorchStreamReader failed reading zip archive: failed finding central directory"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "producer": "package_check.py",
+  "selection": "Four IMPROVE fixed val slices plus first other validation record; no label-based selection",
+  "iou_absolute_tolerance": 0.0001,
+  "labels": "all20 labels map deployment artifact; these validation masks test reproducibility only, not held-out performance",
+  "samples": [
+    {
+      "index": 1916,
+      "stem": "CT_5_0048",
+      "image": "src/pytorch_data_dir/preprocessed_v2/val/images/CT_5_0048.png",
+      "mask": "src/pytorch_data_dir/preprocessed_v2/val/labels/CT_5_0048.png",
+      "iou": {
+        "0": 0.6791140735297977,
+        "1": 0.6810978169605374,
+        "2": 0.6791140735297977
+      }
+    },
+    {
+      "index": 2005,
+      "stem": "CT_6_0047",
+      "image": "src/pytorch_data_dir/preprocessed_v2/val/images/CT_6_0047.png",
+      "mask": "src/pytorch_data_dir/preprocessed_v2/val/labels/CT_6_0047.png",
+      "iou": {
+        "0": 0.9002390265102129,
+        "1": 0.905367231638418,
+        "2": 0.9002390265102129
+      }
+    },
+    {
+      "index": 2095,
+      "stem": "CT_8_0059",
+      "image": "src/pytorch_data_dir/preprocessed_v2/val/images/CT_8_0059.png",
+      "mask": "src/pytorch_data_dir/preprocessed_v2/val/labels/CT_8_0059.png",
+      "iou": {
+        "0": 0.8171311765399584,
+        "1": 0.817942470921094,
+        "2": 0.8172097959825465
+      }
+    },
+    {
+      "index": 2242,
+      "stem": "CT_30_0139",
+      "image": "src/pytorch_data_dir/preprocessed_v2/val/images/CT_30_0139.png",
+      "mask": "src/pytorch_data_dir/preprocessed_v2/val/labels/CT_30_0139.png",
+      "iou": {
+        "0": 0.7486785199423354,
+        "1": 0.748618452666987,
+        "2": 0.7486785199423354
+      }
+    },
+    {
+      "index": 1869,
+      "stem": "CT_5_0095",
+      "image": "src/pytorch_data_dir/preprocessed_v2/val/images/CT_5_0095.png",
+      "mask": "src/pytorch_data_dir/preprocessed_v2/val/labels/CT_5_0095.png",
+      "iou": {
+        "0": 0.24161490683229814,
+        "1": 0.23540372670807452,
+        "2": 0.24161490683229814
+      }
+    }
+  ]
+}

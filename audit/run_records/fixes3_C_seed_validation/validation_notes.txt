@@ -1,0 +1,164 @@
+Commit: 97ff83a6d411c229121c929a8eebd5ddfa187761
+
+No source changes, training, datasets/checkpoint modifications, or cache generation.
+Process inventory: sandbox ps failed "operation not permitted: ps". Escalated process inspection rejected by user; existing training status UNVERIFIED. No training will be launched without overlap verification.
+Seed blocker: src/train_segmentation.py:601 hard-codes seed_everything(seed=0). src/configs/train_config.yaml has no seed key. No supported seed parameter was found; +seed would add a field but would NOT change the hard-coded seed.
+Default train_linear_probe remains False in the existing config; no override added.
+Visual review: A raw map uniform cluster4. B raw maps broadly follow body/abdominal regions, but its evaluation mapping gives no liver. C raw maps structured, with liver-like regions and substantial spill into other anatomy. Neither is proven superior.
+
+{
+  "name": "fixes3_A_seed0_retry1",
+  "batches": 217,
+  "early_stopped": true,
+  "monitors": {
+    "code_std": 0.004531973873749655,
+    "cross_image_cosine": 0.9985517448937113,
+    "cluster_usage": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cluster_entropy": -0.0,
+    "consecutive_bad_checks": 3
+  },
+  "cluster_metrics": {
+    "test/cluster/mIoU": 46.17916643619537,
+    "test/cluster/Accuracy": 92.35833287239075,
+    "test/cluster/liver_IoU": 0.0,
+    "test/cluster/liver_Dice": 0.0
+  },
+  "cluster_to_class": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "checkpoint": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_A_seed0_retry1/checkpoints/last.ckpt",
+  "overlay": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/fixes3_A_seed0_retry1_final.png",
+  "evaluated_images": 472
+}
+
+{
+  "name": "fixes3_B_seed0",
+  "batches": 500,
+  "early_stopped": false,
+  "monitors": {
+    "code_std": 0.11218597073679663,
+    "cross_image_cosine": 0.06630412481679238,
+    "cluster_usage": [
+      0.08493792528266603,
+      0.21366413107218524,
+      0.11100561616330855,
+      0.03127030986520667,
+      0.05278964654585351,
+      0.1527198836367174,
+      0.2034564603781131,
+      0.1501560270559495
+    ],
+    "cluster_entropy": 1.942498848645494,
+    "consecutive_bad_checks": 0
+  },
+  "cluster_metrics": {
+    "test/cluster/mIoU": 46.17916643619537,
+    "test/cluster/Accuracy": 92.35833287239075,
+    "test/cluster/liver_IoU": 0.0,
+    "test/cluster/liver_Dice": 0.0
+  },
+  "cluster_to_class": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "checkpoint": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_B_seed0/checkpoints/last.ckpt",
+  "overlay": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/fixes3_B_seed0_final.png",
+  "evaluated_images": 472
+}
+
+{
+  "name": "fixes3_C_seed0",
+  "batches": 500,
+  "early_stopped": false,
+  "monitors": {
+    "code_std": 0.11230376072237969,
+    "cross_image_cosine": 0.04633727798549314,
+    "cluster_usage": [
+      0.05702685023294275,
+      0.156837508242174,
+      0.07101756055971117,
+      0.0834827508863715,
+      0.00011522998367779316,
+      0.19363809728737894,
+      0.2180472617741482,
+      0.21983474103359565
+    ],
+    "cluster_entropy": 1.8330848836968356,
+    "consecutive_bad_checks": 0
+  },
+  "cluster_metrics": {
+    "test/cluster/mIoU": 68.85432004928589,
+    "test/cluster/Accuracy": 94.23068761825562,
+    "test/cluster/liver_IoU": 43.74898970127106,
+    "test/cluster/liver_Dice": 60.86858510971069
+  },
+  "cluster_to_class": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "checkpoint": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed0/checkpoints/last.ckpt",
+  "overlay": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/fixes3_C_seed0_final.png",
+  "evaluated_images": 472
+}
+
+Comparability: original scratch runner used cfg.max_steps=5000 for cosine LR schedule while enforcing500 batches through Trainer. Requested max_steps=500 also sets scheduler T_max=500 (src/train_segmentation.py:568). Thus these requested seed tests would also change LR schedule, not only seed. Configuration has NOT been changed.
+Seed1: BLOCKED, not trained. Seed2: NOT STARTED. Full run: NOT STARTED.
+Safest next action: wire an explicit config seed to seed_everything with default0, then verify seeds1/2; obtain process-inspection permission; confirm whether seed tests should retain the requested500-batch LR schedule or match the original5000-batch schedule.
+
+Configuration-only check finished with exit1; no training executed. Exact Hydra error:
+Could not override 'seed'.
+To append to your config use +seed=1
+Key 'seed' is not in struct
+    full_key: seed
+    object_type=dict
+
+Log: seed1_config_check.log. Matplotlib/fontconfig also emitted unwritable-cache warnings and used a temporary cache; these did not cause the Hydra rejection.
+
+FOLLOW-UP PROCESS CHECK
+Overlap gate BLOCKED. No source modifications or training started.
+Verified process inspection:
+PID 67969 PPID62680 state T elapsed03:07:06 CPU0.0% accumulatedCPU134:01.83
+Python -B train_segmentation.py pytorch_data_dir=/Users/navneetbavineni/STEGO/src/pytorch_data_dir experiment_name=chaos_v2_ct
+PID67970 stateT: tee ../audit/run_records/chaos_v2_ct/train.log
+PID67971 stateT: caffeinate -i python3 -B train_segmentation.py pytorch_data_dir=/Users/navneetbavineni/STEGO/src/pytorch_data_dir experiment_name=chaos_v2_ct
+State T means suspended/stopped; process has not exited and can resume. No process was terminated or resumed.
+Seed1 NOT STARTED. Seed2 NOT STARTED. Full run NOT STARTED. Seed source change NOT APPLIED because initial overlap gate is blocked.
+Safest next action: user terminates the suspended old job or authorizes terminating that job; repeat process check before source edits/training.
+
+AUTHORIZED TERMINATION: Verified PID67969 stateT and exact chaos_v2_ct command. kill -KILL67969 succeeded. Subsequent ps -p67969 returned no process row. Whole process inventory found no Python training process. Suspended caffeinate helper PID67971 remains untouched; this is not a training interpreter.
+
+Seed support: exactly two source lines changed: config seed0 added; actual entrypoint reads cfg.seed. Before test reproduced requested1 observed0; after test verified0/1/2. New scratch runner is the original fixes3_experiment.py with seed argument, explicit supplied data root, config snapshot and T_max5000 assertion; default linear-probe configuration left untouched. Uses original CPU4 threads, batch16, seed-only stochastic difference, actual project loop, 1500 optimizer-step hard cap and500-batch callback. Original TensorBoard-only instrumentation retained; WANDB_MODE=offline. No calibration or shift changes.
+
+Diagnostic CLI --cfg job failed: Could not override cfg; Key cfg is not in struct. This was not a training attempt: existing prep_args (src/utils.py:172-185) rewrites --cfg job into cfg=job. No source change was made for this CLI behavior. Direct Hydra compose verified actual config accepts seed0/1/2 and retains max_steps5000; seed_hydra_compose_verified.log.
+
+Seed1 PASS stability gate:500 batches; std0.111622; cosine0.071909; eight clusters>=1%; entropy1.988681; badchecks0; no earlystop. Visual inspection: broad body silhouette and coherent abdominal regions, not uniform/noisy; no reliable liver delineation. Evaluation majority mapping all background, IoU/Dice0; not used to reject stability. Frozen backbone has no gradients, linear parameters unchanged, no train mask reads (runner assertions). Process check after exit found no Python training process; helper67971 untouched. Seed2 authorized to start with identical protocol, seed2 only.
+
+Seed2 PASS stability gate:500 batches, std0.112867, cosine0.049499, entropy1.956189, badchecks0, eight clusters>=1%, no earlystop. Raw maps show coherent body silhouette/abdominal tissue regions, not uniform or random; coarse and not liver-specific. Liver IoU/Dice0, all clusters majority-background. Seeds1/2 do not reproduce seed0 liver quality; all three resist collapse. Full run gate passes solely stability and coarse visual structure, not label performance. Full run retains default seed0; no seed chosen using labels.

@@ -1,0 +1,29 @@
+{
+  "base": "pipeline.yaml",
+  "training": {
+    "batches": 500,
+    "batch_size": 16,
+    "lr": 0.0005,
+    "optimizer": "Adam",
+    "lr_schedule": null,
+    "feature_samples": 11,
+    "neg_samples": 5,
+    "pointwise": true,
+    "zero_clamp": true,
+    "stabalize": false,
+    "use_salience": false,
+    "pos_intra_shift": 0.794418,
+    "pos_inter_shift": 0.8869667053222656,
+    "neg_inter_shift": 0.797651,
+    "pos_intra_weight": 0.67,
+    "pos_inter_weight": 0.25,
+    "neg_inter_weight": 0.63,
+    "correspondence_weight": 1.0,
+    "monitor_every": 50,
+    "monitor_seed": 104729,
+    "partner_mode": "feature_knn",
+    "knn_k": 30,
+    "num_neighbors": 7
+  },
+  "output": "src2/runs/knn_seed0_training"
+}

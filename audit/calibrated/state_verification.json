@@ -1,0 +1,18 @@
+{
+  "bit_identical_next_update": true,
+  "expected": [
+    0.6073194146156311,
+    0.4072417636703983,
+    0.2268514535642031
+  ],
+  "actual": [
+    0.6073194146156311,
+    0.4072417636703983,
+    0.2268514535642031
+  ],
+  "model_equal": true,
+  "optimizer_equal": true,
+  "rng_equal": true,
+  "boundary": "same CPU runtime/thread count; serialized model, Adam, torch/Python/NumPy/generator RNG, order/cursor, bad-check state",
+  "production_resume": "forbidden; rerun fresh unique directory"
+}

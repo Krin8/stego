@@ -1,0 +1,63 @@
+{
+  "selected_noncollapse_candidate": "C",
+  "label_free_inputs": [
+    {
+      "run": "A",
+      "batches": 217,
+      "early_stopped": true,
+      "code_std": 0.004531973873749655,
+      "cross_image_cosine": 0.9985517448937113,
+      "cluster_usage": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cluster_entropy": -0.0
+    },
+    {
+      "run": "B",
+      "batches": 500,
+      "early_stopped": false,
+      "code_std": 0.11218597073679663,
+      "cross_image_cosine": 0.06630412481679238,
+      "cluster_usage": [
+        0.08493792528266603,
+        0.21366413107218524,
+        0.11100561616330855,
+        0.03127030986520667,
+        0.05278964654585351,
+        0.1527198836367174,
+        0.2034564603781131,
+        0.1501560270559495
+      ],
+      "cluster_entropy": 1.942498848645494
+    },
+    {
+      "run": "C",
+      "batches": 500,
+      "early_stopped": false,
+      "code_std": 0.11230376072237969,
+      "cross_image_cosine": 0.04633727798549314,
+      "cluster_usage": [
+        0.05702685023294275,
+        0.156837508242174,
+        0.07101756055971117,
+        0.0834827508863715,
+        0.00011522998367779316,
+        0.19363809728737894,
+        0.2180472617741482,
+        0.21983474103359565
+      ],
+      "cluster_entropy": 1.8330848836968356
+    }
+  ],
+  "rule": "Reach500 without early-stop; cosine<=.99, std>=.01, >=2 clusters at>=1%; lowest cosine, then highest entropy within1e-4 tie",
+  "label_dependent_reports": "Evaluation-only majority map, liver IoU/Dice and GT overlays; reused DIAG linear reference is supervised and has100-slice scope",
+  "scope": "Only4 validation patients; <=500 batches do not establish final quality or generalization",
+  "full_run_command": "WANDB_MODE=offline python3 -B train_segmentation.py experiment_name=fixes3_full_C max_steps=5000 extra_clusters=6 train_linear_probe=False collapse_early_stop=True pos_intra_shift=0.4584466218948364 pos_inter_shift=0.45247218012809753 neg_inter_shift=0.7459585666656494"
+}

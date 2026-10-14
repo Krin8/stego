@@ -1,0 +1,149 @@
+[
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "-m",
+      "src2.preprocess",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: python3 -m src2.preprocess [-h] [--config CONFIG] --input INPUT\n                                  [--output OUTPUT] [--write]\n\nPlan or create windowed uint16 CT PNGs from one flat input folder.\n\noptions:\n  -h, --help       show this help message and exit\n  --config CONFIG\n  --input INPUT\n  --output OUTPUT\n  --write\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "src2/preprocess.py",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: preprocess.py [-h] [--config CONFIG] --input INPUT [--output OUTPUT]\n                     [--write]\n\nPlan or create windowed uint16 CT PNGs from one flat input folder.\n\noptions:\n  -h, --help       show this help message and exit\n  --config CONFIG\n  --input INPUT\n  --output OUTPUT\n  --write\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "-m",
+      "src2.extract_features",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: python3 -m src2.extract_features [-h] [--config CONFIG] --output OUTPUT\n\nOptional explicit cache creation; never run automatically by evaluation.\n\noptions:\n  -h, --help       show this help message and exit\n  --config CONFIG\n  --output OUTPUT\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "src2/extract_features.py",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: extract_features.py [-h] [--config CONFIG] --output OUTPUT\n\nOptional explicit cache creation; never run automatically by evaluation.\n\noptions:\n  -h, --help       show this help message and exit\n  --config CONFIG\n  --output OUTPUT\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "-m",
+      "src2.train_segmentation",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: python3 -m src2.train_segmentation [-h] [--config CONFIG]\n                                          [--output OUTPUT]\n\nFresh P1 seed-0 training on frozen cached features; final checkpoint only.\n\noptions:\n  -h, --help       show this help message and exit\n  --config CONFIG\n  --output OUTPUT\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "src2/train_segmentation.py",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: train_segmentation.py [-h] [--config CONFIG] [--output OUTPUT]\n\nFresh P1 seed-0 training on frozen cached features; final checkpoint only.\n\noptions:\n  -h, --help       show this help message and exit\n  --config CONFIG\n  --output OUTPUT\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "-m",
+      "src2.fit_clusters",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: python3 -m src2.fit_clusters [-h] [--config CONFIG] [--output OUTPUT]\n\nFit optimized P1 K=8 centres and N2 naming on train images only.\n\noptions:\n  -h, --help       show this help message and exit\n  --config CONFIG\n  --output OUTPUT\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "src2/fit_clusters.py",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: fit_clusters.py [-h] [--config CONFIG] [--output OUTPUT]\n\nFit optimized P1 K=8 centres and N2 naming on train images only.\n\noptions:\n  -h, --help       show this help message and exit\n  --config CONFIG\n  --output OUTPUT\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "-m",
+      "src2.eval_segmentation",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: python3 -m src2.eval_segmentation [-h] [--config CONFIG]\n                                         [--fit-dir FIT_DIR] [--output OUTPUT]\n\nSeal all validation predictions first, then score N2 hard/refined masks.\n\noptions:\n  -h, --help         show this help message and exit\n  --config CONFIG\n  --fit-dir FIT_DIR\n  --output OUTPUT\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "src2/eval_segmentation.py",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: eval_segmentation.py [-h] [--config CONFIG] [--fit-dir FIT_DIR]\n                            [--output OUTPUT]\n\nSeal all validation predictions first, then score N2 hard/refined masks.\n\noptions:\n  -h, --help         show this help message and exit\n  --config CONFIG\n  --fit-dir FIT_DIR\n  --output OUTPUT\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "-m",
+      "src2.demo_segmentation",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: python3 -m src2.demo_segmentation [-h] [--config CONFIG] --input INPUT\n                                         [--fit-dir FIT_DIR] [--output OUTPUT]\n\nPredict new CT PNG/DICOM slices with a saved train-only N2 clustering fit.\n\noptions:\n  -h, --help         show this help message and exit\n  --config CONFIG\n  --input INPUT\n  --fit-dir FIT_DIR\n  --output OUTPUT\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "src2/demo_segmentation.py",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: demo_segmentation.py [-h] [--config CONFIG] --input INPUT\n                            [--fit-dir FIT_DIR] [--output OUTPUT]\n\nPredict new CT PNG/DICOM slices with a saved train-only N2 clustering fit.\n\noptions:\n  -h, --help         show this help message and exit\n  --config CONFIG\n  --input INPUT\n  --fit-dir FIT_DIR\n  --output OUTPUT\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "-m",
+      "src2.visualize_segmentation",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: python3 -m src2.visualize_segmentation [-h] [--config CONFIG]\n                                              [--evaluation-dir EVALUATION_DIR]\n                                              [--output OUTPUT]\n\nRender actual saved cluster/hard/refined arrays; never refit during plotting.\n\noptions:\n  -h, --help            show this help message and exit\n  --config CONFIG\n  --evaluation-dir EVALUATION_DIR\n  --output OUTPUT\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "src2/visualize_segmentation.py",
+      "--help"
+    ],
+    "returncode": 0,
+    "stdout": "usage: visualize_segmentation.py [-h] [--config CONFIG]\n                                 [--evaluation-dir EVALUATION_DIR]\n                                 [--output OUTPUT]\n\nRender actual saved cluster/hard/refined arrays; never refit during plotting.\n\noptions:\n  -h, --help            show this help message and exit\n  --config CONFIG\n  --evaluation-dir EVALUATION_DIR\n  --output OUTPUT\n",
+    "stderr": ""
+  }
+]

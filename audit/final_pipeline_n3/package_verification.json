@@ -1,0 +1,67 @@
+{
+  "producer": "package_check.py",
+  "live_feature_checks": [
+    {
+      "stem": "CT_5_0048",
+      "features_max_abs_error": 0.0,
+      "live_iou": 0.6791140735297977,
+      "reference_iou": 0.6791140735297977,
+      "iou_absolute_error": 0.0
+    },
+    {
+      "stem": "CT_6_0047",
+      "features_max_abs_error": 0.0,
+      "live_iou": 0.9002390265102129,
+      "reference_iou": 0.9002390265102129,
+      "iou_absolute_error": 0.0
+    },
+    {
+      "stem": "CT_8_0059",
+      "features_max_abs_error": 0.0,
+      "live_iou": 0.8171311765399584,
+      "reference_iou": 0.8171311765399584,
+      "iou_absolute_error": 0.0
+    },
+    {
+      "stem": "CT_30_0139",
+      "features_max_abs_error": 0.0,
+      "live_iou": 0.7486785199423354,
+      "reference_iou": 0.7486785199423354,
+      "iou_absolute_error": 0.0
+    },
+    {
+      "stem": "CT_5_0095",
+      "features_max_abs_error": 0.0,
+      "live_iou": 0.24161490683229814,
+      "reference_iou": 0.24161490683229814,
+      "iou_absolute_error": 0.0
+    }
+  ],
+  "dicom_checks": [
+    {
+      "path": "/Users/navneetbavineni/STEGO/src/pytorch_data_dir/archive/CHAOS_Train_Sets/Train_Sets/CT/5/DICOM_anon/i0047,0000b.dcm",
+      "pixel_max_abs_error": 0.0
+    },
+    {
+      "path": "/Users/navneetbavineni/STEGO/src/pytorch_data_dir/archive/CHAOS_Train_Sets/Train_Sets/CT/6/DICOM_anon/i0046,0000b.dcm",
+      "pixel_max_abs_error": 0.0
+    },
+    {
+      "path": "/Users/navneetbavineni/STEGO/src/pytorch_data_dir/archive/CHAOS_Train_Sets/Train_Sets/CT/8/DICOM_anon/i0058,0000b.dcm",
+      "pixel_max_abs_error": 0.0
+    },
+    {
+      "path": "/Users/navneetbavineni/STEGO/src/pytorch_data_dir/archive/CHAOS_Train_Sets/Train_Sets/CT/30/DICOM_anon/IMG-0002-00139.dcm",
+      "pixel_max_abs_error": 0.0
+    },
+    {
+      "path": "/Users/navneetbavineni/STEGO/src/pytorch_data_dir/archive/CHAOS_Train_Sets/Train_Sets/CT/5/DICOM_anon/i0094,0000b.dcm",
+      "pixel_max_abs_error": 0.0
+    }
+  ],
+  "dicom_raw_root": "/Users/navneetbavineni/STEGO/src/pytorch_data_dir/archive/CHAOS_Train_Sets/Train_Sets",
+  "backbone_frozen": true,
+  "model_eval": true,
+  "labels": "Validation masks only compare fixed reference scores; all20 artifact is not an inductive test",
+  "seconds": 17.706273166986648
+}

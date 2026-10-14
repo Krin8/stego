@@ -1,0 +1,63 @@
+{
+  "run": "C",
+  "name": "fixes3_C_seed2",
+  "seed": 2,
+  "batch_budget": 500,
+  "batches": 500,
+  "optimizer_steps": 1500,
+  "early_stopped": false,
+  "monitors": {
+    "code_std": 0.11286678515503402,
+    "cross_image_cosine": 0.04949929049675766,
+    "cluster_usage": [
+      0.1450992928620071,
+      0.2318873581940721,
+      0.06872697933781563,
+      0.08549287862655655,
+      0.09978912364071688,
+      0.12409061628491438,
+      0.040250901572228465,
+      0.20466284948168886
+    ],
+    "cluster_entropy": 1.9561887295105762,
+    "consecutive_bad_checks": 0
+  },
+  "cluster_metrics": {
+    "test/cluster/mIoU": 46.17916643619537,
+    "test/cluster/Accuracy": 92.35833287239075,
+    "test/cluster/liver_IoU": 0.0,
+    "test/cluster/liver_Dice": 0.0
+  },
+  "cluster_to_class": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "shifts": {
+    "pos_intra_shift": 0.4584466218948364,
+    "pos_inter_shift": 0.45247218012809753,
+    "neg_inter_shift": 0.7459585666656494
+  },
+  "supervised_reference": {
+    "liver_IoU": 60.889639267877435,
+    "scope": "Existing DIAG frozen final-block probe on100 val slices; identical reference, NOT a fitted per-run code probe"
+  },
+  "checkpoint": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed2/checkpoints/last.ckpt",
+  "overlay": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/fixes3_C_seed2_final.png",
+  "logged_overlay": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed2/logs/chaos/chaos_fixes3_C_seed2_date_Sep30_19-30-11/lightning_logs/version_0/fixed_slices_batch_000500.png",
+  "fixed_samples": [
+    "CT_5_0048",
+    "CT_6_0047",
+    "CT_8_0059",
+    "CT_30_0139"
+  ],
+  "evaluated_images": 472,
+  "linear_parameters_unchanged": true,
+  "train_mask_reads": 0,
+  "elapsed_seconds": 947.2968601659959
+}

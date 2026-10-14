@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py", line 204, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py", line 178, in main
+    if a.order_manifest is None:raise ValueError('F2 PNG requires --order-manifest; filename order is not physical position')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: F2 PNG requires --order-manifest; filename order is not physical position

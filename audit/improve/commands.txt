@@ -1,0 +1,24 @@
+# Run from /Users/navneetbavineni/STEGO. All scripts CPU/offline; writes constrained to audit/improve.
+PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/prepare.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/ceiling.py
+for seed in 0 1 2; do
+  PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/fit.py --variant B0 --seed "$seed"
+  PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/score.py --variant B0 --seed "$seed"
+done
+for variant in B1 B2_336 B2_448 B3 B6; do
+  PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/extract.py --variant "$variant"
+  for seed in 0 1 2; do
+    PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/fit.py --variant "$variant" --seed "$seed"
+    PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/score.py --variant "$variant" --seed "$seed"
+  done
+done
+PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/select_parent.py
+for seed in 0 1 2; do
+  PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/soft_weights.py --seed "$seed"
+  PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/postprocess.py --seed "$seed"
+done
+PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/checks.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/report.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/figures.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/validate.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/improve/report.py

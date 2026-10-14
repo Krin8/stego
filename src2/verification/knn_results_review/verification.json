@@ -1,0 +1,25 @@
+{
+  "artifact_hashes_verified": true,
+  "batches": 500,
+  "validation_slices": 472,
+  "monitor_checks": 10,
+  "all_monitor_checks_healthy": true,
+  "selected_cluster": 2,
+  "labels_use": "validation labels for score verification and GT display only",
+  "empty_slice_diagnostics": {
+    "hard": {
+      "slices": 0,
+      "with_false_positives": 0,
+      "mean_fp_pixels": null
+    },
+    "refined": {
+      "slices": 0,
+      "with_false_positives": 0,
+      "mean_fp_pixels": null
+    }
+  },
+  "metric_values_verified": true,
+  "checkpoint": "/Users/navneetbavineni/STEGO/src2/runs/knn_seed0_training/final.pt",
+  "checkpoint_bytes": 8420944,
+  "figure": "/Users/navneetbavineni/STEGO/src2/verification/knn_results_review/fixed_slices.png"
+}

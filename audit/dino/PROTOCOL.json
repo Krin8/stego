@@ -1,0 +1,109 @@
+{
+  "locked_at_utc": "2026-10-01T23:36:47.031532+00:00",
+  "arms": {
+    "D1": {
+      "backbone": "DINO_v1_ViT_B8",
+      "input": 224,
+      "grid": 28,
+      "status": "RUN"
+    },
+    "D2": {
+      "backbone": "DINO_v1_ViT_B16",
+      "input": 448,
+      "grid": 28,
+      "status": "SKIP_MISSING"
+    },
+    "D3": {
+      "backbone": "DINOv2_ViT_B14",
+      "input": 392,
+      "grid": 28,
+      "status": "SKIP_MISSING"
+    }
+  },
+  "preprocessing": {
+    "window_hu": [
+      -150,
+      250
+    ],
+    "storage": "existing native512 uint16 derivatives /65535",
+    "spatial": "IMPROVE B2 label-free body square crop, threshold.05, LCC8,5% each-side margin,zero padding; no physical resampling",
+    "resize": "bilinear antialias",
+    "grayscale_channels": 3,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "normalization_application_count": 1,
+    "orientation": "native",
+    "features": "final block LayerNorm tokens, CLS removed, patch L2, uncentered"
+  },
+  "segmentation": {
+    "patients": 20,
+    "slices": 2341,
+    "K": [
+      8,
+      2
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "fit": "all slices, all patches, no labels",
+    "kmeans": {
+      "init": "k-means++",
+      "n_init": 3,
+      "max_iter": 100,
+      "tol": 0.0001,
+      "algorithm": "lloyd",
+      "copy_x": false
+    },
+    "mapping": "other19 labels only; K8 strict-majority and exhaustive optimal subset; K2 Hungarian maximizing confusion count",
+    "outside_crop": "forced background not eligible for mapping",
+    "scoring": [
+      224,
+      512
+    ],
+    "mask_resize": "nearest",
+    "aggregation": "pool pixels per patient; average seeds per patient, then equal-patient mean/sample SD/min/max",
+    "postprocessing": "none"
+  },
+  "selectivity": {
+    "cohort": "all472 validation slices; 4 patients",
+    "sources": [
+      "D1",
+      "BiomedCLIP_B2_448"
+    ],
+    "pool": "same-image",
+    "sampling": "SELECTIVITY/PAIRS batch order, seeds, actual loss.forward coordinates;7 passes,11x11 coordinates;fixed2048 of14641 pair positions",
+    "centering": "actual project helper pointwise restored-global-mean, zero_clamp=True,stabalize=False",
+    "budgets": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "thresholds": "global affinity quantiles; labels not read until scores/cuts saved",
+    "labels": "common28x28 majority cells of body-cropped nearest448 mask, ties background; actual nearest sampler coordinates",
+    "reference": "BiomedCLIP cached B2_44828-grid; original SELECTIVITY14-grid full-frame reference listed separately as historical"
+  },
+  "figures": {
+    "indices": [
+      1916,
+      2005,
+      2095,
+      2242,
+      1922,
+      2017,
+      2122,
+      2296
+    ],
+    "pca": "fit label-free on these8 feature grids jointly; deterministic full SVD; each RGB component scales using joint1st/99th percentiles; no scoring/selection"
+  },
+  "decision": "justified only if an available declared arm reaches K8 224 LOPO liver IoU >=62.87% and same-image liver-anchor AUC >=.90; report mapping rule triggering gate explicitly; no head training"
+}

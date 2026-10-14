@@ -1,0 +1,32 @@
+{
+  "224": {
+    "supported": true,
+    "shape": [
+      1,
+      768,
+      14,
+      14
+    ]
+  },
+  "336": {
+    "supported": true,
+    "shape": [
+      1,
+      768,
+      21,
+      21
+    ]
+  },
+  "448": {
+    "supported": true,
+    "shape": [
+      1,
+      768,
+      28,
+      28
+    ]
+  },
+  "position_interpolation_code": "    def _pos_embed(self, x: torch.Tensor) -> torch.Tensor:\n        \"\"\"Apply positional embedding to input.\"\"\"\n        if self.pos_embed is None:\n            return x.view(x.shape[0], -1, x.shape[-1])\n\n        if self.dynamic_img_size:\n            B, H, W, C = x.shape\n            prev_grid_size = self.patch_embed.grid_size\n            pos_embed = resample_abs_pos_embed(\n                self.pos_embed,\n                new_size=(H, W),\n                old_size=prev_grid_size,\n                num_prefix_tokens=0 if self.no_embed_class else self.num_prefix_tokens,\n            )\n            x = x.view(B, -1, C)\n        else:\n            pos_embed = self.pos_embed\n\n        to_cat = []\n        if self.cls_token is not None:\n            to_cat.append(self.cls_token.expand(x.shape[0], -1, -1))\n        if self.reg_token is not None:\n            to_cat.append(self.reg_token.expand(x.shape[0], -1, -1))\n\n        if self.no_embed_class:\n            # deit-3, updated JAX (big vision)\n            # position embedding does not overlap with class token, add then concat\n            x = x + pos_embed\n            if to_cat:\n                x = torch.cat(to_cat + [x], dim=1)\n        else:\n            # original timm, JAX, and deit vit impl\n            # pos_embed has entry for class token, concat then add\n            if to_cat:\n                x = torch.cat(to_cat + [x], dim=1)\n            x = x + pos_embed\n\n        return self.pos_drop(x)\n",
+  "script": "/Users/navneetbavineni/STEGO/audit/improve/prepare.py",
+  "elapsed_seconds": 34.62533354200423
+}

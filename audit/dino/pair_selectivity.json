@@ -1,0 +1,156 @@
+{
+  "producer": "pair_score.py",
+  "labels": "Only472 validation masks for diagnostic AUC/AP/precision/recall; thresholds/affinities were saved label-free first",
+  "label_grid": "common body-crop nearest448 then16x16 majority ->28x28; ties background; PAIRS actual nearest sampler",
+  "results": {
+    "D1": {
+      "pairs": 6766592,
+      "liver_anchor_pairs": 530420,
+      "liver_target_pairs": 69815,
+      "liver_target_base_rate": 0.1316221107801365,
+      "auc": 0.9316439752389252,
+      "average_precision": 0.7624173197448734,
+      "sweep": [
+        {
+          "budget": 0.05,
+          "threshold": 0.7534567922353743,
+          "attraction": 0.050000059113952784,
+          "liver_target_precision": 0.9429864253393665,
+          "liver_pair_recall": 0.23880254959535915,
+          "liver_background_attraction": 0.002188426091770606,
+          "same_label": 0.994425560842964,
+          "attracted_liver_anchor_pairs": 17680,
+          "counts_BB_BL_LB_LL": [
+            319772,
+            878,
+            1008,
+            16672
+          ]
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.6165334582328799,
+          "attraction": 0.10000011822790557,
+          "liver_target_precision": 0.8816741037082628,
+          "liver_pair_recall": 0.41037026426985607,
+          "liver_background_attraction": 0.008347716590136885,
+          "same_label": 0.989004817781456,
+          "attracted_liver_anchor_pairs": 32495,
+          "counts_BB_BL_LB_LL": [
+            640570,
+            3595,
+            3845,
+            28650
+          ]
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.42587846517562866,
+          "attraction": 0.19999994088604722,
+          "liver_target_precision": 0.6879859615082818,
+          "liver_pair_recall": 0.690725488791807,
+          "liver_background_attraction": 0.047481030383951545,
+          "same_label": 0.9693752687838335,
+          "attracted_liver_anchor_pairs": 70093,
+          "counts_BB_BL_LB_LL": [
+            1263650,
+            19575,
+            21870,
+            48223
+          ]
+        }
+      ],
+      "precision_envelopes": {
+        "r50": {
+          "target_recall": 0.5,
+          "precision": 0.8359595766080751,
+          "actual_recall": 0.5000071617847167,
+          "inclusive_threshold": 0.5549255609512329,
+          "overall_attraction": 0.12672139830508475
+        },
+        "r75": {
+          "target_recall": 0.75,
+          "precision": 0.6261824182920558,
+          "actual_recall": 0.7500107426770751,
+          "inclusive_threshold": 0.3852863013744354,
+          "overall_attraction": 0.2314460514244098
+        }
+      }
+    },
+    "BiomedCLIP_B2_448": {
+      "pairs": 6766592,
+      "liver_anchor_pairs": 530420,
+      "liver_target_pairs": 69815,
+      "liver_target_base_rate": 0.1316221107801365,
+      "auc": 0.9683638434450452,
+      "average_precision": 0.8577433099967458,
+      "sweep": [
+        {
+          "budget": 0.05,
+          "threshold": 0.9141591787338257,
+          "attraction": 0.04999991132907082,
+          "liver_target_precision": 0.8631416412458103,
+          "liver_pair_recall": 0.6565637756929027,
+          "liver_background_attraction": 0.015779246860107902,
+          "same_label": 0.9578280312949821,
+          "attracted_liver_anchor_pairs": 53106,
+          "counts_BB_BL_LB_LL": [
+            278223,
+            7000,
+            7268,
+            45838
+          ]
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.8663409233093262,
+          "attraction": 0.09999997044302361,
+          "liver_target_precision": 0.7932436894078099,
+          "liver_pair_recall": 0.757100909546659,
+          "liver_background_attraction": 0.029910660978495675,
+          "same_label": 0.9608458618004047,
+          "attracted_liver_anchor_pairs": 66634,
+          "counts_BB_BL_LB_LL": [
+            597308,
+            12717,
+            13777,
+            52857
+          ]
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.7954046726226807,
+          "attraction": 0.19999994088604722,
+          "liver_target_precision": 0.6726734743820775,
+          "liver_pair_recall": 0.8661748907827831,
+          "liver_background_attraction": 0.0638855418417082,
+          "same_label": 0.9594182594187027,
+          "attracted_liver_anchor_pairs": 89898,
+          "counts_BB_BL_LB_LL": [
+            1237926,
+            25494,
+            29426,
+            60472
+          ]
+        }
+      ],
+      "precision_envelopes": {
+        "r50": {
+          "target_recall": 0.5,
+          "precision": 0.9260723096103345,
+          "actual_recall": 0.5000644560624508,
+          "inclusive_threshold": 0.9666395783424377,
+          "overall_attraction": 0.020613626475484263
+        },
+        "r75": {
+          "target_recall": 0.75,
+          "precision": 0.7989472078120232,
+          "actual_recall": 0.7500250662465087,
+          "inclusive_threshold": 0.8700827956199646,
+          "overall_attraction": 0.09540991979418886
+        }
+      }
+    }
+  },
+  "seconds": 3.2628370840102434
+}

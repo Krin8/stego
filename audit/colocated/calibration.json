@@ -1,0 +1,10 @@
+{
+  "shift": 1.0410113334655762,
+  "attraction": 0.19999156687468375,
+  "pairs": 23716,
+  "valid_samples": 196,
+  "skipped_samples": 4,
+  "affinity_mean": 0.9817366003990173,
+  "source": "verify.py",
+  "labels_used": false
+}

@@ -1,0 +1,262 @@
+{
+  "producer": "/Users/navneetbavineni/STEGO/audit/project_review_20261005/check_artifacts.py",
+  "labels_opened": false,
+  "training_steps": 0,
+  "cache_rows_checked": [
+    0,
+    1869,
+    1964,
+    2046,
+    2144
+  ],
+  "feature_cache_shape": [
+    2341,
+    784,
+    768
+  ],
+  "checkpoints": [
+    {
+      "path": "experiments/stego_colocated/P1/stage2/checkpoints/seed0/final.pt",
+      "bytes": 8417040,
+      "sha256": "1454f1bb8d2261a9a56a0fbcd6bed1d8946bf8cd7ff319d697b108ec16d28f1b",
+      "step": 500,
+      "seed": 0,
+      "state_keys": [
+        "cluster1.0.weight",
+        "cluster1.0.bias",
+        "cluster2.0.weight",
+        "cluster2.0.bias",
+        "cluster2.2.weight",
+        "cluster2.2.bias"
+      ],
+      "config_sha_matches": true,
+      "current_source_hash_matches": {
+        "run_round.py": true,
+        "runtime.py": true,
+        "model.py": true,
+        "stages.py": true,
+        "reference_loss.py": true,
+        "loss.py": true,
+        "train.py": false,
+        "check_state.py": true,
+        "evaluate.py": true,
+        "seal_all.py": true,
+        "state.py": true
+      },
+      "optimizer_group_parameter_counts": [
+        6
+      ],
+      "optimizer_learning_rates": [
+        0.0005
+      ],
+      "optimized_missing_keys": [],
+      "optimized_unexpected_keys": [
+        "cluster1.0.weight",
+        "cluster1.0.bias"
+      ],
+      "feature_shape": [
+        5,
+        768,
+        28,
+        28
+      ],
+      "feature_norm_mean": 1.0,
+      "full_output_norm_mean": 1.0,
+      "optimized_output_norm_mean": 0.29881584644317627,
+      "mean_direction_cosine": 0.5367600917816162,
+      "max_abs_output_difference": 0.4520469903945923,
+      "deterministic": true
+    },
+    {
+      "path": "experiments/stego_colocated/P1/stage2/checkpoints/seed1/final.pt",
+      "bytes": 8417104,
+      "sha256": "837fed0c86c74d8fe678a29e780360d0ecaa294f3e79c69f5eb8a8a4ade64b96",
+      "step": 500,
+      "seed": 1,
+      "state_keys": [
+        "cluster1.0.weight",
+        "cluster1.0.bias",
+        "cluster2.0.weight",
+        "cluster2.0.bias",
+        "cluster2.2.weight",
+        "cluster2.2.bias"
+      ],
+      "config_sha_matches": true,
+      "current_source_hash_matches": {
+        "run_round.py": true,
+        "runtime.py": true,
+        "model.py": true,
+        "stages.py": true,
+        "reference_loss.py": true,
+        "loss.py": true,
+        "train.py": false,
+        "check_state.py": true,
+        "evaluate.py": true,
+        "seal_all.py": true,
+        "state.py": true
+      },
+      "optimizer_group_parameter_counts": [
+        6
+      ],
+      "optimizer_learning_rates": [
+        0.0005
+      ],
+      "optimized_missing_keys": [],
+      "optimized_unexpected_keys": [
+        "cluster1.0.weight",
+        "cluster1.0.bias"
+      ],
+      "feature_shape": [
+        5,
+        768,
+        28,
+        28
+      ],
+      "feature_norm_mean": 1.0,
+      "full_output_norm_mean": 1.0,
+      "optimized_output_norm_mean": 0.30446571111679077,
+      "mean_direction_cosine": 0.5192591547966003,
+      "max_abs_output_difference": 0.42808395624160767,
+      "deterministic": true
+    },
+    {
+      "path": "experiments/stego_colocated/P1/stage2/checkpoints/seed2/final.pt",
+      "bytes": 8417104,
+      "sha256": "0cf04d2cdd26f1ec97b7c99cf272b5e3e7315b7a4626523cf31b233ae82c3b01",
+      "step": 500,
+      "seed": 2,
+      "state_keys": [
+        "cluster1.0.weight",
+        "cluster1.0.bias",
+        "cluster2.0.weight",
+        "cluster2.0.bias",
+        "cluster2.2.weight",
+        "cluster2.2.bias"
+      ],
+      "config_sha_matches": true,
+      "current_source_hash_matches": {
+        "run_round.py": true,
+        "runtime.py": true,
+        "model.py": true,
+        "stages.py": true,
+        "reference_loss.py": true,
+        "loss.py": true,
+        "train.py": false,
+        "check_state.py": true,
+        "evaluate.py": true,
+        "seal_all.py": true,
+        "state.py": true
+      },
+      "optimizer_group_parameter_counts": [
+        6
+      ],
+      "optimizer_learning_rates": [
+        0.0005
+      ],
+      "optimized_missing_keys": [],
+      "optimized_unexpected_keys": [
+        "cluster1.0.weight",
+        "cluster1.0.bias"
+      ],
+      "feature_shape": [
+        5,
+        768,
+        28,
+        28
+      ],
+      "feature_norm_mean": 1.0,
+      "full_output_norm_mean": 1.0,
+      "optimized_output_norm_mean": 0.3095329999923706,
+      "mean_direction_cosine": 0.5069647431373596,
+      "max_abs_output_difference": 0.533578097820282,
+      "deterministic": true
+    }
+  ],
+  "saved_original_F1_scores": [
+    {
+      "seed": 0,
+      "scale": "224",
+      "names": {
+        "N1": 3,
+        "N2": 3,
+        "N3": 3
+      },
+      "patient_macro_iou": 67.65628156032778,
+      "patient_sd_iou": 2.4606174470332935,
+      "patient_macro_dice": 80.68907903237626,
+      "all_patient_pooled_iou": 67.80695867986452,
+      "all_patient_pooled_dice": 80.81543127090927
+    },
+    {
+      "seed": 0,
+      "scale": "512",
+      "names": {
+        "N1": 3,
+        "N2": 3,
+        "N3": 3
+      },
+      "patient_macro_iou": 67.63526666367238,
+      "patient_sd_iou": 2.439502142996694,
+      "patient_macro_dice": 80.67445452195156,
+      "all_patient_pooled_iou": 67.78201894309639,
+      "all_patient_pooled_dice": 80.79771523798959
+    },
+    {
+      "seed": 1,
+      "scale": "224",
+      "names": {
+        "N1": 1,
+        "N2": 1,
+        "N3": 1
+      },
+      "patient_macro_iou": 66.7888366626076,
+      "patient_sd_iou": 2.3959562147552793,
+      "patient_macro_dice": 80.06935662943975,
+      "all_patient_pooled_iou": 66.94754894235484,
+      "all_patient_pooled_dice": 80.20189498615652
+    },
+    {
+      "seed": 1,
+      "scale": "512",
+      "names": {
+        "N1": 1,
+        "N2": 1,
+        "N3": 1
+      },
+      "patient_macro_iou": 66.7647467083303,
+      "patient_sd_iou": 2.37518220029818,
+      "patient_macro_dice": 80.05235545402454,
+      "all_patient_pooled_iou": 66.91980013948384,
+      "all_patient_pooled_dice": 80.18197970949329
+    },
+    {
+      "seed": 2,
+      "scale": "224",
+      "names": {
+        "N1": 3,
+        "N2": 3,
+        "N3": 3
+      },
+      "patient_macro_iou": 68.75899157829754,
+      "patient_sd_iou": 2.227029278387007,
+      "patient_macro_dice": 81.47226577858737,
+      "all_patient_pooled_iou": 68.92931619528287,
+      "all_patient_pooled_dice": 81.60728729358064
+    },
+    {
+      "seed": 2,
+      "scale": "512",
+      "names": {
+        "N1": 3,
+        "N2": 3,
+        "N3": 3
+      },
+      "patient_macro_iou": 68.75903237543808,
+      "patient_sd_iou": 2.1978535487424318,
+      "patient_macro_dice": 81.47271145872182,
+      "all_patient_pooled_iou": 68.91893474492903,
+      "all_patient_pooled_dice": 81.60001109289257
+    }
+  ],
+  "claimed_score_text_matches": []
+}

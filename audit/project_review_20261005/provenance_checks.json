@@ -1,0 +1,170 @@
+{
+  "producer": "/Users/navneetbavineni/STEGO/audit/project_review_20261005/provenance_checks.py",
+  "git_commit": "6afbd3d0d0d14f12920c93780d85fbcd8d0d306a",
+  "checkpoint_train_source_sha256": "7b75f5d76e5497f6a146617cba469283550ddbaf1ffb26a9c47d772f9386f952",
+  "matching_git_commits": [
+    "3947cad6e3648dead44d3a0d5b185f8659f2ae2e"
+  ],
+  "patient_slice_counts": {
+    "train": {
+      "1": 93,
+      "2": 81,
+      "10": 107,
+      "14": 93,
+      "16": 89,
+      "18": 106,
+      "19": 90,
+      "21": 170,
+      "22": 101,
+      "23": 180,
+      "24": 96,
+      "25": 118,
+      "26": 107,
+      "27": 182,
+      "28": 102,
+      "29": 154
+    },
+    "val": {
+      "5": 95,
+      "6": 82,
+      "8": 98,
+      "30": 197
+    }
+  },
+  "patient_overlap": [],
+  "final_monitors": [
+    {
+      "seed": 0,
+      "source": "experiments/stego_colocated/P1/stage2/logs/seed0_complete.json",
+      "batches": 500,
+      "final": {
+        "seed": 0,
+        "batch": 500,
+        "loss": 0.0029035480692982674,
+        "pos_intra": -0.01113036461174488,
+        "pos_inter": 0.018273407593369484,
+        "neg_inter": 0.009194509126245975,
+        "code_std": 0.11353005468845367,
+        "cross_image_cosine": 0.021001342684030533,
+        "cluster_usage": [
+          0.06010841836734694,
+          0.20232780612244897,
+          0.15122767857142858,
+          0.05365114795918367,
+          0.2497608418367347,
+          0.11535395408163265,
+          0.12611607142857142,
+          0.04145408163265306
+        ],
+        "cluster_entropy": 1.9236035040475903,
+        "monitor_loss": -0.03374600037932396,
+        "healthy": true,
+        "consecutive_bad_checks": 0,
+        "collapse_detected": false
+      }
+    },
+    {
+      "seed": 1,
+      "source": "experiments/stego_colocated/P1/stage2/logs/seed1_complete.json",
+      "batches": 500,
+      "final": {
+        "seed": 1,
+        "batch": 500,
+        "loss": -0.004895717836916447,
+        "pos_intra": -0.012237557210028172,
+        "pos_inter": -0.003385096089914441,
+        "neg_inter": 0.006586857605725527,
+        "code_std": 0.11409512907266617,
+        "cross_image_cosine": 0.022079994902014732,
+        "cluster_usage": [
+          0.12547831632653061,
+          0.21022002551020408,
+          0.15282206632653061,
+          0.2510363520408163,
+          0.039939413265306124,
+          0.05994897959183673,
+          0.05333227040816327,
+          0.10722257653061225
+        ],
+        "cluster_entropy": 1.9154226896120714,
+        "monitor_loss": -0.033810269087553024,
+        "healthy": true,
+        "consecutive_bad_checks": 0,
+        "collapse_detected": false
+      }
+    },
+    {
+      "seed": 2,
+      "source": "experiments/stego_colocated/P1/stage2/logs/seed2_complete.json",
+      "batches": 500,
+      "final": {
+        "seed": 2,
+        "batch": 500,
+        "loss": -0.012543321587145329,
+        "pos_intra": -0.012224644422531128,
+        "pos_inter": -0.027494024485349655,
+        "neg_inter": 0.004001104738563299,
+        "code_std": 0.1131102442741394,
+        "cross_image_cosine": 0.028304584324359894,
+        "cluster_usage": [
+          0.13161670918367346,
+          0.10762117346938775,
+          0.20798788265306123,
+          0.15473533163265307,
+          0.04057716836734694,
+          0.24346301020408162,
+          0.06018813775510204,
+          0.053810586734693876
+        ],
+        "cluster_entropy": 1.9225324351752728,
+        "monitor_loss": -0.033688321709632874,
+        "healthy": true,
+        "consecutive_bad_checks": 0,
+        "collapse_detected": false
+      }
+    }
+  ],
+  "normalization_examples": [
+    {
+      "windowed_intensity": 0.0,
+      "expected_BiomedCLIP": [
+        -1.79226253374815,
+        -1.7520971281645974,
+        -1.4802197687835659
+      ],
+      "current_eval": [
+        -2.1179039301310043,
+        -2.0357142857142856,
+        -1.8044444444444445
+      ]
+    },
+    {
+      "windowed_intensity": 0.5,
+      "expected_BiomedCLIP": [
+        0.06903686020532225,
+        0.16139335478432704,
+        0.33283861013700516
+      ],
+      "current_eval": [
+        0.06550218340611359,
+        0.19642857142857134,
+        0.41777777777777764
+      ]
+    },
+    {
+      "windowed_intensity": 1.0,
+      "expected_BiomedCLIP": [
+        1.930336254158794,
+        2.0748838377332515,
+        2.1458969890575763
+      ],
+      "current_eval": [
+        2.2489082969432315,
+        2.428571428571429,
+        2.6399999999999997
+      ]
+    }
+  ],
+  "labels_opened": false,
+  "training_steps": 0
+}

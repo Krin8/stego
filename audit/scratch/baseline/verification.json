@@ -1,0 +1,38 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/baseline/verify.py",
+  "synthetic_confusion_and_mapping_checks": "PASS K8 and K16",
+  "fit_rows": 12,
+  "head_rows": 5,
+  "all_successful_fits_under_570_seconds": true,
+  "label_free_partition_ARI": {
+    "K8 center0 seed0 vs seed1": 0.999948838423087,
+    "K8 center0 seed0 vs seed2": 0.999948838423087,
+    "K8 center0 seed1 vs seed2": 1.0,
+    "K16 center0 seed0 vs seed1": 0.7771173304831336,
+    "K16 center0 seed0 vs seed2": 0.7758289614914438,
+    "K16 center0 seed1 vs seed2": 0.9979115020327581,
+    "K8 center1 seed0 vs seed1": 0.7882771524417397,
+    "K8 center1 seed0 vs seed2": 0.6193087224603997,
+    "K8 center1 seed1 vs seed2": 0.7479572129506464,
+    "K16 center1 seed0 vs seed1": 0.8648326510109333,
+    "K16 center1 seed0 vs seed2": 0.8417317105518568,
+    "K16 center1 seed1 vs seed2": 0.9231742918212346
+  },
+  "linear_artifact_search_roots": [
+    "/Users/navneetbavineni/STEGO/audit/scratch/diag",
+    "/Users/navneetbavineni/STEGO/audit/run_records"
+  ],
+  "linear_artifact_filename_hits": [],
+  "DIAG_model_saved_flags": {
+    "/Users/navneetbavineni/STEGO/audit/scratch/diag/ceiling_b12_c0.json": false,
+    "/Users/navneetbavineni/STEGO/audit/scratch/diag/ceiling_b12_c1.json": false
+  },
+  "git_commit": "e3c3ab0e396c194a7314d64546c81e9ba4973b72",
+  "tracked_diff": "",
+  "source_reuse_sha256": {
+    "audit/scratch/forensics/common.py": "52f0a47092d5c5355afd1774cebb1241ad995800e1bec01c6b317f32ea628c94",
+    "audit/scratch/forensics/task1.py": "9bb66fad8b4ed891ee5a4bb2a2e448e57ab1deb4fbdef82fe8ccd7b60e3cec97",
+    "audit/scratch/forensics/task2.py": "950f0aafbcf02537cf4bab8f8c0d47306558a8bdeb334a82fac837a1f27a43bf"
+  },
+  "elapsed_seconds": 5.531723749998491
+}

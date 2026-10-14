@@ -1,0 +1,1984 @@
+[
+  {
+    "confusion": [
+      [
+        1272074,
+        35
+      ],
+      [
+        4934238,
+        6954
+      ],
+      [
+        2551249,
+        1311621
+      ],
+      [
+        333527,
+        818
+      ],
+      [
+        5392372,
+        410
+      ],
+      [
+        1826045,
+        376218
+      ],
+      [
+        1947523,
+        113726
+      ],
+      [
+        3616262,
+        0
+      ]
+    ],
+    "pixels": 23683072,
+    "liver_pixels": 1809782,
+    "clusters": [
+      {
+        "cluster": 0,
+        "pixel_fraction": 0.05371385097338724,
+        "liver_pixels": 35,
+        "background_pixels": 1272074,
+        "precision": 2.751336559996038e-05,
+        "recall": 1.9339345843864068e-05
+      },
+      {
+        "cluster": 1,
+        "pixel_fraction": 0.20863813613369075,
+        "liver_pixels": 6954,
+        "background_pixels": 4934238,
+        "precision": 0.001407352719748595,
+        "recall": 0.003842451742806592
+      },
+      {
+        "cluster": 2,
+        "pixel_fraction": 0.16310679628048252,
+        "liver_pixels": 1311621,
+        "background_pixels": 2551249,
+        "precision": 0.33954572636407643,
+        "recall": 0.7247397752878524
+      },
+      {
+        "cluster": 3,
+        "pixel_fraction": 0.014117467531239191,
+        "liver_pixels": 818,
+        "background_pixels": 333527,
+        "precision": 0.002446574645949543,
+        "recall": 0.0004519881400080231
+      },
+      {
+        "cluster": 4,
+        "pixel_fraction": 0.22770618608937218,
+        "liver_pixels": 410,
+        "background_pixels": 5392372,
+        "precision": 7.602754941697995e-05,
+        "recall": 0.00022654662274240766
+      },
+      {
+        "cluster": 5,
+        "pixel_fraction": 0.09298890785789951,
+        "liver_pixels": 376218,
+        "background_pixels": 1826045,
+        "precision": 0.17083245734047206,
+        "recall": 0.20788028613391005
+      },
+      {
+        "cluster": 6,
+        "pixel_fraction": 0.08703469718793237,
+        "liver_pixels": 113726,
+        "background_pixels": 1947523,
+        "precision": 0.055173343928850906,
+        "recall": 0.06283961272683672
+      },
+      {
+        "cluster": 7,
+        "pixel_fraction": 0.1526939579459962,
+        "liver_pixels": 0,
+        "background_pixels": 3616262,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    ],
+    "majority": {
+      "clusters": [],
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1809782
+    },
+    "optimal": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.30075938465009766,
+      "dice": 0.46243661694741717,
+      "precision": 0.33954572636407643,
+      "recall": 0.7247397752878524,
+      "tp": 1311621,
+      "fp": 2551249,
+      "fn": 498161
+    },
+    "thresholds": {
+      "10": {
+        "clusters": [
+          2,
+          5
+        ],
+        "iou": 0.2728007543466413,
+        "dice": 0.42866215063908625,
+        "precision": 0.2782855709841812,
+        "recall": 0.9326200614217623,
+        "tp": 1687839,
+        "fp": 4377294,
+        "fn": 121943
+      },
+      "20": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.30075938465009766,
+        "dice": 0.46243661694741717,
+        "precision": 0.33954572636407643,
+        "recall": 0.7247397752878524,
+        "tp": 1311621,
+        "fp": 2551249,
+        "fn": 498161
+      },
+      "30": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.30075938465009766,
+        "dice": 0.46243661694741717,
+        "precision": 0.33954572636407643,
+        "recall": 0.7247397752878524,
+        "tp": 1311621,
+        "fp": 2551249,
+        "fn": 498161
+      },
+      "40": {
+        "clusters": [],
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1809782
+      }
+    },
+    "best_single": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.30075938465009766,
+      "dice": 0.46243661694741717,
+      "precision": 0.33954572636407643,
+      "recall": 0.7247397752878524,
+      "tp": 1311621,
+      "fp": 2551249,
+      "fn": 498161
+    },
+    "active": 8,
+    "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=17-step=6300-mIoU=test/cluster/mIoU=46.1792.ckpt",
+    "batch": 2100,
+    "optimizer_step": 6300,
+    "stored_miou": 46.1792,
+    "stored_score_validation_batch": 2089,
+    "backbone_equal": true,
+    "feature_reuse_error": 0.0,
+    "code_reuse_error": 0.0,
+    "script": "/Users/navneetbavineni/STEGO/audit/scratch/forensics/task5.py",
+    "elapsed_seconds": 13.34937004200765
+  },
+  {
+    "confusion": [
+      [
+        1245379,
+        35
+      ],
+      [
+        4772798,
+        5788
+      ],
+      [
+        2590463,
+        1325438
+      ],
+      [
+        517194,
+        1100
+      ],
+      [
+        5424795,
+        518
+      ],
+      [
+        1559532,
+        322350
+      ],
+      [
+        2211415,
+        154553
+      ],
+      [
+        3551714,
+        0
+      ]
+    ],
+    "pixels": 23683072,
+    "liver_pixels": 1809782,
+    "clusters": [
+      {
+        "cluster": 0,
+        "pixel_fraction": 0.052586674566542715,
+        "liver_pixels": 35,
+        "background_pixels": 1245379,
+        "precision": 2.8103104670414817e-05,
+        "recall": 1.9339345843864068e-05
+      },
+      {
+        "cluster": 1,
+        "pixel_fraction": 0.20177221941477863,
+        "liver_pixels": 5788,
+        "background_pixels": 4772798,
+        "precision": 0.0012112369642400492,
+        "recall": 0.0031981752498367205
+      },
+      {
+        "cluster": 2,
+        "pixel_fraction": 0.16534599058770755,
+        "liver_pixels": 1325438,
+        "background_pixels": 2590463,
+        "precision": 0.3384758705595468,
+        "recall": 0.7323743964742715
+      },
+      {
+        "cluster": 3,
+        "pixel_fraction": 0.02188457646035109,
+        "liver_pixels": 1100,
+        "background_pixels": 517194,
+        "precision": 0.0021223475479168192,
+        "recall": 0.0006078080122357279
+      },
+      {
+        "cluster": 4,
+        "pixel_fraction": 0.22907978323082412,
+        "liver_pixels": 518,
+        "background_pixels": 5424795,
+        "precision": 9.547836226223262e-05,
+        "recall": 0.0002862223184891882
+      },
+      {
+        "cluster": 5,
+        "pixel_fraction": 0.07946105978143377,
+        "liver_pixels": 322350,
+        "background_pixels": 1559532,
+        "precision": 0.1712912924402274,
+        "recall": 0.17811537522198806
+      },
+      {
+        "cluster": 6,
+        "pixel_fraction": 0.09990122902974749,
+        "liver_pixels": 154553,
+        "background_pixels": 2211415,
+        "precision": 0.0653233687015209,
+        "recall": 0.08539868337733494
+      },
+      {
+        "cluster": 7,
+        "pixel_fraction": 0.14996846692861468,
+        "liver_pixels": 0,
+        "background_pixels": 3551714,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    ],
+    "majority": {
+      "clusters": [],
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1809782
+    },
+    "optimal": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.30121913666170863,
+      "dice": 0.46297987506468663,
+      "precision": 0.3384758705595468,
+      "recall": 0.7323743964742715,
+      "tp": 1325438,
+      "fp": 2590463,
+      "fn": 484344
+    },
+    "thresholds": {
+      "10": {
+        "clusters": [
+          2,
+          5
+        ],
+        "iou": 0.27648484163081943,
+        "dice": 0.43319721882100254,
+        "precision": 0.2842100161389276,
+        "recall": 0.9104897716962596,
+        "tp": 1647788,
+        "fp": 4149995,
+        "fn": 161994
+      },
+      "20": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.30121913666170863,
+        "dice": 0.46297987506468663,
+        "precision": 0.3384758705595468,
+        "recall": 0.7323743964742715,
+        "tp": 1325438,
+        "fp": 2590463,
+        "fn": 484344
+      },
+      "30": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.30121913666170863,
+        "dice": 0.46297987506468663,
+        "precision": 0.3384758705595468,
+        "recall": 0.7323743964742715,
+        "tp": 1325438,
+        "fp": 2590463,
+        "fn": 484344
+      },
+      "40": {
+        "clusters": [],
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1809782
+      }
+    },
+    "best_single": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.30121913666170863,
+      "dice": 0.46297987506468663,
+      "precision": 0.3384758705595468,
+      "recall": 0.7323743964742715,
+      "tp": 1325438,
+      "fp": 2590463,
+      "fn": 484344
+    },
+    "active": 8,
+    "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=18-step=6600-mIoU=test/cluster/mIoU=46.1792.ckpt",
+    "batch": 2200,
+    "optimizer_step": 6600,
+    "stored_miou": 46.1792,
+    "stored_score_validation_batch": 2156,
+    "backbone_equal": true,
+    "feature_reuse_error": 0.0,
+    "code_reuse_error": 0.0,
+    "script": "/Users/navneetbavineni/STEGO/audit/scratch/forensics/task5.py",
+    "elapsed_seconds": 21.780832125004963
+  },
+  {
+    "confusion": [
+      [
+        1245716,
+        35
+      ],
+      [
+        5398983,
+        8315
+      ],
+      [
+        2519730,
+        1280867
+      ],
+      [
+        331929,
+        997
+      ],
+      [
+        5101705,
+        270
+      ],
+      [
+        1695979,
+        379138
+      ],
+      [
+        2190920,
+        140160
+      ],
+      [
+        3388328,
+        0
+      ]
+    ],
+    "pixels": 23683072,
+    "liver_pixels": 1809782,
+    "clusters": [
+      {
+        "cluster": 0,
+        "pixel_fraction": 0.05260090413946299,
+        "liver_pixels": 35,
+        "background_pixels": 1245716,
+        "precision": 2.809550223118424e-05,
+        "recall": 1.9339345843864068e-05
+      },
+      {
+        "cluster": 1,
+        "pixel_fraction": 0.22831911333124352,
+        "liver_pixels": 8315,
+        "background_pixels": 5398983,
+        "precision": 0.0015377365922869426,
+        "recall": 0.004594476019763706
+      },
+      {
+        "cluster": 2,
+        "pixel_fraction": 0.16047736543637584,
+        "liver_pixels": 1280867,
+        "background_pixels": 2519730,
+        "precision": 0.3370173159637815,
+        "recall": 0.7077465683712182
+      },
+      {
+        "cluster": 3,
+        "pixel_fraction": 0.014057551317666898,
+        "liver_pixels": 997,
+        "background_pixels": 331929,
+        "precision": 0.002994659473877078,
+        "recall": 0.0005508950801809279
+      },
+      {
+        "cluster": 4,
+        "pixel_fraction": 0.21542707804122707,
+        "liver_pixels": 270,
+        "background_pixels": 5101705,
+        "precision": 5.292068267680653e-05,
+        "recall": 0.00014918923936695137
+      },
+      {
+        "cluster": 5,
+        "pixel_fraction": 0.08762026311451487,
+        "liver_pixels": 379138,
+        "background_pixels": 1695979,
+        "precision": 0.18270680641139753,
+        "recall": 0.20949374013002672
+      },
+      {
+        "cluster": 6,
+        "pixel_fraction": 0.09842810932635766,
+        "liver_pixels": 140160,
+        "background_pixels": 2190920,
+        "precision": 0.06012663658046914,
+        "recall": 0.07744579181359965
+      },
+      {
+        "cluster": 7,
+        "pixel_fraction": 0.14306961529315115,
+        "liver_pixels": 0,
+        "background_pixels": 3388328,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    ],
+    "majority": {
+      "clusters": [],
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1809782
+    },
+    "optimal": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.2958455825968377,
+      "dice": 0.4566062292761327,
+      "precision": 0.3370173159637815,
+      "recall": 0.7077465683712182,
+      "tp": 1280867,
+      "fp": 2519730,
+      "fn": 528915
+    },
+    "thresholds": {
+      "10": {
+        "clusters": [
+          2,
+          5
+        ],
+        "iou": 0.27549705077976216,
+        "dice": 0.43198383032142623,
+        "precision": 0.2825197073921569,
+        "recall": 0.9172403085012449,
+        "tp": 1660005,
+        "fp": 4215709,
+        "fn": 149777
+      },
+      "20": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.2958455825968377,
+        "dice": 0.4566062292761327,
+        "precision": 0.3370173159637815,
+        "recall": 0.7077465683712182,
+        "tp": 1280867,
+        "fp": 2519730,
+        "fn": 528915
+      },
+      "30": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.2958455825968377,
+        "dice": 0.4566062292761327,
+        "precision": 0.3370173159637815,
+        "recall": 0.7077465683712182,
+        "tp": 1280867,
+        "fp": 2519730,
+        "fn": 528915
+      },
+      "40": {
+        "clusters": [],
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1809782
+      }
+    },
+    "best_single": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.2958455825968377,
+      "dice": 0.4566062292761327,
+      "precision": 0.3370173159637815,
+      "recall": 0.7077465683712182,
+      "tp": 1280867,
+      "fp": 2519730,
+      "fn": 528915
+    },
+    "active": 8,
+    "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=19-step=6900-mIoU=test/cluster/mIoU=46.1792.ckpt",
+    "batch": 2300,
+    "optimizer_step": 6900,
+    "stored_miou": 46.1792,
+    "stored_score_validation_batch": 2273,
+    "backbone_equal": true,
+    "feature_reuse_error": 0.0,
+    "code_reuse_error": 0.0,
+    "script": "/Users/navneetbavineni/STEGO/audit/scratch/forensics/task5.py",
+    "elapsed_seconds": 29.92395958400448
+  },
+  {
+    "confusion": [
+      [
+        1245844,
+        35
+      ],
+      [
+        5348587,
+        6214
+      ],
+      [
+        2535846,
+        1281227
+      ],
+      [
+        398163,
+        931
+      ],
+      [
+        4904122,
+        194
+      ],
+      [
+        1909840,
+        411025
+      ],
+      [
+        1954714,
+        110156
+      ],
+      [
+        3576174,
+        0
+      ]
+    ],
+    "pixels": 23683072,
+    "liver_pixels": 1809782,
+    "clusters": [
+      {
+        "cluster": 0,
+        "pixel_fraction": 0.05260630884371757,
+        "liver_pixels": 35,
+        "background_pixels": 1245844,
+        "precision": 2.8092615735556984e-05,
+        "recall": 1.9339345843864068e-05
+      },
+      {
+        "cluster": 1,
+        "pixel_fraction": 0.2261024667745806,
+        "liver_pixels": 6214,
+        "background_pixels": 5348587,
+        "precision": 0.0011604539552450223,
+        "recall": 0.003433562716393466
+      },
+      {
+        "cluster": 2,
+        "pixel_fraction": 0.16117305221214545,
+        "liver_pixels": 1281227,
+        "background_pixels": 2535846,
+        "precision": 0.3356569287514281,
+        "recall": 0.7079454873570408
+      },
+      {
+        "cluster": 3,
+        "pixel_fraction": 0.016851445623270494,
+        "liver_pixels": 931,
+        "background_pixels": 398163,
+        "precision": 0.0023327837552055406,
+        "recall": 0.0005144265994467842
+      },
+      {
+        "cluster": 4,
+        "pixel_fraction": 0.20708107461734693,
+        "liver_pixels": 194,
+        "background_pixels": 4904122,
+        "precision": 3.955699428829627e-05,
+        "recall": 0.00010719523124884655
+      },
+      {
+        "cluster": 5,
+        "pixel_fraction": 0.09799678859229073,
+        "liver_pixels": 411025,
+        "background_pixels": 1909840,
+        "precision": 0.17709991748766085,
+        "recall": 0.22711298929926366
+      },
+      {
+        "cluster": 6,
+        "pixel_fraction": 0.0871875912043843,
+        "liver_pixels": 110156,
+        "background_pixels": 1954714,
+        "precision": 0.05334766837621739,
+        "recall": 0.06086699945076258
+      },
+      {
+        "cluster": 7,
+        "pixel_fraction": 0.15100127213226391,
+        "liver_pixels": 0,
+        "background_pixels": 3576174,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    ],
+    "majority": {
+      "clusters": [],
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1809782
+    },
+    "optimal": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.29483126489427997,
+      "dice": 0.45539719790184746,
+      "precision": 0.3356569287514281,
+      "recall": 0.7079454873570408,
+      "tp": 1281227,
+      "fp": 2535846,
+      "fn": 528555
+    },
+    "thresholds": {
+      "10": {
+        "clusters": [
+          2,
+          5
+        ],
+        "iou": 0.2705236442740975,
+        "dice": 0.4258459029759478,
+        "precision": 0.2757036646508974,
+        "recall": 0.9350584766563045,
+        "tp": 1692252,
+        "fp": 4445686,
+        "fn": 117530
+      },
+      "20": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.29483126489427997,
+        "dice": 0.45539719790184746,
+        "precision": 0.3356569287514281,
+        "recall": 0.7079454873570408,
+        "tp": 1281227,
+        "fp": 2535846,
+        "fn": 528555
+      },
+      "30": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.29483126489427997,
+        "dice": 0.45539719790184746,
+        "precision": 0.3356569287514281,
+        "recall": 0.7079454873570408,
+        "tp": 1281227,
+        "fp": 2535846,
+        "fn": 528555
+      },
+      "40": {
+        "clusters": [],
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1809782
+      }
+    },
+    "best_single": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.29483126489427997,
+      "dice": 0.45539719790184746,
+      "precision": 0.3356569287514281,
+      "recall": 0.7079454873570408,
+      "tp": 1281227,
+      "fp": 2535846,
+      "fn": 528555
+    },
+    "active": 8,
+    "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=20-step=7200-mIoU=test/cluster/mIoU=46.1792.ckpt",
+    "batch": 2400,
+    "optimizer_step": 7200,
+    "stored_miou": 46.1792,
+    "stored_score_validation_batch": 2390,
+    "backbone_equal": true,
+    "feature_reuse_error": 0.0,
+    "code_reuse_error": 0.0,
+    "script": "/Users/navneetbavineni/STEGO/audit/scratch/forensics/task5.py",
+    "elapsed_seconds": 37.41891812499671
+  },
+  {
+    "confusion": [
+      [
+        1238712,
+        35
+      ],
+      [
+        4947655,
+        4672
+      ],
+      [
+        2563702,
+        1283616
+      ],
+      [
+        556086,
+        1123
+      ],
+      [
+        5119529,
+        294
+      ],
+      [
+        1793437,
+        399394
+      ],
+      [
+        2085050,
+        120648
+      ],
+      [
+        3569119,
+        0
+      ]
+    ],
+    "pixels": 23683072,
+    "liver_pixels": 1809782,
+    "clusters": [
+      {
+        "cluster": 0,
+        "pixel_fraction": 0.05230516547853251,
+        "liver_pixels": 35,
+        "background_pixels": 1238712,
+        "precision": 2.8254357023669886e-05,
+        "recall": 1.9339345843864068e-05
+      },
+      {
+        "cluster": 1,
+        "pixel_fraction": 0.2091083031795875,
+        "liver_pixels": 4672,
+        "background_pixels": 4947655,
+        "precision": 0.0009433948929462857,
+        "recall": 0.002581526393786655
+      },
+      {
+        "cluster": 2,
+        "pixel_fraction": 0.16245012471355066,
+        "liver_pixels": 1283616,
+        "background_pixels": 2563702,
+        "precision": 0.333639174094785,
+        "recall": 0.7092655358490692
+      },
+      {
+        "cluster": 3,
+        "pixel_fraction": 0.023527733226500345,
+        "liver_pixels": 1123,
+        "background_pixels": 556086,
+        "precision": 0.002015401761278084,
+        "recall": 0.0006205167252188385
+      },
+      {
+        "cluster": 4,
+        "pixel_fraction": 0.21618069649072552,
+        "liver_pixels": 294,
+        "background_pixels": 5119529,
+        "precision": 5.7423860160790714e-05,
+        "recall": 0.00016245050508845816
+      },
+      {
+        "cluster": 5,
+        "pixel_fraction": 0.09259064871313992,
+        "liver_pixels": 399394,
+        "background_pixels": 1793437,
+        "precision": 0.18213624305749052,
+        "recall": 0.22068624839897844
+      },
+      {
+        "cluster": 6,
+        "pixel_fraction": 0.0931339481634815,
+        "liver_pixels": 120648,
+        "background_pixels": 2085050,
+        "precision": 0.05469833132187634,
+        "recall": 0.06666438278201463
+      },
+      {
+        "cluster": 7,
+        "pixel_fraction": 0.15070338003448203,
+        "liver_pixels": 0,
+        "background_pixels": 3569119,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    ],
+    "majority": {
+      "clusters": [],
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1809782
+    },
+    "optimal": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.29349964467687545,
+      "dice": 0.4538070742960174,
+      "precision": 0.333639174094785,
+      "recall": 0.7092655358490692,
+      "tp": 1283616,
+      "fp": 2563702,
+      "fn": 526166
+    },
+    "thresholds": {
+      "10": {
+        "clusters": [
+          2,
+          5
+        ],
+        "iou": 0.27290928487652105,
+        "dice": 0.42879612572390763,
+        "precision": 0.27863716606990985,
+        "recall": 0.9299517842480476,
+        "tp": 1683010,
+        "fp": 4357139,
+        "fn": 126772
+      },
+      "20": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.29349964467687545,
+        "dice": 0.4538070742960174,
+        "precision": 0.333639174094785,
+        "recall": 0.7092655358490692,
+        "tp": 1283616,
+        "fp": 2563702,
+        "fn": 526166
+      },
+      "30": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.29349964467687545,
+        "dice": 0.4538070742960174,
+        "precision": 0.333639174094785,
+        "recall": 0.7092655358490692,
+        "tp": 1283616,
+        "fp": 2563702,
+        "fn": 526166
+      },
+      "40": {
+        "clusters": [],
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1809782
+      }
+    },
+    "best_single": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.29349964467687545,
+      "dice": 0.4538070742960174,
+      "precision": 0.333639174094785,
+      "recall": 0.7092655358490692,
+      "tp": 1283616,
+      "fp": 2563702,
+      "fn": 526166
+    },
+    "active": 8,
+    "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=21-step=7500-mIoU=test/cluster/mIoU=46.1792.ckpt",
+    "batch": 2500,
+    "optimizer_step": 7500,
+    "stored_miou": 46.1792,
+    "stored_score_validation_batch": 2440,
+    "backbone_equal": true,
+    "feature_reuse_error": 0.0,
+    "code_reuse_error": 0.0,
+    "script": "/Users/navneetbavineni/STEGO/audit/scratch/forensics/task5.py",
+    "elapsed_seconds": 44.89564179199806
+  },
+  {
+    "confusion": [
+      [
+        1242547,
+        34
+      ],
+      [
+        5247938,
+        5726
+      ],
+      [
+        2554821,
+        1275928
+      ],
+      [
+        512235,
+        1140
+      ],
+      [
+        4896477,
+        202
+      ],
+      [
+        1781962,
+        408966
+      ],
+      [
+        2089211,
+        117786
+      ],
+      [
+        3548099,
+        0
+      ]
+    ],
+    "pixels": 23683072,
+    "liver_pixels": 1809782,
+    "clusters": [
+      {
+        "cluster": 0,
+        "pixel_fraction": 0.05246705326065808,
+        "liver_pixels": 34,
+        "background_pixels": 1242547,
+        "precision": 2.7362401324340225e-05,
+        "recall": 1.878679310546795e-05
+      },
+      {
+        "cluster": 1,
+        "pixel_fraction": 0.22183203260117607,
+        "liver_pixels": 5726,
+        "background_pixels": 5247938,
+        "precision": 0.0010899060160680242,
+        "recall": 0.0031639169800561614
+      },
+      {
+        "cluster": 2,
+        "pixel_fraction": 0.1617505110823461,
+        "liver_pixels": 1275928,
+        "background_pixels": 2554821,
+        "precision": 0.3330753333094912,
+        "recall": 0.7050175103962798
+      },
+      {
+        "cluster": 3,
+        "pixel_fraction": 0.021676875364817536,
+        "liver_pixels": 1140,
+        "background_pixels": 512235,
+        "precision": 0.002220598977355734,
+        "recall": 0.0006299101217715724
+      },
+      {
+        "cluster": 4,
+        "pixel_fraction": 0.20675860800490747,
+        "liver_pixels": 202,
+        "background_pixels": 4896477,
+        "precision": 4.125244885360057e-05,
+        "recall": 0.00011161565315601547
+      },
+      {
+        "cluster": 5,
+        "pixel_fraction": 0.09251029596160498,
+        "liver_pixels": 408966,
+        "background_pixels": 1781962,
+        "precision": 0.18666336821657306,
+        "recall": 0.22597528321090607
+      },
+      {
+        "cluster": 6,
+        "pixel_fraction": 0.09318879746681512,
+        "liver_pixels": 117786,
+        "background_pixels": 2089211,
+        "precision": 0.05336935211058284,
+        "recall": 0.06508297684472494
+      },
+      {
+        "cluster": 7,
+        "pixel_fraction": 0.14981582625767467,
+        "liver_pixels": 0,
+        "background_pixels": 3548099,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    ],
+    "majority": {
+      "clusters": [],
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1809782
+    },
+    "optimal": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.29233540828341087,
+      "dice": 0.45241414327835444,
+      "precision": 0.3330753333094912,
+      "recall": 0.7050175103962798,
+      "tp": 1275928,
+      "fp": 2554821,
+      "fn": 533854
+    },
+    "thresholds": {
+      "10": {
+        "clusters": [
+          2,
+          5
+        ],
+        "iou": 0.27411960989593376,
+        "dice": 0.43028866013344386,
+        "precision": 0.27980477863558606,
+        "recall": 0.9309927936071858,
+        "tp": 1684894,
+        "fp": 4336783,
+        "fn": 124888
+      },
+      "20": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.29233540828341087,
+        "dice": 0.45241414327835444,
+        "precision": 0.3330753333094912,
+        "recall": 0.7050175103962798,
+        "tp": 1275928,
+        "fp": 2554821,
+        "fn": 533854
+      },
+      "30": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.29233540828341087,
+        "dice": 0.45241414327835444,
+        "precision": 0.3330753333094912,
+        "recall": 0.7050175103962798,
+        "tp": 1275928,
+        "fp": 2554821,
+        "fn": 533854
+      },
+      "40": {
+        "clusters": [],
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1809782
+      }
+    },
+    "best_single": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.29233540828341087,
+      "dice": 0.45241414327835444,
+      "precision": 0.3330753333094912,
+      "recall": 0.7050175103962798,
+      "tp": 1275928,
+      "fp": 2554821,
+      "fn": 533854
+    },
+    "active": 8,
+    "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=22-step=7800-mIoU=test/cluster/mIoU=46.1792.ckpt",
+    "batch": 2600,
+    "optimizer_step": 7800,
+    "stored_miou": 46.1792,
+    "stored_score_validation_batch": 2557,
+    "backbone_equal": true,
+    "feature_reuse_error": 0.0,
+    "code_reuse_error": 0.0,
+    "script": "/Users/navneetbavineni/STEGO/audit/scratch/forensics/task5.py",
+    "elapsed_seconds": 52.41659520899702
+  },
+  {
+    "confusion": [
+      [
+        1222897,
+        35
+      ],
+      [
+        4950607,
+        4903
+      ],
+      [
+        2482451,
+        1256974
+      ],
+      [
+        535718,
+        1413
+      ],
+      [
+        5221126,
+        336
+      ],
+      [
+        1795469,
+        425643
+      ],
+      [
+        2051896,
+        120478
+      ],
+      [
+        3613126,
+        0
+      ]
+    ],
+    "pixels": 23683072,
+    "liver_pixels": 1809782,
+    "clusters": [
+      {
+        "cluster": 0,
+        "pixel_fraction": 0.05163738893332757,
+        "liver_pixels": 35,
+        "background_pixels": 1222897,
+        "precision": 2.8619743370849728e-05,
+        "recall": 1.9339345843864068e-05
+      },
+      {
+        "cluster": 1,
+        "pixel_fraction": 0.2092427029736683,
+        "liver_pixels": 4903,
+        "background_pixels": 4950607,
+        "precision": 0.000989403714249391,
+        "recall": 0.0027091660763561578
+      },
+      {
+        "cluster": 2,
+        "pixel_fraction": 0.1578944234937089,
+        "liver_pixels": 1256974,
+        "background_pixels": 2482451,
+        "precision": 0.33614098424222977,
+        "recall": 0.6945444257927198
+      },
+      {
+        "cluster": 3,
+        "pixel_fraction": 0.022679954695066586,
+        "liver_pixels": 1413,
+        "background_pixels": 535718,
+        "precision": 0.0026306431764318203,
+        "recall": 0.0007807570193537122
+      },
+      {
+        "cluster": 4,
+        "pixel_fraction": 0.2204723272386285,
+        "liver_pixels": 336,
+        "background_pixels": 5221126,
+        "precision": 6.434979321883411e-05,
+        "recall": 0.00018565772010109506
+      },
+      {
+        "cluster": 5,
+        "pixel_fraction": 0.09378479278363888,
+        "liver_pixels": 425643,
+        "background_pixels": 1795469,
+        "precision": 0.19163509089140934,
+        "recall": 0.23519020522913808
+      },
+      {
+        "cluster": 6,
+        "pixel_fraction": 0.09172686719020236,
+        "liver_pixels": 120478,
+        "background_pixels": 2051896,
+        "precision": 0.05545914285477547,
+        "recall": 0.06657044881648728
+      },
+      {
+        "cluster": 7,
+        "pixel_fraction": 0.1525615426917589,
+        "liver_pixels": 0,
+        "background_pixels": 3613126,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    ],
+    "majority": {
+      "clusters": [],
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1809782
+    },
+    "optimal": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.2928485010016931,
+      "dice": 0.4530283335979357,
+      "precision": 0.33614098424222977,
+      "recall": 0.6945444257927198,
+      "tp": 1256974,
+      "fp": 2482451,
+      "fn": 552808
+    },
+    "thresholds": {
+      "10": {
+        "clusters": [
+          2,
+          5
+        ],
+        "iou": 0.2763960850908931,
+        "dice": 0.433088268319486,
+        "precision": 0.282292853815017,
+        "recall": 0.9297346310218578,
+        "tp": 1682617,
+        "fp": 4277920,
+        "fn": 127165
+      },
+      "20": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.2928485010016931,
+        "dice": 0.4530283335979357,
+        "precision": 0.33614098424222977,
+        "recall": 0.6945444257927198,
+        "tp": 1256974,
+        "fp": 2482451,
+        "fn": 552808
+      },
+      "30": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.2928485010016931,
+        "dice": 0.4530283335979357,
+        "precision": 0.33614098424222977,
+        "recall": 0.6945444257927198,
+        "tp": 1256974,
+        "fp": 2482451,
+        "fn": 552808
+      },
+      "40": {
+        "clusters": [],
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1809782
+      }
+    },
+    "best_single": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.2928485010016931,
+      "dice": 0.4530283335979357,
+      "precision": 0.33614098424222977,
+      "recall": 0.6945444257927198,
+      "tp": 1256974,
+      "fp": 2482451,
+      "fn": 552808
+    },
+    "active": 8,
+    "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=23-step=8100-mIoU=test/cluster/mIoU=46.1792.ckpt",
+    "batch": 2700,
+    "optimizer_step": 8100,
+    "stored_miou": 46.1792,
+    "stored_score_validation_batch": 2674,
+    "backbone_equal": true,
+    "feature_reuse_error": 0.0,
+    "code_reuse_error": 0.0,
+    "script": "/Users/navneetbavineni/STEGO/audit/scratch/forensics/task5.py",
+    "elapsed_seconds": 60.51781987500726
+  },
+  {
+    "confusion": [
+      [
+        1225686,
+        34
+      ],
+      [
+        5233140,
+        6493
+      ],
+      [
+        2455959,
+        1260944
+      ],
+      [
+        811626,
+        2628
+      ],
+      [
+        4771187,
+        203
+      ],
+      [
+        1738523,
+        418014
+      ],
+      [
+        2155039,
+        121466
+      ],
+      [
+        3482130,
+        0
+      ]
+    ],
+    "pixels": 23683072,
+    "liver_pixels": 1809782,
+    "clusters": [
+      {
+        "cluster": 0,
+        "pixel_fraction": 0.05175511014787271,
+        "liver_pixels": 34,
+        "background_pixels": 1225686,
+        "precision": 2.7738798420520183e-05,
+        "recall": 1.878679310546795e-05
+      },
+      {
+        "cluster": 1,
+        "pixel_fraction": 0.22123958412151937,
+        "liver_pixels": 6493,
+        "background_pixels": 5233140,
+        "precision": 0.001239208929327684,
+        "recall": 0.0035877249304059828
+      },
+      {
+        "cluster": 2,
+        "pixel_fraction": 0.15694344889041423,
+        "liver_pixels": 1260944,
+        "background_pixels": 2455959,
+        "precision": 0.33924587216830787,
+        "recall": 0.6967380601641524
+      },
+      {
+        "cluster": 3,
+        "pixel_fraction": 0.03438126607899516,
+        "liver_pixels": 2628,
+        "background_pixels": 811626,
+        "precision": 0.0032274941234553345,
+        "recall": 0.0014521085965049933
+      },
+      {
+        "cluster": 4,
+        "pixel_fraction": 0.20146837369746629,
+        "liver_pixels": 203,
+        "background_pixels": 4771187,
+        "precision": 4.2545254108341594e-05,
+        "recall": 0.00011216820589441159
+      },
+      {
+        "cluster": 5,
+        "pixel_fraction": 0.09105816171145364,
+        "liver_pixels": 418014,
+        "background_pixels": 1738523,
+        "precision": 0.19383576539609568,
+        "recall": 0.23097478038791414
+      },
+      {
+        "cluster": 6,
+        "pixel_fraction": 0.09612372077406174,
+        "liver_pixels": 121466,
+        "background_pixels": 2155039,
+        "precision": 0.05335635107324605,
+        "recall": 0.06711637092202265
+      },
+      {
+        "cluster": 7,
+        "pixel_fraction": 0.14703033457821688,
+        "liver_pixels": 0,
+        "background_pixels": 3482130,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    ],
+    "majority": {
+      "clusters": [],
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1809782
+    },
+    "optimal": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.2955978808840012,
+      "dice": 0.456311152164453,
+      "precision": 0.33924587216830787,
+      "recall": 0.6967380601641524,
+      "tp": 1260944,
+      "fp": 2455959,
+      "fn": 548838
+    },
+    "thresholds": {
+      "10": {
+        "clusters": [
+          2,
+          5
+        ],
+        "iou": 0.27962761131089503,
+        "dice": 0.43704529167580997,
+        "precision": 0.2858559889945245,
+        "recall": 0.9277128405520665,
+        "tp": 1678958,
+        "fp": 4194482,
+        "fn": 130824
+      },
+      "20": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.2955978808840012,
+        "dice": 0.456311152164453,
+        "precision": 0.33924587216830787,
+        "recall": 0.6967380601641524,
+        "tp": 1260944,
+        "fp": 2455959,
+        "fn": 548838
+      },
+      "30": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.2955978808840012,
+        "dice": 0.456311152164453,
+        "precision": 0.33924587216830787,
+        "recall": 0.6967380601641524,
+        "tp": 1260944,
+        "fp": 2455959,
+        "fn": 548838
+      },
+      "40": {
+        "clusters": [],
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1809782
+      }
+    },
+    "best_single": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.2955978808840012,
+      "dice": 0.456311152164453,
+      "precision": 0.33924587216830787,
+      "recall": 0.6967380601641524,
+      "tp": 1260944,
+      "fp": 2455959,
+      "fn": 548838
+    },
+    "active": 8,
+    "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=23-step=8400-mIoU=test/cluster/mIoU=46.1792.ckpt",
+    "batch": 2800,
+    "optimizer_step": 8400,
+    "stored_miou": 46.1792,
+    "stored_score_validation_batch": 2791,
+    "backbone_equal": true,
+    "feature_reuse_error": 0.0,
+    "code_reuse_error": 0.0,
+    "script": "/Users/navneetbavineni/STEGO/audit/scratch/forensics/task5.py",
+    "elapsed_seconds": 68.99329929200758
+  },
+  {
+    "confusion": [
+      [
+        1226453,
+        31
+      ],
+      [
+        4943753,
+        4752
+      ],
+      [
+        2420054,
+        1237624
+      ],
+      [
+        777957,
+        2363
+      ],
+      [
+        4956816,
+        251
+      ],
+      [
+        1755540,
+        440066
+      ],
+      [
+        2176635,
+        124691
+      ],
+      [
+        3616082,
+        4
+      ]
+    ],
+    "pixels": 23683072,
+    "liver_pixels": 1809782,
+    "clusters": [
+      {
+        "cluster": 0,
+        "pixel_fraction": 0.05178736947639225,
+        "liver_pixels": 31,
+        "background_pixels": 1226453,
+        "precision": 2.5275502982509353e-05,
+        "recall": 1.71291348902796e-05
+      },
+      {
+        "cluster": 1,
+        "pixel_fraction": 0.2089469220884858,
+        "liver_pixels": 4752,
+        "background_pixels": 4943753,
+        "precision": 0.0009602900269879489,
+        "recall": 0.002625730612858344
+      },
+      {
+        "cluster": 2,
+        "pixel_fraction": 0.15444271756636976,
+        "liver_pixels": 1237624,
+        "background_pixels": 2420054,
+        "precision": 0.33836330043267887,
+        "recall": 0.6838525303047549
+      },
+      {
+        "cluster": 3,
+        "pixel_fraction": 0.032948428312002766,
+        "liver_pixels": 2363,
+        "background_pixels": 777957,
+        "precision": 0.003028244822636867,
+        "recall": 0.0013056821208300227
+      },
+      {
+        "cluster": 4,
+        "pixel_fraction": 0.20930844613401506,
+        "liver_pixels": 251,
+        "background_pixels": 4956816,
+        "precision": 5.0634780607161454e-05,
+        "recall": 0.00013869073733742518
+      },
+      {
+        "cluster": 5,
+        "pixel_fraction": 0.0927078210124092,
+        "liver_pixels": 440066,
+        "background_pixels": 1755540,
+        "precision": 0.20043031399987066,
+        "recall": 0.24315967337502528
+      },
+      {
+        "cluster": 6,
+        "pixel_fraction": 0.09717176893267901,
+        "liver_pixels": 124691,
+        "background_pixels": 2176635,
+        "precision": 0.05418224102104613,
+        "recall": 0.06889835350335012
+      },
+      {
+        "cluster": 7,
+        "pixel_fraction": 0.15268652647764613,
+        "liver_pixels": 4,
+        "background_pixels": 3616082,
+        "precision": 1.1061683820572852e-06,
+        "recall": 2.210210953584465e-06
+      }
+    ],
+    "majority": {
+      "clusters": [],
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1809782
+    },
+    "optimal": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.29259384997432525,
+      "dice": 0.4527235681651077,
+      "precision": 0.33836330043267887,
+      "recall": 0.6838525303047549,
+      "tp": 1237624,
+      "fp": 2420054,
+      "fn": 572158
+    },
+    "thresholds": {
+      "10": {
+        "clusters": [
+          2,
+          5
+        ],
+        "iou": 0.2802981800976246,
+        "dice": 0.43786390460424063,
+        "precision": 0.2866237141406431,
+        "recall": 0.9270122036797802,
+        "tp": 1677690,
+        "fp": 4175594,
+        "fn": 132092
+      },
+      "20": {
+        "clusters": [
+          2,
+          5
+        ],
+        "iou": 0.2802981800976246,
+        "dice": 0.43786390460424063,
+        "precision": 0.2866237141406431,
+        "recall": 0.9270122036797802,
+        "tp": 1677690,
+        "fp": 4175594,
+        "fn": 132092
+      },
+      "30": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.29259384997432525,
+        "dice": 0.4527235681651077,
+        "precision": 0.33836330043267887,
+        "recall": 0.6838525303047549,
+        "tp": 1237624,
+        "fp": 2420054,
+        "fn": 572158
+      },
+      "40": {
+        "clusters": [],
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1809782
+      }
+    },
+    "best_single": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.29259384997432525,
+      "dice": 0.4527235681651077,
+      "precision": 0.33836330043267887,
+      "recall": 0.6838525303047549,
+      "tp": 1237624,
+      "fp": 2420054,
+      "fn": 572158
+    },
+    "active": 8,
+    "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=24-step=8700-mIoU=test/cluster/mIoU=46.1792.ckpt",
+    "batch": 2900,
+    "optimizer_step": 8700,
+    "stored_miou": 46.1792,
+    "stored_score_validation_batch": 2858,
+    "backbone_equal": true,
+    "feature_reuse_error": 0.0,
+    "code_reuse_error": 0.0,
+    "script": "/Users/navneetbavineni/STEGO/audit/scratch/forensics/task5.py",
+    "elapsed_seconds": 77.44081304200517
+  },
+  {
+    "confusion": [
+      [
+        1225459,
+        33
+      ],
+      [
+        5015872,
+        4938
+      ],
+      [
+        2396040,
+        1234050
+      ],
+      [
+        934470,
+        3288
+      ],
+      [
+        4757456,
+        188
+      ],
+      [
+        1766628,
+        441751
+      ],
+      [
+        2242454,
+        125533
+      ],
+      [
+        3534911,
+        1
+      ]
+    ],
+    "pixels": 23683072,
+    "liver_pixels": 1809782,
+    "clusters": [
+      {
+        "cluster": 0,
+        "pixel_fraction": 0.05174548301841923,
+        "liver_pixels": 33,
+        "background_pixels": 1225459,
+        "precision": 2.6927960362042347e-05,
+        "recall": 1.8234240367071836e-05
+      },
+      {
+        "cluster": 1,
+        "pixel_fraction": 0.2119999466285455,
+        "liver_pixels": 4938,
+        "background_pixels": 5015872,
+        "precision": 0.0009835066453420863,
+        "recall": 0.002728505422200022
+      },
+      {
+        "cluster": 2,
+        "pixel_fraction": 0.15327783490249913,
+        "liver_pixels": 1234050,
+        "background_pixels": 2396040,
+        "precision": 0.33995024916737604,
+        "recall": 0.6818777068177272
+      },
+      {
+        "cluster": 3,
+        "pixel_fraction": 0.03959613009663611,
+        "liver_pixels": 3288,
+        "background_pixels": 934470,
+        "precision": 0.0035062350841048545,
+        "recall": 0.0018167934038464302
+      },
+      {
+        "cluster": 4,
+        "pixel_fraction": 0.20088795912962643,
+        "liver_pixels": 188,
+        "background_pixels": 4757456,
+        "precision": 3.9515356760615127e-05,
+        "recall": 0.00010387991481846985
+      },
+      {
+        "cluster": 5,
+        "pixel_fraction": 0.09324715138306382,
+        "liver_pixels": 441751,
+        "background_pixels": 1766628,
+        "precision": 0.2000340521260164,
+        "recall": 0.24409072473922275
+      },
+      {
+        "cluster": 6,
+        "pixel_fraction": 0.09998647979451314,
+        "liver_pixels": 125533,
+        "background_pixels": 2242454,
+        "precision": 0.053012537653289483,
+        "recall": 0.06936360290907966
+      },
+      {
+        "cluster": 7,
+        "pixel_fraction": 0.14925901504669664,
+        "liver_pixels": 1,
+        "background_pixels": 3534911,
+        "precision": 2.8289247370231566e-07,
+        "recall": 5.525527383961162e-07
+      }
+    ],
+    "majority": {
+      "clusters": [],
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1809782
+    },
+    "optimal": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.29341469990884067,
+      "dice": 0.4537055283653733,
+      "precision": 0.33995024916737604,
+      "recall": 0.6818777068177272,
+      "tp": 1234050,
+      "fp": 2396040,
+      "fn": 575732
+    },
+    "thresholds": {
+      "10": {
+        "clusters": [
+          2,
+          5
+        ],
+        "iou": 0.2805885356930573,
+        "dice": 0.4382180971832645,
+        "precision": 0.28702747244183363,
+        "recall": 0.92596843155695,
+        "tp": 1675801,
+        "fp": 4162668,
+        "fn": 133981
+      },
+      "20": {
+        "clusters": [
+          2,
+          5
+        ],
+        "iou": 0.2805885356930573,
+        "dice": 0.4382180971832645,
+        "precision": 0.28702747244183363,
+        "recall": 0.92596843155695,
+        "tp": 1675801,
+        "fp": 4162668,
+        "fn": 133981
+      },
+      "30": {
+        "clusters": [
+          2
+        ],
+        "iou": 0.29341469990884067,
+        "dice": 0.4537055283653733,
+        "precision": 0.33995024916737604,
+        "recall": 0.6818777068177272,
+        "tp": 1234050,
+        "fp": 2396040,
+        "fn": 575732
+      },
+      "40": {
+        "clusters": [],
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1809782
+      }
+    },
+    "best_single": {
+      "clusters": [
+        2
+      ],
+      "iou": 0.29341469990884067,
+      "dice": 0.4537055283653733,
+      "precision": 0.33995024916737604,
+      "recall": 0.6818777068177272,
+      "tp": 1234050,
+      "fp": 2396040,
+      "fn": 575732
+    },
+    "active": 8,
+    "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=25-step=9000-mIoU=test/cluster/mIoU=46.1792.ckpt",
+    "batch": 3000,
+    "optimizer_step": 9000,
+    "stored_miou": 46.1792,
+    "stored_score_validation_batch": 2975,
+    "backbone_equal": true,
+    "feature_reuse_error": 0.0,
+    "code_reuse_error": 0.0,
+    "script": "/Users/navneetbavineni/STEGO/audit/scratch/forensics/task5.py",
+    "elapsed_seconds": 85.77623941699858
+  }
+]

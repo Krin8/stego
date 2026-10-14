@@ -1,0 +1,30 @@
+{
+  "producer": "extract.py",
+  "weight": {
+    "path": "/Users/navneetbavineni/.cache/torch/hub/checkpoints/dino_vitbase8_pretrain.pth",
+    "bytes": 343279349,
+    "mtime": "2026-04-02T20:06:47.801978+00:00",
+    "sha256": "575f0efc4838938314afa09897a62ed2b87919928b5edcd133abb907328995eb",
+    "patch_embed_shape": [
+      768,
+      3,
+      8,
+      8
+    ],
+    "keys": 150
+  },
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "model_eval": true,
+  "all_requires_grad_false": true,
+  "deterministic_exact": true,
+  "deterministic_max_abs_difference": 0.0,
+  "cls_excluded": true,
+  "feature_shape": [
+    2341,
+    784,
+    768
+  ],
+  "labels_used": false,
+  "seconds": 278.4340663749899
+}

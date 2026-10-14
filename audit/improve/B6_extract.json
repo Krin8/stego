@@ -1,0 +1,34 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/improve/extract.py",
+  "variant": "B6",
+  "labels_used": false,
+  "input_resolution": 224,
+  "grid": 16,
+  "feature_shape": [
+    2341,
+    256,
+    1024
+  ],
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "weights": {
+    "path": "/Users/navneetbavineni/.cache/torch/hub/checkpoints/dinov2_vitl14_pretrain.pth",
+    "bytes": 1217586395,
+    "strict_load": "<All keys matched successfully>",
+    "hub": "/Users/navneetbavineni/.cache/torch/hub/facebookresearch_dinov2_main",
+    "architecture": "DINOv2 ViT-L/14"
+  },
+  "frozen": true,
+  "cpu": true,
+  "eval": true,
+  "patch_norm": "final block LayerNorm then L2; tile features averaged before L2",
+  "elapsed_seconds": 195.3214929169917
+}

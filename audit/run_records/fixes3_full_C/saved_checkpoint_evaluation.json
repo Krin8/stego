@@ -1,0 +1,158 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/full_c_evaluate_saved.py",
+  "protocol": "Actual training validation: CPU/eval/no gradients; same472 val slices,224x224, raw clusters, bilinear code upsample align_cornersFalse, evaluation-only many-to-one mapping, no CRF. No training.",
+  "results": {
+    "best": {
+      "checkpoint": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=05-step=1800-mIoU=test/cluster/mIoU=69.3704.ckpt",
+      "global_step": 1800,
+      "batches": 600,
+      "strict_load": true,
+      "eval_mode": true,
+      "images": 472,
+      "monitors": {
+        "code_std": 0.11158012777201123,
+        "cross_image_cosine": 0.07093274294949342,
+        "cluster_usage": [
+          0.059521627937456766,
+          0.17965794302360774,
+          0.09889709409319872,
+          0.041584807916810795,
+          0.002379969963356105,
+          0.1542972972425199,
+          0.22915971373983915,
+          0.23450154608321083
+        ],
+        "cluster_entropy": 1.8178745157518454,
+        "images": 472
+      },
+      "metrics": {
+        "test/cluster/mIoU": 68.63282918930054,
+        "test/cluster/Accuracy": 93.24977993965149,
+        "test/cluster/liver_IoU": 44.40049231052399,
+        "test/cluster/liver_Dice": 61.4963173866272
+      },
+      "mapping": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "confusion": [
+        [
+          1409653,
+          2
+        ],
+        [
+          4241990,
+          12862
+        ],
+        [
+          1065533,
+          1276654
+        ],
+        [
+          977722,
+          7134
+        ],
+        [
+          56359,
+          6
+        ],
+        [
+          3451675,
+          202559
+        ],
+        [
+          5116641,
+          310565
+        ],
+        [
+          5553717,
+          0
+        ]
+      ],
+      "overlay": "/Users/navneetbavineni/STEGO/audit/run_records/fixes3_full_C/best_checkpoint_overlay.png",
+      "seconds": 20.225680792005733
+    },
+    "final": {
+      "checkpoint": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=42-step=15000-mIoU=test/cluster/mIoU=46.1792.ckpt",
+      "global_step": 15000,
+      "batches": 5000,
+      "strict_load": true,
+      "eval_mode": true,
+      "images": 472,
+      "monitors": {
+        "code_std": 0.11264951444789059,
+        "cross_image_cosine": 0.08160950741423995,
+        "cluster_usage": [
+          0.04863528684116655,
+          0.16408200760441888,
+          0.12694755139873745,
+          0.1178562054787487,
+          0.18841660406217572,
+          0.10151364654044881,
+          0.10843301916237894,
+          0.14411567891192495
+        ],
+        "cluster_entropy": 2.0244065580538315,
+        "images": 472
+      },
+      "metrics": {
+        "test/cluster/mIoU": 46.17916643619537,
+        "test/cluster/Accuracy": 92.35833287239075,
+        "test/cluster/liver_IoU": 0.0,
+        "test/cluster/liver_Dice": 0.0
+      },
+      "mapping": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "confusion": [
+        [
+          1151813,
+          20
+        ],
+        [
+          3884664,
+          1302
+        ],
+        [
+          1965682,
+          1040826
+        ],
+        [
+          2783146,
+          8051
+        ],
+        [
+          4462030,
+          254
+        ],
+        [
+          1787000,
+          617155
+        ],
+        [
+          2425875,
+          142152
+        ],
+        [
+          3413080,
+          22
+        ]
+      ],
+      "overlay": "/Users/navneetbavineni/STEGO/audit/run_records/fixes3_full_C/final_checkpoint_overlay.png",
+      "seconds": 19.86166208299983
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "seed_0": {
+    "label_selected": 6,
+    "N3_selected": 6,
+    "match": true,
+    "abstention": false
+  },
+  "seed_1": {
+    "label_selected": 3,
+    "N3_selected": 3,
+    "match": true,
+    "abstention": false
+  },
+  "seed_2": {
+    "label_selected": 3,
+    "N3_selected": 3,
+    "match": true,
+    "abstention": false
+  },
+  "all_match": true,
+  "any_abstained": false
+}

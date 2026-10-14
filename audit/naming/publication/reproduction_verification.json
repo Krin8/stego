@@ -1,0 +1,36 @@
+{
+  "producer": "publication/reproduce.py",
+  "only_changed": "output destinations; elapsed time excluded from equality",
+  "runs": [
+    {
+      "fit": "inductive",
+      "seed": 0,
+      "all_scores_rankings_agreement_exact": true
+    },
+    {
+      "fit": "inductive",
+      "seed": 1,
+      "all_scores_rankings_agreement_exact": true
+    },
+    {
+      "fit": "inductive",
+      "seed": 2,
+      "all_scores_rankings_agreement_exact": true
+    },
+    {
+      "fit": "transductive",
+      "seed": 0,
+      "all_scores_rankings_agreement_exact": true
+    },
+    {
+      "fit": "transductive",
+      "seed": 1,
+      "all_scores_rankings_agreement_exact": true
+    },
+    {
+      "fit": "transductive",
+      "seed": 2,
+      "all_scores_rankings_agreement_exact": true
+    }
+  ]
+}

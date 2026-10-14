@@ -1,0 +1,31 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/selectivity/verify.py",
+  "labels": "validation scoring verification only",
+  "checks": {
+    "intra": {
+      "all_472_anchors_appear_seven_times": true,
+      "pairs": 6766592,
+      "liver_anchor_pairs": 573652,
+      "liver_liver_pairs": 79281,
+      "background_target_pairs": 494371,
+      "independent_boolean_scoring_matches": true
+    },
+    "knn": {
+      "all_472_anchors_appear_seven_times": true,
+      "pairs": 6766592,
+      "liver_anchor_pairs": 573652,
+      "liver_liver_pairs": 74630,
+      "background_target_pairs": 499022,
+      "independent_boolean_scoring_matches": true
+    },
+    "random": {
+      "all_472_anchors_appear_seven_times": true,
+      "pairs": 6766592,
+      "liver_anchor_pairs": 573652,
+      "liver_liver_pairs": 48684,
+      "background_target_pairs": 524968,
+      "independent_boolean_scoring_matches": true
+    }
+  },
+  "elapsed_seconds": 6.872477416996844
+}

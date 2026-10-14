@@ -1,0 +1,26 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/improve/fit.py",
+  "variant": "B6",
+  "seed": 0,
+  "labels_used": false,
+  "grid": 16,
+  "dim": 1024,
+  "patches": 599296,
+  "parameters": {
+    "algorithm": "lloyd",
+    "copy_x": false,
+    "init": "k-means++",
+    "max_iter": 100,
+    "n_clusters": 8,
+    "n_init": 3,
+    "random_state": 0,
+    "tol": 0.0001,
+    "verbose": 0
+  },
+  "inertia": 299663.59375,
+  "iterations": 19,
+  "temperature": 0.19558802211782664,
+  "warnings": [],
+  "elapsed_seconds": 21.273051084019244,
+  "memory_note": "copy_x=False on disposable scratch working matrix; all algorithm and initialization parameters unchanged"
+}

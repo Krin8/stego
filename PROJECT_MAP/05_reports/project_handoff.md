@@ -1,0 +1,1 @@
+../../Handoff label-free CT liver segmentation on CHAOS with frozen BiomedCLIP (STEGO adaptation).md

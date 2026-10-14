@@ -1,0 +1,152 @@
+{
+  "seed": 20260930,
+  "K": 8,
+  "kmeans_seeds": [
+    0,
+    1,
+    2
+  ],
+  "fits": [
+    "inductive",
+    "transductive"
+  ],
+  "no_refit": true,
+  "preprocessing": {
+    "modality": "CT",
+    "window_hu": [
+      -150,
+      250
+    ],
+    "intensity": "clip HU then linear [0,1]; round(65535*x)/65535",
+    "png": "uint16 grayscale already windowed [-150,250]; reject 8-bit/RGB",
+    "orientation": "native; no flip/transpose",
+    "spatial_resampling": "none",
+    "native_shape": [
+      512,
+      512
+    ],
+    "body_threshold": 0.05,
+    "body_connectivity": 8,
+    "body_box": "largest component; fill holes; square bounding box with 5% each-side margin; zero padding",
+    "input_resolution": 448,
+    "resize": "torchvision bilinear antialias=True",
+    "mean": [
+      0.48145466,
+      0.4578275,
+      0.40821073
+    ],
+    "std": [
+      0.26862954,
+      0.26130258,
+      0.27577711
+    ],
+    "normalization_application_count": 1,
+    "grayscale_channels": 3,
+    "backbone": "BiomedCLIP ViT-B/16",
+    "layer": "final block",
+    "normalization": "final LayerNorm then patch L2; uncentered",
+    "cls_excluded": true,
+    "grid": [
+      28,
+      28
+    ],
+    "eval": true,
+    "device": "cpu",
+    "soft_assignment": "softmax(-squared_euclidean_distance/temperature)",
+    "temperature": "median nearest/second-nearest squared-distance gap over fitting patches / log(4); floor 1e-6",
+    "inverse_crop": "bilinear align_corners=False; outside=0",
+    "guided_radius": 8,
+    "guided_epsilon": 0.01,
+    "guided_boundary": "reflect",
+    "threshold": 0.5,
+    "largest_component_connectivity": 8,
+    "hole_fill_background_connectivity": 4,
+    "closing_disk_radius": 3,
+    "closing_padding": "3 zero pixels then crop",
+    "f2_default": false,
+    "f2": "median(3,1,1), nearest endpoints, one series at a time"
+  },
+  "feature_source": "existing B2_448_features.npy, normalized uncentered final tokens",
+  "N1": {
+    "nearest_per_cluster": 200,
+    "restriction": "all body-centre patches in this fit own images; no cluster-assignment restriction",
+    "distance": "squared Euclidean to saved centre",
+    "ties": "distance, then global image index, then row-major patch index",
+    "crop_native_pixels": 112,
+    "crop_center": "grid cell centre transformed through recorded body crop: (cell+.5)*side/28-.5+offset; nearest integer centre=floor(value+.5)",
+    "crop_boundary": "zero padding in windowed[0,1] space",
+    "resize": 224,
+    "interpolation": "bilinear antialias=True",
+    "mean": [
+      0.48145466,
+      0.4578275,
+      0.40821073
+    ],
+    "std": [
+      0.26862954,
+      0.26130258,
+      0.27577711
+    ],
+    "normalization_application_count": 1,
+    "image_embedding": "full BiomedCLIP encode_image with CLIP projection, L2 per crop, mean of200, L2 mean for cosine",
+    "text_embedding": "full BiomedCLIP encode_text normalize=True; tokenizer context256",
+    "prompts": [
+      "an axial abdominal CT image showing the liver",
+      "an axial abdominal CT image showing the spleen",
+      "an axial abdominal CT image showing the kidney",
+      "an axial abdominal CT image showing the stomach",
+      "an axial abdominal CT image showing the pancreas",
+      "an axial abdominal CT image showing the gallbladder",
+      "an axial abdominal CT image showing the aorta",
+      "an axial abdominal CT image showing the vertebra",
+      "an axial abdominal CT image showing the muscle",
+      "an axial abdominal CT image showing the subcutaneous fat",
+      "an axial abdominal CT image showing the bowel",
+      "an axial abdominal CT image showing the lung",
+      "an axial abdominal CT image showing the heart",
+      "an axial abdominal CT image showing the rib",
+      "an axial abdominal CT image showing the air"
+    ],
+    "zscore": "per prompt across8 cluster cosine similarities; population SD(ddof0); zero SD gives0",
+    "selection": "argmax liver zscore; ties lowest cluster ID",
+    "top_prompt": "argmax zscored prompt per cluster; ties declared prompt order",
+    "margins": "top prompt zscore minus second; raw cosine top-minus-second also recorded; liver selection zscore winner minus runner-up"
+  },
+  "N2": {
+    "body_HU_threshold": -500,
+    "threshold_comparison": ">",
+    "opening": "binary opening disk radius5; native pixels; scipy default1 iteration/border0",
+    "connectivity": 8,
+    "hole_fill": "4-connected background",
+    "body_patch": "patch centre rounded to nearest native pixel inside body mask",
+    "bounding_box_coordinates": "pixel-centre normalized x=(x-xmin)/(xmax-xmin), y=(y-ymin)/(ymax-ymin); singleton denominator1",
+    "patch_HU": "mean unwindowed HU over native pixels whose centres lie in that patch cell footprint, restricted to body mask",
+    "area": "each eligible patch counts one; fraction among all fit body patches",
+    "centroid": "area-weighted patch centroid; each patch weight1",
+    "mean_HU": "arithmetic mean of per-body-patch HU means, each patch weight1",
+    "candidates": "x<.5 AND y<.6 AND40<=mean_HU<=180",
+    "selection": "candidate with largest area; tie lowest cluster ID; none -> abstain"
+  },
+  "N3": "accept iff N1 and N2 cluster IDs equal, else abstain",
+  "scoring_plan": {
+    "inductive": "4 validation patients; training16 majority/optimal fixed mapping reference",
+    "transductive": "all20; other19 LOPO majority/optimal reference",
+    "reference_choice_agreement": "exact singleton set equality; per-patient when LOPO mappings differ",
+    "abstentions": "empty masks; report fit-level and evaluated-slice rates",
+    "outputs": [
+      "hard",
+      "F1"
+    ],
+    "resolutions": [
+      224,
+      512
+    ],
+    "patient_metrics": [
+      "pooled_pixels",
+      "mean_slice"
+    ],
+    "diagnostic": "per-cluster liver precision/recall on evaluated cohort; label-using, not fed back",
+    "figures": "same8 fixed slices; one composite per rule, columns6 fits, hard prediction contours; historical label-selected fixed slices"
+  },
+  "snapshot": "StageA outputs and code SHA256 sealed before StageB; manifest own digest separate sidecar"
+}

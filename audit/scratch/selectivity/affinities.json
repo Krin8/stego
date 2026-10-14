@@ -1,0 +1,739 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/selectivity/affinities.py",
+  "seed": 20260930,
+  "labels_used": false,
+  "rows_per_pool": 3304,
+  "pairs_per_image_edge": 2048,
+  "pairs_per_pool": 6766592,
+  "all_val_slices": 472,
+  "neighbors": 7,
+  "variants": [
+    "baseline",
+    "uncentered",
+    "mean",
+    "mean_loss",
+    "block9",
+    "block11",
+    "kmeans8"
+  ],
+  "pools": [
+    "intra",
+    "knn",
+    "random"
+  ],
+  "thresholds": {
+    "baseline": {
+      "intra": [
+        {
+          "budget": 0.02,
+          "threshold": 0.9782155609130854,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.9138612389564509,
+          "attraction": 0.050000059113952784
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.8619711339473725,
+          "attraction": 0.09999997044302361
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.7959701299667359,
+          "attraction": 0.19999994088604722
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.7398751199245452,
+          "attraction": 0.29999991132907083
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.6272099614143372,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": 0.4813505634665489,
+          "attraction": 0.7499997044302361
+        }
+      ],
+      "knn": [
+        {
+          "budget": 0.02,
+          "threshold": 0.954688115119934,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.8979268550872801,
+          "attraction": 0.050000059113952784
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.8500694155693056,
+          "attraction": 0.10000011822790557
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.7870612621307373,
+          "attraction": 0.19999994088604722
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.7322688341140746,
+          "attraction": 0.3000000591139528
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.6218085885047913,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": 0.47771120071411133,
+          "attraction": 0.749999852215118
+        }
+      ],
+      "random": [
+        {
+          "budget": 0.02,
+          "threshold": 0.8754291045665741,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.8268119364976882,
+          "attraction": 0.050000059113952784
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.7811716794967651,
+          "attraction": 0.09999997044302361
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.7194491624832153,
+          "attraction": 0.19999994088604722
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.6686693251132965,
+          "attraction": 0.29999991132907083
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.574500322341919,
+          "attraction": 0.49999970443023606
+        },
+        {
+          "budget": 0.75,
+          "threshold": 0.444842167198658,
+          "attraction": 0.75
+        }
+      ]
+    },
+    "uncentered": {
+      "intra": [
+        {
+          "budget": 0.02,
+          "threshold": 0.9727144455909729,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.9388525158166885,
+          "attraction": 0.050000059113952784
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.9037942230701447,
+          "attraction": 0.09999982265814164
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.8408350110054017,
+          "attraction": 0.19999994088604722
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.7727406799793239,
+          "attraction": 0.3000000591139528
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.6328184008598328,
+          "attraction": 0.49999970443023606
+        },
+        {
+          "budget": 0.75,
+          "threshold": 0.45692552626132965,
+          "attraction": 0.75
+        }
+      ],
+      "knn": [
+        {
+          "budget": 0.02,
+          "threshold": 0.9542418336868286,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.9269245862960815,
+          "attraction": 0.04999991132907082
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.8937759339809418,
+          "attraction": 0.09999982265814164
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.8314493656158448,
+          "attraction": 0.19999994088604722
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.7639846801757812,
+          "attraction": 0.29999991132907083
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.6262907981872559,
+          "attraction": 0.49999970443023606
+        },
+        {
+          "budget": 0.75,
+          "threshold": 0.45264336466789246,
+          "attraction": 0.75
+        }
+      ],
+      "random": [
+        {
+          "budget": 0.02,
+          "threshold": 0.9152655005455017,
+          "attraction": 0.01999987586069915
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.8815318018198013,
+          "attraction": 0.050000059113952784
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.8389452993869783,
+          "attraction": 0.09999997044302361
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.7641038298606875,
+          "attraction": 0.20000008867092917
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.6939624607563017,
+          "attraction": 0.3000000591139528
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.5653237700462341,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": 0.41714534163475037,
+          "attraction": 0.75
+        }
+      ]
+    },
+    "mean": {
+      "intra": [
+        {
+          "budget": 0.02,
+          "threshold": 0.9270890557765958,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.8288688540458677,
+          "attraction": 0.050000059113952784
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.7276157140731814,
+          "attraction": 0.10000011822790557
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.573985314369202,
+          "attraction": 0.20000008867092917
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.4309385478496548,
+          "attraction": 0.3000000591139528
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.14197617769241333,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": -0.17835303395986557,
+          "attraction": 0.75
+        }
+      ],
+      "knn": [
+        {
+          "budget": 0.02,
+          "threshold": 0.8723074185848234,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.7936580330133436,
+          "attraction": 0.050000059113952784
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.7006499528884889,
+          "attraction": 0.09999997044302361
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.551817774772644,
+          "attraction": 0.19999994088604722
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.41165755689144123,
+          "attraction": 0.3000000591139528
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.12663723528385162,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": -0.18652499467134476,
+          "attraction": 0.75
+        }
+      ],
+      "random": [
+        {
+          "budget": 0.02,
+          "threshold": 0.7409609770774841,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.6398254096508018,
+          "attraction": 0.050000059113952784
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.5271457433700562,
+          "attraction": 0.09999997044302361
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.36515383720397965,
+          "attraction": 0.20000008867092917
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.2366706803441047,
+          "attraction": 0.3000000591139528
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.0050663575530052185,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": -0.2613314464688301,
+          "attraction": 0.75
+        }
+      ]
+    },
+    "mean_loss": {
+      "intra": [
+        {
+          "budget": 0.02,
+          "threshold": 0.9584318125247955,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.8362167388200745,
+          "attraction": 0.050000059113952784
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.7075506627559666,
+          "attraction": 0.10000011822790557
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.53508460521698,
+          "attraction": 0.19999994088604722
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.3962442606687543,
+          "attraction": 0.3000000591139528
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.13862693309783936,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": -0.15450555458664894,
+          "attraction": 0.75
+        }
+      ],
+      "knn": [
+        {
+          "budget": 0.02,
+          "threshold": 0.9081467008590698,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.7963880717754361,
+          "attraction": 0.050000059113952784
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.6771932721138001,
+          "attraction": 0.09999997044302361
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.5127661108970643,
+          "attraction": 0.19999994088604722
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.3773835539817809,
+          "attraction": 0.3000000591139528
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.12476464733481407,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": -0.1629561074078083,
+          "attraction": 0.75
+        }
+      ],
+      "random": [
+        {
+          "budget": 0.02,
+          "threshold": 0.7314058101177214,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.6162370175123206,
+          "attraction": 0.050000059113952784
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.49663999676704407,
+          "attraction": 0.09999997044302361
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.3414177358150483,
+          "attraction": 0.20000008867092917
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.2239529773592948,
+          "attraction": 0.3000000591139528
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.01014123484492302,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": -0.24065736681222916,
+          "attraction": 0.75
+        }
+      ]
+    },
+    "block9": {
+      "intra": [
+        {
+          "budget": 0.02,
+          "threshold": 0.9212234008312223,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.7978897094726562,
+          "attraction": 0.04999991132907082
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.6889266014099122,
+          "attraction": 0.10000011822790557
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.5727648019790652,
+          "attraction": 0.20000008867092917
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.493156337738037,
+          "attraction": 0.3000000591139528
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.35412828624248505,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": 0.2161525934934616,
+          "attraction": 0.75
+        }
+      ],
+      "knn": [
+        {
+          "budget": 0.02,
+          "threshold": 0.8607092094421382,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.7614268064498901,
+          "attraction": 0.04999976354418886
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.6668413519859315,
+          "attraction": 0.10000011822790557
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.5598297834396364,
+          "attraction": 0.20000008867092917
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.48278255760669697,
+          "attraction": 0.3000000591139528
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.3478463441133499,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": 0.21346447989344597,
+          "attraction": 0.749999852215118
+        }
+      ],
+      "random": [
+        {
+          "budget": 0.02,
+          "threshold": 0.7463393306732176,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.6505015045404432,
+          "attraction": 0.050000059113952784
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.5716807663440705,
+          "attraction": 0.09999997044302361
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.4855864644050599,
+          "attraction": 0.20000008867092917
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.4210701197385788,
+          "attraction": 0.29999991132907083
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.3127913773059845,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": 0.19701779261231422,
+          "attraction": 0.75
+        }
+      ]
+    },
+    "block11": {
+      "intra": [
+        {
+          "budget": 0.02,
+          "threshold": 0.9739407300949097,
+          "attraction": 0.01999987586069915
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.8867179691791534,
+          "attraction": 0.050000059113952784
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.822980272769928,
+          "attraction": 0.09999997044302361
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.7432264685630801,
+          "attraction": 0.20000008867092917
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.6715784311294555,
+          "attraction": 0.3000000591139528
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.5255681872367859,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": 0.3513321876525879,
+          "attraction": 0.75
+        }
+      ],
+      "knn": [
+        {
+          "budget": 0.02,
+          "threshold": 0.9436658620834351,
+          "attraction": 0.01999987586069915
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.867434251308441,
+          "attraction": 0.050000059113952784
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.810169804096222,
+          "attraction": 0.09999997044302361
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.7338122606277466,
+          "attraction": 0.19999994088604722
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.6635184109210968,
+          "attraction": 0.29999991132907083
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.5207277536392212,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": 0.3488391041755676,
+          "attraction": 0.749999852215118
+        }
+      ],
+      "random": [
+        {
+          "budget": 0.02,
+          "threshold": 0.8650102651119229,
+          "attraction": 0.020000023645581115
+        },
+        {
+          "budget": 0.05,
+          "threshold": 0.8047083616256714,
+          "attraction": 0.04999991132907082
+        },
+        {
+          "budget": 0.1,
+          "threshold": 0.7526104331016541,
+          "attraction": 0.09999997044302361
+        },
+        {
+          "budget": 0.2,
+          "threshold": 0.6781336307525636,
+          "attraction": 0.20000008867092917
+        },
+        {
+          "budget": 0.3,
+          "threshold": 0.6111469686031341,
+          "attraction": 0.29999991132907083
+        },
+        {
+          "budget": 0.5,
+          "threshold": 0.48988018929958344,
+          "attraction": 0.5
+        },
+        {
+          "budget": 0.75,
+          "threshold": 0.335417702794075,
+          "attraction": 0.75
+        }
+      ]
+    },
+    "kmeans8": {
+      "intra": [
+        {
+          "budget": null,
+          "threshold": 0.5,
+          "attraction": 0.20582000510744553
+        }
+      ],
+      "knn": [
+        {
+          "budget": null,
+          "threshold": 0.5,
+          "attraction": 0.19781597590042374
+        }
+      ],
+      "random": [
+        {
+          "budget": null,
+          "threshold": 0.5,
+          "attraction": 0.16309746472079298
+        }
+      ]
+    }
+  },
+  "actual_shifts": {
+    "intra": 0.4584466218948364,
+    "knn": 0.45247218012809753,
+    "random": 0.7459585666656494
+  },
+  "baseline_attraction_at_C_shift": {
+    "intra": 0.785656058470793,
+    "knn": 0.7894613713964135,
+    "random": 0.1531741532517403
+  },
+  "intra_coordinate_diagonal_sample_fraction": 0.00927734375,
+  "elapsed_seconds": 40.86434833399835
+}

@@ -1,0 +1,32 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/crosspatient/report.py",
+  "changes": {
+    "val": {
+      "liver_target_share_change_pp": -0.35409256681030177,
+      "attracted_LL_change_pp": -0.02901379737480555,
+      "LL_enrichment_current": 1.3309534357978707,
+      "LL_enrichment_cross": 1.3320772003662131,
+      "LL_enrichment_change": 0.0011237645683424002,
+      "liver_to_background_attraction_change_pp": 0.12367010202241069,
+      "positive_shift_change": -0.012543320655822754
+    },
+    "train": {
+      "liver_target_share_change_pp": -0.6035714634230943,
+      "attracted_LL_change_pp": -0.06095622270495156,
+      "LL_enrichment_current": 1.3286393576060305,
+      "LL_enrichment_cross": 1.328981901566434,
+      "LL_enrichment_change": 0.0003425439604034519,
+      "liver_to_background_attraction_change_pp": 0.07220497264631698,
+      "positive_shift_change": -0.003922790288925171
+    }
+  },
+  "verdict": [
+    "val: attracting liver-anchor target share changes 16.297% \u2192 15.943% (-0.354 pp); attracted liver/liver fraction 1.424% \u2192 1.395% (-0.029 pp). Baseline-normalized LL enrichment changes 1.330953\u00d7 \u2192 1.332077\u00d7 (+0.001124\u00d7). These are diagnostic-label measurements, not selection criteria.",
+    "train: attracting liver-anchor target share changes 16.508% \u2192 15.904% (-0.604 pp); attracted liver/liver fraction 1.638% \u2192 1.577% (-0.061 pp). Baseline-normalized LL enrichment changes 1.328639\u00d7 \u2192 1.328982\u00d7 (+0.000343\u00d7). These are diagnostic-label measurements, not selection criteria.",
+    "Cross-patient positive-shift changes are val: 0.474392 \u2192 0.461848 (-0.012543); train: 0.451209 \u2192 0.447286 (-0.003923). Positive attraction budgets remain approximately 75%; random negatives approximately 15%. The saved C configuration is unchanged.",
+    "Both cohorts show a small decrease in liver-target share under cross-patient exclusion. The tiny increase in baseline-normalized LL enrichment does not translate into a larger absolute LL fraction or more liver targets. There is no improvement in liver specificity demonstrated by this comparison. This is descriptive evidence, not a statistical-significance or training-benefit claim.",
+    "Positive-shift changes are limited in absolute affinity units (about 0.0125 validation and 0.0039 train), rather than a large change of scale. Cross-patient exclusion alone does not establish organ-specific correspondences. Training benefits, statistical/generalization uncertainty and anatomical registration across patients remain UNVERIFIED."
+  ],
+  "source_commit": "e3c3ab0e396c194a7314d64546c81e9ba4973b72",
+  "elapsed_seconds": 2.8759510000090813
+}

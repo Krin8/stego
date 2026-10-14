@@ -1,0 +1,16 @@
+{
+  "source": "check_loss.py",
+  "labels_used": false,
+  "original_inter": 0.19213099777698517,
+  "p1_inter": 0.18250030279159546,
+  "expected_diagonal": 0.18250031769275665,
+  "self_and_random_bit_identical": true,
+  "valid_only_centering": true,
+  "empty_partner_zero": true,
+  "feature_gradients_absent": true,
+  "code_gradients_finite_nonzero": true,
+  "invalid_partner_gradient_zero": true,
+  "physical_order_boundary_checks": true,
+  "optimizer_updates": 0,
+  "status": "PASS"
+}

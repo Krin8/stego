@@ -1,0 +1,27 @@
+{
+  "seed0": {
+    "path": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed0/checkpoints/last.ckpt",
+    "exists": true,
+    "bytes": 792434993
+  },
+  "seed1": {
+    "path": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed1/checkpoints/last.ckpt",
+    "exists": true,
+    "bytes": 792435185
+  },
+  "seed2": {
+    "path": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed2/checkpoints/last.ckpt",
+    "exists": true,
+    "bytes": 792435185
+  },
+  "best600": {
+    "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=05-step=1800-mIoU=test/cluster/mIoU=69.3704.ckpt",
+    "exists": true,
+    "bytes": 792437477
+  },
+  "final": {
+    "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=42-step=15000-mIoU=test/cluster/mIoU=46.1792.ckpt",
+    "exists": true,
+    "bytes": 792455565
+  }
+}

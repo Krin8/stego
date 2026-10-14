@@ -1,0 +1,745 @@
+{
+  "producer": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/extract_visualize.py",
+  "protocol": "inductive seed0 N1=N2=N3; unchanged hard/F1",
+  "selected_cluster": 2,
+  "manifest_sha256": "ceb1f5e236980247444416469c03c86339348d4e73e51c2208de39f2d430416b",
+  "sealed_hashes_unchanged": true,
+  "pdf_files_read": 0,
+  "no_refitting_or_backbone_forward": true,
+  "slice_order": [
+    1916,
+    2005,
+    2095,
+    2242,
+    1922,
+    2017,
+    2122,
+    2296
+  ],
+  "arrays": {
+    "cluster_grid_28": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/cluster_grid_28.npy",
+    "cluster_assignments_native_512": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/cluster_assignments_native_512.npy",
+    "selected_liver_hard_512": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/selected_liver_hard_512.npy",
+    "final_F1_512": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/final_F1_512.npy",
+    "ground_truth_512": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/ground_truth_512.npy"
+  },
+  "source_sha256": {
+    "/Users/navneetbavineni/STEGO/audit/naming/inductive_s0_grids.npy": "3aaa46f009d8763878958b63e70ff9e1937058e40ed66d20fc186e90c637a8ce",
+    "/Users/navneetbavineni/STEGO/audit/naming/inductive_s0_figure_masks.npz": "bc02514c2caad51e43709c1683032dce24da5b93f57378d312d89cff415e73cb",
+    "/Users/navneetbavineni/STEGO/audit/naming/inductive_s0_scores.json": "602c692becef45dba71533c3c8b269595532b6ee6d3fb237f7bb9fa80e19a50c",
+    "/Users/navneetbavineni/STEGO/audit/naming/publication/reproduction/inductive_s0_figure_masks.npz": "bc02514c2caad51e43709c1683032dce24da5b93f57378d312d89cff415e73cb",
+    "/Users/navneetbavineni/STEGO/audit/naming/publication/reproduction/inductive_s0_scores.json": "743c38f799c23ca56d2e877e02f84128cb944b513b647e0f59f8430ca34f1c45",
+    "/Users/navneetbavineni/STEGO/audit/naming/inductive_s0_centers.npy": "5f288520877d4ea6349b4ba705b689ed7babc823b694e61335cbad2a3db172d7",
+    "/Users/navneetbavineni/STEGO/audit/naming/image_records.json": "1568b31f8ce82759fbf8542a88a77c00794b2fd7d2e8864d6f32286bc573481e"
+  },
+  "output_sha256": {
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0048/clusters_native_ids.png": "a8537c675930e2fc41f821ecbe8264eae3cb29080123a94207d2457e9dfb5148",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0048/selected_liver_hard.png": "3210b0fe12c7e907ea9effc0e1c8ebf902ea16a6aa72b1226560cdb569217825",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0048/final_F1.png": "e71ebb7f67cfab74f72563af2bb00d7d727e5a26193cda262ce1d080ceada2bc",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0048/ground_truth.png": "1cd4684ed86b27923712b43c9b8e61a222f9f4d281cf88f36e04d846a33e749f",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0048/clusters_native_colors.png": "3a383c95f55516a63e5c2e670cf1090b27c872aeffa900473f4e974208040175",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0048/final_F1_overlay.png": "d0d9b9bcbb0672e061eef3ef9150577d7ed96b94a451461e07abd5f455c5faac",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0048/original_CT_windowed.png": "b396dfd5a89666d6f72c89d58db50a35f0f0ae0283b5b9dbecea696975a31edb",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0047/clusters_native_ids.png": "39b9e771fc76fa228551f918792f22f6526016816f59cbb40bc608bf674d5001",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0047/selected_liver_hard.png": "66aa10fafcda932b33444c00270d89ead0d858c0a611ca068a7239d1e14a12a8",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0047/final_F1.png": "543ec439416bc45834fc2bd1b02c3ae40e1b302fc6b675954fcc94f865526191",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0047/ground_truth.png": "4d0f0f0e4b2a1faadfeaf5808ce19a67e8cc22856c4d4dd2894f5a0031612e69",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0047/clusters_native_colors.png": "d5f87b059148f0614eabd7bf5c8d2a0c7aac9df8d4db7023bb240b1670d0ea55",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0047/final_F1_overlay.png": "e1e99099486a474359f7ecf44ae29c1d01e05e7f432d84f1487d1b96d125cbe7",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0047/original_CT_windowed.png": "26f9f9e67ca364331521ea9837c6e2630880ac93673b9b60739bcac6c57c91f9",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0059/clusters_native_ids.png": "47a3ba0558558ec69dd9bd409c4cb5f510e74dfa66d21b69f955474fe37f37af",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0059/selected_liver_hard.png": "e4bd5f3a61d1b98a6d051aaeff005d21ac3577a8cf70217ea134e5b391d2a017",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0059/final_F1.png": "c9bb1a7348fefa2f0b04403f769c6d75b3e9ac6253fe526deec947b99735f738",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0059/ground_truth.png": "a3b9f1646356da5c685f59cca4158741e200918c86b0949142513af1f5d4bc6c",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0059/clusters_native_colors.png": "ebdfcae3162a0be76331071a2b2419bd0ad0b9fbea659c682139076a9a997d43",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0059/final_F1_overlay.png": "7b9fd3426f35f1f57d963151e093600625f52ef3148a01421b374c490b51ca19",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0059/original_CT_windowed.png": "7405546e20c041188d0ee0883e1cd85babed61f3a04476b076cb3c3582c3ade5",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0139/clusters_native_ids.png": "6462ba3426ccdaa88d707686a23905c6362e29e7e947e9cdb2e50af2e416c6fb",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0139/selected_liver_hard.png": "b9f09d0f2c90bec52304c2e489849cd3fcd3043c5fca72c9249e7d64953a903b",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0139/final_F1.png": "12f0bf4153ecfede499c4c9b4c116a535394cc9225ec7a89e90d78e7dc61e16d",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0139/ground_truth.png": "c603e181462803248b2420fe3f4d242f935f0d340dac16be7e68ff8fca150ea4",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0139/clusters_native_colors.png": "4743db9f22c568714efedfdff04ff08e4578d6f1badc82bad66170fc8500f009",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0139/final_F1_overlay.png": "40a47106e74eb33028ec5df7c9553046cf2ed301459824ebf94cb0b446c79a57",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0139/original_CT_windowed.png": "1ff07103fe188a4dd03cea8358cbb208788934408d965c71c251bf90c571ee4e",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0042/clusters_native_ids.png": "993f91fdbed4e6f562034e3948126d1a6658c16a73a4e1e501cdcbbd8b76e77b",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0042/selected_liver_hard.png": "049134215408651b75409755945e72d34138660bd90435ce3d4305870c119eaf",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0042/final_F1.png": "f3703d37b68446b85e51020971406caf50994766da8ddefbfad90b058e967d0e",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0042/ground_truth.png": "cbe1a977152b0b20bfb8feca8fc6b103f4705fc8753084bc279347ece00a589b",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0042/clusters_native_colors.png": "0bf6a4f12db0cb66937c4dc3516a8148fa6368d3a8aa15bc9ee9d99e0111a383",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0042/final_F1_overlay.png": "f06545281e315605eea3646966c900ee3169551c274784333115a265171fe862",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0042/original_CT_windowed.png": "ab4da78ad6280b5f5590216563036497b2102e4634bc0ab69c0e25774b76d201",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0035/clusters_native_ids.png": "34fafc63c96719652ae5adeb04a92a7e8510d97980202f2eca53614303ab34ec",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0035/selected_liver_hard.png": "10415c7294ca2c816374cdc0e25add218b954f6f8e6625fe08563defe5e88c21",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0035/final_F1.png": "2d0af3b83abd8621d181f5c28f2a763e1651e914ddf5cc24dc9ca7d37cb06b46",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0035/ground_truth.png": "cfefc7ec3c91b66dc7b66d1b7742f3b739a8c964a6770b1318d9c971b0de52e6",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0035/clusters_native_colors.png": "e791df26da9e8a61246b3ecd0ceabd92ce1e01baa18bec48321cf9596bbd74a6",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0035/final_F1_overlay.png": "8a4ef66711daeabdb7ea6ab9ae4a492f2ea0b0db18849e3d6be2a66360518070",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0035/original_CT_windowed.png": "d1e6ca3f178924eb3167d2c3d7efe22a73a116b4895ee786e6e53535ba2cfa14",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0032/clusters_native_ids.png": "542c9b5398a6302f203bfff3d0e5b98381acaa0a647ddb52251e82493bc92d77",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0032/selected_liver_hard.png": "0e17fdbcc1db88fee2e5d7f4b08bbefa2e64d1565bccd60f3a7ace29d3a5ff63",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0032/final_F1.png": "7ca2513f5c147d7a4518c2cd9064a89b6e9a3f2560e7712d8e4ae57c80f5c270",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0032/ground_truth.png": "7397020fc19d9300f77e7e8a63f7e4e09abafcf894b29a4d272766f8823e7484",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0032/clusters_native_colors.png": "7ad2d4cb88d575a0253cce511d1f0e1ff64f4c2dbb7332ac478c4e22518c4e94",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0032/final_F1_overlay.png": "1e5f3359684c836e19a7077aafcab2a682047206156e3616c741c596fde0d0c0",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0032/original_CT_windowed.png": "4336cc660217a94dbd8d5387d13ea65a2ff74ba6aa6820cbc0ac770500606c82",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0085/clusters_native_ids.png": "d41e41a3dfc8748817b27759f5829acfbebb25b691eb29240d0a34648a2f66cb",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0085/selected_liver_hard.png": "f1f3e863b6679a7326def9c659d308469923e97b3a4d246c2598d33a0a21727d",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0085/final_F1.png": "f61a77f3d370cd2b97be80f483be667c6e05d902c80eeb0170f665ab22a96544",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0085/ground_truth.png": "3d899baadb20f4f609134b61e193abb92bc0d74a4d8270a9813b8d2982c06605",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0085/clusters_native_colors.png": "5a39bed3c1e0b102fa31e5cad28b9a1f3ea60aa3b2019a6e07e42766ac43ca59",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0085/final_F1_overlay.png": "dbf7f1379e789f12096620b1455f11261eea65c51e8e0974c0b600861774178a",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0085/original_CT_windowed.png": "6d422a9190f1d01249cf40b6a7ffc16f6e68d07ef91755e1c0ae66eb1863707a",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/cluster_grid_28.npy": "bd7c0ac754ce6de4120a76ac9b41be18cd9b406bfb67372f861701a0ba2862ca",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/cluster_assignments_native_512.npy": "a4a73ba9def753e6306072b2e39966f53bea5af402e369a8036591c97913b7cc",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/selected_liver_hard_512.npy": "b824e4a0b89eff937e372082391ca9a567c54d5d423640c4b3d1cf1fc9ea7e29",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/final_F1_512.npy": "a2919ab01b49614bf886d902643bd7d0d8e2d1848e10225b64c89b9a6bcd754a",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/ground_truth_512.npy": "dee06c1f789e2ef72d695eff29738a26cb076226f9ca5ebce2f84e1043b5fa7e",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/actual_predictions_five_columns.png": "452b27995e26d28dbb4a637df118ccef78ae34b3dd669ab541e85f0fab88a2ea",
+    "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/actual_predictions_F1_overlay.png": "4eab684ae7f0bfa9d6ca029372600659797486518e460ef4ee0fee33dc080ad5"
+  },
+  "geometry": "Native512\u00d7512, original orientation; saved28\u00d728 crop assignments inverse-mapped by original nearest inverse_grid; outside crop sentinel8 is not a ninth cluster. Hard/native=(IDs==2). Binary NPY values0/1; binary PNG values0/255.",
+  "labels": "Ground truth display and IoU/Dice verification only; no selection or parameter adjustment",
+  "slices": [
+    {
+      "index": 1916,
+      "stem": "CT_5_0048",
+      "patient": "5",
+      "shape": [
+        512,
+        512
+      ],
+      "crop_box": [
+        13,
+        2,
+        512
+      ],
+      "selected_cluster": 2,
+      "raw_ids_present": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "outside_crop_pixels": 7654,
+      "metrics": {
+        "512": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.679297766814496,
+            "dice": 0.8090259872173519,
+            "precision": 0.9808275234919672,
+            "recall": 0.6884391372569878,
+            "tp": 25886,
+            "fp": 506,
+            "fn": 11715
+          },
+          "expected": {
+            "iou": 0.679297766814496,
+            "dice": 0.8090259872173519,
+            "tp": 25886,
+            "fp": 506,
+            "fn": 11715
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        },
+        "224": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.6791883740060324,
+            "dice": 0.8089483997387329,
+            "precision": 0.981378763866878,
+            "recall": 0.6880555555555555,
+            "tp": 4954,
+            "fp": 94,
+            "fn": 2246
+          },
+          "expected": {
+            "iou": 0.6791883740060324,
+            "dice": 0.8089483997387329,
+            "tp": 4954,
+            "fp": 94,
+            "fn": 2246
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        }
+      },
+      "files": {
+        "clusters_native_ids": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0048/clusters_native_ids.png",
+        "selected_liver_hard": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0048/selected_liver_hard.png",
+        "final_F1": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0048/final_F1.png",
+        "ground_truth": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0048/ground_truth.png"
+      }
+    },
+    {
+      "index": 2005,
+      "stem": "CT_6_0047",
+      "patient": "6",
+      "shape": [
+        512,
+        512
+      ],
+      "crop_box": [
+        -11,
+        0,
+        489
+      ],
+      "selected_cluster": 2,
+      "raw_ids_present": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "outside_crop_pixels": 28402,
+      "metrics": {
+        "512": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.90042151920737,
+            "dice": 0.947601897902018,
+            "precision": 0.9772207418586554,
+            "recall": 0.9197256868924497,
+            "tp": 41441,
+            "fp": 966,
+            "fn": 3617
+          },
+          "expected": {
+            "iou": 0.90042151920737,
+            "dice": 0.947601897902018,
+            "tp": 41441,
+            "fp": 966,
+            "fn": 3617
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        },
+        "224": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.9015220354384371,
+            "dice": 0.9482109790335106,
+            "precision": 0.9771020558906808,
+            "recall": 0.9209793455558134,
+            "tp": 7937,
+            "fp": 186,
+            "fn": 681
+          },
+          "expected": {
+            "iou": 0.9015220354384371,
+            "dice": 0.9482109790335106,
+            "tp": 7937,
+            "fp": 186,
+            "fn": 681
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        }
+      },
+      "files": {
+        "clusters_native_ids": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0047/clusters_native_ids.png",
+        "selected_liver_hard": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0047/selected_liver_hard.png",
+        "final_F1": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0047/final_F1.png",
+        "ground_truth": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0047/ground_truth.png"
+      }
+    },
+    {
+      "index": 2095,
+      "stem": "CT_8_0059",
+      "patient": "8",
+      "shape": [
+        512,
+        512
+      ],
+      "crop_box": [
+        12,
+        12,
+        491
+      ],
+      "selected_cluster": 2,
+      "raw_ids_present": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "outside_crop_pixels": 21063,
+      "metrics": {
+        "512": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.8173786712737553,
+            "dice": 0.8995138813870585,
+            "precision": 0.9613022396675133,
+            "recall": 0.8451887941534714,
+            "tp": 20817,
+            "fp": 838,
+            "fn": 3813
+          },
+          "expected": {
+            "iou": 0.8173786712737553,
+            "dice": 0.8995138813870585,
+            "tp": 20817,
+            "fp": 838,
+            "fn": 3813
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        },
+        "224": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.8196923076923077,
+            "dice": 0.9009130875887724,
+            "precision": 0.9621960028894775,
+            "recall": 0.8469690546841883,
+            "tp": 3996,
+            "fp": 157,
+            "fn": 722
+          },
+          "expected": {
+            "iou": 0.8196923076923077,
+            "dice": 0.9009130875887724,
+            "tp": 3996,
+            "fp": 157,
+            "fn": 722
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        }
+      },
+      "files": {
+        "clusters_native_ids": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0059/clusters_native_ids.png",
+        "selected_liver_hard": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0059/selected_liver_hard.png",
+        "final_F1": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0059/final_F1.png",
+        "ground_truth": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0059/ground_truth.png"
+      }
+    },
+    {
+      "index": 2242,
+      "stem": "CT_30_0139",
+      "patient": "30",
+      "shape": [
+        512,
+        512
+      ],
+      "crop_box": [
+        2,
+        -26,
+        564
+      ],
+      "selected_cluster": 2,
+      "raw_ids_present": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "outside_crop_pixels": 1024,
+      "metrics": {
+        "512": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.7506607400288323,
+            "dice": 0.857574197975639,
+            "precision": 1.0,
+            "recall": 0.7506607400288323,
+            "tp": 12497,
+            "fp": 0,
+            "fn": 4151
+          },
+          "expected": {
+            "iou": 0.7506607400288323,
+            "dice": 0.857574197975639,
+            "tp": 12497,
+            "fp": 0,
+            "fn": 4151
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        },
+        "224": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.7512578616352201,
+            "dice": 0.8579637277787754,
+            "precision": 1.0,
+            "recall": 0.7512578616352201,
+            "tp": 2389,
+            "fp": 0,
+            "fn": 791
+          },
+          "expected": {
+            "iou": 0.7512578616352201,
+            "dice": 0.8579637277787754,
+            "tp": 2389,
+            "fp": 0,
+            "fn": 791
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        }
+      },
+      "files": {
+        "clusters_native_ids": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0139/clusters_native_ids.png",
+        "selected_liver_hard": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0139/selected_liver_hard.png",
+        "final_F1": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0139/final_F1.png",
+        "ground_truth": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0139/ground_truth.png"
+      }
+    },
+    {
+      "index": 1922,
+      "stem": "CT_5_0042",
+      "patient": "5",
+      "shape": [
+        512,
+        512
+      ],
+      "crop_box": [
+        16,
+        3,
+        510
+      ],
+      "selected_cluster": 2,
+      "raw_ids_present": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "outside_crop_pixels": 9680,
+      "metrics": {
+        "512": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.8790939002784105,
+            "dice": 0.935657233678596,
+            "precision": 0.9707378423700391,
+            "recall": 0.9030236850999662,
+            "tp": 34733,
+            "fp": 1047,
+            "fn": 3730
+          },
+          "expected": {
+            "iou": 0.8790939002784105,
+            "dice": 0.935657233678596,
+            "tp": 34733,
+            "fp": 1047,
+            "fn": 3730
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        },
+        "224": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.8778071334214003,
+            "dice": 0.9349278930707,
+            "precision": 0.970356308411215,
+            "recall": 0.9019953848242162,
+            "tp": 6645,
+            "fp": 203,
+            "fn": 722
+          },
+          "expected": {
+            "iou": 0.8778071334214003,
+            "dice": 0.9349278930707,
+            "tp": 6645,
+            "fp": 203,
+            "fn": 722
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        }
+      },
+      "files": {
+        "clusters_native_ids": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0042/clusters_native_ids.png",
+        "selected_liver_hard": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0042/selected_liver_hard.png",
+        "final_F1": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0042/final_F1.png",
+        "ground_truth": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_5_0042/ground_truth.png"
+      }
+    },
+    {
+      "index": 2017,
+      "stem": "CT_6_0035",
+      "patient": "6",
+      "shape": [
+        512,
+        512
+      ],
+      "crop_box": [
+        -18,
+        -9,
+        502
+      ],
+      "selected_cluster": 2,
+      "raw_ids_present": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "outside_crop_pixels": 23532,
+      "metrics": {
+        "512": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.8655742313794004,
+            "dice": 0.9279440258342303,
+            "precision": 0.969849020093153,
+            "recall": 0.8895102874713664,
+            "tp": 43103,
+            "fp": 1340,
+            "fn": 5354
+          },
+          "expected": {
+            "iou": 0.8655742313794004,
+            "dice": 0.9279440258342303,
+            "tp": 43103,
+            "fp": 1340,
+            "fn": 5354
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        },
+        "224": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.8656105749055812,
+            "dice": 0.9279649103075971,
+            "precision": 0.9700211615330355,
+            "recall": 0.8894039021235313,
+            "tp": 8251,
+            "fp": 255,
+            "fn": 1026
+          },
+          "expected": {
+            "iou": 0.8656105749055812,
+            "dice": 0.9279649103075971,
+            "tp": 8251,
+            "fp": 255,
+            "fn": 1026
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        }
+      },
+      "files": {
+        "clusters_native_ids": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0035/clusters_native_ids.png",
+        "selected_liver_hard": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0035/selected_liver_hard.png",
+        "final_F1": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0035/final_F1.png",
+        "ground_truth": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_6_0035/ground_truth.png"
+      }
+    },
+    {
+      "index": 2122,
+      "stem": "CT_8_0032",
+      "patient": "8",
+      "shape": [
+        512,
+        512
+      ],
+      "crop_box": [
+        13,
+        13,
+        488
+      ],
+      "selected_cluster": 2,
+      "raw_ids_present": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "outside_crop_pixels": 24000,
+      "metrics": {
+        "512": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.7417419314090823,
+            "dice": 0.8517242629727672,
+            "precision": 0.8943948009748173,
+            "recall": 0.8129398463277879,
+            "tp": 35232,
+            "fp": 4160,
+            "fn": 8107
+          },
+          "expected": {
+            "iou": 0.7417419314090823,
+            "dice": 0.8517242629727672,
+            "tp": 35232,
+            "fp": 4160,
+            "fn": 8107
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        },
+        "224": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.7397275324104592,
+            "dice": 0.850394695295232,
+            "precision": 0.8941567065073042,
+            "recall": 0.8107164358819988,
+            "tp": 6733,
+            "fp": 797,
+            "fn": 1572
+          },
+          "expected": {
+            "iou": 0.7397275324104592,
+            "dice": 0.850394695295232,
+            "tp": 6733,
+            "fp": 797,
+            "fn": 1572
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        }
+      },
+      "files": {
+        "clusters_native_ids": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0032/clusters_native_ids.png",
+        "selected_liver_hard": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0032/selected_liver_hard.png",
+        "final_F1": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0032/final_F1.png",
+        "ground_truth": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_8_0032/ground_truth.png"
+      }
+    },
+    {
+      "index": 2296,
+      "stem": "CT_30_0085",
+      "patient": "30",
+      "shape": [
+        512,
+        512
+      ],
+      "crop_box": [
+        8,
+        -26,
+        564
+      ],
+      "selected_cluster": 2,
+      "raw_ids_present": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "outside_crop_pixels": 4096,
+      "metrics": {
+        "512": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.8648920907231601,
+            "dice": 0.9275518889543639,
+            "precision": 0.9990479548660085,
+            "recall": 0.8656055236465844,
+            "tp": 28333,
+            "fp": 27,
+            "fn": 4399
+          },
+          "expected": {
+            "iou": 0.8648920907231601,
+            "dice": 0.9275518889543639,
+            "tp": 28333,
+            "fp": 27,
+            "fn": 4399
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        },
+        "224": {
+          "actual": {
+            "clusters": [
+              1
+            ],
+            "iou": 0.8645933014354067,
+            "dice": 0.9273800359250706,
+            "precision": 0.9988944168048646,
+            "recall": 0.8654214559386973,
+            "tp": 5421,
+            "fp": 6,
+            "fn": 843
+          },
+          "expected": {
+            "iou": 0.8645933014354067,
+            "dice": 0.9273800359250706,
+            "tp": 5421,
+            "fp": 6,
+            "fn": 843
+          },
+          "absolute_iou_error": 0.0,
+          "absolute_dice_error": 0.0
+        }
+      },
+      "files": {
+        "clusters_native_ids": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0085/clusters_native_ids.png",
+        "selected_liver_hard": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0085/selected_liver_hard.png",
+        "final_F1": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0085/final_F1.png",
+        "ground_truth": "/Users/navneetbavineni/STEGO/audit/naming/actual_predictions/CT_30_0085/ground_truth.png"
+      }
+    }
+  ],
+  "all_masks_exactly_match_original_and_repeated_StageB": true,
+  "all_metrics_exact_at_224_and_512": true
+}

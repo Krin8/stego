@@ -1,0 +1,51 @@
+{
+  "producer": "validate.py",
+  "manifest_sha256": "ceb1f5e236980247444416469c03c86339348d4e73e51c2208de39f2d430416b",
+  "all_stageA_file_hashes_unchanged": true,
+  "stageA_zero_label_reads": true,
+  "all_selections_verified": true,
+  "abstentions_empty": true,
+  "reference_regression_checks": [
+    {
+      "fit": "inductive",
+      "seed": 0,
+      "selection_verified": true,
+      "reference_exact": true
+    },
+    {
+      "fit": "inductive",
+      "seed": 1,
+      "selection_verified": true,
+      "reference_exact": true
+    },
+    {
+      "fit": "inductive",
+      "seed": 2,
+      "selection_verified": true,
+      "reference_exact": true
+    },
+    {
+      "fit": "transductive",
+      "seed": 0,
+      "selection_verified": true,
+      "reference_exact": true
+    },
+    {
+      "fit": "transductive",
+      "seed": 1,
+      "selection_verified": true,
+      "reference_exact": true
+    },
+    {
+      "fit": "transductive",
+      "seed": 2,
+      "selection_verified": true,
+      "reference_exact": true
+    }
+  ],
+  "source_state": {
+    "commit": "6f6f326a3d4c8ebe56900d75a9c7ad8eb27137f2",
+    "diff": "",
+    "status": "?? audit/dino/\n?? audit/dino2/\n?? audit/final_pipeline/\n?? audit/improve/\n?? audit/improve2/\n?? audit/naming/\n"
+  }
+}

@@ -1,0 +1,22 @@
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/navneetbavineni/.cache/fontconfig
+	/Users/navneetbavineni/.fontconfig
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/navneetbavineni/.cache/fontconfig
+	/Users/navneetbavineni/.fontconfig
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/navneetbavineni/.cache/fontconfig
+	/Users/navneetbavineni/.fontconfig
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/navneetbavineni/.cache/fontconfig
+	/Users/navneetbavineni/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+PACKAGE VERIFIED [{"stem": "CT_5_0048", "features_max_abs_error": 0.0, "live_iou": 0.6791140735297977, "reference_iou": 0.6791140735297977, "iou_absolute_error": 0.0}, {"stem": "CT_6_0047", "features_max_abs_error": 0.0, "live_iou": 0.9002390265102129, "reference_iou": 0.9002390265102129, "iou_absolute_error": 0.0}, {"stem": "CT_8_0059", "features_max_abs_error": 0.0, "live_iou": 0.8171311765399584, "reference_iou": 0.8171311765399584, "iou_absolute_error": 0.0}, {"stem": "CT_30_0139", "features_max_abs_error": 0.0, "live_iou": 0.7486785199423354, "reference_iou": 0.7486785199423354, "iou_absolute_error": 0.0}, {"stem": "CT_5_0095", "features_max_abs_error": 0.0, "live_iou": 0.24161490683229814, "reference_iou": 0.24161490683229814, "iou_absolute_error": 0.0}]

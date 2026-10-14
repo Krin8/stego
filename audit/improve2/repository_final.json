@@ -1,0 +1,5 @@
+{
+  "git rev-parse HEAD": "6f6f326a3d4c8ebe56900d75a9c7ad8eb27137f2\n",
+  "git status --short": "?? audit/improve/\n?? audit/improve2/\n",
+  "git diff --stat": ""
+}

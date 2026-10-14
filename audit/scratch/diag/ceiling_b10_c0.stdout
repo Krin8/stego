@@ -1,0 +1,26 @@
+kmeans 10 0 2 {'liver_iou': 0.0, 'liver_dice': 0.0, 'tp': 0, 'fp': 0, 'fn': 421619} elapsed 1.94
+kmeans 10 0 4 {'liver_iou': 0.0, 'liver_dice': 0.0, 'tp': 0, 'fp': 0, 'fn': 421619} elapsed 2.32
+kmeans 10 0 8 {'liver_iou': 0.4766006402822896, 'liver_dice': 0.6455376318828838, 'tp': 364141, 'fp': 342419, 'fn': 57478} elapsed 3.17
+linear 10 0 {'liver_iou': 0.6163861569347966, 'liver_dice': 0.7626719076877878, 'tp': 376411, 'fp': 189055, 'fn': 45208, 'iterations': [41], 'fit_patch_count': 39200, 'fit_liver_patches': 3092, 'class_weight': 'balanced', 'C': 1.0, 'threshold': 0.0, 'model_saved': False} elapsed 3.37
+{
+  "block": 10,
+  "center": 0,
+  "linear": {
+    "liver_iou": 0.6163861569347966,
+    "liver_dice": 0.7626719076877878,
+    "tp": 376411,
+    "fp": 189055,
+    "fn": 45208,
+    "iterations": [
+      41
+    ],
+    "fit_patch_count": 39200,
+    "fit_liver_patches": 3092,
+    "class_weight": "balanced",
+    "C": 1.0,
+    "threshold": 0.0,
+    "model_saved": false
+  },
+  "warnings": [],
+  "elapsed_seconds": 3.5
+}

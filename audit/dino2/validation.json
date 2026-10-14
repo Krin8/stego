@@ -1,0 +1,17 @@
+{
+  "producer": "validate.py",
+  "backbone_files_unchanged": true,
+  "exact_BiomedCLIP_selectivity_reference": true,
+  "exact_D1_sampling_and_label_indices": true,
+  "L2_errors": {
+    "D2": 3.5762786865234375e-07,
+    "D3": 2.980232238769531e-07
+  },
+  "all_L0PO_mappings_exclude_heldout": true,
+  "figures_before_scoring": true,
+  "source_state": {
+    "commit": "6f6f326a3d4c8ebe56900d75a9c7ad8eb27137f2",
+    "diff": "",
+    "status": "?? audit/dino/\n?? audit/dino2/\n?? audit/final_pipeline/\n?? audit/improve/\n?? audit/improve2/\n"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "unchanged_copies": {
+    "runtime.py": "3775415cdccc10dac430bbf20093037b4760c6022b7f498d59d0b7f89019dee5",
+    "model.py": "95a2befc6c2b7a271596e442d0420771a01a4a8819bb1e68c4ca2a7c774dfe04",
+    "reference_loss.py": "b86995be6db96c653cc5fa3c8cae23c3c3fb8b0f667fed5795de1f79b1cff3a6",
+    "state.py": "f53f9468d7f6d1f366c3a2e56c43f9f965a1a18fd9592320c2b9a8e5095fd4b0",
+    "stages.py": "a7b1edef1e2377265bd7848a51088f9ad130ca8544da312f4f420ad33fd6c386",
+    "seal_all.py": "153347ea3ee3604b10dd15ced0878394a786fc495aa4354de1028f720b3bcaf1",
+    "evaluate.py": "16785ed345e78fd2e799a3a3ab341461de08885e65e7e5dd2cdd3ab2c1b33922"
+  },
+  "adapted": [
+    "train.py",
+    "check_state.py"
+  ],
+  "differences": "candidate assertion; P1 partner selection and criterion; same control RNG and loss; P1 state test",
+  "config_differences": "requested rounded shifts, candidate identity, stage budgets, metadata"
+}

@@ -1,0 +1,25 @@
+diff --git a/src/configs/train_config.yaml b/src/configs/train_config.yaml
+index 48a1368..79ad403 100644
+--- a/src/configs/train_config.yaml
++++ b/src/configs/train_config.yaml
+@@ -8,6 +8,7 @@ submitting_to_aml: False
+ # Loader params
+ num_workers: 0
+ max_steps: 5000
++seed: 0
+ batch_size: 16
+ chaos_modality: "CT"       # or "CT" or "T1DUAL" or "T2SPIR"
+ chaos_n_classes: 2         # use 2 if CT only, 5 if MR or all
+diff --git a/src/train_segmentation.py b/src/train_segmentation.py
+index 878bb53..c4e0239 100644
+--- a/src/train_segmentation.py
++++ b/src/train_segmentation.py
+@@ -598,7 +598,7 @@ def my_app(cfg: DictConfig) -> None:
+     os.makedirs(log_dir, exist_ok=True)
+     os.makedirs(checkpoint_dir, exist_ok=True)
+ 
+-    seed_everything(seed=0)
++    seed_everything(seed=cfg.seed)
+ 
+     print(data_dir)
+     print(cfg.output_root)

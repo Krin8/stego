@@ -1,0 +1,60 @@
+{
+  "producer": "verify_cli.py",
+  "tests": [
+    {
+      "name": "check_seed0",
+      "returncode": 0,
+      "expected_success": true
+    },
+    {
+      "name": "check_seed1",
+      "returncode": 0,
+      "expected_success": true
+    },
+    {
+      "name": "check_seed2",
+      "returncode": 0,
+      "expected_success": true
+    },
+    {
+      "name": "png",
+      "returncode": 0,
+      "expected_success": true
+    },
+    {
+      "name": "dicom",
+      "returncode": 0,
+      "expected_success": true
+    },
+    {
+      "name": "refuse_overwrite",
+      "returncode": 1,
+      "expected_success": false
+    },
+    {
+      "name": "f2",
+      "returncode": 0,
+      "expected_success": true
+    },
+    {
+      "name": "f2_refuse_rank_order",
+      "returncode": 1,
+      "expected_success": false
+    },
+    {
+      "name": "refuse_eightbit",
+      "returncode": 1,
+      "expected_success": false
+    }
+  ],
+  "dicom_png_mask_overlay_bitwise_identical": true,
+  "check_seeds": [
+    0,
+    1,
+    2
+  ],
+  "native_output_shape": [
+    512,
+    512
+  ]
+}

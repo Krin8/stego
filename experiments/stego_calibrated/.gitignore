@@ -1,0 +1,6 @@
+**/checkpoints/
+**/predictions/
+**/logs/
+**/metrics/
+**/visualizations/
+__pycache__/

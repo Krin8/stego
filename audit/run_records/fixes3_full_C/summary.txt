@@ -1,0 +1,10 @@
+PREPARED. Both seed stability gates passed. Full seed0 retained by default, not selected using labels. No linear-probe override. Source commit e3c3ab0. 5000 batches =15000 optimizer steps; scheduler T_max5000. Logs/checkpoints use new experiment name fixes3_full_C. Final results pending.
+
+Full run launched; shell session17994. Heartbeat monitor-stego-full-c-run active every5minutes for progress/error/completion and final artifact collection. No overlapping Python job before launch. Remaining suspended caffeinate67971 untouched.
+
+First full-run validation: batch50, code_std0.1058355900, cosine0.1426150498, entropy1.603166851, badchecks0, eight clusters>=1%, no collapse. LiverIoU/Dice0 at this early check; not final metrics.
+Existing checkpoints: ["/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=00-step=0300-mIoU=test/cluster/mIoU=46.1792.ckpt"]
+Exact command: Working directory: /Users/navneetbavineni/STEGO/src
+WANDB_MODE=offline HF_HUB_OFFLINE=1 caffeinate -i python3 -B train_segmentation.py "pytorch_data_dir=$PWD/pytorch_data_dir" experiment_name=fixes3_full_C max_steps=5000 seed=0 extra_clusters=6 collapse_early_stop=True pos_intra_shift=0.4584466218948364 pos_inter_shift=0.45247218012809753 neg_inter_shift=0.7459585666656494
+Stdout/stderr: train.log. Shell records exit_code.txt after process exits.
+

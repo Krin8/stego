@@ -1,0 +1,32 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/crosspatient/verify.py",
+  "status": "PASS",
+  "cohorts": {
+    "val": {
+      "anchors": 472,
+      "patients": 4,
+      "mask_count": 472,
+      "calibration_hash_unchanged": true,
+      "current_positive_attraction": 0.7500626578021553,
+      "cross_positive_attraction": 0.7494001395739925,
+      "negative_attraction": 0.1502829869107574,
+      "prefix29_cross_minus_current_liver_target_pp": -0.40562891318696725,
+      "calibration_seconds": 91.72963262499252,
+      "purity_seconds": 109.7280095419992
+    },
+    "train": {
+      "anchors": 200,
+      "patients": 16,
+      "mask_count": 1841,
+      "calibration_hash_unchanged": true,
+      "current_positive_attraction": 0.7505219400408395,
+      "cross_positive_attraction": 0.7504644727018364,
+      "negative_attraction": 0.15164386192005802,
+      "prefix29_cross_minus_current_liver_target_pp": null,
+      "calibration_seconds": 34.72707779200573,
+      "purity_seconds": 53.099034915998345
+    }
+  },
+  "no_tracked_source_changes": true,
+  "elapsed_seconds": 2.8052427919901675
+}

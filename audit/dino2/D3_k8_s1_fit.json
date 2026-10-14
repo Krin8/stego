@@ -1,0 +1,7 @@
+{
+  "producer": "fit_score.py",
+  "labels_used": false,
+  "iterations": 19,
+  "inertia": 816021.375,
+  "seconds": 62.785305625002366
+}

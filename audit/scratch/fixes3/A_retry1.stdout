@@ -1,0 +1,257 @@
+/Users/navneetbavineni/STEGO/src/train_segmentation.py:584: UserWarning: 
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path="configs", config_name="train_config.yaml")
+AUTHORIZED LIMIT500 BATCHES; CPU; labels only in evaluation; no supervised fitting
+Seed set to 0
+output_root: /Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_A_seed0_retry1
+pytorch_data_dir: /Users/navneetbavineni/STEGO/src/pytorch_data_dir
+experiment_name: fixes3_A_seed0_retry1
+log_dir: chaos
+azureml_logging: false
+submitting_to_aml: false
+num_workers: 0
+max_steps: 5000
+batch_size: 16
+chaos_modality: CT
+chaos_n_classes: 2
+num_neighbors: 7
+knn_k: 30
+archive_existing_cache: false
+dataset_name: chaos
+use_preprocessed_data: true
+dir_dataset_name: null
+dir_dataset_n_classes: 5
+has_labels: true
+crop_type: five
+crop_ratio: 0.75
+res: 224
+loader_crop_type: center
+extra_clusters: 6
+use_true_labels: false
+use_recalibrator: false
+model_type: vit_base
+arch: biomedclip
+use_text_prompts: false
+text_align_weight: 0.0
+shallow_layer_n: 2
+dino_feat_type: feat
+projection_type: nonlinear
+dino_patch_size: 16
+granularity: 1
+continuous: true
+dim: 70
+dropout: true
+zero_clamp: true
+spatial_weight: 0
+lr: 0.0001
+pretrained_weights: null
+use_salience: false
+stabalize: false
+pointwise: true
+feature_samples: 11
+neg_samples: 20
+aug_alignment_weight: 0.0
+correspondence_weight: 1.0
+neg_inter_weight: 0.63
+pos_inter_weight: 0.25
+pos_intra_weight: 0.67
+neg_inter_shift: 0.46
+pos_inter_shift: 0.12
+pos_intra_shift: 0.18
+rec_weight: 0.0
+crf_weight: 0.0
+alpha: 0.5
+beta: 0.1
+gamma: 0.05
+w1: 10.0
+w2: 3.0
+shift: 0.0
+crf_samples: 2000
+color_space: rgb
+n_images: 5
+scalar_log_freq: 10
+val_freq: 50
+hist_freq: 100
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+collapse_early_stop: true
+collapse_cosine_threshold: 0.99
+collapse_std_threshold: 0.01
+train_linear_probe: false
+
+/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_A_seed0_retry1/data
+/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_A_seed0_retry1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=13` in the `DataLoader` to improve performance.
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=13` in the `DataLoader` to improve performance.
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/pytorch_lightning/loops/fit_loop.py:534: Found 512 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/torchmetrics/utilities/prints.py:43: UserWarning: The ``compute`` method of metric UnsupervisedMetrics was called before the ``update`` method which may lead to errors, as metric states have not yet been updated.
+  warnings.warn(*args, **kwargs)
+Loaded verified KNN neighbors from /Users/navneetbavineni/STEGO/src/pytorch_data_dir/nns/nns_chaos_v2_train_af7eb1c9b4b1f0ef0fa2328fdabb30c9ed455cd55cef7a3b85bc7c673e0ec793.npz, shape=torch.Size([1869, 30])
+
+======================================================================
+[CLUSTER PROBE DEBUG]  epoch=0  step=0  n_classes=2  extra_clusters=6
+  Total clusters in probe: 8
+  Unique cluster IDs found: [1, 2, 3, 4, 5, 6, 7]
+  Pixel counts per cluster:
+    cluster  1:      426 pixels  (  0.1%)
+    cluster  2:    46090 pixels  (  5.7%)
+    cluster  3:      702 pixels  (  0.1%)
+    cluster  4:    24667 pixels  (  3.1%)
+    cluster  5:   455526 pixels  ( 56.7%)
+    cluster  6:     1288 pixels  (  0.2%)
+    cluster  7:   274117 pixels  ( 34.1%)
+
+  Cross-tab (cluster × ground-truth):
+    cluster \ label |   background |        liver
+  -----------------------------------------------
+  cluster  0         |            0 |            0
+  cluster  1         |           32 |          394
+  cluster  2 (extra) |        42849 |         3241
+  cluster  3 (extra) |          702 |            0
+  cluster  4 (extra) |        24407 |          260
+  cluster  5 (extra) |       439463 |        16063
+  cluster  6 (extra) |          319 |          969
+  cluster  7 (extra) |       274117 |            0
+
+  Per-class dominant cluster:
+         background: dominant cluster=5  (56.2% of 781889 pixels)
+              liver: dominant cluster=5  (76.8% of 20927 pixels)
+
+  Cluster centroid norms: ['8.671', '9.783', '7.886', '10.023', '7.618', '8.445', '8.344', '9.562']
+======================================================================
+
+PROGRESS A 25 seconds 30.2
+PROGRESS A 50 seconds 56.3
+
+======================================================================
+[CLUSTER PROBE DEBUG]  epoch=0  step=150  n_classes=2  extra_clusters=6
+  Total clusters in probe: 8
+  Unique cluster IDs found: [4, 5, 7]
+  Pixel counts per cluster:
+    cluster  4:    45304 pixels  (  5.6%)
+    cluster  5:   757499 pixels  ( 94.4%)
+    cluster  7:       13 pixels  (  0.0%)
+
+  Cross-tab (cluster × ground-truth):
+    cluster \ label |   background |        liver
+  -----------------------------------------------
+  cluster  0         |            0 |            0
+  cluster  1         |            0 |            0
+  cluster  2 (extra) |            0 |            0
+  cluster  3 (extra) |            0 |            0
+  cluster  4 (extra) |        45302 |            2
+  cluster  5 (extra) |       736574 |        20925
+  cluster  6 (extra) |            0 |            0
+  cluster  7 (extra) |           13 |            0
+
+  Per-class dominant cluster:
+         background: dominant cluster=5  (94.2% of 781889 pixels)
+              liver: dominant cluster=5  (100.0% of 20927 pixels)
+
+  Cluster centroid norms: ['8.671', '9.783', '7.886', '10.023', '7.619', '8.445', '8.344', '9.562']
+======================================================================
+
+VALIDATION {"run": "A", "batches": 50, "code_std": 0.013212389414124124, "cosine": 0.9873095320720167, "usage": [0.0, 0.0, 0.0, 0.0, 0.12170583275683154, 0.8778196510993168, 0.0, 0.00047451614385160844], "early_stop": false}
+PROGRESS A 75 seconds 110.7
+PROGRESS A 100 seconds 152.5
+
+======================================================================
+[CLUSTER PROBE DEBUG]  epoch=0  step=300  n_classes=2  extra_clusters=6
+  Total clusters in probe: 8
+  Unique cluster IDs found: [4, 5]
+  Pixel counts per cluster:
+    cluster  4:   191283 pixels  ( 23.8%)
+    cluster  5:   611533 pixels  ( 76.2%)
+
+  Cross-tab (cluster × ground-truth):
+    cluster \ label |   background |        liver
+  -----------------------------------------------
+  cluster  0         |            0 |            0
+  cluster  1         |            0 |            0
+  cluster  2 (extra) |            0 |            0
+  cluster  3 (extra) |            0 |            0
+  cluster  4 (extra) |       189162 |         2121
+  cluster  5 (extra) |       592727 |        18806
+  cluster  6 (extra) |            0 |            0
+  cluster  7 (extra) |            0 |            0
+
+  Per-class dominant cluster:
+         background: dominant cluster=5  (75.8% of 781889 pixels)
+              liver: dominant cluster=5  (89.9% of 20927 pixels)
+
+  Cluster centroid norms: ['8.671', '9.783', '7.886', '10.023', '7.626', '8.447', '8.344', '9.562']
+======================================================================
+
+VALIDATION {"run": "A", "batches": 100, "code_std": 0.00821742627713314, "cosine": 0.9952087720781432, "usage": [0.0, 0.0, 0.0, 0.0, 0.3339812926296048, 0.6660187073703951, 0.0, 0.0], "early_stop": false}
+PROGRESS A 125 seconds 242.9
+PROGRESS A 150 seconds 319.7
+
+======================================================================
+[CLUSTER PROBE DEBUG]  epoch=1  step=501  n_classes=2  extra_clusters=6
+  Total clusters in probe: 8
+  Unique cluster IDs found: [4, 5]
+  Pixel counts per cluster:
+    cluster  4:   801939 pixels  ( 99.9%)
+    cluster  5:      877 pixels  (  0.1%)
+
+  Cross-tab (cluster × ground-truth):
+    cluster \ label |   background |        liver
+  -----------------------------------------------
+  cluster  0         |            0 |            0
+  cluster  1         |            0 |            0
+  cluster  2 (extra) |            0 |            0
+  cluster  3 (extra) |            0 |            0
+  cluster  4 (extra) |       781012 |        20927
+  cluster  5 (extra) |          877 |            0
+  cluster  6 (extra) |            0 |            0
+  cluster  7 (extra) |            0 |            0
+
+  Per-class dominant cluster:
+         background: dominant cluster=4  (99.9% of 781889 pixels)
+              liver: dominant cluster=4  (100.0% of 20927 pixels)
+
+  Cluster centroid norms: ['8.671', '9.783', '7.886', '10.023', '7.649', '8.450', '8.344', '9.562']
+======================================================================
+
+VALIDATION {"run": "A", "batches": 167, "code_std": 0.005615631395668691, "cosine": 0.9977743442946749, "usage": [0.0, 0.0, 0.0, 0.0, 0.9982179254448071, 0.0017820745551928399, 0.0, 0.0], "early_stop": false}
+PROGRESS A 175 seconds 530.9
+PROGRESS A 200 seconds 589.2
+
+======================================================================
+[CLUSTER PROBE DEBUG]  epoch=1  step=651  n_classes=2  extra_clusters=6
+  Total clusters in probe: 8
+  Unique cluster IDs found: [4]
+  Pixel counts per cluster:
+    cluster  4:   802816 pixels  (100.0%)
+
+  Cross-tab (cluster × ground-truth):
+    cluster \ label |   background |        liver
+  -----------------------------------------------
+  cluster  0         |            0 |            0
+  cluster  1         |            0 |            0
+  cluster  2 (extra) |            0 |            0
+  cluster  3 (extra) |            0 |            0
+  cluster  4 (extra) |       781889 |        20927
+  cluster  5 (extra) |            0 |            0
+  cluster  6 (extra) |            0 |            0
+  cluster  7 (extra) |            0 |            0
+
+  Per-class dominant cluster:
+         background: dominant cluster=4  (100.0% of 781889 pixels)
+              liver: dominant cluster=4  (100.0% of 20927 pixels)
+
+  Cluster centroid norms: ['8.671', '9.783', '7.886', '10.023', '7.673', '8.450', '8.344', '9.562']
+======================================================================
+
+VALIDATION {"run": "A", "batches": 217, "code_std": 0.004531973873749655, "cosine": 0.9985517448937113, "usage": [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0], "early_stop": true}
+`weights_only` was not set, defaulting to `False`.
+RESULT {"run": "A", "name": "fixes3_A_seed0_retry1", "seed": 0, "batch_budget": 500, "batches": 217, "optimizer_steps": 651, "early_stopped": true, "monitors": {"code_std": 0.004531973873749655, "cross_image_cosine": 0.9985517448937113, "cluster_usage": [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0], "cluster_entropy": -0.0, "consecutive_bad_checks": 3}, "cluster_metrics": {"test/cluster/mIoU": 46.17916643619537, "test/cluster/Accuracy": 92.35833287239075, "test/cluster/liver_IoU": 0.0, "test/cluster/liver_Dice": 0.0}, "cluster_to_class": [0, 0, 0, 0, 0, 0, 0, 0], "shifts": {"pos_intra_shift": 0.18, "pos_inter_shift": 0.12, "neg_inter_shift": 0.46}, "supervised_reference": {"liver_IoU": 60.889639267877435, "scope": "Existing DIAG frozen final-block probe on100 val slices; identical reference, NOT a fitted per-run code probe"}, "checkpoint": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_A_seed0_retry1/checkpoints/last.ckpt", "overlay": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/fixes3_A_seed0_retry1_final.png", "logged_overlay": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_A_seed0_retry1/logs/chaos/chaos_fixes3_A_seed0_retry1_date_Sep30_16-59-23/lightning_logs/version_0/fixed_slices_batch_000217.png", "fixed_samples": ["CT_5_0048", "CT_6_0047", "CT_8_0059", "CT_30_0139"], "evaluated_images": 472, "linear_parameters_unchanged": true, "train_mask_reads": 0, "elapsed_seconds": 651.8319637500099}

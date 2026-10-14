@@ -1,0 +1,25 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/diag_extract.py",
+  "split": "train",
+  "count": 200,
+  "blocks": [
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "shape": [
+    200,
+    196,
+    768
+  ],
+  "cpu": true,
+  "layernorm": true,
+  "cls_excluded": true,
+  "feature_dtype": "float32",
+  "runtime_capture": "actual extractor call instrumented to request blocks8..12 from its own timm trunk; original final output retained and equality checked",
+  "backbone_frozen": true,
+  "backbone_eval": true,
+  "elapsed_seconds": 21.7
+}

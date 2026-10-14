@@ -1,0 +1,8 @@
+# CPU only; no model loading, inference, fitting or installs.
+for seed in 0 1 2; do
+ PYTHONDONTWRITEBYTECODE=1 python3 audit/improve2/run.py --seed "$seed"
+done
+PYTHONDONTWRITEBYTECODE=1 python3 audit/improve2/validate.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/improve2/figures.py
+pdftoppm -scale-to 2400 -singlefile -png audit/improve2/eleven_slices_contours.pdf audit/improve2/pdf_render
+PYTHONDONTWRITEBYTECODE=1 python3 audit/improve2/report.py

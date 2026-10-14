@@ -1,0 +1,185 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/fixes4/verify_round.py",
+  "round": [
+    {
+      "name": "fixes4_D_seed0",
+      "batches": 500,
+      "early_stopped": false,
+      "checkpoint_count": 3,
+      "checkpoint_sizes": {
+        "100": 792435121,
+        "250": 792435121,
+        "500": 792435185
+      },
+      "monitors": {
+        "code_std": 0.11643634232110353,
+        "cross_image_cosine": 0.012718559661012797,
+        "cluster_usage": [
+          0.10005040731202439,
+          0.07552499945952958,
+          0.08545648132134209,
+          0.08358320238185317,
+          0.19756220814597025,
+          0.14324615489071688,
+          0.1657325958389182,
+          0.14884395064964545
+        ],
+        "cluster_entropy": 2.023227273262771,
+        "consecutive_bad_checks": 0
+      },
+      "elapsed_seconds": 724.1188083339948
+    },
+    {
+      "name": "fixes4_D_seed1",
+      "batches": 500,
+      "early_stopped": false,
+      "checkpoint_count": 3,
+      "checkpoint_sizes": {
+        "100": 792435121,
+        "250": 792435121,
+        "500": 792435185
+      },
+      "monitors": {
+        "code_std": 0.11628287939244208,
+        "cross_image_cosine": 0.017376706866250074,
+        "cluster_usage": [
+          0.12529903215258562,
+          0.07399196354256746,
+          0.12758213968187912,
+          0.16022275319688256,
+          0.11309863011014787,
+          0.05569125491828087,
+          0.23419373128621152,
+          0.109920495111445
+        ],
+        "cluster_entropy": 1.9989939786881115,
+        "consecutive_bad_checks": 0
+      },
+      "elapsed_seconds": 719.410641208
+    },
+    {
+      "name": "fixes4_D_seed2",
+      "batches": 500,
+      "early_stopped": false,
+      "checkpoint_count": 3,
+      "checkpoint_sizes": {
+        "100": 792435121,
+        "250": 792435121,
+        "500": 792435185
+      },
+      "monitors": {
+        "code_std": 0.11675354119202663,
+        "cross_image_cosine": 0.017691053085235425,
+        "cluster_usage": [
+          0.12209404252961778,
+          0.19153790521770148,
+          0.04441906860731581,
+          0.22181459398510464,
+          0.08667131527531563,
+          0.08771699887582152,
+          0.07773890143981321,
+          0.16800717406930993
+        ],
+        "cluster_entropy": 1.9693630905495292,
+        "consecutive_bad_checks": 0
+      },
+      "elapsed_seconds": 714.9368071669887
+    },
+    {
+      "name": "fixes4_E_seed0",
+      "batches": 500,
+      "early_stopped": false,
+      "checkpoint_count": 3,
+      "checkpoint_sizes": {
+        "100": 792435121,
+        "250": 792435121,
+        "500": 792435185
+      },
+      "monitors": {
+        "code_std": 0.11695271465603237,
+        "cross_image_cosine": 0.009300304330136275,
+        "cluster_usage": [
+          0.10600520912151937,
+          0.07269086544178052,
+          0.07416031163524732,
+          0.07599326641408682,
+          0.19177296762852386,
+          0.13918283067331805,
+          0.18443650384544708,
+          0.15575804524007697
+        ],
+        "cluster_entropy": 2.009810303553081,
+        "consecutive_bad_checks": 0
+      },
+      "elapsed_seconds": 716.4444534159993
+    },
+    {
+      "name": "fixes4_E_seed1",
+      "batches": 500,
+      "early_stopped": false,
+      "checkpoint_count": 3,
+      "checkpoint_sizes": {
+        "100": 792435121,
+        "250": 792435121,
+        "500": 792435185
+      },
+      "monitors": {
+        "code_std": 0.11698807893499574,
+        "cross_image_cosine": 0.011991627310290342,
+        "cluster_usage": [
+          0.12587298640987116,
+          0.0763072881761285,
+          0.11108960020051453,
+          0.15204856025434538,
+          0.11408435527282947,
+          0.05625697544642857,
+          0.22450854348625043,
+          0.13983169075363197
+        ],
+        "cluster_entropy": 2.0077366159716057,
+        "consecutive_bad_checks": 0
+      },
+      "elapsed_seconds": 721.6167089999944
+    },
+    {
+      "name": "fixes4_E_seed2",
+      "batches": 500,
+      "early_stopped": false,
+      "checkpoint_count": 3,
+      "checkpoint_sizes": {
+        "100": 792435121,
+        "250": 792435121,
+        "500": 792435185
+      },
+      "monitors": {
+        "code_std": 0.11720306842620058,
+        "cross_image_cosine": 0.011956284182975644,
+        "cluster_usage": [
+          0.12332791962123833,
+          0.15608866113315029,
+          0.0835048341701617,
+          0.17252968702708837,
+          0.10102194512603771,
+          0.10520277943672172,
+          0.0741222253599533,
+          0.18420194812564855
+        ],
+        "cluster_entropy": 2.0314937241393487,
+        "consecutive_bad_checks": 0
+      },
+      "elapsed_seconds": 722.7278556250094
+    }
+  ],
+  "strictly_sequential_timestamps": true,
+  "all_overlap_checks_clear": true,
+  "unchanged_runner_and_calibration_hashes": true,
+  "project_source_unchanged": true,
+  "labels_used": false,
+  "fixed_samples": [
+    "CT_5_0048",
+    "CT_6_0047",
+    "CT_8_0059",
+    "CT_30_0139"
+  ],
+  "total_checkpoints": 18
+}

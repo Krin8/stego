@@ -1,0 +1,38 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/improve/ceiling.py",
+  "fixed_label_free": [
+    1916,
+    2005,
+    2095,
+    2242
+  ],
+  "largest_liver_validation": {
+    "5": {
+      "index": 1922,
+      "pixels": 38463
+    },
+    "6": {
+      "index": 2017,
+      "pixels": 48457
+    },
+    "8": {
+      "index": 2122,
+      "pixels": 43339
+    },
+    "30": {
+      "index": 2296,
+      "pixels": 32732
+    }
+  },
+  "eight_indices": [
+    1916,
+    2005,
+    2095,
+    2242,
+    1922,
+    2017,
+    2122,
+    2296
+  ],
+  "labels_used": "Largest-liver slice selection uses validation masks; fixed midpoint slices do not"
+}

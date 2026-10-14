@@ -1,0 +1,198 @@
+{
+  "created_at": "2026-10-05T12:03:10.082693+00:00",
+  "repository_head": "6afbd3d0d0d14f12920c93780d85fbcd8d0d306a",
+  "checkpoint_training_source_commit": "3947cad6e3648dead44d3a0d5b185f8659f2ae2e",
+  "method": "Optimized P1 seed 0: nonlinear-only unnormalized inference codes; train-only K8; N2 only; guided size25 eps0.01 threshold0.30; largest component, hole fill, disk3 closing",
+  "source_files": {
+    "optimized_inference": {
+      "path": "audit/ensemble/verify4/run_p1_optimized.py",
+      "sha256": "c41a8eb909fd896b759c50f2ddff609eb93ba40443417f84097e199bbc1cead2"
+    },
+    "preprocessing": {
+      "path": "audit/improve/pipeline.py",
+      "sha256": "fd3b3f4f878a4c93e0aa6a28213b1104408dcb5501ed1a8c123c020fa4fe80a5"
+    },
+    "soft_assignment": {
+      "path": "audit/final_pipeline/segment_ct.py",
+      "sha256": "0981de7d626a962749f1f59b131d1a434418380c7cffaecda043ca8febe2dc9e"
+    },
+    "pinned_training_source": {
+      "path": "audit/project_review_20261005/checkpoint_train_source.txt",
+      "sha256": "7b75f5d76e5497f6a146617cba469283550ddbaf1ffb26a9c47d772f9386f952"
+    },
+    "pinned_training_config": {
+      "path": "experiments/stego_colocated/P1/stage2/configs/locked.json",
+      "sha256": "ebf414f30bdc92b09756dcb55b7aad6a2d1c584299560b618082a6b107631b38"
+    },
+    "correspondence": {
+      "path": "experiments/stego_colocated/reference_loss.py",
+      "sha256": "b86995be6db96c653cc5fa3c8cae23c3c3fb8b0f667fed5795de1f79b1cff3a6"
+    },
+    "p1_partner_loss": {
+      "path": "experiments/stego_colocated/loss.py",
+      "sha256": "17223b1cd000e9f4c88a8cc884997b89884ecb8ae88907190a8dcbcc82293252"
+    },
+    "original_head_checkpoint": {
+      "path": "experiments/stego_colocated/P1/stage2/checkpoints/seed0/final.pt",
+      "sha256": "1454f1bb8d2261a9a56a0fbcd6bed1d8946bf8cd7ff319d697b108ec16d28f1b"
+    }
+  },
+  "checkpoint_copy": {
+    "path": "src2/checkpoints/p1_seed0.pt",
+    "sha256": "1454f1bb8d2261a9a56a0fbcd6bed1d8946bf8cd7ff319d697b108ec16d28f1b",
+    "bytes": 8417040
+  },
+  "verification": {
+    "unit_tests": 12,
+    "unit_tests_passed": 12,
+    "cli_help_checks": 14,
+    "cli_help_checks_passed": 14,
+    "backbone": {
+      "sample_id": "CT/1/1.3.6.1.4.1.9590.100.1.2.405493159911658411515822770371320186331",
+      "input_shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "feature_shape": [
+        1,
+        768,
+        28,
+        28
+      ],
+      "code_shape": [
+        1,
+        70,
+        28,
+        28
+      ],
+      "raw_dicom_equals_windowed_png": true,
+      "cache_max_abs_difference": 0.0,
+      "backbone_training": false,
+      "trainable_backbone_parameters": 0,
+      "deterministic": true,
+      "strict_backbone_load": true,
+      "checkpoint_sha256": "1454f1bb8d2261a9a56a0fbcd6bed1d8946bf8cd7ff319d697b108ec16d28f1b",
+      "labels_opened": false,
+      "training_batches": 0,
+      "kmeans_fits": 0,
+      "seconds": 4.197287791001145
+    },
+    "no_training_run": true,
+    "no_full_clustering": true,
+    "no_full_evaluation": true,
+    "no_installs": true,
+    "no_downloads": true
+  },
+  "unverified": [
+    "Full new-fit N2 selection and resulting segmentation metrics",
+    "Bit-identical long-run training replay",
+    "The previously claimed 83.92 percent result"
+  ],
+  "package_files": {
+    "src2/.gitignore": "5733e54f0e4aa9a2733beda5c222d470ab3b072e1a2ce161bbca37a43b91d548",
+    "src2/README.md": "01bb2906fdcafbff279c4eb59eba707310a0f8486f127ecf8e42b9cc7d053c77",
+    "src2/__init__.py": "d0a3f5a533ab62ed7399cac78f035c0aceb4422fdd9d88a557dc9786007e1b02",
+    "src2/backbone.py": "559ed6362a7b269a191c8a60261f65b79464e3c548af15d0ff3b8f567f02e558",
+    "src2/checkpoints/p1_seed0.pt": "1454f1bb8d2261a9a56a0fbcd6bed1d8946bf8cd7ff319d697b108ec16d28f1b",
+    "src2/clustering.py": "c85a86e88ea18adf4a794bb288da88e67acf602f0aa1edf8d770be94953601f3",
+    "src2/collapse_monitor.py": "0f153508b5234a1c557c25890e9fc9efaae4396300f493599ffe236de5d0f1f6",
+    "src2/configs/chaos_splits_v2.json": "87860489e5e783ef6e36ca6c9d56987fb884ed8a170d7b4889ea91260f3698e2",
+    "src2/configs/demo_config.yaml": "00c20132da71980b28a78cdd09d1a8f5e7ef3043c33e19d7b07ca8372c2cec91",
+    "src2/configs/eval_config.yaml": "2eab0eadd563ba2bc83b8a6894533d993817d46ad4ecae2f4d82cbbb0cb2843a",
+    "src2/configs/fit_config.yaml": "9a0c23b4c50d74046c1036bd493e49fe93ff81c90595cc55ede002426f91a583",
+    "src2/configs/pipeline.yaml": "5665ad3b988d9d028884206191570c02264f7ace828c9891d661dfe825c0d4c6",
+    "src2/configs/plot_config.yaml": "f677a7760d8b4eac6d4335ed57b6a0c5ad914a4f06bb474530620ecd96bf871c",
+    "src2/configs/train_config.yaml": "9a395cc0ed1a4a18f1523680fce3fd1547cf24dc3eefac0f7653e8d5a7dc843e",
+    "src2/configs/train_knn_config.yaml": "271f76cf1f18e215e3fef50c88488cdb6e36abffa8d9e54eb8121278f19519a3",
+    "src2/correspondence.py": "0ef55789879de05f28a6d645073b1f2347e7855f8e763fb2c4da55aef193c4d3",
+    "src2/data.py": "72babd10e4e1edb9be522a81d8a9caf95556445e031d4401398e22474843a1f1",
+    "src2/demo_segmentation.py": "457aef78c8972fd7dd7329ac2b80b8dd061fb8e6853a143e0000a7466a7d6162",
+    "src2/eval_segmentation.py": "232b3c1e96454d1207762fa14fac5e45e7e42909d2a3856ac2e3ec58f6a16e85",
+    "src2/extract_features.py": "e8c0dbcf8876ea7e62b048f05818b2f48676834e1ab2a32b3756b41a4223b85e",
+    "src2/fit_clusters.py": "a3b33c00a58b0220ec6dd297e13a6e33d1e473e060c44c15a36668453d959da7",
+    "src2/loss.py": "1f3294d29b1d936bf6cddd77e2409162d8fd0620c1f1c66f4a72573f1b7bc433",
+    "src2/metrics.py": "bd5cba9323ba0e728cd166bd0f5e1f3fa56a28122cdf949346c5fbc46860cbf5",
+    "src2/modules.py": "70d90ce3de19ba8f5bb69c4c44f18deb50a38a6360b9e525060d02c27e6358b9",
+    "src2/naming.py": "595a8baaeac2bf1f34f1f90049a0f94cc22d275050cb81a0ba7018f6b373c931",
+    "src2/postprocessing.py": "59863eddcd2c478e9400f612e275436f55a315e5cf8ddfe89e91bd3aa6956295",
+    "src2/preprocess.py": "4bf5af4a1b6cf79350eab21f4c1655ac34a441613c700b1fb9b15e6ceccc9b7d",
+    "src2/preprocessing.py": "55602c40226d04581a7f4d2a3e041d606bc622fa29d2a0e045c1cd49d16b1956",
+    "src2/reference_loss.py": "b86995be6db96c653cc5fa3c8cae23c3c3fb8b0f667fed5795de1f79b1cff3a6",
+    "src2/requirements-tested.txt": "cd181a166cb6c9ab4a1c5ed77b1eadf9c510c3af660d73c9e52e2de4feb2ac1e",
+    "src2/state.py": "f53f9468d7f6d1f366c3a2e56c43f9f965a1a18fd9592320c2b9a8e5095fd4b0",
+    "src2/tests/check_knn_neighbors.py": "97363a593db147886dbcfc095e3d7e9f1d0b094f026a13e4670026cd34239a86",
+    "src2/tests/smoke_backbone.py": "e280e18e990048f46ed7ab3a781eb6bcd5ee72d387ab9945873f3ba98a4dfd78",
+    "src2/tests/test_knn.py": "ff78ec27049705ca1533c6556aa20d35f1640ec88f10d07478078c3afdd6e3a9",
+    "src2/tests/test_overlap.py": "ca51dede28593b31b2ace67cc6c522681ee4e21b2b06a2bbf7f7bedd1cfbbd7e",
+    "src2/tests/test_pipeline.py": "82c75db1414140ab724572ab8b4d46ae78fc11731fffb8d8e1455eef62dceb9c",
+    "src2/train_segmentation.py": "40b1027cec795756ea0381cbabf2e559ab78db43f273805c2eca87e118e67b20",
+    "src2/utils.py": "0e3f4f79f10af7182035b57bd1f552335e3eaaa43c889428c788dfdb8b58e508",
+    "src2/verification/backbone_smoke.json": "953e065f1a2b5d39ef92c4b5f8719701533c21ca460f25e3292ea8d1f53f61fe",
+    "src2/verification/backbone_smoke.log": "8888c374d2cd600cab9039a2352dbf7e850770edce81941f504150aa64bb1d87",
+    "src2/verification/cli_checks.json": "36686b9c83e881f827c4b4208d9d1817a0129fdc1519702a9345cd8535711ded",
+    "src2/verification/knn_after.log": "d39c0350eea29019522f0891fda44b28af1915f6dea3e304baf2728ecdc6de78",
+    "src2/verification/knn_before.log": "a70349943d9f9f2a907ff3fb820f61f24d77c2e7bf4165984a9cd681bfa69f9f",
+    "src2/verification/knn_neighbors.json": "da949ddbb864d37c4d9e0197a2124113bfe48f9ec720a65e47bbf8da8542dfbd",
+    "src2/verification/knn_neighbors.log": "da949ddbb864d37c4d9e0197a2124113bfe48f9ec720a65e47bbf8da8542dfbd",
+    "src2/verification/overlap_after.log": "4cedb497ffe266578f3621829cfa7aeb3e85760ed0c6933b6b0dddc27f4f912e",
+    "src2/verification/overlap_before.log": "5195b09ad59977ded8df4cd2f91c67e0fb554c56e433593cd27befa9f673ee7e",
+    "src2/verification/unit_tests.log": "3564e9c90b797a4e83a342c88cd5dfd310b96fe7316e880d6fe8cc0b0037b14f",
+    "src2/visualize_segmentation.py": "32ec0aa35de7afb46b344b604ef935e97bb4dd891cdb1ded285519f5612f8dee"
+  },
+  "knn_extension": {
+    "recorded_at": "2026-10-05T12:15:06.289398+00:00",
+    "configuration": "src2/configs/train_knn_config.yaml",
+    "default_P1_preserved": true,
+    "only_method_changes": [
+      "train-only feature-image neighbour selection",
+      "full original cross-image patch-pair term instead of colocated diagonal"
+    ],
+    "shift_values_unchanged": [
+      0.794418,
+      0.8869667053222656,
+      0.797651
+    ],
+    "source_recipe": {
+      "path": "experiments/stego_biomedclip/preflight.py",
+      "sha256": "78c1c904113b671dd8d032177c133943e3f5d4f2e69ab0cc3eba0c004c5d6f9e"
+    },
+    "tests": {
+      "before": 12,
+      "after": 17,
+      "passed": 17,
+      "logs": [
+        "src2/verification/knn_before.log",
+        "src2/verification/knn_after.log"
+      ]
+    },
+    "neighbor_check": {
+      "training_images": 1869,
+      "stored_neighbors": 30,
+      "uniform_sampling_topk": 7,
+      "self_matches": 0,
+      "exact_match_to_existing_448_neighbors": true,
+      "labels_read": false,
+      "training_batches": 0,
+      "feature_extractions": 0,
+      "neighbor_cache_files_written": 0,
+      "seconds": 6.765358624979854,
+      "reference": "/Users/navneetbavineni/STEGO/experiments/stego_biomedclip/logs/train_neighbors.npy",
+      "ordered_sample_ids_sha256": "04c6259360898cadbfd3eb9085b124a9d4c5cb56f120a784e67f69e7fc733cc8"
+    },
+    "training_launched": false,
+    "segmentation_quality": "UNVERIFIED"
+  },
+  "overlap_wrapper_fix": {
+    "recorded_at": "2026-10-05T12:21:09.877073+00:00",
+    "cause": "Own macOS caffeinate child repeated training argv and was falsely classified as another trainer",
+    "change": "Exclude only caffeinate child whose PPID equals current trainer PID",
+    "reproduced_before": true,
+    "tests_passed": 22,
+    "before_log": "src2/verification/overlap_before.log",
+    "after_log": "src2/verification/overlap_after.log",
+    "training_launched": false,
+    "processes_terminated": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/forensics/backbone_check.py",
+  "results": {
+    "seed0": {
+      "visual_trunk_tensors": 150,
+      "exactly_equal_to_seed0": true
+    },
+    "seed1": {
+      "visual_trunk_tensors": 150,
+      "exactly_equal_to_seed0": true
+    },
+    "seed2": {
+      "visual_trunk_tensors": 150,
+      "exactly_equal_to_seed0": true
+    },
+    "best600": {
+      "visual_trunk_tensors": 150,
+      "exactly_equal_to_seed0": true
+    },
+    "final": {
+      "visual_trunk_tensors": 150,
+      "exactly_equal_to_seed0": true
+    }
+  },
+  "elapsed_seconds": 5.0557676250027725
+}

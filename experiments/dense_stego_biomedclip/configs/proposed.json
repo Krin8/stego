@@ -1,0 +1,18 @@
+{
+  "status": "PROPOSED_PENDING_USER_BUDGET_AND_PROCESS_RESOLUTION",
+  "seeds": [0, 1, 2], "arms": ["A", "B"], "device": "cpu", "threads": 4,
+  "batches": 500, "batch_size": 2, "lr": 0.0005, "optimizer": "Adam",
+  "lr_schedule": "CosineAnnealingLR", "scheduler_T_max": 500, "weight_decay": 0.0,
+  "projection_dim": 32, "ct_branch": false, "K": 8,
+  "temperature": 0.1, "correspondences": 96, "negative_distance": 0.15,
+  "crop_scale": [0.8, 1.0], "rotation_degrees": [-5, 5], "translation": [-0.08, 0.08],
+  "flip": false, "gain": [0.95, 1.05], "offset": [-0.02, 0.02],
+  "monitor_every": 50, "monitor_seed": 104729,
+  "checkpoint_selection": "Minimum bidirectional InfoNCE on fixed augmented training-image pairs, one image from each of 16 train patients, every50 batches; ties keep earliest. No validation images or labels.",
+  "fit_locations_per_image": 512, "kmeans_n_init": 3, "kmeans_max_iter": 100, "kmeans_tol": 0.0001,
+  "kmeans_algorithm": "lloyd", "fit_population": "All1869 train slices;512 fixed uniform canonical spatial samples per image, shared between arms and seeds; no masks.",
+  "naming": "Existing N1/N2/N3 thresholds,200 crops,112native crop,224joint image embedding and15prompts; fit train images only. Grid-index geometry scales mechanically with28 vs448.",
+  "postprocessing": "Existing F1 exactly; field reshape follows actual learned grid, no fixed28reshape.",
+  "evaluation": "After all six runs complete, naming fixed, validation predictions saved and hashes sealed; same4patients,224/native512,pooled andmean-slice.",
+  "dense_feature_storage": "Float32 saved for all472 validation feature maps; B approximately12.1GB per seed; A approximately47.4MB per seed. No existing cache changed."
+}

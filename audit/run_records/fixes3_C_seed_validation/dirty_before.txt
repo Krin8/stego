@@ -1,0 +1,3 @@
+?? audit/run_records/fixes3_C_seed_validation/
+?? audit/scratch/fixes3/fixed_selection_synthetic.png
+?? audit/scratch/fixes3/mpl/

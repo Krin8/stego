@@ -1,0 +1,10 @@
+6afbd3d0d0d14f12920c93780d85fbcd8d0d306a Finalize pipeline optimization and discoveries
+bc126516ba2313b9d114b44f8a27372dd504dad7 feat: Add Cross-Domain Negative Dataset to PyTorch Lightning pipeline to resolve feature collapse and confidence trap
+2e93b741b292eeb834eb8ca05bcd1b66d8ffa0ae feat: Add label-free N3 naming package (Task 1 & 2)
+15f44f639fc15eca2500754c67471f0f1654afa2 Corrected evaluation results in WRITEUP.md with per-seed 224 scores and clarified head architecture
+3947cad6e3648dead44d3a0d5b185f8659f2ae2e Final evaluation of P1 and C448, update WRITEUP.md with failure outcome
+11c20082f89cc2cd1e03ff9470f211d3f11fa8f0 fix(task1): apply amended full-loss gate and select P1 attraction
+e17d2d714c4deca316872b498160d391fc716ea5 fix(task1): verify colocated loss and stop on failed admissibility
+530e4e577b16a686a49f677e0797cb2e66f48855 fix(task4): complete D448 stage2 sealing and evaluation
+2734c4e019af993708c6e5c26ca691228870000c fix(task3): complete all-seed D448 stability screen
+fdae63bf7703f3dada12ad26fdca5eb0188d7aae fix(task2): isolate bounded runs and verify complete state serialization

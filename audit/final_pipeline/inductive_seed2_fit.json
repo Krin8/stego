@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "K": 8,
+  "seed": 2,
+  "git_commit": "6f6f326a3d4c8ebe56900d75a9c7ad8eb27137f2",
+  "preprocessing": {
+    "modality": "CT",
+    "window_hu": [
+      -150,
+      250
+    ],
+    "intensity": "clip HU then linear [0,1]; round(65535*x)/65535",
+    "png": "uint16 grayscale already windowed [-150,250]; reject 8-bit/RGB",
+    "orientation": "native; no flip/transpose",
+    "spatial_resampling": "none",
+    "native_shape": [
+      512,
+      512
+    ],
+    "body_threshold": 0.05,
+    "body_connectivity": 8,
+    "body_box": "largest component; fill holes; square bounding box with 5% each-side margin; zero padding",
+    "input_resolution": 448,
+    "resize": "torchvision bilinear antialias=True",
+    "mean": [
+      0.48145466,
+      0.4578275,
+      0.40821073
+    ],
+    "std": [
+      0.26862954,
+      0.26130258,
+      0.27577711
+    ],
+    "normalization_application_count": 1,
+    "grayscale_channels": 3,
+    "backbone": "BiomedCLIP ViT-B/16",
+    "layer": "final block",
+    "normalization": "final LayerNorm then patch L2; uncentered",
+    "cls_excluded": true,
+    "grid": [
+      28,
+      28
+    ],
+    "eval": true,
+    "device": "cpu",
+    "soft_assignment": "softmax(-squared_euclidean_distance/temperature)",
+    "temperature": "median nearest/second-nearest squared-distance gap over fitting patches / log(4); floor 1e-6",
+    "inverse_crop": "bilinear align_corners=False; outside=0",
+    "guided_radius": 8,
+    "guided_epsilon": 0.01,
+    "guided_boundary": "reflect",
+    "threshold": 0.5,
+    "largest_component_connectivity": 8,
+    "hole_fill_background_connectivity": 4,
+    "closing_disk_radius": 3,
+    "closing_padding": "3 zero pixels then crop",
+    "f2_default": false,
+    "f2": "median(3,1,1), nearest endpoints, one series at a time"
+  },
+  "temperature": 0.12531268630057937,
+  "backbone_weight_file": "src/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/open_clip_pytorch_model.bin",
+  "backbone_weight_sha256": "52cc993c5c5ff962bd0c60931874bc001e7e9b41666a385530f4a036294576be",
+  "centers_sha256": "da9eb725dce9e525c288b5304b75f6a23ce50db702220fe096a4b14668a63019",
+  "fitting_scope": "16 train patients; 1869 slices",
+  "fit_labels_used": false,
+  "mapping_rule": "strict majority native512 pixels; precision > 0.5; ties background",
+  "kmeans_parameters": {
+    "n_clusters": 8,
+    "n_init": 3,
+    "max_iter": 100,
+    "tol": 0.0001,
+    "algorithm": "lloyd",
+    "init": "k-means++",
+    "random_state": 2,
+    "copy_x": false
+  },
+  "versions": {
+    "torch": "2.10.0",
+    "torchvision": "0.25.0",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "timm": "1.0.25",
+    "open_clip_torch": "3.3.0",
+    "pillow": "12.1.0",
+    "pydicom": "3.0.1"
+  },
+  "fit_patient_ids": [
+    "1",
+    "2",
+    "10",
+    "14",
+    "16",
+    "18",
+    "19",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29"
+  ],
+  "ordered_fit_ids_sha256": "f307cfeaeac0ef5e099d3eb8934b7d5ff924a506e2098a80b022271d6f804541",
+  "inertia": 312608.6875,
+  "iterations": 32,
+  "seconds": 42.95714295801008,
+  "producer": "study.py fit"
+}

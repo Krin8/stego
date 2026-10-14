@@ -1,0 +1,27 @@
+Working directory: /Users/navneetbavineni/STEGO/src
+Requested training command (NOT RUN):
+WANDB_MODE=offline HF_HUB_OFFLINE=1 caffeinate -i python3 -B train_segmentation.py "pytorch_data_dir=$PWD/pytorch_data_dir" experiment_name=fixes3_C_seed1 max_steps=500 extra_clusters=6 collapse_early_stop=True pos_intra_shift=0.4584466218948364 pos_inter_shift=0.45247218012809753 neg_inter_shift=0.7459585666656494 seed=1
+Configuration-only validation (no training):
+WANDB_MODE=offline HF_HUB_OFFLINE=1 caffeinate -i python3 -B train_segmentation.py "pytorch_data_dir=$PWD/pytorch_data_dir" experiment_name=fixes3_C_seed1 max_steps=500 extra_clusters=6 collapse_early_stop=True pos_intra_shift=0.4584466218948364 pos_inter_shift=0.45247218012809753 neg_inter_shift=0.7459585666656494 seed=1 --cfg job
+
+Follow-up inspection (no training):
+git status --short --branch
+git rev-parse HEAD
+ps -axo pid,etime,command
+ps -p 67969,67970,67971 -o pid,ppid,state,etime,time,pcpu,command
+tail -c 3500 audit/run_records/chaos_v2_ct/train.log
+
+ps -p 67969 -o pid=,state=,command=
+kill -KILL 67969
+ps -p 67969 -o pid,state,command
+ps -axo pid,state,etime,command | rg -i python
+
+Seed verification: python3 -B audit/scratch/seed_support_check.py
+
+Planned seed1 (from src; seed2 gated):
+WANDB_MODE=offline HF_HUB_OFFLINE=1 caffeinate -i python3 -B ../audit/scratch/seed_validation_experiment.py --run C --name fixes3_C_seed1 --seed 1 "pytorch_data_dir=$PWD/pytorch_data_dir"
+
+Planned seed2 (from src; seed2 gated):
+WANDB_MODE=offline HF_HUB_OFFLINE=1 caffeinate -i python3 -B ../audit/scratch/seed_validation_experiment.py --run C --name fixes3_C_seed2 --seed 2 "pytorch_data_dir=$PWD/pytorch_data_dir"
+
+Seed1 and seed2 planned commands both executed successfully, exit0. Full command recorded under fixes3_full_C/commands.txt after both stability gates passed.

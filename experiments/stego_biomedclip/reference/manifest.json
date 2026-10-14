@@ -1,0 +1,11 @@
+{
+  "commit": "eb4d6b521740bd4265681b353547f2ffca65d673",
+  "url": "https://github.com/mhamilton723/STEGO",
+  "files": {
+    "LICENSE": "322bd9cc6ef4960a4caf228200b4ee8bf6e816cb9e1162dabba0ba0d72c89c2a",
+    "src/train_segmentation.py": "7a77aea79022f4cfbcfe3c58cb24bc20c53baf524f8ffbb0fd37a6fbafbe997b",
+    "src/modules.py": "c08b08207014c732d38100a2e5d55e73c454d42bb0762d87e65083ca5240cde2",
+    "src/precompute_knns.py": "8cac06a72b2ed2cd609bc554d4515d8b0f4ca5297954ff0703311fdad2040651",
+    "src/configs/train_config.yml": "f68d70ae24420265b34f6ffa0dcec714860642d0dabb63f7cbb2c65512c8fef0"
+  }
+}

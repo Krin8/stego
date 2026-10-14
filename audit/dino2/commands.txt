@@ -1,0 +1,22 @@
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/figures.py --arm D2
+# Initial digest/extraction commands
+PYTHONDONTWRITEBYTECODE=1 python3 audit/dino2/verify_weights.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/dino2/extract.py --arm D2
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/extract.py --arm D3
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/figures.py --arm D3
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/fit_score.py --arm D2 --k 8 --seed 0
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/fit_score.py --arm D2 --k 8 --seed 1
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/fit_score.py --arm D2 --k 8 --seed 2
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/fit_score.py --arm D2 --k 2 --seed 0
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/fit_score.py --arm D2 --k 2 --seed 1
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/fit_score.py --arm D2 --k 2 --seed 2
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/fit_score.py --arm D3 --k 8 --seed 0
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/fit_score.py --arm D3 --k 8 --seed 1
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/fit_score.py --arm D3 --k 8 --seed 2
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/fit_score.py --arm D3 --k 2 --seed 0
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/fit_score.py --arm D3 --k 2 --seed 1
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/fit_score.py --arm D3 --k 2 --seed 2
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/pair_affinities.py
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 /Users/navneetbavineni/STEGO/audit/dino2/pair_score.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/dino2/report.py
+PYTHONDONTWRITEBYTECODE=1 python3 audit/dino2/validate.py

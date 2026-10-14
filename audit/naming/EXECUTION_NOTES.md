@@ -1,0 +1,3 @@
+# StageA pre-scoring correction
+
+Stage A's first execution stopped before reading any labels or starting Stage B because an extra assignment-membership restriction left cluster6 with only13 body patches. The user rule specifies the200 body patches nearest each centre, with no hard-assignment restriction. That extra restriction was removed; all eligible body patches now compete for each centre, exactly200 are retained by fixed(distance,image,patch) ordering. N2 still aggregates patches by their actual assigned cluster. StageA is rerun from the raw inputs. No scored results existed or informed this correction. The failed log is stageA_initial.log; the completed execution is stageA.log. Both are hashed in the final manifest.

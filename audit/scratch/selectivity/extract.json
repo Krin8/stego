@@ -1,0 +1,35 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/selectivity/extract.py",
+  "labels_used": false,
+  "val_slices": 472,
+  "patients": {
+    "5": 95,
+    "6": 82,
+    "8": 98,
+    "30": 197
+  },
+  "source_checkpoint": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed0/checkpoints/last.ckpt",
+  "blocks": [
+    9,
+    11,
+    12
+  ],
+  "norm": true,
+  "cls_excluded": true,
+  "features_shape": [
+    472,
+    768,
+    14,
+    14
+  ],
+  "final_max_abs_difference": 0.0,
+  "train_mean_exactly_verified": true,
+  "train_mean_images": 1869,
+  "backbone_frozen": true,
+  "backbone_eval": true,
+  "cache_verified_by_actual_loader": true,
+  "neighbors_used": 7,
+  "kmeans_reference": "baseline/k8_c0_s0_assignments.npy: seed0 K8 no mean subtraction",
+  "kmeans_nearest_upsampling_exactly_verified": true,
+  "elapsed_seconds": 31.897837291006
+}

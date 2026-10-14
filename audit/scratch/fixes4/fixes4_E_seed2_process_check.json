@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-09-30T23:50:38.115402+00:00",
+  "self_pid": 12228,
+  "other_python_processes": [],
+  "training_wrappers": [
+    {
+      "pid": 67971,
+      "ppid": 1,
+      "state": "T",
+      "comm": "caffeinate",
+      "args": "caffeinate -i python3 -B train_segmentation.py pytorch_data_dir=/Users/navneetbavineni/STEGO/src/pytorch_data_dir experiment_name=chaos_v2_ct",
+      "child_pids": []
+    }
+  ],
+  "clear": true
+}

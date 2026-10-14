@@ -1,0 +1,9 @@
+"""Presentation-only adjustment; sealed naming/scoring code and all parameters unchanged."""
+from pathlib import Path
+p=Path(__file__).resolve().parent
+source=(p/'report.py').read_text()
+assert source.count('fig.tight_layout();path=')==1
+# Reserve header space so the figure title cannot overlap the first row's titles.
+exec(compile(source.replace('fig.tight_layout();path=', 'fig.tight_layout(rect=(0,0,1,.975));path='),str(p/'report.py'),'exec'))
+with (p/'NAMING.md').open('a') as f:
+ f.write('''\n\n## Completed verification\n\n`validate.py` → `validation.json` and `validate.log`: every sealed StageA file hash unchanged; zero mask/label or prior semantic-mapping reads in StageA; all saved naming decisions reproduced from embeddings and body statistics; exact per-patient regression against FINAL_PIPELINE (inductive) and IMPROVE2 (transductive) majority-reference hard/F1 scores at both resolutions. No tracked source changes.\n\nMean-slice metrics average every slice in the patient, including empty-ground-truth slices. The inherited FORENSICS score function assigns zero when both prediction and ground truth are empty (denominators clamped to at least 1). Pooled-pixel metrics first sum confusion counts across the patient's slices. Sample SD uses ddof=1 across patients.\n\nAll three rules select the same cluster within each fit; N3 abstention is 0/6 fits. All selections equal both label-assisted references on every evaluated patient. The inspected hard-assignment figures still show non-liver spill and coarse boundaries: correct semantic naming does not make the cluster organ-pure.\n\n`presentation.py` changes only figure header spacing after scoring; no pipeline, naming, scoring parameter or numerical output is altered. The sealed report generator remains unchanged. The sole computational correction occurred before StageB, as documented in EXECUTION_NOTES.md; StageA was fully rerun before sealing.\n''')

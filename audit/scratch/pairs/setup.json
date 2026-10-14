@@ -1,0 +1,57 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/pairs/setup.py",
+  "checkpoints": {
+    "seed0": {
+      "path": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed0/checkpoints/last.ckpt",
+      "exists": true,
+      "bytes": 792434993
+    },
+    "seed1": {
+      "path": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed1/checkpoints/last.ckpt",
+      "exists": true,
+      "bytes": 792435185
+    },
+    "seed2": {
+      "path": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed2/checkpoints/last.ckpt",
+      "exists": true,
+      "bytes": 792435185
+    },
+    "best600": {
+      "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=05-step=1800-mIoU=test/cluster/mIoU=69.3704.ckpt",
+      "exists": true,
+      "bytes": 792437477
+    },
+    "final": {
+      "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=42-step=15000-mIoU=test/cluster/mIoU=46.1792.ckpt",
+      "exists": true,
+      "bytes": 792455565
+    }
+  },
+  "source_sha256": {
+    "modules.py": "c0306a6df692bdd242ecc229c51c6cf5f05cc922b9c8b7eb7ecb2ac09ede61ea",
+    "data.py": "a07d09889b565d0ceca6b2f8224d5af3620c0c73b582dd445ae9edec460efdc2",
+    "chaos_preprocessing.py": "91404a4c9a3d1eb54b27d93e6ebe6e7788d8352ece913fa00e6a2288a6f51a83",
+    "train_segmentation.py": "5f4b14d87b1b4bd277b4472d38fc5c93d8fa13bc6b778fd2b7df304462db53d9"
+  },
+  "validation_cache": "/Users/navneetbavineni/STEGO/src/pytorch_data_dir/nns/nns_chaos_v2_val_5ddb5797be0b7b014c0745edcc62538bc2a10917dfbb6946c04401ec448536df.npz",
+  "cache_shape": [
+    472,
+    30
+  ],
+  "num_neighbors": 7,
+  "patient_counts": {
+    "5": 95,
+    "6": 82,
+    "8": 98,
+    "30": 197
+  },
+  "identity_validated_by_project": true,
+  "all_val_labels_match": true,
+  "max_feature_error": 0,
+  "shifts": {
+    "pos_intra_shift": 0.4584466218948364,
+    "pos_inter_shift": 0.45247218012809753,
+    "neg_inter_shift": 0.7459585666656494
+  },
+  "elapsed_seconds": 30.396979459008435
+}

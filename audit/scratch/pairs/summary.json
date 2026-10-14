@@ -1,0 +1,23 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/pairs/report.py",
+  "verdict": [
+    "Attracting positives are predominantly background, not liver-specific: kNN same-label purity is 87.687%, but liver/liver is only 1.403%. Among attracting liver-anchor pairs only 15.962% target liver; 79.017% of all liver\u2192background pairs attract. Thus positive affinity enrichment is weak for liver isolation, even though it attracts 99.911% of liver/liver pairs. These validation-label diagnostics support objective misalignment; they do not prove a causal sufficiency threshold.",
+    "Positive image neighbours overwhelmingly stay within patient (99.667%). Exactly adjacent slices account for 28.299%, while within-three accounts for 78.208%. Liver-anchor-weighted values are 99.852% same-patient and 80.610% within-three. This is image-level serial-slice locality, not a stored organ-specific patch correspondence.",
+    "Primary matched-inference code k-means beats the own probe on optimal IoU for: none. Across all checkpoint/seed combinations, improvements occur for [('final', '1'), ('final', '2')]. Nearest-grid code k-means spans 28.447\u201334.601% optimal IoU, compared with 64.135% on the identical frozen features. The per-checkpoint table distinguishes assignment limitations from degradation of the code geometry; this is not a proof of complete information erasure.",
+    "Late-run interpretation, matched-inference oracle IoU: k-means seed 0, batch600 28.931% \u2192 batch5000 29.279%; k-means seed 1, batch600 28.931% \u2192 batch5000 30.181%; k-means seed 2, batch600 28.948% \u2192 batch5000 35.175%. Meanwhile the own probe falls from 44.400% to 29.807%. Thus these tests do not show a uniform loss of recoverable liver structure in the late codes. Final-probe assignment has room for improvement in repeat seeds, but selecting the 35%-level repeat by its IoU would use validation labels. The primary seed does not establish an improvement. All code-k-means majority mappings remain all-background; the gains discussed here require oracle subsets.",
+    "UNVERIFIED: training-pair label purity, a literal patch-kNN graph, causal gains from changing the objective, and whether another decoder could recover additional liver information."
+  ],
+  "primary_code_kmeans_better_than_probe": [],
+  "all_seed_improvements": [
+    [
+      "final",
+      "1"
+    ],
+    [
+      "final",
+      "2"
+    ]
+  ],
+  "source_commit": "e3c3ab0e396c194a7314d64546c81e9ba4973b72",
+  "elapsed_seconds": 2.6301104580052197
+}

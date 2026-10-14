@@ -1,0 +1,10 @@
+2026-09-30T18:59:34.013966
+Overlap gate BLOCKED. No source modifications or training started.
+Verified process inspection:
+PID 67969 PPID62680 state T elapsed03:07:06 CPU0.0% accumulatedCPU134:01.83
+Python -B train_segmentation.py pytorch_data_dir=/Users/navneetbavineni/STEGO/src/pytorch_data_dir experiment_name=chaos_v2_ct
+PID67970 stateT: tee ../audit/run_records/chaos_v2_ct/train.log
+PID67971 stateT: caffeinate -i python3 -B train_segmentation.py pytorch_data_dir=/Users/navneetbavineni/STEGO/src/pytorch_data_dir experiment_name=chaos_v2_ct
+State T means suspended/stopped; process has not exited and can resume. No process was terminated or resumed.
+Seed1 NOT STARTED. Seed2 NOT STARTED. Full run NOT STARTED. Seed source change NOT APPLIED because initial overlap gate is blocked.
+Safest next action: user terminates the suspended old job or authorizes terminating that job; repeat process check before source edits/training.

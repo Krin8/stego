@@ -1,0 +1,13 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/improve/select_parent.py",
+  "parent": "B2_448",
+  "means": {
+    "B0": 0.628718050141798,
+    "B1": 0.6293186470091504,
+    "B2_336": 0.6896273585454029,
+    "B2_448": 0.6978373877443641,
+    "B3": 0.6589467288706332
+  },
+  "criterion": "Highest mean224 LOPO optimal IoU across all3 seeds among B0-B3; ties retain earlier listed variant",
+  "labels_used": "All cohort labels indirectly through LOPO scores. B4/B5 exploratory; no untouched outer selection set."
+}

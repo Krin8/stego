@@ -1,0 +1,97 @@
+--- audit/dino/common.py
++++ audit/dino2/common.py
+@@ -9,14 +9,14 @@
+   path,mode,flags=args
+   if isinstance(path,int):return
+   p=Path(os.fsdecode(path)).resolve();writing=(isinstance(mode,str) and any(c in mode for c in 'wax+')) or (isinstance(flags,int) and flags&(os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC))
+-  if writing and not p.is_relative_to(OUT):raise PermissionError('Writes only under audit/dino: '+str(p))
++  if writing and (not p.is_relative_to(OUT) or p.is_relative_to(OUT/'weights')):raise PermissionError('Writes only under audit/dino2: '+str(p))
+   if os.environ.get('LABEL_FREE')=='1' and ('/labels/' in str(p) or 'scoring_masks' in str(p) or p.name.endswith('_labels.npy')):raise PermissionError('Labels forbidden in extraction/fitting/affinities')
+  elif event=='os.mkdir':
+   p=Path(os.fsdecode(args[0])).resolve()
+-  if not p.exists() and not p.is_relative_to(OUT):raise PermissionError(str(p))
++  if not p.exists() and (not p.is_relative_to(OUT) or p.is_relative_to(OUT/'weights')):raise PermissionError(str(p))
+  elif event in ['os.remove','os.rmdir','os.rename']:
+   for path in args[:2] if event=='os.rename' else args[:1]:
+-   if not Path(os.fsdecode(path)).resolve().is_relative_to(OUT):raise PermissionError(str(path))
++   if (not Path(os.fsdecode(path)).resolve().is_relative_to(OUT) or Path(os.fsdecode(path)).resolve().is_relative_to(OUT/'weights')):raise PermissionError(str(path))
+  elif event=='socket.connect':raise PermissionError('Network forbidden')
+ sys.addaudithook(guard);sys.path.insert(0,str(ROOT/'src'))
+ import numpy as np,torch
+@@ -36,7 +36,7 @@
+ node=next(n for n in ast.walk(ast.parse((ROOT/'audit/scratch/forensics/task1.py').read_text())) if isinstance(n,ast.AugAssign) and isinstance(n.target,ast.Name) and n.target.id=='conf')
+ expr=compile(ast.unparse(node.value).replace('minlength=16','minlength=2*K').replace('reshape(8, 2)','reshape(K, 2)'),'FORENSICS confusion','eval')
+ def confusion(pr,y,K):return eval(expr,dict(np=np,pr=np.asarray(pr,np.int64),y=np.asarray(y,np.int64),K=K))
+-def dump(name,value):(OUT/name).write_text(json.dumps(value,indent=2,allow_nan=False)+'\n')
++def dump(name,value):(OUT/name).write_text(json.dumps(value,indent=2,allow_nan=False,default=lambda x:sorted(x) if isinstance(x,set) else str(x))+'\n')
+ def sha(path):
+  h=hashlib.sha256()
+  with open(path,'rb') as f:
+--- audit/dino/fit_score.py
++++ audit/dino2/fit_score.py
+@@ -3,9 +3,9 @@
+ from sklearn.cluster import KMeans
+ from scipy.optimize import linear_sum_assignment
+ import argparse
+-p=argparse.ArgumentParser();p.add_argument('--k',type=int,choices=[2,8],required=True);p.add_argument('--seed',type=int,choices=[0,1,2],required=True);a=p.parse_args()
+-tag=f'D1_k{a.k}_s{a.seed}';assert not (OUT/f'{tag}_scores.json').exists();rr=records()
+-os.environ['LABEL_FREE']='1';f=np.load(OUT/'D1_features.npy',mmap_mode='r');work=OUT/f'{tag}_work.npy'
++p=argparse.ArgumentParser();p.add_argument('--arm',choices=['D2','D3'],required=True);p.add_argument('--k',type=int,choices=[2,8],required=True);p.add_argument('--seed',type=int,choices=[0,1,2],required=True);a=p.parse_args()
++tag=f'{a.arm}_k{a.k}_s{a.seed}';assert not (OUT/f'{tag}_scores.json').exists();rr=records()
++os.environ['LABEL_FREE']='1';f=np.load(OUT/f'{a.arm}_features.npy',mmap_mode='r');work=OUT/f'{tag}_work.npy'
+ x=np.lib.format.open_memmap(work,mode='w+',dtype=np.float32,shape=(2341*784,768))
+ for start in range(0,2341,16):x[start*784:min(start+16,2341)*784]=f[start:start+16].reshape(-1,768)
+ x.flush();km=KMeans(n_clusters=a.k,random_state=a.seed,n_init=3,max_iter=100,tol=1e-4,algorithm='lloyd',copy_x=False)
+@@ -35,5 +35,5 @@
+    row,col=linear_sum_assignment(-train[:2]);subset=row[col==1].tolist();subsets={'Hungarian':subset}
+   folds[pat]={name:scores(c,ids) for name,ids in subsets.items()};folds[pat]['mapping_patients']=[q for q in pats if q!=pat]
+  results[str(res)]=dict(patient_confusions={pat:c.tolist() for pat,c in cs.items()},folds=folds)
+-dump(f'{tag}_scores.json',dict(producer='fit_score.py',arm='D1',K=a.k,seed=a.seed,labels_used='Other19 patient labels map; heldout patient labels score; no labels fit; independently at224/native512',results=results,seconds=elapsed()))
++dump(f'{tag}_scores.json',dict(producer='fit_score.py',arm=a.arm,K=a.k,seed=a.seed,labels_used='Other19 patient labels map; heldout patient labels score; no labels fit; independently at224/native512',results=results,seconds=elapsed()))
+ print('DONE',tag,elapsed(),flush=True)
+--- audit/dino/figures.py
++++ audit/dino2/figures.py
+@@ -1,9 +1,11 @@
+ """Fixed eight-slice PCA diagnostic; no labels fit PCA or set colours."""
+ from common import *
++import argparse
++p=argparse.ArgumentParser();p.add_argument('--arm',choices=['D2','D3'],required=True);a=p.parse_args()
+ from sklearn.decomposition import PCA
+ import matplotlib.pyplot as plt
+ os.environ['LABEL_FREE']='1'
+-rr=records();inds=json.loads((OUT/'PROTOCOL.json').read_text())['figures']['indices'];f=np.load(OUT/'D1_features.npy',mmap_mode='r')
++rr=records();inds=json.loads((OUT/'PROTOCOL.json').read_text())['figures']['indices'];f=np.load(OUT/f'{a.arm}_features.npy',mmap_mode='r')
+ x=np.array(f[inds]).reshape(-1,768);pca=PCA(n_components=3,svd_solver='full');z=pca.fit_transform(x)
+ lo,hi=np.percentile(z,[1,99],axis=0);rgb=np.clip((z-lo)/(hi-lo),0,1).reshape(8,28,28,3)
+ os.environ['LABEL_FREE']='0';truth=np.load(OLD/'scoring_masks_native.npy',mmap_mode='r')
+@@ -11,7 +13,7 @@
+ for row,i in enumerate(inds):
+  im=raw_image(rr[i]);axes[row,0].imshow(im,cmap='gray',vmin=0,vmax=1);axes[row,0].set_title(rr[i]['stem'])
+  axes[row,1].imshow(im,cmap='gray',vmin=0,vmax=1);axes[row,1].contour(truth[i],levels=[.5],colors=['red'],linewidths=.7);axes[row,1].set_title('Ground truth (display only)')
+- axes[row,2].imshow(rgb[row],interpolation='nearest');axes[row,2].set_title('D1 PCA RGB — body crop, 28×28')
++ axes[row,2].imshow(rgb[row],interpolation='nearest');axes[row,2].set_title(f'{a.arm} PCA RGB — body crop, 28×28')
+  for ax in axes[row]:ax.axis('off')
+-fig.tight_layout();fig.savefig(OUT/'D1_eight_slices_PCA.png',dpi=180);plt.close(fig)
+-dump('figures.json',dict(producer='figures.py',indices=inds,path=str(OUT/'D1_eight_slices_PCA.png'),PCA_labels_used=False,GT_labels='display only; inherited fixed largest-liver slice selection used labels historically',explained_variance_ratio=pca.explained_variance_ratio_.tolist(),scale_percentiles=[1,99]))
++fig.tight_layout();fig.savefig(OUT/f'{a.arm}_eight_slices_PCA.png',dpi=180);plt.close(fig)
++dump(f'{a.arm}_figures.json',dict(producer='figures.py',indices=inds,path=str(OUT/f'{a.arm}_eight_slices_PCA.png'),PCA_labels_used=False,GT_labels='display only; inherited fixed largest-liver slice selection used labels historically',explained_variance_ratio=pca.explained_variance_ratio_.tolist(),scale_percentiles=[1,99]))
+--- audit/dino/pair_affinities.py
++++ audit/dino2/pair_affinities.py
+@@ -6,7 +6,7 @@
+ PAIR=ROOT/'audit/scratch/pairs';reuse(ROOT/'audit/scratch/crosspatient/engine.py',['batches','image_id_codes','reuse_pair_function'],globals())
+ rr=records();vi=[i for i,r in enumerate(rr) if r['split']=='val'];assert len(vi)==472
+ original_records=json.loads((SELECT/'records.json').read_text());assert [r['sample_id'] for r in original_records]==[rr[i]['sample_id'] for i in vi]
+-sources={name:torch.from_numpy(np.array(np.load(path,mmap_mode='r')[vi])).permute(0,2,1).reshape(472,768,28,28) for name,path in [('D1',OUT/'D1_features.npy'),('BiomedCLIP_B2_448',OLD/'B2_448_features.npy')]}
++sources={name:torch.from_numpy(np.array(np.load(path,mmap_mode='r')[vi])).permute(0,2,1).reshape(472,768,28,28) for name,path in ([(arm,OUT/f'{arm}_features.npy') for arm in ['D2','D3'] if (OUT/f'{arm}_extract.json').exists()]+[('BiomedCLIP_B2_448',OLD/'B2_448_features.npy')])}
+ cfg=OmegaConf.create(dict(pointwise=True,stabalize=False,zero_clamp=True,use_salience=False,feature_samples=11,neg_samples=20,pos_intra_shift=0.,pos_inter_shift=0.,neg_inter_shift=0.))
+ lossfn=modules.ContrastiveCorrelationLoss(cfg);original_helper=lossfn.helper;original_sample=modules.sample
+ ctx={};reuse_pair_function('spy_sample',globals());reuse_pair_function('hard_labels',globals())
+@@ -32,7 +32,7 @@
+ with torch.inference_mode():
+  for nr,a,seed in batches(np.arange(472),7):
+   ctx.clear();ctx.update(feature_samples_seen=0,calls=0,anchors=a);torch.manual_seed(seed)
+-  features=sources['D1'][a];codes=image_id_codes(a)
++  features=sources[next(iter(sources))][a];codes=image_id_codes(a)
+   lossfn(features,features,None,None,codes,codes,features,codes)
+   if seed==SEED+(nr+1)*100+29:print('PAIRS',nr+1,elapsed(),flush=True)
+ modules.sample=original_sample;lossfn.helper=original_helper

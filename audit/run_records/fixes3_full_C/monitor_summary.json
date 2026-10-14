@@ -1,0 +1,52 @@
+{
+  "source": "logs/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/lightning_logs/version_0/validation_diagnostics.jsonl",
+  "checks": [
+    {
+      "code_std": 0.1058355900203584,
+      "cross_image_cosine": 0.14261504981097092,
+      "cluster_usage": [
+        0.011669052055409027,
+        0.052153960432160154,
+        0.04668203516841059,
+        0.0903934253123919,
+        0.031134432222306295,
+        0.42669857187445953,
+        0.09164233423772052,
+        0.24962618869714198
+      ],
+      "cluster_entropy": 1.603166850989826,
+      "images": 472,
+      "batches": 50,
+      "optimizer_steps": 150,
+      "consecutive_bad_checks": 0,
+      "early_stopped": false,
+      "metrics": {
+        "test/linear/mIoU": 18.241341412067413,
+        "test/linear/Accuracy": 32.06721544265747,
+        "test/linear/liver_IoU": 9.885745495557785,
+        "test/linear/liver_Dice": 17.992772161960602,
+        "test/cluster/mIoU": 46.17916643619537,
+        "test/cluster/Accuracy": 92.35833287239075,
+        "test/cluster/liver_IoU": 0.0,
+        "test/cluster/liver_Dice": 0.0
+      },
+      "fixed_samples": [
+        "CT_5_0048",
+        "CT_6_0047",
+        "CT_8_0059",
+        "CT_30_0139"
+      ],
+      "fixed_overlay_path": "../logs/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/lightning_logs/version_0/fixed_slices_batch_000050.png",
+      "cluster_to_class": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

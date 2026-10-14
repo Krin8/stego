@@ -1,0 +1,46 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/final_baseline/validate.py",
+  "checks": [
+    {
+      "k": 8,
+      "seed": 0,
+      "folds": 20,
+      "pass_checks": true
+    },
+    {
+      "k": 8,
+      "seed": 1,
+      "folds": 20,
+      "pass_checks": true
+    },
+    {
+      "k": 8,
+      "seed": 2,
+      "folds": 20,
+      "pass_checks": true
+    },
+    {
+      "k": 16,
+      "seed": 0,
+      "folds": 20,
+      "pass_checks": true
+    },
+    {
+      "k": 16,
+      "seed": 1,
+      "folds": 20,
+      "pass_checks": true
+    },
+    {
+      "k": 16,
+      "seed": 2,
+      "folds": 20,
+      "pass_checks": true
+    }
+  ],
+  "source_and_feature_sha256_unchanged": true,
+  "patient_label_counts_consistent": true,
+  "heldout_labels_excluded_from_mapping": true,
+  "exhaustive_mapping_dimension_test": true,
+  "elapsed_seconds": 3.47577416698914
+}

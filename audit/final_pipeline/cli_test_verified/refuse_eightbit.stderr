@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py", line 204, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py", line 197, in main
+    im=load_plane(path);f,record=extract(net,im);_,pred=predict_features(f,im,record,centers,meta)
+  File "/Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py", line 95, in load_plane
+    raise ValueError(f'{path}: PNG must be uint16 grayscale under the documented HU-window contract; 8-bit/RGB is ambiguous')
+ValueError: /Users/navneetbavineni/STEGO/audit/final_pipeline/cli_test_verified/bad_png/eightbit.png: PNG must be uint16 grayscale under the documented HU-window contract; 8-bit/RGB is ambiguous

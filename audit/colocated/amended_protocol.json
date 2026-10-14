@@ -1,0 +1,17 @@
+{
+  "recorded_utc": "2026-10-03T00:21:00Z",
+  "targets": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    0.9
+  ],
+  "seed": 20261003,
+  "source_protocol_sha256": "cf734b7fb048f9f06586887f2c7100609a060955eb2c67a46daf38edecc87a41",
+  "gate": "constant > random > K8 in full-loss mean AND all batches including final remainder",
+  "selection": "largest mean random minus K8 full loss among admissible targets",
+  "labels_used": false,
+  "previous_failed_attempt_preserved": true,
+  "source_sha256": "6999b8b7793a05652e1cec6e0e98b5ba458a4047fc23c3dcdfc4e8fd1c8b9709"
+}

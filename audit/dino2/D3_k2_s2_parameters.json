@@ -1,0 +1,16 @@
+{
+  "producer": "fit_score.py",
+  "parameters": {
+    "algorithm": "lloyd",
+    "copy_x": false,
+    "init": "k-means++",
+    "max_iter": 100,
+    "n_clusters": 2,
+    "n_init": 3,
+    "random_state": 2,
+    "tol": 0.0001,
+    "verbose": 0
+  },
+  "labels_used": false,
+  "protocol_sha256": "f44c7f459889db97b6a1bcf1ae544dddbd94297b640d97f895e3a843cfb5da56"
+}

@@ -1,0 +1,33 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/final_baseline/fit.py",
+  "k": 16,
+  "seed": 2,
+  "labels_used": false,
+  "fit_slices": 2341,
+  "fit_patients": 20,
+  "patch_vectors": 458836,
+  "dimensions": 768,
+  "centering": "none",
+  "normalization": "L2 per patch",
+  "parameters": {
+    "algorithm": "lloyd",
+    "copy_x": true,
+    "init": "k-means++",
+    "max_iter": 100,
+    "n_clusters": 16,
+    "n_init": 3,
+    "random_state": 2,
+    "tol": 0.0001,
+    "verbose": 0
+  },
+  "iterations": 54,
+  "inertia": 85607.6171875,
+  "ordered_ids_sha256": "11e4d7286a7d57777bd76e92fbe6f5491fff440ff80913d9d6a59fe1b0b0548d",
+  "warnings": [],
+  "grid_shape": [
+    2341,
+    14,
+    14
+  ],
+  "elapsed_seconds": 19.343423042009817
+}

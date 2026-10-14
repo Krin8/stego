@@ -1,0 +1,37 @@
+{
+  "body_box": {
+    "source": "audit/improve/pipeline.py",
+    "line": 9,
+    "sha256": "59e1a10ea18c06e517399426422d36ccc0ac43161938dddd2f491a1939b009a1"
+  },
+  "crop_image": {
+    "source": "audit/improve/pipeline.py",
+    "line": 18,
+    "sha256": "29dc16228dfe88d6ee9ef88df04a03b8465454bf4c7019f7c297eb063a20a914"
+  },
+  "image_tensor": {
+    "source": "audit/improve/pipeline.py",
+    "line": 23,
+    "sha256": "dd347c9cc6c1b68bbe03c4dd8559c555aa409cb8089d39bb7615bc490ad50592"
+  },
+  "inverse_grid": {
+    "source": "audit/improve/pipeline.py",
+    "line": 29,
+    "sha256": "5e31918b471333a77259eb4c071a68245489ff2c9142ab72a8fd6d6ce994a097"
+  },
+  "resize224": {
+    "source": "audit/improve/pipeline.py",
+    "line": 44,
+    "sha256": "66ccd798c3962c651bb68db51fd0da93789c781938a2fe9b9ec80cd7fdc09643"
+  },
+  "largest": {
+    "source": "audit/improve/postprocess.py",
+    "line": 14,
+    "sha256": "051ef8f2bcdae48714c77a49f5ee3a297b76f1ee1099255d06379eb9d3ee617e"
+  },
+  "guided": {
+    "source": "audit/improve/postprocess.py",
+    "line": 19,
+    "sha256": "994583963527d0359ccec3d22a78531ce4fb6becc4882d429af48ca6695d1239"
+  }
+}

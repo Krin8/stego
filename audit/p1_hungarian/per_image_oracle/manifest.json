@@ -1,0 +1,26 @@
+{
+  "method": "per-image exhaustive hard-IoU-optimal subset over all 2^8 cluster subsets",
+  "label_use": "each validation slice's ground-truth mask chooses that slice's prediction; oracle only",
+  "tie_break": "higher hard IoU, then fewer clusters, then lower cluster IDs",
+  "refinement": "same selected subset feeds unchanged soft F1 refinement; subset is not re-optimized for refined IoU",
+  "slices": 472,
+  "subset_frequency": {
+    "[1]": 8,
+    "[1, 5]": 2,
+    "[2]": 418,
+    "[2, 4]": 4,
+    "[2, 5]": 8,
+    "[4]": 15,
+    "[5]": 16,
+    "[7]": 1
+  },
+  "mean_clusters_per_slice": 1.0296610169491525,
+  "multi_cluster_slices": 14,
+  "c2_only_slices": 418,
+  "checkpoint_sha256": "1454f1bb8d2261a9a56a0fbcd6bed1d8946bf8cd7ff319d697b108ec16d28f1b",
+  "fit_sha256": "369693b2e0dbaad2616cc5f77b235315de9be6c4bd55ba1bdc1ab0b5ae68a54a",
+  "outputs": {
+    "hard.npy": "065d40c8af413477009ec0485e160f667e7d4711a52f771a9b412c86ddf5908e",
+    "refined.npy": "a28240e4a0aedbd3b44de33f13c546f222b401bf2c0bf19191fdefad866de335"
+  }
+}

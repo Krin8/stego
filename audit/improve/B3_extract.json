@@ -1,0 +1,33 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/improve/extract.py",
+  "variant": "B3",
+  "labels_used": false,
+  "input_resolution": 448,
+  "grid": 28,
+  "feature_shape": [
+    2341,
+    784,
+    768
+  ],
+  "mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "weights": {
+    "path": "/Users/navneetbavineni/STEGO/audit/scratch/fixes3/experiments/fixes3_C_seed0/checkpoints/last.ckpt",
+    "strict_load": true,
+    "architecture": "BiomedCLIP ViT-B/16",
+    "source": "Frozen backbone only; head output unused"
+  },
+  "frozen": true,
+  "cpu": true,
+  "eval": true,
+  "patch_norm": "final block LayerNorm then L2; tile features averaged before L2",
+  "elapsed_seconds": 397.0122856670059
+}

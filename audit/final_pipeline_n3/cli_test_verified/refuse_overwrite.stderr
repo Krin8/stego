@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py", line 204, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/navneetbavineni/STEGO/audit/final_pipeline/segment_ct.py", line 193, in main
+    if a.output.exists() and any(a.output.iterdir()):raise FileExistsError('Output folder must be new or empty')
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: Output folder must be new or empty

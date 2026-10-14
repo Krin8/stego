@@ -1,0 +1,1114 @@
+{
+  "Frozen Baseline": {
+    "Seed 0": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.708307791145933,
+          "pooled_iou_sd": 0.016613720221415076,
+          "pooled_dice": 0.8291403834655986,
+          "pooled_dice_sd": 0.011352776329225286,
+          "mean_slice_iou": 0.600751235941228,
+          "mean_slice_iou_sd": 0.22336643836058714,
+          "mean_slice_dice": 0.7172403162426412,
+          "mean_slice_dice_sd": 0.2423228374583855
+        },
+        "F1": {
+          "pooled_iou": 0.7599666712760886,
+          "pooled_iou_sd": 0.022300252918995504,
+          "pooled_dice": 0.8634321272175463,
+          "pooled_dice_sd": 0.014420774203630892,
+          "mean_slice_iou": 0.611308393962356,
+          "mean_slice_iou_sd": 0.29157379568038944,
+          "mean_slice_dice": 0.704275522806066,
+          "mean_slice_dice_sd": 0.3048803215082818
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.7089702869453143,
+          "pooled_iou_sd": 0.015950430277442498,
+          "pooled_dice": 0.8296030161199881,
+          "pooled_dice_sd": 0.010888418900360443,
+          "mean_slice_iou": 0.601743443590053,
+          "mean_slice_iou_sd": 0.22294537720917373,
+          "mean_slice_dice": 0.7181466554815308,
+          "mean_slice_dice_sd": 0.24196197196012906
+        },
+        "F1": {
+          "pooled_iou": 0.7597577407063469,
+          "pooled_iou_sd": 0.02232171097890449,
+          "pooled_dice": 0.8632968050142944,
+          "pooled_dice_sd": 0.014436945441896743,
+          "mean_slice_iou": 0.6110775697421249,
+          "mean_slice_iou_sd": 0.291254918966526,
+          "mean_slice_dice": 0.7042016612809817,
+          "mean_slice_dice_sd": 0.3045935411334951
+        }
+      }
+    },
+    "Seed 1": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.708307791145933,
+          "pooled_iou_sd": 0.016613720221415076,
+          "pooled_dice": 0.8291403834655986,
+          "pooled_dice_sd": 0.011352776329225286,
+          "mean_slice_iou": 0.600751235941228,
+          "mean_slice_iou_sd": 0.22336643836058714,
+          "mean_slice_dice": 0.7172403162426412,
+          "mean_slice_dice_sd": 0.2423228374583855
+        },
+        "F1": {
+          "pooled_iou": 0.759966736267474,
+          "pooled_iou_sd": 0.02230080436733763,
+          "pooled_dice": 0.8634321599683824,
+          "pooled_dice_sd": 0.01442114538160995,
+          "mean_slice_iou": 0.6113092368062973,
+          "mean_slice_iou_sd": 0.29157404149586696,
+          "mean_slice_dice": 0.7042761081382474,
+          "mean_slice_dice_sd": 0.3048805473310072
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.7089702869453143,
+          "pooled_iou_sd": 0.015950430277442498,
+          "pooled_dice": 0.8296030161199881,
+          "pooled_dice_sd": 0.010888418900360443,
+          "mean_slice_iou": 0.601743443590053,
+          "mean_slice_iou_sd": 0.22294537720917373,
+          "mean_slice_dice": 0.7181466554815308,
+          "mean_slice_dice_sd": 0.24196197196012906
+        },
+        "F1": {
+          "pooled_iou": 0.7597591106286109,
+          "pooled_iou_sd": 0.022320889709217886,
+          "pooled_dice": 0.8632977035567424,
+          "pooled_dice_sd": 0.01443640041526764,
+          "mean_slice_iou": 0.6110808660066109,
+          "mean_slice_iou_sd": 0.29125371510043463,
+          "mean_slice_dice": 0.7042047854977829,
+          "mean_slice_dice_sd": 0.3045921970064746
+        }
+      }
+    },
+    "Seed 2": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.708307791145933,
+          "pooled_iou_sd": 0.016613720221415076,
+          "pooled_dice": 0.8291403834655986,
+          "pooled_dice_sd": 0.011352776329225286,
+          "mean_slice_iou": 0.600751235941228,
+          "mean_slice_iou_sd": 0.22336643836058714,
+          "mean_slice_dice": 0.7172403162426412,
+          "mean_slice_dice_sd": 0.2423228374583855
+        },
+        "F1": {
+          "pooled_iou": 0.7599673263354498,
+          "pooled_iou_sd": 0.02230117836609781,
+          "pooled_dice": 0.863432534919723,
+          "pooled_dice_sd": 0.014421385534861345,
+          "mean_slice_iou": 0.6113106352512265,
+          "mean_slice_iou_sd": 0.29157378622264946,
+          "mean_slice_dice": 0.7042772602447817,
+          "mean_slice_dice_sd": 0.3048805930437484
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.7089702869453143,
+          "pooled_iou_sd": 0.015950430277442498,
+          "pooled_dice": 0.8296030161199881,
+          "pooled_dice_sd": 0.010888418900360443,
+          "mean_slice_iou": 0.601743443590053,
+          "mean_slice_iou_sd": 0.22294537720917373,
+          "mean_slice_dice": 0.7181466554815308,
+          "mean_slice_dice_sd": 0.24196197196012906
+        },
+        "F1": {
+          "pooled_iou": 0.7597602342408406,
+          "pooled_iou_sd": 0.02232131840073258,
+          "pooled_dice": 0.8632984224384213,
+          "pooled_dice_sd": 0.014436667568219244,
+          "mean_slice_iou": 0.6110825757385021,
+          "mean_slice_iou_sd": 0.29125341788172077,
+          "mean_slice_dice": 0.7042062115199774,
+          "mean_slice_dice_sd": 0.30459217557486695
+        }
+      }
+    },
+    "Soft Ensemble": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.7157678990646529,
+          "pooled_iou_sd": 0.020999204999804764,
+          "pooled_dice": 0.8341668774621187,
+          "pooled_dice_sd": 0.014241849475295543,
+          "mean_slice_iou": 0.5869427435109684,
+          "mean_slice_iou_sd": 0.2572333332622109,
+          "mean_slice_dice": 0.6955509693805143,
+          "mean_slice_dice_sd": 0.2756482881100779
+        },
+        "F1": {
+          "pooled_iou": 0.759966736267474,
+          "pooled_iou_sd": 0.02230080436733763,
+          "pooled_dice": 0.8634321599683824,
+          "pooled_dice_sd": 0.01442114538160995,
+          "mean_slice_iou": 0.6113092368062973,
+          "mean_slice_iou_sd": 0.29157404149586696,
+          "mean_slice_dice": 0.7042761081382474,
+          "mean_slice_dice_sd": 0.3048805473310072
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.7156464587806846,
+          "pooled_iou_sd": 0.021223155606651743,
+          "pooled_dice": 0.834080667307243,
+          "pooled_dice_sd": 0.01438971381486667,
+          "mean_slice_iou": 0.586735665498681,
+          "mean_slice_iou_sd": 0.25695086579911436,
+          "mean_slice_dice": 0.6954645328691749,
+          "mean_slice_dice_sd": 0.27542032326360155
+        },
+        "F1": {
+          "pooled_iou": 0.7597590679245226,
+          "pooled_iou_sd": 0.022321518617280135,
+          "pooled_dice": 0.8632976655823923,
+          "pooled_dice_sd": 0.014436812819332213,
+          "mean_slice_iou": 0.6110805483208632,
+          "mean_slice_iou_sd": 0.2912540571841286,
+          "mean_slice_dice": 0.7042044287027683,
+          "mean_slice_dice_sd": 0.3045924046444526
+        }
+      }
+    },
+    "Hard Ensemble": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.708307791145933,
+          "pooled_iou_sd": 0.016613720221415076,
+          "pooled_dice": 0.8291403834655986,
+          "pooled_dice_sd": 0.011352776329225286,
+          "mean_slice_iou": 0.600751235941228,
+          "mean_slice_iou_sd": 0.22336643836058714,
+          "mean_slice_dice": 0.7172403162426412,
+          "mean_slice_dice_sd": 0.2423228374583855
+        },
+        "F1": {
+          "pooled_iou": 0.7849690414697601,
+          "pooled_iou_sd": 0.017230959226643562,
+          "pooled_dice": 0.8794275030102063,
+          "pooled_dice_sd": 0.010865323255435115,
+          "mean_slice_iou": 0.6637649497102767,
+          "mean_slice_iou_sd": 0.2547093803936566,
+          "mean_slice_dice": 0.7580991170020627,
+          "mean_slice_dice_sd": 0.2639348547037309
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.7089702869453143,
+          "pooled_iou_sd": 0.015950430277442498,
+          "pooled_dice": 0.8296030161199881,
+          "pooled_dice_sd": 0.010888418900360443,
+          "mean_slice_iou": 0.601743443590053,
+          "mean_slice_iou_sd": 0.22294537720917373,
+          "mean_slice_dice": 0.7181466554815308,
+          "mean_slice_dice_sd": 0.24196197196012906
+        },
+        "F1": {
+          "pooled_iou": 0.7851760044793108,
+          "pooled_iou_sd": 0.016703055379023744,
+          "pooled_dice": 0.8795637551614345,
+          "pooled_dice_sd": 0.010531157463174753,
+          "mean_slice_iou": 0.6639756562228533,
+          "mean_slice_iou_sd": 0.25446830409861293,
+          "mean_slice_dice": 0.758333349977101,
+          "mean_slice_dice_sd": 0.2636810106774442
+        }
+      }
+    },
+    "Mean over Seeds": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.7083077911459329,
+          "pooled_iou_sd": 0.016613720221415076,
+          "pooled_dice": 0.8291403834655986,
+          "pooled_dice_sd": 0.011352776329225286,
+          "mean_slice_iou": 0.600751235941228,
+          "mean_slice_iou_sd": 0.22336643836058714,
+          "mean_slice_dice": 0.7172403162426412,
+          "mean_slice_dice_sd": 0.24232283745838554
+        },
+        "F1": {
+          "pooled_iou": 0.7599669112930041,
+          "pooled_iou_sd": 0.02230074521747698,
+          "pooled_dice": 0.8634322740352173,
+          "pooled_dice_sd": 0.01442110170670073,
+          "mean_slice_iou": 0.6113094220066266,
+          "mean_slice_iou_sd": 0.29157387446630195,
+          "mean_slice_dice": 0.7042762970630316,
+          "mean_slice_dice_sd": 0.3048804872943458
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.7089702869453142,
+          "pooled_iou_sd": 0.015950430277442498,
+          "pooled_dice": 0.8296030161199881,
+          "pooled_dice_sd": 0.010888418900360443,
+          "mean_slice_iou": 0.601743443590053,
+          "mean_slice_iou_sd": 0.22294537720917373,
+          "mean_slice_dice": 0.7181466554815308,
+          "mean_slice_dice_sd": 0.24196197196012906
+        },
+        "F1": {
+          "pooled_iou": 0.7597590285252661,
+          "pooled_iou_sd": 0.022321306362951654,
+          "pooled_dice": 0.8632976436698193,
+          "pooled_dice_sd": 0.014436671141794541,
+          "mean_slice_iou": 0.6110803371624126,
+          "mean_slice_iou_sd": 0.29125401731622713,
+          "mean_slice_dice": 0.704204219432914,
+          "mean_slice_dice_sd": 0.30459263790494556
+        }
+      }
+    }
+  },
+  "Untrained Head": {
+    "Seed 0": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.00011130487350049403,
+          "pooled_iou_sd": 0.0001539438689661509,
+          "pooled_dice": 0.0002225375981496496,
+          "pooled_dice_sd": 0.0003077701796895255,
+          "mean_slice_iou": 7.640288649652718e-05,
+          "mean_slice_iou_sd": 0.0007507490789060377,
+          "mean_slice_dice": 0.0001516755201244897,
+          "mean_slice_dice_sd": 0.0014900654085661098
+        },
+        "F1": {
+          "pooled_iou": 0.0,
+          "pooled_iou_sd": 0.0,
+          "pooled_dice": 0.0,
+          "pooled_dice_sd": 0.0,
+          "mean_slice_iou": 0.0,
+          "mean_slice_iou_sd": 0.0,
+          "mean_slice_dice": 0.0,
+          "mean_slice_dice_sd": 0.0
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.00012079027485263487,
+          "pooled_iou_sd": 0.00016537936756794432,
+          "pooled_dice": 0.00024149670103524234,
+          "pooled_dice_sd": 0.0003306229674423779,
+          "mean_slice_iou": 8.255201558049367e-05,
+          "mean_slice_iou_sd": 0.0008078244207075526,
+          "mean_slice_dice": 0.000163795922604344,
+          "mean_slice_dice_sd": 0.0016025607508290316
+        },
+        "F1": {
+          "pooled_iou": 0.0,
+          "pooled_iou_sd": 0.0,
+          "pooled_dice": 0.0,
+          "pooled_dice_sd": 0.0,
+          "mean_slice_iou": 0.0,
+          "mean_slice_iou_sd": 0.0,
+          "mean_slice_dice": 0.0,
+          "mean_slice_dice_sd": 0.0
+        }
+      }
+    },
+    "Seed 1": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.7061169262801535,
+          "pooled_iou_sd": 0.018610062636227397,
+          "pooled_dice": 0.8276072932345023,
+          "pooled_dice_sd": 0.012845303033734923,
+          "mean_slice_iou": 0.5985479771823271,
+          "mean_slice_iou_sd": 0.22412228687509597,
+          "mean_slice_dice": 0.7151776248795595,
+          "mean_slice_dice_sd": 0.24353532712860798
+        },
+        "F1": {
+          "pooled_iou": 0.7469213374809927,
+          "pooled_iou_sd": 0.03532254141726972,
+          "pooled_dice": 0.8546617500526011,
+          "pooled_dice_sd": 0.023097591705018364,
+          "mean_slice_iou": 0.589643769861352,
+          "mean_slice_iou_sd": 0.3060888855738495,
+          "mean_slice_dice": 0.6805389902869888,
+          "mean_slice_dice_sd": 0.32205513695001275
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.7066148314768755,
+          "pooled_iou_sd": 0.017739693243666085,
+          "pooled_dice": 0.8279622411797296,
+          "pooled_dice_sd": 0.012234210566245074,
+          "mean_slice_iou": 0.5994103648056686,
+          "mean_slice_iou_sd": 0.22375991434789427,
+          "mean_slice_dice": 0.715957795410698,
+          "mean_slice_dice_sd": 0.24328799878123522
+        },
+        "F1": {
+          "pooled_iou": 0.7467828202064605,
+          "pooled_iou_sd": 0.03513443420715514,
+          "pooled_dice": 0.8545758447068911,
+          "pooled_dice_sd": 0.022976715810341237,
+          "mean_slice_iou": 0.5894322113273542,
+          "mean_slice_iou_sd": 0.305905468767152,
+          "mean_slice_dice": 0.6804323600661975,
+          "mean_slice_dice_sd": 0.32189044858704935
+        }
+      }
+    },
+    "Seed 2": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.6984917418684533,
+          "pooled_iou_sd": 0.02156817873701965,
+          "pooled_dice": 0.8222938150843256,
+          "pooled_dice_sd": 0.015033745583428241,
+          "mean_slice_iou": 0.5960282266999749,
+          "mean_slice_iou_sd": 0.21944133631871798,
+          "mean_slice_dice": 0.714635260948802,
+          "mean_slice_dice_sd": 0.23773790860872043
+        },
+        "F1": {
+          "pooled_iou": 0.7076760532307452,
+          "pooled_iou_sd": 0.0336217071350609,
+          "pooled_dice": 0.8283611246599735,
+          "pooled_dice_sd": 0.023190507595986686,
+          "mean_slice_iou": 0.5657562036765791,
+          "mean_slice_iou_sd": 0.29053556670303576,
+          "mean_slice_dice": 0.6646077711931925,
+          "mean_slice_dice_sd": 0.3160930512361631
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.699185692961223,
+          "pooled_iou_sd": 0.020754421305674682,
+          "pooled_dice": 0.8227890651835108,
+          "pooled_dice_sd": 0.014454565389356811,
+          "mean_slice_iou": 0.5971287024129693,
+          "mean_slice_iou_sd": 0.2190473608885358,
+          "mean_slice_dice": 0.7156337986492661,
+          "mean_slice_dice_sd": 0.23733414183245727
+        },
+        "F1": {
+          "pooled_iou": 0.707608892292232,
+          "pooled_iou_sd": 0.03351488507991101,
+          "pooled_dice": 0.8283179670519139,
+          "pooled_dice_sd": 0.02311541262714454,
+          "mean_slice_iou": 0.5657545514961004,
+          "mean_slice_iou_sd": 0.2903395022746126,
+          "mean_slice_dice": 0.6646721852220967,
+          "mean_slice_dice_sd": 0.3159461021931727
+        }
+      }
+    },
+    "Soft Ensemble": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.4986013035491129,
+          "pooled_iou_sd": 0.041011925444740235,
+          "pooled_dice": 0.6644180825637322,
+          "pooled_dice_sd": 0.036694335040516106,
+          "mean_slice_iou": 0.3619463681847272,
+          "mean_slice_iou_sd": 0.2552931966654825,
+          "mean_slice_dice": 0.47344212880352043,
+          "mean_slice_dice_sd": 0.31195593183895154
+        },
+        "F1": {
+          "pooled_iou": 0.4565385005173631,
+          "pooled_iou_sd": 0.04929047104333686,
+          "pooled_dice": 0.6253113869599352,
+          "pooled_dice_sd": 0.046402840412209385,
+          "mean_slice_iou": 0.31902753956091273,
+          "mean_slice_iou_sd": 0.2523265174758979,
+          "mean_slice_dice": 0.4235392349667664,
+          "mean_slice_dice_sd": 0.31653680951430413
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.49852484801237273,
+          "pooled_iou_sd": 0.040811410153967796,
+          "pooled_dice": 0.6643596807893768,
+          "pooled_dice_sd": 0.036516954983451026,
+          "mean_slice_iou": 0.36177226477498275,
+          "mean_slice_iou_sd": 0.25532063359863766,
+          "mean_slice_dice": 0.47321869871073563,
+          "mean_slice_dice_sd": 0.3120659222709913
+        },
+        "F1": {
+          "pooled_iou": 0.45675021723847403,
+          "pooled_iou_sd": 0.04936643364387494,
+          "pooled_dice": 0.6255065211769097,
+          "pooled_dice_sd": 0.04646872454059495,
+          "mean_slice_iou": 0.31910654953151846,
+          "mean_slice_iou_sd": 0.25242688995846646,
+          "mean_slice_dice": 0.4235929527669454,
+          "mean_slice_dice_sd": 0.3166237306760353
+        }
+      }
+    },
+    "Hard Ensemble": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.6964765796677317,
+          "pooled_iou_sd": 0.018946138772835984,
+          "pooled_dice": 0.8209381771831538,
+          "pooled_dice_sd": 0.013236477002812648,
+          "mean_slice_iou": 0.5896355316648669,
+          "mean_slice_iou_sd": 0.22551901784030212,
+          "mean_slice_dice": 0.7073008455884994,
+          "mean_slice_dice_sd": 0.24666065035056228
+        },
+        "F1": {
+          "pooled_iou": 0.7677979492545576,
+          "pooled_iou_sd": 0.023707840571769993,
+          "pooled_dice": 0.8684444865689466,
+          "pooled_dice_sd": 0.015249850804748654,
+          "mean_slice_iou": 0.6458208476488677,
+          "mean_slice_iou_sd": 0.2602678696101969,
+          "mean_slice_dice": 0.7423501225977192,
+          "mean_slice_dice_sd": 0.2719589617075355
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.6971394621934035,
+          "pooled_iou_sd": 0.018120429573134193,
+          "pooled_dice": 0.8214114327170464,
+          "pooled_dice_sd": 0.012647442465133843,
+          "mean_slice_iou": 0.5905989975779343,
+          "mean_slice_iou_sd": 0.22523190659617306,
+          "mean_slice_dice": 0.708156914564586,
+          "mean_slice_dice_sd": 0.24644772712476465
+        },
+        "F1": {
+          "pooled_iou": 0.7679773536087648,
+          "pooled_iou_sd": 0.023161500595879972,
+          "pooled_dice": 0.8685686448136121,
+          "pooled_dice_sd": 0.014896970138618652,
+          "mean_slice_iou": 0.6459860870143899,
+          "mean_slice_iou_sd": 0.26003919961370925,
+          "mean_slice_dice": 0.7425561651244,
+          "mean_slice_dice_sd": 0.27170133314818007
+        }
+      }
+    },
+    "Mean over Seeds": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.4682399910073691,
+          "pooled_iou_sd": 0.0134440617474044,
+          "pooled_dice": 0.5500412153056592,
+          "pooled_dice_sd": 0.009395606265617563,
+          "mean_slice_iou": 0.39821753558959955,
+          "mean_slice_iou_sd": 0.14810479075757332,
+          "mean_slice_dice": 0.4766548537828286,
+          "mean_slice_dice_sd": 0.16092110038196483
+        },
+        "F1": {
+          "pooled_iou": 0.48486579690391257,
+          "pooled_iou_sd": 0.022981416184110204,
+          "pooled_dice": 0.5610076249041915,
+          "pooled_dice_sd": 0.015429366433668351,
+          "mean_slice_iou": 0.38513332451264376,
+          "mean_slice_iou_sd": 0.19887481742562843,
+          "mean_slice_dice": 0.4483822538267271,
+          "mean_slice_dice_sd": 0.2127160627287253
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.4686404382376504,
+          "pooled_iou_sd": 0.012886497972302903,
+          "pooled_dice": 0.5503309343547585,
+          "pooled_dice_sd": 0.009006466307681421,
+          "mean_slice_iou": 0.3988738730780728,
+          "mean_slice_iou_sd": 0.14787169988571255,
+          "mean_slice_dice": 0.4772517966608561,
+          "mean_slice_dice_sd": 0.1607415671215072
+        },
+        "F1": {
+          "pooled_iou": 0.48479723749956416,
+          "pooled_iou_sd": 0.02288310642902205,
+          "pooled_dice": 0.5609646039196017,
+          "pooled_dice_sd": 0.01536404281249526,
+          "mean_slice_iou": 0.38506225427448487,
+          "mean_slice_iou_sd": 0.19874832368058817,
+          "mean_slice_dice": 0.4483681817627647,
+          "mean_slice_dice_sd": 0.21261218359340736
+        }
+      }
+    }
+  },
+  "C448": {
+    "Seed 0": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.7075050483287227,
+          "pooled_iou_sd": 0.018345023851074074,
+          "pooled_dice": 0.8285660194907218,
+          "pooled_dice_sd": 0.012507051467419738,
+          "mean_slice_iou": 0.6062599421479862,
+          "mean_slice_iou_sd": 0.21392367302821794,
+          "mean_slice_dice": 0.7251088038784386,
+          "mean_slice_dice_sd": 0.22698977569879433
+        },
+        "F1": {
+          "pooled_iou": 0.6862983122574874,
+          "pooled_iou_sd": 0.02198392233191107,
+          "pooled_dice": 0.8137695849944186,
+          "pooled_dice_sd": 0.015391290143246502,
+          "mean_slice_iou": 0.5418822874051931,
+          "mean_slice_iou_sd": 0.26533929853216054,
+          "mean_slice_dice": 0.6536936643309607,
+          "mean_slice_dice_sd": 0.2893889279753798
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.708179634642662,
+          "pooled_iou_sd": 0.017641068316819393,
+          "pooled_dice": 0.8290388745858343,
+          "pooled_dice_sd": 0.012014743543101076,
+          "mean_slice_iou": 0.6075068421678405,
+          "mean_slice_iou_sd": 0.21322716972791675,
+          "mean_slice_dice": 0.7262869617677455,
+          "mean_slice_dice_sd": 0.22629137826063778
+        },
+        "F1": {
+          "pooled_iou": 0.6863569969304345,
+          "pooled_iou_sd": 0.02181876385202714,
+          "pooled_dice": 0.813813950823796,
+          "pooled_dice_sd": 0.015269259150247846,
+          "mean_slice_iou": 0.5419989504742727,
+          "mean_slice_iou_sd": 0.2650962553697691,
+          "mean_slice_dice": 0.6538751340163667,
+          "mean_slice_dice_sd": 0.2891867502720183
+        }
+      }
+    },
+    "Seed 1": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.7110827806989621,
+          "pooled_iou_sd": 0.017391697980875104,
+          "pooled_dice": 0.8310296839886576,
+          "pooled_dice_sd": 0.011786232881561444,
+          "mean_slice_iou": 0.6089731276588605,
+          "mean_slice_iou_sd": 0.21493264145364246,
+          "mean_slice_dice": 0.7269211259701119,
+          "mean_slice_dice_sd": 0.22840343413262035
+        },
+        "F1": {
+          "pooled_iou": 0.7178143554410149,
+          "pooled_iou_sd": 0.01762116737365585,
+          "pooled_dice": 0.8356067042455448,
+          "pooled_dice_sd": 0.01200409352689169,
+          "mean_slice_iou": 0.5823937703929691,
+          "mean_slice_iou_sd": 0.2610715397605748,
+          "mean_slice_dice": 0.690603978751489,
+          "mean_slice_dice_sd": 0.27939832464043945
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.7117577584181687,
+          "pooled_iou_sd": 0.016631339860265392,
+          "pooled_dice": 0.8315009633988376,
+          "pooled_dice_sd": 0.011261539223813831,
+          "mean_slice_iou": 0.6101909549627595,
+          "mean_slice_iou_sd": 0.21424688371956616,
+          "mean_slice_dice": 0.7280756827167432,
+          "mean_slice_dice_sd": 0.22768334547968622
+        },
+        "F1": {
+          "pooled_iou": 0.7180221042794175,
+          "pooled_iou_sd": 0.017513929770640424,
+          "pooled_dice": 0.8357490829201182,
+          "pooled_dice_sd": 0.011922948057114944,
+          "mean_slice_iou": 0.5826084038402465,
+          "mean_slice_iou_sd": 0.26085733394231886,
+          "mean_slice_dice": 0.6908579187896522,
+          "mean_slice_dice_sd": 0.2791622184733763
+        }
+      }
+    },
+    "Seed 2": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.7118569530231019,
+          "pooled_iou_sd": 0.01880310907345031,
+          "pooled_dice": 0.8315382978506839,
+          "pooled_dice_sd": 0.01272634176197709,
+          "mean_slice_iou": 0.6132453649802163,
+          "mean_slice_iou_sd": 0.21008722993481957,
+          "mean_slice_dice": 0.7318564802720303,
+          "mean_slice_dice_sd": 0.22161345105511376
+        },
+        "F1": {
+          "pooled_iou": 0.7219405193168107,
+          "pooled_iou_sd": 0.01677090179903889,
+          "pooled_dice": 0.838408972774833,
+          "pooled_dice_sd": 0.011368560598688612,
+          "mean_slice_iou": 0.5876681563154297,
+          "mean_slice_iou_sd": 0.26111074598702955,
+          "mean_slice_dice": 0.6949859829652152,
+          "mean_slice_dice_sd": 0.279131788099968
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.7125107971917259,
+          "pooled_iou_sd": 0.01804238284001785,
+          "pooled_dice": 0.8319956191312687,
+          "pooled_dice_sd": 0.012200039797907153,
+          "mean_slice_iou": 0.6145272698932179,
+          "mean_slice_iou_sd": 0.20951362319069083,
+          "mean_slice_dice": 0.7330090067049528,
+          "mean_slice_dice_sd": 0.22108294084435615
+        },
+        "F1": {
+          "pooled_iou": 0.7221395251871197,
+          "pooled_iou_sd": 0.016628429983484884,
+          "pooled_dice": 0.838545157888518,
+          "pooled_dice_sd": 0.011263511741558025,
+          "mean_slice_iou": 0.5878461939565327,
+          "mean_slice_iou_sd": 0.2608897595528444,
+          "mean_slice_dice": 0.6952078208523108,
+          "mean_slice_dice_sd": 0.27890811186869985
+        }
+      }
+    },
+    "Soft Ensemble": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.6890494987792859,
+          "pooled_iou_sd": 0.01589030679616357,
+          "pooled_dice": 0.8157976835705771,
+          "pooled_dice_sd": 0.011096988176106529,
+          "mean_slice_iou": 0.5670435298371371,
+          "mean_slice_iou_sd": 0.2369916122852953,
+          "mean_slice_dice": 0.6852818563461138,
+          "mean_slice_dice_sd": 0.25732103223258923
+        },
+        "F1": {
+          "pooled_iou": 0.7098523648360258,
+          "pooled_iou_sd": 0.018221963504322918,
+          "pooled_dice": 0.8301752581072164,
+          "pooled_dice_sd": 0.012490925326893802,
+          "mean_slice_iou": 0.5716831182090143,
+          "mean_slice_iou_sd": 0.26283287666659705,
+          "mean_slice_dice": 0.6807902085168076,
+          "mean_slice_dice_sd": 0.28282606149570816
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.6891732295641708,
+          "pooled_iou_sd": 0.015730242833782417,
+          "pooled_dice": 0.8158865577652742,
+          "pooled_dice_sd": 0.010980902900167882,
+          "mean_slice_iou": 0.5671247819705887,
+          "mean_slice_iou_sd": 0.2367395824117825,
+          "mean_slice_dice": 0.6854280470258347,
+          "mean_slice_dice_sd": 0.2570854639388878
+        },
+        "F1": {
+          "pooled_iou": 0.7100908015914016,
+          "pooled_iou_sd": 0.01818048956310828,
+          "pooled_dice": 0.8303390585167904,
+          "pooled_dice_sd": 0.012454259101539059,
+          "mean_slice_iou": 0.5718928804914641,
+          "mean_slice_iou_sd": 0.26261120841985464,
+          "mean_slice_dice": 0.6810494287577258,
+          "mean_slice_dice_sd": 0.2825713316357126
+        }
+      }
+    },
+    "Hard Ensemble": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.7097364694816791,
+          "pooled_iou_sd": 0.01828049809437529,
+          "pooled_dice": 0.8300963192343376,
+          "pooled_dice_sd": 0.012417296884534187,
+          "mean_slice_iou": 0.608352905513234,
+          "mean_slice_iou_sd": 0.2135232090473559,
+          "mean_slice_dice": 0.7268888538218448,
+          "mean_slice_dice_sd": 0.2264695482257003
+        },
+        "F1": {
+          "pooled_iou": 0.79349856949228,
+          "pooled_iou_sd": 0.014240543353400387,
+          "pooled_dice": 0.884790550762035,
+          "pooled_dice_sd": 0.008886845087035626,
+          "mean_slice_iou": 0.6805955866865996,
+          "mean_slice_iou_sd": 0.25082410945231587,
+          "mean_slice_dice": 0.771513699732113,
+          "mean_slice_dice_sd": 0.2611282721467181
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.710380022245513,
+          "pooled_iou_sd": 0.017532078898541577,
+          "pooled_dice": 0.8305472713530931,
+          "pooled_dice_sd": 0.011897533117417404,
+          "mean_slice_iou": 0.6095848029163198,
+          "mean_slice_iou_sd": 0.21285866011383797,
+          "mean_slice_dice": 0.7280436048284732,
+          "mean_slice_dice_sd": 0.2258005303708826
+        },
+        "F1": {
+          "pooled_iou": 0.7936554053087936,
+          "pooled_iou_sd": 0.013730325848291964,
+          "pooled_dice": 0.8848930338301482,
+          "pooled_dice_sd": 0.00856780890101693,
+          "mean_slice_iou": 0.6808858343684344,
+          "mean_slice_iou_sd": 0.2504722246455258,
+          "mean_slice_dice": 0.7718205038445892,
+          "mean_slice_dice_sd": 0.26085259573702885
+        }
+      }
+    },
+    "Mean over Seeds": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.7101482606835955,
+          "pooled_iou_sd": 0.018179943635133162,
+          "pooled_dice": 0.8303780004433544,
+          "pooled_dice_sd": 0.012339875370319423,
+          "mean_slice_iou": 0.6094928115956876,
+          "mean_slice_iou_sd": 0.21298118147222667,
+          "mean_slice_dice": 0.7279621367068603,
+          "mean_slice_dice_sd": 0.22566888696217613
+        },
+        "F1": {
+          "pooled_iou": 0.7086843956717711,
+          "pooled_iou_sd": 0.018791997168201936,
+          "pooled_dice": 0.8292617540049321,
+          "pooled_dice_sd": 0.012921314756275601,
+          "mean_slice_iou": 0.5706480713711973,
+          "mean_slice_iou_sd": 0.2625071947599216,
+          "mean_slice_dice": 0.6797612086825549,
+          "mean_slice_dice_sd": 0.28263968023859576
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.7108160634175188,
+          "pooled_iou_sd": 0.017438263672367543,
+          "pooled_dice": 0.8308451523719803,
+          "pooled_dice_sd": 0.011825440854940687,
+          "mean_slice_iou": 0.6107416890079392,
+          "mean_slice_iou_sd": 0.2123292255460579,
+          "mean_slice_dice": 0.7291238837298138,
+          "mean_slice_dice_sd": 0.22501922152822673
+        },
+        "F1": {
+          "pooled_iou": 0.7088395421323238,
+          "pooled_iou_sd": 0.018653707868717482,
+          "pooled_dice": 0.8293693972108107,
+          "pooled_dice_sd": 0.012818572982973606,
+          "mean_slice_iou": 0.570817849423684,
+          "mean_slice_iou_sd": 0.26228111628831074,
+          "mean_slice_dice": 0.6799802912194433,
+          "mean_slice_dice_sd": 0.28241902687136483
+        }
+      }
+    }
+  },
+  "P1": {
+    "Seed 0": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.7066053074589765,
+          "pooled_iou_sd": 0.016290477547313234,
+          "pooled_dice": 0.8279766546247637,
+          "pooled_dice_sd": 0.011127061295868428,
+          "mean_slice_iou": 0.6056388611900635,
+          "mean_slice_iou_sd": 0.21498522080401317,
+          "mean_slice_dice": 0.7243936543347476,
+          "mean_slice_dice_sd": 0.22747530932756121
+        },
+        "F1": {
+          "pooled_iou": 0.7100521119818741,
+          "pooled_iou_sd": 0.020236351938759806,
+          "pooled_dice": 0.830281792205744,
+          "pooled_dice_sd": 0.013792033784515996,
+          "mean_slice_iou": 0.5657784007515141,
+          "mean_slice_iou_sd": 0.26785960384230467,
+          "mean_slice_dice": 0.6740745438702683,
+          "mean_slice_dice_sd": 0.2878350664303943
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.7072534549505738,
+          "pooled_iou_sd": 0.01557262267282677,
+          "pooled_dice": 0.8284308485200385,
+          "pooled_dice_sd": 0.010626624644101867,
+          "mean_slice_iou": 0.6068153272763323,
+          "mean_slice_iou_sd": 0.21432246562843418,
+          "mean_slice_dice": 0.7255175222808584,
+          "mean_slice_dice_sd": 0.22674544456185738
+        },
+        "F1": {
+          "pooled_iou": 0.7101822051154105,
+          "pooled_iou_sd": 0.02020043351579359,
+          "pooled_dice": 0.8303714220520033,
+          "pooled_dice_sd": 0.013761524995432274,
+          "mean_slice_iou": 0.5658805142937283,
+          "mean_slice_iou_sd": 0.2675617380657003,
+          "mean_slice_dice": 0.6742737932037275,
+          "mean_slice_dice_sd": 0.28750128739796116
+        }
+      }
+    },
+    "Seed 1": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.7097597290050395,
+          "pooled_iou_sd": 0.016208811146152448,
+          "pooled_dice": 0.8301405242105951,
+          "pooled_dice_sd": 0.011020266484965192,
+          "mean_slice_iou": 0.6112440983094727,
+          "mean_slice_iou_sd": 0.21727216377067737,
+          "mean_slice_dice": 0.7282178807148209,
+          "mean_slice_dice_sd": 0.22955890520204184
+        },
+        "F1": {
+          "pooled_iou": 0.7056932733735575,
+          "pooled_iou_sd": 0.017313139930513106,
+          "pooled_dice": 0.8273353915120492,
+          "pooled_dice_sd": 0.01190677614258249,
+          "mean_slice_iou": 0.5655884435860085,
+          "mean_slice_iou_sd": 0.2632152268918116,
+          "mean_slice_dice": 0.6754604640302783,
+          "mean_slice_dice_sd": 0.28363907532083704
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.7104790765503521,
+          "pooled_iou_sd": 0.015688395505760087,
+          "pooled_dice": 0.8306391585290849,
+          "pooled_dice_sd": 0.010661188170362832,
+          "mean_slice_iou": 0.612428900267207,
+          "mean_slice_iou_sd": 0.2166101545756018,
+          "mean_slice_dice": 0.7293440493815864,
+          "mean_slice_dice_sd": 0.22882268135830344
+        },
+        "F1": {
+          "pooled_iou": 0.705798744668697,
+          "pooled_iou_sd": 0.017139966362252443,
+          "pooled_dice": 0.8274103628298393,
+          "pooled_dice_sd": 0.011781794502569653,
+          "mean_slice_iou": 0.5657179388937795,
+          "mean_slice_iou_sd": 0.2628873218851335,
+          "mean_slice_dice": 0.6756995733000404,
+          "mean_slice_dice_sd": 0.2832269351907701
+        }
+      }
+    },
+    "Seed 2": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.7087810560492075,
+          "pooled_iou_sd": 0.016606230772797374,
+          "pooled_dice": 0.829465317046915,
+          "pooled_dice_sd": 0.011290636820994758,
+          "mean_slice_iou": 0.611680194783136,
+          "mean_slice_iou_sd": 0.21094806973156846,
+          "mean_slice_dice": 0.7304597779691496,
+          "mean_slice_dice_sd": 0.22195582239572792
+        },
+        "F1": {
+          "pooled_iou": 0.7379050247784279,
+          "pooled_iou_sd": 0.016163480562379085,
+          "pooled_dice": 0.849088971225723,
+          "pooled_dice_sd": 0.01076894928396883,
+          "mean_slice_iou": 0.6031640311018518,
+          "mean_slice_iou_sd": 0.26249244964138196,
+          "mean_slice_dice": 0.7076186049095431,
+          "mean_slice_dice_sd": 0.27775766726897927
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.7094083847710362,
+          "pooled_iou_sd": 0.015878963059609022,
+          "pooled_dice": 0.8299043588772481,
+          "pooled_dice_sd": 0.010788017093457681,
+          "mean_slice_iou": 0.612889390025569,
+          "mean_slice_iou_sd": 0.2104058432297277,
+          "mean_slice_dice": 0.7315537459510915,
+          "mean_slice_dice_sd": 0.2214241695947918
+        },
+        "F1": {
+          "pooled_iou": 0.7379320417158959,
+          "pooled_iou_sd": 0.01588553364179521,
+          "pooled_dice": 0.8491103398936981,
+          "pooled_dice_sd": 0.010576940816644296,
+          "mean_slice_iou": 0.6031683804421234,
+          "mean_slice_iou_sd": 0.2622877895522929,
+          "mean_slice_dice": 0.7076893277195345,
+          "mean_slice_dice_sd": 0.2775543521278939
+        }
+      }
+    },
+    "Soft Ensemble": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.6950961672440291,
+          "pooled_iou_sd": 0.015228336574701283,
+          "pooled_dice": 0.8200311352352838,
+          "pooled_dice_sd": 0.010552968987555719,
+          "mean_slice_iou": 0.5718744831430357,
+          "mean_slice_iou_sd": 0.2377423200990212,
+          "mean_slice_dice": 0.6892898814364979,
+          "mean_slice_dice_sd": 0.25683189520712785
+        },
+        "F1": {
+          "pooled_iou": 0.7186386574688726,
+          "pooled_iou_sd": 0.017182304361270984,
+          "pooled_dice": 0.8361717842137607,
+          "pooled_dice_sd": 0.011649714522391722,
+          "mean_slice_iou": 0.5789098752577411,
+          "mean_slice_iou_sd": 0.2644284953365813,
+          "mean_slice_dice": 0.6865920398942331,
+          "mean_slice_dice_sd": 0.2826784677451455
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.6951818171665043,
+          "pooled_iou_sd": 0.01507899174767627,
+          "pooled_dice": 0.8200926267062865,
+          "pooled_dice_sd": 0.01044689673910722,
+          "mean_slice_iou": 0.5719083870068363,
+          "mean_slice_iou_sd": 0.23748208882249755,
+          "mean_slice_dice": 0.6893985627157782,
+          "mean_slice_dice_sd": 0.25658435136710717
+        },
+        "F1": {
+          "pooled_iou": 0.7188355796151925,
+          "pooled_iou_sd": 0.01711245553593071,
+          "pooled_dice": 0.8363061380267202,
+          "pooled_dice_sd": 0.011595065538630907,
+          "mean_slice_iou": 0.579113153402577,
+          "mean_slice_iou_sd": 0.2641517739193739,
+          "mean_slice_dice": 0.6868593146803322,
+          "mean_slice_dice_sd": 0.28239213994355766
+        }
+      }
+    },
+    "Hard Ensemble": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.708626411454134,
+          "pooled_iou_sd": 0.01618225503466018,
+          "pooled_dice": 0.8293648288334854,
+          "pooled_dice_sd": 0.011010502122645606,
+          "mean_slice_iou": 0.608804662047873,
+          "mean_slice_iou_sd": 0.21502536256676189,
+          "mean_slice_dice": 0.7269416115579318,
+          "mean_slice_dice_sd": 0.22711969615912736
+        },
+        "F1": {
+          "pooled_iou": 0.7933395846879263,
+          "pooled_iou_sd": 0.013253378804680433,
+          "pooled_dice": 0.8847013336963023,
+          "pooled_dice_sd": 0.008243008406063493,
+          "mean_slice_iou": 0.6822304616822626,
+          "mean_slice_iou_sd": 0.2549931036721788,
+          "mean_slice_dice": 0.7713396062847527,
+          "mean_slice_dice_sd": 0.26581224811757104
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.7092415162173655,
+          "pooled_iou_sd": 0.015490693209331836,
+          "pooled_dice": 0.8297948976790871,
+          "pooled_dice_sd": 0.010531868050696808,
+          "mean_slice_iou": 0.6099363071405389,
+          "mean_slice_iou_sd": 0.21440817013894944,
+          "mean_slice_dice": 0.728011527538149,
+          "mean_slice_dice_sd": 0.22645075587917396
+        },
+        "F1": {
+          "pooled_iou": 0.7934898243782161,
+          "pooled_iou_sd": 0.012731167632589312,
+          "pooled_dice": 0.8847994775073003,
+          "pooled_dice_sd": 0.007916782173472641,
+          "mean_slice_iou": 0.6824796414099507,
+          "mean_slice_iou_sd": 0.2546524170364752,
+          "mean_slice_dice": 0.7716156046358404,
+          "mean_slice_dice_sd": 0.2655396064550746
+        }
+      }
+    },
+    "Mean over Seeds": {
+      "224": {
+        "hard": {
+          "pooled_iou": 0.7083820308377412,
+          "pooled_iou_sd": 0.01636850648875435,
+          "pooled_dice": 0.8291941652940912,
+          "pooled_dice_sd": 0.01114598820060946,
+          "mean_slice_iou": 0.6095210514275574,
+          "mean_slice_iou_sd": 0.21440181810208633,
+          "mean_slice_dice": 0.727690437672906,
+          "mean_slice_dice_sd": 0.22633001230844366
+        },
+        "F1": {
+          "pooled_iou": 0.7178834700446198,
+          "pooled_iou_sd": 0.017904324143883998,
+          "pooled_dice": 0.8355687183145054,
+          "pooled_dice_sd": 0.012155919737022437,
+          "mean_slice_iou": 0.5781769584797914,
+          "mean_slice_iou_sd": 0.26452242679183274,
+          "mean_slice_dice": 0.6857178709366966,
+          "mean_slice_dice_sd": 0.2830772696734036
+        }
+      },
+      "512": {
+        "hard": {
+          "pooled_iou": 0.709046972090654,
+          "pooled_iou_sd": 0.015713327079398626,
+          "pooled_dice": 0.8296581219754572,
+          "pooled_dice_sd": 0.010691943302640795,
+          "mean_slice_iou": 0.6107112058563694,
+          "mean_slice_iou_sd": 0.21377948781125455,
+          "mean_slice_dice": 0.7288051058711787,
+          "mean_slice_dice_sd": 0.22566409850498423
+        },
+        "F1": {
+          "pooled_iou": 0.7179709971666678,
+          "pooled_iou_sd": 0.01774197783994708,
+          "pooled_dice": 0.8356307082585136,
+          "pooled_dice_sd": 0.01204008677154874,
+          "mean_slice_iou": 0.578255611209877,
+          "mean_slice_iou_sd": 0.2642456165010422,
+          "mean_slice_dice": 0.6858875647411008,
+          "mean_slice_dice_sd": 0.28276085823887503
+        }
+      }
+    }
+  }
+}

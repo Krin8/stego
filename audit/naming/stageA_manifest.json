@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "sealed_utc": "2026-10-02T09:33:59.711902+00:00",
+  "parameters": {
+    "seed": 20260930,
+    "K": 8,
+    "kmeans_seeds": [
+      0,
+      1,
+      2
+    ],
+    "fits": [
+      "inductive",
+      "transductive"
+    ],
+    "no_refit": true,
+    "preprocessing": {
+      "modality": "CT",
+      "window_hu": [
+        -150,
+        250
+      ],
+      "intensity": "clip HU then linear [0,1]; round(65535*x)/65535",
+      "png": "uint16 grayscale already windowed [-150,250]; reject 8-bit/RGB",
+      "orientation": "native; no flip/transpose",
+      "spatial_resampling": "none",
+      "native_shape": [
+        512,
+        512
+      ],
+      "body_threshold": 0.05,
+      "body_connectivity": 8,
+      "body_box": "largest component; fill holes; square bounding box with 5% each-side margin; zero padding",
+      "input_resolution": 448,
+      "resize": "torchvision bilinear antialias=True",
+      "mean": [
+        0.48145466,
+        0.4578275,
+        0.40821073
+      ],
+      "std": [
+        0.26862954,
+        0.26130258,
+        0.27577711
+      ],
+      "normalization_application_count": 1,
+      "grayscale_channels": 3,
+      "backbone": "BiomedCLIP ViT-B/16",
+      "layer": "final block",
+      "normalization": "final LayerNorm then patch L2; uncentered",
+      "cls_excluded": true,
+      "grid": [
+        28,
+        28
+      ],
+      "eval": true,
+      "device": "cpu",
+      "soft_assignment": "softmax(-squared_euclidean_distance/temperature)",
+      "temperature": "median nearest/second-nearest squared-distance gap over fitting patches / log(4); floor 1e-6",
+      "inverse_crop": "bilinear align_corners=False; outside=0",
+      "guided_radius": 8,
+      "guided_epsilon": 0.01,
+      "guided_boundary": "reflect",
+      "threshold": 0.5,
+      "largest_component_connectivity": 8,
+      "hole_fill_background_connectivity": 4,
+      "closing_disk_radius": 3,
+      "closing_padding": "3 zero pixels then crop",
+      "f2_default": false,
+      "f2": "median(3,1,1), nearest endpoints, one series at a time"
+    },
+    "feature_source": "existing B2_448_features.npy, normalized uncentered final tokens",
+    "N1": {
+      "nearest_per_cluster": 200,
+      "restriction": "all body-centre patches in this fit own images; no cluster-assignment restriction",
+      "distance": "squared Euclidean to saved centre",
+      "ties": "distance, then global image index, then row-major patch index",
+      "crop_native_pixels": 112,
+      "crop_center": "grid cell centre transformed through recorded body crop: (cell+.5)*side/28-.5+offset; nearest integer centre=floor(value+.5)",
+      "crop_boundary": "zero padding in windowed[0,1] space",
+      "resize": 224,
+      "interpolation": "bilinear antialias=True",
+      "mean": [
+        0.48145466,
+        0.4578275,
+        0.40821073
+      ],
+      "std": [
+        0.26862954,
+        0.26130258,
+        0.27577711
+      ],
+      "normalization_application_count": 1,
+      "image_embedding": "full BiomedCLIP encode_image with CLIP projection, L2 per crop, mean of200, L2 mean for cosine",
+      "text_embedding": "full BiomedCLIP encode_text normalize=True; tokenizer context256",
+      "prompts": [
+        "an axial abdominal CT image showing the liver",
+        "an axial abdominal CT image showing the spleen",
+        "an axial abdominal CT image showing the kidney",
+        "an axial abdominal CT image showing the stomach",
+        "an axial abdominal CT image showing the pancreas",
+        "an axial abdominal CT image showing the gallbladder",
+        "an axial abdominal CT image showing the aorta",
+        "an axial abdominal CT image showing the vertebra",
+        "an axial abdominal CT image showing the muscle",
+        "an axial abdominal CT image showing the subcutaneous fat",
+        "an axial abdominal CT image showing the bowel",
+        "an axial abdominal CT image showing the lung",
+        "an axial abdominal CT image showing the heart",
+        "an axial abdominal CT image showing the rib",
+        "an axial abdominal CT image showing the air"
+      ],
+      "zscore": "per prompt across8 cluster cosine similarities; population SD(ddof0); zero SD gives0",
+      "selection": "argmax liver zscore; ties lowest cluster ID",
+      "top_prompt": "argmax zscored prompt per cluster; ties declared prompt order",
+      "margins": "top prompt zscore minus second; raw cosine top-minus-second also recorded; liver selection zscore winner minus runner-up"
+    },
+    "N2": {
+      "body_HU_threshold": -500,
+      "threshold_comparison": ">",
+      "opening": "binary opening disk radius5; native pixels; scipy default1 iteration/border0",
+      "connectivity": 8,
+      "hole_fill": "4-connected background",
+      "body_patch": "patch centre rounded to nearest native pixel inside body mask",
+      "bounding_box_coordinates": "pixel-centre normalized x=(x-xmin)/(xmax-xmin), y=(y-ymin)/(ymax-ymin); singleton denominator1",
+      "patch_HU": "mean unwindowed HU over native pixels whose centres lie in that patch cell footprint, restricted to body mask",
+      "area": "each eligible patch counts one; fraction among all fit body patches",
+      "centroid": "area-weighted patch centroid; each patch weight1",
+      "mean_HU": "arithmetic mean of per-body-patch HU means, each patch weight1",
+      "candidates": "x<.5 AND y<.6 AND40<=mean_HU<=180",
+      "selection": "candidate with largest area; tie lowest cluster ID; none -> abstain"
+    },
+    "N3": "accept iff N1 and N2 cluster IDs equal, else abstain",
+    "scoring_plan": {
+      "inductive": "4 validation patients; training16 majority/optimal fixed mapping reference",
+      "transductive": "all20; other19 LOPO majority/optimal reference",
+      "reference_choice_agreement": "exact singleton set equality; per-patient when LOPO mappings differ",
+      "abstentions": "empty masks; report fit-level and evaluated-slice rates",
+      "outputs": [
+        "hard",
+        "F1"
+      ],
+      "resolutions": [
+        224,
+        512
+      ],
+      "patient_metrics": [
+        "pooled_pixels",
+        "mean_slice"
+      ],
+      "diagnostic": "per-cluster liver precision/recall on evaluated cohort; label-using, not fed back",
+      "figures": "same8 fixed slices; one composite per rule, columns6 fits, hard prediction contours; historical label-selected fixed slices"
+    },
+    "snapshot": "Every StageA file hashed after producer exits; manifest self-hash stored separately"
+  },
+  "selections": {
+    "inductive_s0": {
+      "N1": 2,
+      "N2": 2,
+      "N3": 2
+    },
+    "inductive_s1": {
+      "N1": 3,
+      "N2": 3,
+      "N3": 3
+    },
+    "inductive_s2": {
+      "N1": 4,
+      "N2": 4,
+      "N3": 4
+    },
+    "transductive_s0": {
+      "N1": 6,
+      "N2": 6,
+      "N3": 6
+    },
+    "transductive_s1": {
+      "N1": 3,
+      "N2": 3,
+      "N3": 3
+    },
+    "transductive_s2": {
+      "N1": 3,
+      "N2": 3,
+      "N3": 3
+    }
+  },
+  "output_sha256": {
+    ".cache/fontconfig/00d5189c1d5ced4af9bb23cbaa9b1e94-le64.cache-9": "26cdbb831a078a2a05ab11214cbd1cb1cf2a7eb03f60094334c1a0dee1d86acb",
+    ".cache/fontconfig/84c0f976e30e948e99073af70f4ae876-le64.cache-9": "a4b3ba6ee8e27c39ad995bc160ff8acc897885936aae77d5364f283a9365c061",
+    ".cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+    ".cache/fontconfig/b0a71e6bf6a8a1a908413a823d76e21f-le64.cache-9": "ac453c01261b955cdf582baf267df70dd87f96ed86c4b5c7949d9ea60f081e5a",
+    ".cache/fontconfig/c6cafe6b1a56ed8b739253d6df90ca6a-le64.cache-9": "b129bf713ff8cfee6edf7e45f168f6bdc86e2395408996e890bd15eb0f268c94",
+    "EXECUTION_NOTES.md": "551d5ba7a2dc7d96930df86558c99452b12baccfb2ce0d61cda9d102b6582c7a",
+    "PARAMETERS.json": "6ed396dd8d68c82d88711f14d82aaec781fa0f0ffab24fa4589810fd7a528477",
+    "body_patch_geometry.npy": "bc35a5e5d360cace505ac53e1a249831a8ece823398cda325772cd798ca6cf59",
+    "common.py": "379652f4fbdcbbc9fe1a821aa061661dba50511c0104e580ff4d4272fc8c05cb",
+    "crop_embeddings.npy": "0e89bf353b4a1605d5093bdab3e559041dee083d6126dce0274f7aaf50e055df",
+    "crop_keys.json": "c7e63397272af09120b224454331086013a71ca582ddfc1fda41789e03106dfb",
+    "image_records.json": "1568b31f8ce82759fbf8542a88a77c00794b2fd7d2e8864d6f32286bc573481e",
+    "inductive_s0_centers.npy": "5f288520877d4ea6349b4ba705b689ed7babc823b694e61335cbad2a3db172d7",
+    "inductive_s0_grids.npy": "3aaa46f009d8763878958b63e70ff9e1937058e40ed66d20fc186e90c637a8ce",
+    "inductive_s0_naming.json": "59be1f975b5f59701e33be847eb05af8045a21df6627e81afc87b21cb0a6fda1",
+    "inductive_s1_centers.npy": "24e18c4d8314703d4f343cda32c1022cb7a5c416ad09c8446714cbe671a2c70c",
+    "inductive_s1_grids.npy": "fef6fd4fcf6eee6057bde41e2c53ece429867b5e355f11ad8a2e6bd5529dbb98",
+    "inductive_s1_naming.json": "4d266046b8a4fd4882c0f3ebedc812ce085d983c55d571ce2d9f2c166c5f84c0",
+    "inductive_s2_centers.npy": "da9eb725dce9e525c288b5304b75f6a23ce50db702220fe096a4b14668a63019",
+    "inductive_s2_grids.npy": "7ccea47e122ce6d3fb31d8f7909eaf365f362686a5bdd6fa78c7fb03712f63b1",
+    "inductive_s2_naming.json": "71c0f4be7b7fa67e23ba9e89aa46ba46a0c724be87c82f1f089eea412c6d6f51",
+    "mpl/fontlist-v390.json": "c8280abb697f38edef9bed42dbb2a9788a48365047732d7675effe7b66e3227c",
+    "patch_centres_xy.npy": "af7628b54e7b0391a548297fc87554dacf6efb004dc5991383ed57c0467d1778",
+    "report.py": "395743e5509f30c00a714ce0f1deea200ce9c361c93c297ae8ea29d7af38c2b6",
+    "run_b.py": "b432316f4e882dd5e6b52e45d75a1e5ca616982b5043370e4cfa7f1196f09563",
+    "seal.py": "4ba2c414044350a40454acc5dc41df6287dc8aec9f2771defd5a5ff658eca9a2",
+    "stageA.log": "8bfcf69d41352c6b0db15f14b4a6590a667381969e5f2850326b232f0d530e4b",
+    "stageA_initial.log": "5fe72204500f42508a68abf4b39c18aa49372b0777e74aa0eabf077c011a8d76",
+    "stageA_ledger.json": "5318622b0b7352031328e88f5a7530a57fb6da499c806adce135e5a143498301",
+    "stage_a.py": "854e99f05a5ffe93b7277807370148e471495c5cedbc06c5b146793509b1d562",
+    "stage_b.py": "58a7229cdf9e7130302c3d0c2a0744947321b0b642975abf524c3f9d9681d118",
+    "text_embeddings.npy": "99a139219c56eb8d162404c74bfb5cf5d56323c942badf58040585809141b7f2",
+    "transductive_s0_centers.npy": "7cf7cc0cb65d2fda9252345d479cb4dbd460395ec552a14ad0dfb42983f0a643",
+    "transductive_s0_grids.npy": "80f5015f719b84ba0876442e92622f00692b21bb385fa0816cd72a56facfe254",
+    "transductive_s0_naming.json": "8ac34d39c05366cb3ad4ce72668fa63d58a35cf33450acf14cd0442b8eab4f1a",
+    "transductive_s1_centers.npy": "62e4f7bf4e8393a65633c2d12175ece7acde11e3237b408e3cca17442bad5ee4",
+    "transductive_s1_grids.npy": "24e2b154afc3954e272a63104e0fd116c395709b3bf4fdde7671d13ee3be420f",
+    "transductive_s1_naming.json": "bb918690d060d2aeb1b93d94d9de7fb01dd5c4f893b19b5f7cf8e0b0f43d9997",
+    "transductive_s2_centers.npy": "1894db4a603b5dcb136986f6b0d7d49132e1b5a250f15c0a14ea08312134b90e",
+    "transductive_s2_grids.npy": "81478bcaa8851a817ae9468b2c1652506bff44dc4da91acfec705ecfdf39b41f",
+    "transductive_s2_naming.json": "c6857ececf97024745a83ac721e3c5d31510816d108517290337e6fabd054a94",
+    "validate.py": "902b48694176d289cf1baee136e7a19f4e83006333fd6af5afab4d4c41c79e69"
+  },
+  "hash_exclusions": "Only manifest itself and its detached SHA256 sidecar (self-reference). All other existing StageA files, including closed logs and library metadata, hashed.",
+  "labels_read": false,
+  "final_sealed_utc": "2026-10-02T09:34:17.225361+00:00"
+}

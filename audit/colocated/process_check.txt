@@ -1,0 +1,2 @@
+49089 46783 Ss         00:00 /bin/zsh -c ps -axo pid,ppid,state,etime,command | rg 'python|caffeinate' > audit/colocated/process_check.txt
+49091 49089 R          00:00 rg python|caffeinate

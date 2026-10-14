@@ -1,0 +1,76 @@
+{
+  "seed": 0,
+  "threads": 2,
+  "paths": {
+    "checkpoint": "src2/checkpoints/p1_seed0.pt",
+    "records": "audit/naming/image_records.json",
+    "features": "audit/improve/B2_448_features.npy",
+    "feature_metadata": "audit/improve/metadata.json",
+    "feature_extract_metadata": "audit/improve/B2_448_extract.json",
+    "train_geometry": "audit/scratch/crosspatient/train_records.json",
+    "split_manifest": "src2/configs/chaos_splits_v2.json",
+    "backbone_folder": "src/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224",
+    "scoring_masks": "audit/improve/scoring_masks_native.npy"
+  },
+  "preprocessing": {
+    "resolution": 448,
+    "grid": 28,
+    "patch_size": 16,
+    "feature_dim": 768,
+    "window_hu": [
+      -150,
+      250
+    ],
+    "mean": [
+      0.48145466,
+      0.4578275,
+      0.40821073
+    ],
+    "std": [
+      0.26862954,
+      0.26130258,
+      0.27577711
+    ],
+    "body_threshold": 0.05,
+    "body_margin_each_side": 0.05,
+    "native_shape": [
+      512,
+      512
+    ],
+    "orientation": "native_no_flip",
+    "normalization_application_count": 1,
+    "backbone_sha256": "52cc993c5c5ff962bd0c60931874bc001e7e9b41666a385530f4a036294576be"
+  },
+  "inference": {
+    "head": "nonlinear_only_unnormalized",
+    "checkpoint_sha256": "1454f1bb8d2261a9a56a0fbcd6bed1d8946bf8cd7ff319d697b108ec16d28f1b",
+    "batch_size": 32
+  },
+  "clustering": {
+    "k": 8,
+    "n_init": 3,
+    "max_iter": 100,
+    "tol": 0.0001,
+    "algorithm": "lloyd",
+    "fit_split": "train"
+  },
+  "naming": {
+    "rule": "N2",
+    "body_hu": -500,
+    "opening_radius": 5,
+    "x_max": 0.5,
+    "y_max": 0.6,
+    "hu_min": 40,
+    "hu_max": 180,
+    "selection": "largest_body_patch_area",
+    "no_candidate": "empty_prediction"
+  },
+  "postprocessing": {
+    "guided_size": 25,
+    "guided_epsilon": 0.01,
+    "threshold": 0.3,
+    "closing_radius": 3,
+    "largest_connectivity": 8,
+    "hole_fill_background_connectivity": 4
+  }
+}

@@ -1,0 +1,2157 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/baseline/proxies.py",
+  "reference_kmeans": "k8_c0_s0; predeclared before scores; fit all train images",
+  "results": [
+    {
+      "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=26-step=9300-mIoU=test/cluster/mIoU=46.1792.ckpt",
+      "batch": 3100,
+      "backbone_equal": true,
+      "feature_reuse_error": 0.0,
+      "code_reuse_error": 0.0,
+      "monitors": {
+        "code_std": 0.1115418075860087,
+        "cross_image_cosine": 0.0979598716694776,
+        "cluster_usage": [
+          0.05132391608656174,
+          0.20594591782687652,
+          0.1521903492925242,
+          0.03540495084421481,
+          0.20700574655179868,
+          0.09636330117984694,
+          0.09810918955108526,
+          0.15365662866709184
+        ],
+        "cluster_entropy": 1.9497088774430664,
+        "images": 472
+      },
+      "losses": {
+        "pos_intra": -0.15402555093169212,
+        "pos_inter": -0.15019578207284212,
+        "neg_inter": 0.007811265793861821,
+        "weighted_correspondence": -0.1358249671923113
+      },
+      "loss_batches": [
+        {
+          "pos_intra": -0.15284566581249237,
+          "pos_inter": -0.15038801729679108,
+          "neg_inter": 0.0065878950990736485,
+          "weighted_correspondence": -0.13585322650615125
+        },
+        {
+          "pos_intra": -0.1547016203403473,
+          "pos_inter": -0.14804790914058685,
+          "neg_inter": 0.009450179524719715,
+          "weighted_correspondence": -0.134708449812606
+        },
+        {
+          "pos_intra": -0.1473284363746643,
+          "pos_inter": -0.14496704936027527,
+          "neg_inter": 0.007099417503923178,
+          "weighted_correspondence": -0.1304791816836223
+        },
+        {
+          "pos_intra": -0.158526211977005,
+          "pos_inter": -0.15525420010089874,
+          "neg_inter": 0.00842607207596302,
+          "weighted_correspondence": -0.13971768664196135
+        },
+        {
+          "pos_intra": -0.15626074373722076,
+          "pos_inter": -0.1497533619403839,
+          "neg_inter": 0.006713645067065954,
+          "weighted_correspondence": -0.13790344239678234
+        },
+        {
+          "pos_intra": -0.1555459052324295,
+          "pos_inter": -0.15268395841121674,
+          "neg_inter": 0.007569629233330488,
+          "weighted_correspondence": -0.13761787969153377
+        },
+        {
+          "pos_intra": -0.15955613553524017,
+          "pos_inter": -0.1554950624704361,
+          "neg_inter": 0.00859907828271389,
+          "weighted_correspondence": -0.1403589571081102
+        },
+        {
+          "pos_intra": -0.15285567939281464,
+          "pos_inter": -0.14988499879837036,
+          "neg_inter": 0.006440663710236549,
+          "weighted_correspondence": -0.13582693675532936
+        },
+        {
+          "pos_intra": -0.14777953922748566,
+          "pos_inter": -0.14190764725208282,
+          "neg_inter": 0.009015070274472237,
+          "weighted_correspondence": -0.1288097088225186
+        },
+        {
+          "pos_intra": -0.15134906768798828,
+          "pos_inter": -0.15123417973518372,
+          "neg_inter": 0.008816776797175407,
+          "weighted_correspondence": -0.13365785090252758
+        },
+        {
+          "pos_intra": -0.15466615557670593,
+          "pos_inter": -0.1520761251449585,
+          "neg_inter": 0.007192778866738081,
+          "weighted_correspondence": -0.1371139048365876
+        },
+        {
+          "pos_intra": -0.15337631106376648,
+          "pos_inter": -0.15120196342468262,
+          "neg_inter": 0.008689980022609234,
+          "weighted_correspondence": -0.13508793185465037
+        },
+        {
+          "pos_intra": -0.15456634759902954,
+          "pos_inter": -0.15012623369693756,
+          "neg_inter": 0.006650582421571016,
+          "weighted_correspondence": -0.13690114438999446
+        },
+        {
+          "pos_intra": -0.15390841662883759,
+          "pos_inter": -0.15017090737819672,
+          "neg_inter": 0.009033896960318089,
+          "weighted_correspondence": -0.13497001090086996
+        },
+        {
+          "pos_intra": -0.15369783341884613,
+          "pos_inter": -0.14922137558460236,
+          "neg_inter": 0.007365361321717501,
+          "weighted_correspondence": -0.13564271465409547
+        },
+        {
+          "pos_intra": -0.15744474530220032,
+          "pos_inter": -0.1507195234298706,
+          "neg_inter": 0.007329225540161133,
+          "weighted_correspondence": -0.13855044811964037
+        }
+      ],
+      "agreement": {
+        "ARI": 0.2007125387766736,
+        "NMI": 0.37015991484305477,
+        "contingency": [
+          [
+            295,
+            8146,
+            1058348,
+            60,
+            148018,
+            0,
+            0,
+            641
+          ],
+          [
+            869653,
+            2211432,
+            69881,
+            21409,
+            1628699,
+            3708,
+            52042,
+            20608
+          ],
+          [
+            159938,
+            1870,
+            1823,
+            644453,
+            7,
+            994913,
+            273271,
+            1528060
+          ],
+          [
+            426056,
+            232932,
+            2284,
+            2958,
+            49396,
+            838,
+            39074,
+            84960
+          ],
+          [
+            1077316,
+            2177031,
+            44159,
+            9880,
+            1573290,
+            64,
+            20766,
+            26
+          ],
+          [
+            385466,
+            17260,
+            4,
+            1261427,
+            15,
+            339982,
+            244204,
+            33821
+          ],
+          [
+            646184,
+            2834,
+            79,
+            1340428,
+            3,
+            50575,
+            283283,
+            141
+          ],
+          [
+            1005460,
+            1313551,
+            52222,
+            17433,
+            996348,
+            0,
+            44032,
+            210015
+          ]
+        ]
+      },
+      "labels": "None: objective uses fixed16 training image batches; monitors and ARI use all472 validation images/assignments without labels.",
+      "elapsed_seconds": 17.13270362500043
+    },
+    {
+      "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=27-step=9600-mIoU=test/cluster/mIoU=46.1792.ckpt",
+      "batch": 3200,
+      "backbone_equal": true,
+      "feature_reuse_error": 0.0,
+      "code_reuse_error": 0.0,
+      "monitors": {
+        "code_std": 0.11280026990735949,
+        "cross_image_cosine": 0.07864593085327164,
+        "cluster_usage": [
+          0.05115421681781823,
+          0.19253397532212038,
+          0.1504673042416119,
+          0.05638339485688343,
+          0.2066791841869163,
+          0.09582274630588464,
+          0.09684719110764009,
+          0.15011198716112503
+        ],
+        "cluster_entropy": 1.977741290918032,
+        "images": 472
+      },
+      "losses": {
+        "pos_intra": -0.1542767807841301,
+        "pos_inter": -0.1504407860338688,
+        "neg_inter": 0.007895368878962472,
+        "weighted_correspondence": -0.13600155724008803
+      },
+      "loss_batches": [
+        {
+          "pos_intra": -0.15301164984703064,
+          "pos_inter": -0.15043030679225922,
+          "neg_inter": 0.006026626564562321,
+          "weighted_correspondence": -0.13632860735990107
+        },
+        {
+          "pos_intra": -0.15485522150993347,
+          "pos_inter": -0.14821605384349823,
+          "neg_inter": 0.009481010027229786,
+          "weighted_correspondence": -0.1348339755553752
+        },
+        {
+          "pos_intra": -0.14755602180957794,
+          "pos_inter": -0.14529433846473694,
+          "neg_inter": 0.007037702947854996,
+          "weighted_correspondence": -0.13075236637145282
+        },
+        {
+          "pos_intra": -0.1590489149093628,
+          "pos_inter": -0.15583018958568573,
+          "neg_inter": 0.009164736606180668,
+          "weighted_correspondence": -0.13974653632380069
+        },
+        {
+          "pos_intra": -0.15655432641506195,
+          "pos_inter": -0.15009784698486328,
+          "neg_inter": 0.0068116700276732445,
+          "weighted_correspondence": -0.13812450832687317
+        },
+        {
+          "pos_intra": -0.15587516129016876,
+          "pos_inter": -0.1530432105064392,
+          "neg_inter": 0.008181851357221603,
+          "weighted_correspondence": -0.1375425943359733
+        },
+        {
+          "pos_intra": -0.15999485552310944,
+          "pos_inter": -0.15601827204227448,
+          "neg_inter": 0.009109425358474255,
+          "weighted_correspondence": -0.14046218323521317
+        },
+        {
+          "pos_intra": -0.1529640257358551,
+          "pos_inter": -0.14994162321090698,
+          "neg_inter": 0.0059784031473100185,
+          "weighted_correspondence": -0.13620490906294436
+        },
+        {
+          "pos_intra": -0.148011714220047,
+          "pos_inter": -0.14202304184436798,
+          "neg_inter": 0.008930646814405918,
+          "weighted_correspondence": -0.12904730149544777
+        },
+        {
+          "pos_intra": -0.15149913728237152,
+          "pos_inter": -0.1514691710472107,
+          "neg_inter": 0.009054616093635559,
+          "weighted_correspondence": -0.13366730660200118
+        },
+        {
+          "pos_intra": -0.1550929844379425,
+          "pos_inter": -0.15253421664237976,
+          "neg_inter": 0.007727894466370344,
+          "weighted_correspondence": -0.13717728022020312
+        },
+        {
+          "pos_intra": -0.15337829291820526,
+          "pos_inter": -0.15117141604423523,
+          "neg_inter": 0.008369098417460918,
+          "weighted_correspondence": -0.13528377826325597
+        },
+        {
+          "pos_intra": -0.1550218164920807,
+          "pos_inter": -0.1505637764930725,
+          "neg_inter": 0.006896107457578182,
+          "weighted_correspondence": -0.13716101347468795
+        },
+        {
+          "pos_intra": -0.15404750406742096,
+          "pos_inter": -0.15016478300094604,
+          "neg_inter": 0.008797832764685154,
+          "weighted_correspondence": -0.13521038883365694
+        },
+        {
+          "pos_intra": -0.1538686603307724,
+          "pos_inter": -0.14932435750961304,
+          "neg_inter": 0.0074910931289196014,
+          "weighted_correspondence": -0.13570370312780144
+        },
+        {
+          "pos_intra": -0.1576482057571411,
+          "pos_inter": -0.15092997252941132,
+          "neg_inter": 0.007267186883836985,
+          "weighted_correspondence": -0.1387784632528201
+        }
+      ],
+      "agreement": {
+        "ARI": 0.19456239216340965,
+        "NMI": 0.36353511917027753,
+        "contingency": [
+          [
+            235,
+            8017,
+            1055053,
+            58,
+            147574,
+            0,
+            0,
+            552
+          ],
+          [
+            830254,
+            2035249,
+            67859,
+            22409,
+            1531526,
+            4129,
+            50075,
+            18295
+          ],
+          [
+            143899,
+            1597,
+            1842,
+            643297,
+            6,
+            994834,
+            268703,
+            1509350
+          ],
+          [
+            532524,
+            452451,
+            7067,
+            4038,
+            181611,
+            1844,
+            48509,
+            107288
+          ],
+          [
+            1092148,
+            2173142,
+            42897,
+            10648,
+            1553350,
+            80,
+            22505,
+            28
+          ],
+          [
+            373066,
+            15690,
+            4,
+            1265230,
+            14,
+            339140,
+            243346,
+            32887
+          ],
+          [
+            626483,
+            2515,
+            74,
+            1334890,
+            1,
+            50053,
+            279528,
+            95
+          ],
+          [
+            971759,
+            1276395,
+            54004,
+            17478,
+            981694,
+            0,
+            44006,
+            209777
+          ]
+        ]
+      },
+      "labels": "None: objective uses fixed16 training image batches; monitors and ARI use all472 validation images/assignments without labels.",
+      "elapsed_seconds": 28.851480208002613
+    },
+    {
+      "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=28-step=9900-mIoU=test/cluster/mIoU=46.1792.ckpt",
+      "batch": 3300,
+      "backbone_equal": true,
+      "feature_reuse_error": 0.0,
+      "code_reuse_error": 0.0,
+      "monitors": {
+        "code_std": 0.1133016392418441,
+        "cross_image_cosine": 0.07007080880228082,
+        "cluster_usage": [
+          0.050400682816823764,
+          0.1916408901683025,
+          0.14863388499600053,
+          0.05636148047010118,
+          0.2110004985839675,
+          0.09537571815007782,
+          0.09756213214231667,
+          0.14902471267241008
+        ],
+        "cluster_entropy": 1.9757946424930792,
+        "images": 472
+      },
+      "losses": {
+        "pos_intra": -0.1539716087281704,
+        "pos_inter": -0.1501440741121769,
+        "neg_inter": 0.007559326622867957,
+        "weighted_correspondence": -0.13593462060351158
+      },
+      "loss_batches": [
+        {
+          "pos_intra": -0.15262314677238464,
+          "pos_inter": -0.15006159245967865,
+          "neg_inter": 0.005738960579037666,
+          "weighted_correspondence": -0.13615736128762365
+        },
+        {
+          "pos_intra": -0.154458686709404,
+          "pos_inter": -0.1477774977684021,
+          "neg_inter": 0.008978871628642082,
+          "weighted_correspondence": -0.1347750054113567
+        },
+        {
+          "pos_intra": -0.14741641283035278,
+          "pos_inter": -0.14503386616706848,
+          "neg_inter": 0.006645767483860254,
+          "weighted_correspondence": -0.13084062962327153
+        },
+        {
+          "pos_intra": -0.15875934064388275,
+          "pos_inter": -0.15558145940303802,
+          "neg_inter": 0.009024390950798988,
+          "weighted_correspondence": -0.1395787567831576
+        },
+        {
+          "pos_intra": -0.15621496737003326,
+          "pos_inter": -0.14976119995117188,
+          "neg_inter": 0.006523679010570049,
+          "weighted_correspondence": -0.13799441034905613
+        },
+        {
+          "pos_intra": -0.15555834770202637,
+          "pos_inter": -0.15267421305179596,
+          "neg_inter": 0.007854386232793331,
+          "weighted_correspondence": -0.13744438289664687
+        },
+        {
+          "pos_intra": -0.15967267751693726,
+          "pos_inter": -0.15566755831241608,
+          "neg_inter": 0.008623414672911167,
+          "weighted_correspondence": -0.14046483227051795
+        },
+        {
+          "pos_intra": -0.15260355174541473,
+          "pos_inter": -0.1496039628982544,
+          "neg_inter": 0.005780953913927078,
+          "weighted_correspondence": -0.13600336942821745
+        },
+        {
+          "pos_intra": -0.14773030579090118,
+          "pos_inter": -0.14188252389431,
+          "neg_inter": 0.008584312163293362,
+          "weighted_correspondence": -0.12904181919060648
+        },
+        {
+          "pos_intra": -0.15139825642108917,
+          "pos_inter": -0.15124155580997467,
+          "neg_inter": 0.008540879935026169,
+          "weighted_correspondence": -0.13386646639555694
+        },
+        {
+          "pos_intra": -0.15477915108203888,
+          "pos_inter": -0.15217556059360504,
+          "neg_inter": 0.0074351755902171135,
+          "weighted_correspondence": -0.13706176075153056
+        },
+        {
+          "pos_intra": -0.15310116112232208,
+          "pos_inter": -0.15099921822547913,
+          "neg_inter": 0.00804837141185999,
+          "weighted_correspondence": -0.13525710851885378
+        },
+        {
+          "pos_intra": -0.15455842018127441,
+          "pos_inter": -0.15021204948425293,
+          "neg_inter": 0.0064501347951591015,
+          "weighted_correspondence": -0.13704356897156686
+        },
+        {
+          "pos_intra": -0.15361610054969788,
+          "pos_inter": -0.14972232282161713,
+          "neg_inter": 0.008302310481667519,
+          "weighted_correspondence": -0.13512291247025132
+        },
+        {
+          "pos_intra": -0.1536141186952591,
+          "pos_inter": -0.14913703501224518,
+          "neg_inter": 0.007323369383811951,
+          "weighted_correspondence": -0.13559199556708337
+        },
+        {
+          "pos_intra": -0.15744109451770782,
+          "pos_inter": -0.1507735699415207,
+          "neg_inter": 0.007094247732311487,
+          "weighted_correspondence": -0.1387095497408882
+        }
+      ],
+      "agreement": {
+        "ARI": 0.19565085044569996,
+        "NMI": 0.36432039228903873,
+        "contingency": [
+          [
+            216,
+            6939,
+            1048602,
+            58,
+            137255,
+            0,
+            0,
+            573
+          ],
+          [
+            823279,
+            2028764,
+            70193,
+            21338,
+            1523771,
+            3868,
+            49513,
+            17919
+          ],
+          [
+            137799,
+            1523,
+            1911,
+            622964,
+            7,
+            984215,
+            262938,
+            1508750
+          ],
+          [
+            539265,
+            441448,
+            7609,
+            4379,
+            179506,
+            2181,
+            50229,
+            110196
+          ],
+          [
+            1129124,
+            2200330,
+            48489,
+            11501,
+            1583350,
+            96,
+            24212,
+            38
+          ],
+          [
+            360017,
+            13952,
+            3,
+            1257870,
+            8,
+            347987,
+            243898,
+            35055
+          ],
+          [
+            611415,
+            2204,
+            67,
+            1362515,
+            1,
+            51733,
+            282501,
+            135
+          ],
+          [
+            969253,
+            1269896,
+            51926,
+            17423,
+            971878,
+            0,
+            43381,
+            205606
+          ]
+        ]
+      },
+      "labels": "None: objective uses fixed16 training image batches; monitors and ARI use all472 validation images/assignments without labels.",
+      "elapsed_seconds": 40.56139808300941
+    },
+    {
+      "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=29-step=10200-mIoU=test/cluster/mIoU=46.1792.ckpt",
+      "batch": 3400,
+      "backbone_equal": true,
+      "feature_reuse_error": 0.0,
+      "code_reuse_error": 0.0,
+      "monitors": {
+        "code_std": 0.11218777769141124,
+        "cross_image_cosine": 0.0888918574242811,
+        "cluster_usage": [
+          0.05074721725289692,
+          0.18431992268570563,
+          0.14556435077341318,
+          0.060653829030287966,
+          0.20591365849835697,
+          0.09966599772191716,
+          0.10057521253999481,
+          0.15255981149742737
+        ],
+        "cluster_entropy": 1.9865584226275024,
+        "images": 472
+      },
+      "losses": {
+        "pos_intra": -0.15415102150291204,
+        "pos_inter": -0.15031206421554089,
+        "neg_inter": 0.00781876701512374,
+        "weighted_correspondence": -0.13593337724130833
+      },
+      "loss_batches": [
+        {
+          "pos_intra": -0.15297193825244904,
+          "pos_inter": -0.1504918485879898,
+          "neg_inter": 0.006398397497832775,
+          "weighted_correspondence": -0.13608317035250367
+        },
+        {
+          "pos_intra": -0.15476180613040924,
+          "pos_inter": -0.1480851173400879,
+          "neg_inter": 0.009367270395159721,
+          "weighted_correspondence": -0.13481030909344555
+        },
+        {
+          "pos_intra": -0.14747990667819977,
+          "pos_inter": -0.14516647160053253,
+          "neg_inter": 0.007170192431658506,
+          "weighted_correspondence": -0.13058593414258213
+        },
+        {
+          "pos_intra": -0.15873302519321442,
+          "pos_inter": -0.1554650068283081,
+          "neg_inter": 0.008609119802713394,
+          "weighted_correspondence": -0.13979363311082124
+        },
+        {
+          "pos_intra": -0.15638011693954468,
+          "pos_inter": -0.14988605678081512,
+          "neg_inter": 0.006698246579617262,
+          "weighted_correspondence": -0.13802629719953985
+        },
+        {
+          "pos_intra": -0.1556633710861206,
+          "pos_inter": -0.15277940034866333,
+          "neg_inter": 0.007662588264793158,
+          "weighted_correspondence": -0.13766187810804695
+        },
+        {
+          "pos_intra": -0.15975089371204376,
+          "pos_inter": -0.15571045875549316,
+          "neg_inter": 0.008660639636218548,
+          "weighted_correspondence": -0.14050451050512494
+        },
+        {
+          "pos_intra": -0.1529425084590912,
+          "pos_inter": -0.1499359905719757,
+          "neg_inter": 0.00621818657964468,
+          "weighted_correspondence": -0.13603802076540888
+        },
+        {
+          "pos_intra": -0.14789079129695892,
+          "pos_inter": -0.14200785756111145,
+          "neg_inter": 0.008974012918770313,
+          "weighted_correspondence": -0.12893516642041503
+        },
+        {
+          "pos_intra": -0.15142761170864105,
+          "pos_inter": -0.1513744741678238,
+          "neg_inter": 0.008952539414167404,
+          "weighted_correspondence": -0.13366001855581996
+        },
+        {
+          "pos_intra": -0.15486383438110352,
+          "pos_inter": -0.1522281914949417,
+          "neg_inter": 0.007316721137613058,
+          "weighted_correspondence": -0.13720628259237858
+        },
+        {
+          "pos_intra": -0.15343588590621948,
+          "pos_inter": -0.15129613876342773,
+          "neg_inter": 0.008767885155975819,
+          "weighted_correspondence": -0.13510231059975922
+        },
+        {
+          "pos_intra": -0.1547205001115799,
+          "pos_inter": -0.15023525059223175,
+          "neg_inter": 0.006628475617617369,
+          "weighted_correspondence": -0.13704560808371755
+        },
+        {
+          "pos_intra": -0.15397700667381287,
+          "pos_inter": -0.15014192461967468,
+          "neg_inter": 0.008798978291451931,
+          "weighted_correspondence": -0.13515671930275858
+        },
+        {
+          "pos_intra": -0.15382319688796997,
+          "pos_inter": -0.1493113785982132,
+          "neg_inter": 0.007416382431983948,
+          "weighted_correspondence": -0.1357170656323433
+        },
+        {
+          "pos_intra": -0.15759395062923431,
+          "pos_inter": -0.1508774608373642,
+          "neg_inter": 0.0074606360867619514,
+          "weighted_correspondence": -0.13860711139626802
+        }
+      ],
+      "agreement": {
+        "ARI": 0.19404964175981138,
+        "NMI": 0.362662699751568,
+        "contingency": [
+          [
+            237,
+            7566,
+            1051349,
+            58,
+            142071,
+            0,
+            0,
+            569
+          ],
+          [
+            784092,
+            1984893,
+            67447,
+            18545,
+            1445801,
+            3140,
+            44734,
+            16610
+          ],
+          [
+            134822,
+            1552,
+            1763,
+            594211,
+            4,
+            967230,
+            254368,
+            1493461
+          ],
+          [
+            528732,
+            485669,
+            8669,
+            4382,
+            250255,
+            2007,
+            50382,
+            106373
+          ],
+          [
+            1055326,
+            2175201,
+            45367,
+            9290,
+            1572241,
+            60,
+            19160,
+            23
+          ],
+          [
+            397134,
+            17300,
+            4,
+            1286985,
+            16,
+            367124,
+            253264,
+            38570
+          ],
+          [
+            673118,
+            3251,
+            77,
+            1366389,
+            4,
+            50519,
+            288445,
+            127
+          ],
+          [
+            996907,
+            1289624,
+            54124,
+            18188,
+            985384,
+            0,
+            46319,
+            222539
+          ]
+        ]
+      },
+      "labels": "None: objective uses fixed16 training image batches; monitors and ARI use all472 validation images/assignments without labels.",
+      "elapsed_seconds": 52.30299912500777
+    },
+    {
+      "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=29-step=10500-mIoU=test/cluster/mIoU=46.1792.ckpt",
+      "batch": 3500,
+      "backbone_equal": true,
+      "feature_reuse_error": 0.0,
+      "code_reuse_error": 0.0,
+      "monitors": {
+        "code_std": 0.11199116993163123,
+        "cross_image_cosine": 0.09155329199396607,
+        "cluster_usage": [
+          0.05074797728943272,
+          0.18247003598181857,
+          0.14406108295410325,
+          0.07669418899710308,
+          0.20200301717615013,
+          0.09338628029336735,
+          0.10433152422118212,
+          0.14630589308684278
+        ],
+        "cluster_entropy": 1.9992868764691605,
+        "images": 472
+      },
+      "losses": {
+        "pos_intra": -0.15403039287775755,
+        "pos_inter": -0.15015185438096523,
+        "neg_inter": 0.007557335717137903,
+        "weighted_correspondence": -0.135977205321542
+      },
+      "loss_batches": [
+        {
+          "pos_intra": -0.1527765691280365,
+          "pos_inter": -0.15020674467086792,
+          "neg_inter": 0.00600042100995779,
+          "weighted_correspondence": -0.13613172224722803
+        },
+        {
+          "pos_intra": -0.1545589417219162,
+          "pos_inter": -0.14789165556430817,
+          "neg_inter": 0.009206874296069145,
+          "weighted_correspondence": -0.13472707403823733
+        },
+        {
+          "pos_intra": -0.1475437730550766,
+          "pos_inter": -0.14525115489959717,
+          "neg_inter": 0.007179891224950552,
+          "weighted_correspondence": -0.13064378520008177
+        },
+        {
+          "pos_intra": -0.15874239802360535,
+          "pos_inter": -0.15543480217456818,
+          "neg_inter": 0.008569375611841679,
+          "weighted_correspondence": -0.13981740058399736
+        },
+        {
+          "pos_intra": -0.15630142390727997,
+          "pos_inter": -0.14969152212142944,
+          "neg_inter": 0.006359526887536049,
+          "weighted_correspondence": -0.13813833260908726
+        },
+        {
+          "pos_intra": -0.15561117231845856,
+          "pos_inter": -0.15266168117523193,
+          "neg_inter": 0.007588603068143129,
+          "weighted_correspondence": -0.13764408581424506
+        },
+        {
+          "pos_intra": -0.159671351313591,
+          "pos_inter": -0.1555890142917633,
+          "neg_inter": 0.008278452791273594,
+          "weighted_correspondence": -0.14066163369454446
+        },
+        {
+          "pos_intra": -0.1527670919895172,
+          "pos_inter": -0.14977149665355682,
+          "neg_inter": 0.0060130576603114605,
+          "weighted_correspondence": -0.13600859947036956
+        },
+        {
+          "pos_intra": -0.14768756926059723,
+          "pos_inter": -0.1417110562324524,
+          "neg_inter": 0.008550719358026981,
+          "weighted_correspondence": -0.12899148226715626
+        },
+        {
+          "pos_intra": -0.15154527127742767,
+          "pos_inter": -0.15140463411808014,
+          "neg_inter": 0.00860648974776268,
+          "weighted_correspondence": -0.13396440174430607
+        },
+        {
+          "pos_intra": -0.1547141820192337,
+          "pos_inter": -0.15210984647274017,
+          "neg_inter": 0.007122765760868788,
+          "weighted_correspondence": -0.1371986211417243
+        },
+        {
+          "pos_intra": -0.15321741998195648,
+          "pos_inter": -0.15104898810386658,
+          "neg_inter": 0.008368098177015781,
+          "weighted_correspondence": -0.13514601656235756
+        },
+        {
+          "pos_intra": -0.15451835095882416,
+          "pos_inter": -0.14999915659427643,
+          "neg_inter": 0.006483900360763073,
+          "weighted_correspondence": -0.13694222706370057
+        },
+        {
+          "pos_intra": -0.1538749784231186,
+          "pos_inter": -0.15008945763111115,
+          "neg_inter": 0.008812310174107552,
+          "weighted_correspondence": -0.1350668445415795
+        },
+        {
+          "pos_intra": -0.15350493788719177,
+          "pos_inter": -0.14896152913570404,
+          "neg_inter": 0.006979332771152258,
+          "weighted_correspondence": -0.1356917110225186
+        },
+        {
+          "pos_intra": -0.1574508547782898,
+          "pos_inter": -0.1506069302558899,
+          "neg_inter": 0.006797552574425936,
+          "weighted_correspondence": -0.1388613471435383
+        }
+      ],
+      "agreement": {
+        "ARI": 0.1910889116508475,
+        "NMI": 0.36019470542609033,
+        "contingency": [
+          [
+            219,
+            7158,
+            1051449,
+            58,
+            142468,
+            0,
+            0,
+            516
+          ],
+          [
+            811985,
+            1947456,
+            67623,
+            21427,
+            1407029,
+            3757,
+            46514,
+            15660
+          ],
+          [
+            123161,
+            1378,
+            1843,
+            590936,
+            4,
+            964722,
+            250934,
+            1478831
+          ],
+          [
+            607397,
+            640060,
+            14007,
+            6267,
+            358718,
+            3922,
+            59305,
+            126678
+          ],
+          [
+            1042565,
+            2126338,
+            43651,
+            9213,
+            1543022,
+            55,
+            19176,
+            32
+          ],
+          [
+            332458,
+            11900,
+            2,
+            1232995,
+            3,
+            361002,
+            236411,
+            36903
+          ],
+          [
+            692191,
+            3443,
+            74,
+            1419392,
+            4,
+            56622,
+            298924,
+            241
+          ],
+          [
+            960392,
+            1227323,
+            50151,
+            17760,
+            944528,
+            0,
+            45408,
+            219411
+          ]
+        ]
+      },
+      "labels": "None: objective uses fixed16 training image batches; monitors and ARI use all472 validation images/assignments without labels.",
+      "elapsed_seconds": 64.19493379100459
+    },
+    {
+      "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=30-step=10800-mIoU=test/cluster/mIoU=46.1792.ckpt",
+      "batch": 3600,
+      "backbone_equal": true,
+      "feature_reuse_error": 0.0,
+      "code_reuse_error": 0.0,
+      "monitors": {
+        "code_std": 0.11304355629558807,
+        "cross_image_cosine": 0.07457021698217603,
+        "cluster_usage": [
+          0.050431970987547564,
+          0.1877307977613715,
+          0.14198744993892684,
+          0.07471627836118558,
+          0.19403352740725527,
+          0.10185870312770236,
+          0.10038963695250346,
+          0.14885163546350744
+        ],
+        "cluster_entropy": 2.000775619308206,
+        "images": 472
+      },
+      "losses": {
+        "pos_intra": -0.15400006622076035,
+        "pos_inter": -0.15014854818582535,
+        "neg_inter": 0.007560733589343727,
+        "weighted_correspondence": -0.1359539192530792
+      },
+      "loss_batches": [
+        {
+          "pos_intra": -0.15270686149597168,
+          "pos_inter": -0.15014730393886566,
+          "neg_inter": 0.005895879585295916,
+          "weighted_correspondence": -0.13613601904828104
+        },
+        {
+          "pos_intra": -0.15450626611709595,
+          "pos_inter": -0.1477612555027008,
+          "neg_inter": 0.009059848263859749,
+          "weighted_correspondence": -0.13475180776789786
+        },
+        {
+          "pos_intra": -0.14747653901576996,
+          "pos_inter": -0.14506569504737854,
+          "neg_inter": 0.00686668511480093,
+          "weighted_correspondence": -0.1307496932800859
+        },
+        {
+          "pos_intra": -0.1586630940437317,
+          "pos_inter": -0.15546908974647522,
+          "neg_inter": 0.00889602117240429,
+          "weighted_correspondence": -0.13956705210730433
+        },
+        {
+          "pos_intra": -0.15622451901435852,
+          "pos_inter": -0.14972461760044098,
+          "neg_inter": 0.006484060548245907,
+          "weighted_correspondence": -0.13801662399433554
+        },
+        {
+          "pos_intra": -0.1555577665567398,
+          "pos_inter": -0.1526646912097931,
+          "neg_inter": 0.007709290366619825,
+          "weighted_correspondence": -0.13753302346449348
+        },
+        {
+          "pos_intra": -0.1596839874982834,
+          "pos_inter": -0.155666321516037,
+          "neg_inter": 0.008629033342003822,
+          "weighted_correspondence": -0.1404685609973967
+        },
+        {
+          "pos_intra": -0.15276175737380981,
+          "pos_inter": -0.14988791942596436,
+          "neg_inter": 0.00604925025254488,
+          "weighted_correspondence": -0.1360113296378404
+        },
+        {
+          "pos_intra": -0.14766162633895874,
+          "pos_inter": -0.14178898930549622,
+          "neg_inter": 0.008326207287609577,
+          "weighted_correspondence": -0.12913502638228236
+        },
+        {
+          "pos_intra": -0.15139026939868927,
+          "pos_inter": -0.1512313038110733,
+          "neg_inter": 0.008582297712564468,
+          "weighted_correspondence": -0.1338324588909745
+        },
+        {
+          "pos_intra": -0.15468357503414154,
+          "pos_inter": -0.1520370990037918,
+          "neg_inter": 0.007380416616797447,
+          "weighted_correspondence": -0.1369976075552404
+        },
+        {
+          "pos_intra": -0.1531371921300888,
+          "pos_inter": -0.15100164711475372,
+          "neg_inter": 0.00781865231692791,
+          "weighted_correspondence": -0.13542657954618337
+        },
+        {
+          "pos_intra": -0.15457016229629517,
+          "pos_inter": -0.15014183521270752,
+          "neg_inter": 0.006360664963722229,
+          "weighted_correspondence": -0.13709024861454966
+        },
+        {
+          "pos_intra": -0.1538235992193222,
+          "pos_inter": -0.14993508160114288,
+          "neg_inter": 0.008602907881140709,
+          "weighted_correspondence": -0.13512574991211296
+        },
+        {
+          "pos_intra": -0.1536819338798523,
+          "pos_inter": -0.14910951256752014,
+          "neg_inter": 0.00721965404227376,
+          "weighted_correspondence": -0.1356958917947486
+        },
+        {
+          "pos_intra": -0.1574719101190567,
+          "pos_inter": -0.15074440836906433,
+          "neg_inter": 0.007090867962688208,
+          "weighted_correspondence": -0.1387250350555405
+        }
+      ],
+      "agreement": {
+        "ARI": 0.19081448165367126,
+        "NMI": 0.35977576114062154,
+        "contingency": [
+          [
+            203,
+            6809,
+            1045613,
+            55,
+            141223,
+            0,
+            0,
+            481
+          ],
+          [
+            837484,
+            2029541,
+            72000,
+            19258,
+            1423079,
+            3321,
+            45626,
+            15733
+          ],
+          [
+            122010,
+            1384,
+            1868,
+            564481,
+            4,
+            949728,
+            247551,
+            1475673
+          ],
+          [
+            581300,
+            615645,
+            14225,
+            5565,
+            373358,
+            3329,
+            55920,
+            120169
+          ],
+          [
+            977308,
+            2045992,
+            41524,
+            8273,
+            1503725,
+            52,
+            18422,
+            14
+          ],
+          [
+            393147,
+            14614,
+            2,
+            1321548,
+            6,
+            384545,
+            257913,
+            40552
+          ],
+          [
+            678723,
+            3609,
+            70,
+            1360849,
+            4,
+            49105,
+            285175,
+            0
+          ],
+          [
+            980193,
+            1247462,
+            53498,
+            18019,
+            954377,
+            0,
+            46065,
+            225650
+          ]
+        ]
+      },
+      "labels": "None: objective uses fixed16 training image batches; monitors and ARI use all472 validation images/assignments without labels.",
+      "elapsed_seconds": 75.68543812500138
+    },
+    {
+      "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=31-step=11100-mIoU=test/cluster/mIoU=46.1792.ckpt",
+      "batch": 3700,
+      "backbone_equal": true,
+      "feature_reuse_error": 0.0,
+      "code_reuse_error": 0.0,
+      "monitors": {
+        "code_std": 0.11285641774992575,
+        "cross_image_cosine": 0.07742737372107393,
+        "cluster_usage": [
+          0.05021232042870114,
+          0.1754109010858051,
+          0.14244334518765134,
+          0.08188608302166206,
+          0.2008793453822207,
+          0.09719976361174766,
+          0.10343007866547042,
+          0.1485381626167416
+        ],
+        "cluster_entropy": 2.004954026708532,
+        "images": 472
+      },
+      "losses": {
+        "pos_intra": -0.15402785036712885,
+        "pos_inter": -0.15016132034361362,
+        "neg_inter": 0.007606817845953628,
+        "weighted_correspondence": -0.13594669458892894
+      },
+      "loss_batches": [
+        {
+          "pos_intra": -0.15278887748718262,
+          "pos_inter": -0.15021862089633942,
+          "neg_inter": 0.005900579039007425,
+          "weighted_correspondence": -0.13620583834592254
+        },
+        {
+          "pos_intra": -0.15451660752296448,
+          "pos_inter": -0.147775337100029,
+          "neg_inter": 0.008935599587857723,
+          "weighted_correspondence": -0.1348405335750431
+        },
+        {
+          "pos_intra": -0.147525355219841,
+          "pos_inter": -0.1451423168182373,
+          "neg_inter": 0.006715187802910805,
+          "weighted_correspondence": -0.13089699888601902
+        },
+        {
+          "pos_intra": -0.1587468981742859,
+          "pos_inter": -0.1555391401052475,
+          "neg_inter": 0.00899377278983593,
+          "weighted_correspondence": -0.1395791299454868
+        },
+        {
+          "pos_intra": -0.1562037616968155,
+          "pos_inter": -0.14969536662101746,
+          "neg_inter": 0.006427454762160778,
+          "weighted_correspondence": -0.13803106549195948
+        },
+        {
+          "pos_intra": -0.15552066266536713,
+          "pos_inter": -0.15257976949214935,
+          "neg_inter": 0.007472032215446234,
+          "weighted_correspondence": -0.1376364060631022
+        },
+        {
+          "pos_intra": -0.15967561304569244,
+          "pos_inter": -0.15566085278987885,
+          "neg_inter": 0.008609400130808353,
+          "weighted_correspondence": -0.14047395185567438
+        },
+        {
+          "pos_intra": -0.15276511013507843,
+          "pos_inter": -0.14983204007148743,
+          "neg_inter": 0.0059199463576078415,
+          "weighted_correspondence": -0.13608106760308147
+        },
+        {
+          "pos_intra": -0.14780595898628235,
+          "pos_inter": -0.14185142517089844,
+          "neg_inter": 0.008771544322371483,
+          "weighted_correspondence": -0.12896677589043976
+        },
+        {
+          "pos_intra": -0.15136604011058807,
+          "pos_inter": -0.15124136209487915,
+          "neg_inter": 0.008706497959792614,
+          "weighted_correspondence": -0.13374049368314447
+        },
+        {
+          "pos_intra": -0.15476581454277039,
+          "pos_inter": -0.15209509432315826,
+          "neg_inter": 0.007227182388305664,
+          "weighted_correspondence": -0.13716374441981316
+        },
+        {
+          "pos_intra": -0.15323279798030853,
+          "pos_inter": -0.15108998119831085,
+          "neg_inter": 0.008567651733756065,
+          "weighted_correspondence": -0.13504084935411811
+        },
+        {
+          "pos_intra": -0.15460063517093658,
+          "pos_inter": -0.15009474754333496,
+          "neg_inter": 0.00632440485060215,
+          "weighted_correspondence": -0.1371217373944819
+        },
+        {
+          "pos_intra": -0.15372692048549652,
+          "pos_inter": -0.1498153656721115,
+          "neg_inter": 0.008453918620944023,
+          "weighted_correspondence": -0.13512490941211583
+        },
+        {
+          "pos_intra": -0.15371978282928467,
+          "pos_inter": -0.14919082820415497,
+          "neg_inter": 0.00738433888182044,
+          "weighted_correspondence": -0.13563782805111257
+        },
+        {
+          "pos_intra": -0.157484769821167,
+          "pos_inter": -0.15075887739658356,
+          "neg_inter": 0.007299574092030525,
+          "weighted_correspondence": -0.13860578345134855
+        }
+      ],
+      "agreement": {
+        "ARI": 0.18941988337729085,
+        "NMI": 0.3591007952676608,
+        "contingency": [
+          [
+            185,
+            6579,
+            1043590,
+            53,
+            138333,
+            0,
+            0,
+            442
+          ],
+          [
+            791687,
+            1886486,
+            66392,
+            19065,
+            1328713,
+            3173,
+            44270,
+            14483
+          ],
+          [
+            122386,
+            1441,
+            1977,
+            564121,
+            5,
+            949875,
+            248742,
+            1484949
+          ],
+          [
+            599454,
+            695640,
+            17635,
+            5968,
+            443741,
+            3190,
+            55989,
+            117697
+          ],
+          [
+            1036141,
+            2112609,
+            45106,
+            9136,
+            1534359,
+            61,
+            19997,
+            31
+          ],
+          [
+            348960,
+            12829,
+            2,
+            1273810,
+            4,
+            378717,
+            247349,
+            40318
+          ],
+          [
+            688641,
+            3514,
+            75,
+            1407746,
+            4,
+            55064,
+            294329,
+            169
+          ],
+          [
+            982914,
+            1245958,
+            54023,
+            18149,
+            950617,
+            0,
+            45996,
+            220183
+          ]
+        ]
+      },
+      "labels": "None: objective uses fixed16 training image batches; monitors and ARI use all472 validation images/assignments without labels.",
+      "elapsed_seconds": 87.39143412500562
+    },
+    {
+      "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=32-step=11400-mIoU=test/cluster/mIoU=46.1792.ckpt",
+      "batch": 3800,
+      "backbone_equal": true,
+      "feature_reuse_error": 0.0,
+      "code_reuse_error": 0.0,
+      "monitors": {
+        "code_std": 0.11286737741587533,
+        "cross_image_cosine": 0.07765369902703498,
+        "cluster_usage": [
+          0.050126478524407644,
+          0.16690474107413092,
+          0.14125566142770668,
+          0.09500549590863888,
+          0.20193161596603684,
+          0.0959766537043843,
+          0.10569414305711691,
+          0.14310521033757784
+        ],
+        "cluster_entropy": 2.01267224885496,
+        "images": 472
+      },
+      "losses": {
+        "pos_intra": -0.15402656327933073,
+        "pos_inter": -0.15014360006898642,
+        "neg_inter": 0.0075153558573219925,
+        "weighted_correspondence": -0.13599902322428536
+      },
+      "loss_batches": [
+        {
+          "pos_intra": -0.15274569392204285,
+          "pos_inter": -0.1501312106847763,
+          "neg_inter": 0.005737457890063524,
+          "weighted_correspondence": -0.13625781912822277
+        },
+        {
+          "pos_intra": -0.15450908243656158,
+          "pos_inter": -0.14783935248851776,
+          "neg_inter": 0.008904787711799145,
+          "weighted_correspondence": -0.13487090709619223
+        },
+        {
+          "pos_intra": -0.14758996665477753,
+          "pos_inter": -0.1453138142824173,
+          "neg_inter": 0.0070786261931061745,
+          "weighted_correspondence": -0.13075419672764838
+        },
+        {
+          "pos_intra": -0.15882451832294464,
+          "pos_inter": -0.1555812656879425,
+          "neg_inter": 0.008944686502218246,
+          "weighted_correspondence": -0.13967259120196104
+        },
+        {
+          "pos_intra": -0.1562199741601944,
+          "pos_inter": -0.14966845512390137,
+          "neg_inter": 0.006292534526437521,
+          "weighted_correspondence": -0.13812019971664996
+        },
+        {
+          "pos_intra": -0.15559102594852448,
+          "pos_inter": -0.15264588594436646,
+          "neg_inter": 0.007666826713830233,
+          "weighted_correspondence": -0.13757735804188995
+        },
+        {
+          "pos_intra": -0.15968768298625946,
+          "pos_inter": -0.15564079582691193,
+          "neg_inter": 0.008306669071316719,
+          "weighted_correspondence": -0.1406677450425923
+        },
+        {
+          "pos_intra": -0.15267501771450043,
+          "pos_inter": -0.14965958893299103,
+          "neg_inter": 0.005735219456255436,
+          "weighted_correspondence": -0.13609397084452213
+        },
+        {
+          "pos_intra": -0.1477874368429184,
+          "pos_inter": -0.14176234602928162,
+          "neg_inter": 0.008668606169521809,
+          "weighted_correspondence": -0.128996947305277
+        },
+        {
+          "pos_intra": -0.15145431458950043,
+          "pos_inter": -0.1513696163892746,
+          "neg_inter": 0.008689384907484055,
+          "weighted_correspondence": -0.13384248238056898
+        },
+        {
+          "pos_intra": -0.15482467412948608,
+          "pos_inter": -0.1521800309419632,
+          "neg_inter": 0.007262909319251776,
+          "weighted_correspondence": -0.13720190653111786
+        },
+        {
+          "pos_intra": -0.1531885266304016,
+          "pos_inter": -0.1509852260351181,
+          "neg_inter": 0.008316460996866226,
+          "weighted_correspondence": -0.13514324892312288
+        },
+        {
+          "pos_intra": -0.1545194536447525,
+          "pos_inter": -0.14996787905693054,
+          "neg_inter": 0.006229155231267214,
+          "weighted_correspondence": -0.13709563591051846
+        },
+        {
+          "pos_intra": -0.15365874767303467,
+          "pos_inter": -0.14971470832824707,
+          "neg_inter": 0.008295796811580658,
+          "weighted_correspondence": -0.1351536860316992
+        },
+        {
+          "pos_intra": -0.1536063551902771,
+          "pos_inter": -0.14907971024513245,
+          "neg_inter": 0.007167533040046692,
+          "weighted_correspondence": -0.13567063972353935
+        },
+        {
+          "pos_intra": -0.15754254162311554,
+          "pos_inter": -0.15075771510601044,
+          "neg_inter": 0.006949039176106453,
+          "weighted_correspondence": -0.13886503698304298
+        }
+      ],
+      "agreement": {
+        "ARI": 0.18820660537233028,
+        "NMI": 0.35841653479779023,
+        "contingency": [
+          [
+            184,
+            6489,
+            1043322,
+            55,
+            136692,
+            0,
+            0,
+            407
+          ],
+          [
+            758756,
+            1789678,
+            64217,
+            17906,
+            1265986,
+            2731,
+            41292,
+            12251
+          ],
+          [
+            119966,
+            1349,
+            2051,
+            550666,
+            6,
+            942536,
+            246732,
+            1482062
+          ],
+          [
+            661856,
+            823094,
+            21997,
+            7784,
+            539504,
+            4759,
+            60905,
+            130123
+          ],
+          [
+            1037109,
+            2132882,
+            46205,
+            9044,
+            1538004,
+            58,
+            19030,
+            29
+          ],
+          [
+            333463,
+            11976,
+            2,
+            1261050,
+            3,
+            381544,
+            244172,
+            40812
+          ],
+          [
+            706506,
+            3700,
+            75,
+            1433795,
+            4,
+            58452,
+            300348,
+            282
+          ],
+          [
+            952528,
+            1195888,
+            50931,
+            17748,
+            915577,
+            0,
+            44193,
+            212306
+          ]
+        ]
+      },
+      "labels": "None: objective uses fixed16 training image batches; monitors and ARI use all472 validation images/assignments without labels.",
+      "elapsed_seconds": 99.03412666599615
+    },
+    {
+      "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=33-step=11700-mIoU=test/cluster/mIoU=46.1792.ckpt",
+      "batch": 3900,
+      "backbone_equal": true,
+      "feature_reuse_error": 0.0,
+      "code_reuse_error": 0.0,
+      "monitors": {
+        "code_std": 0.11220686145561337,
+        "cross_image_cosine": 0.08866213290175667,
+        "cluster_usage": [
+          0.05007944070769198,
+          0.16937274860288395,
+          0.13810792789043583,
+          0.0938083539162487,
+          0.19921300750172952,
+          0.09998335519986597,
+          0.10426303648445608,
+          0.145172129696688
+        ],
+        "cluster_entropy": 2.0136283722413424,
+        "images": 472
+      },
+      "losses": {
+        "pos_intra": -0.15408148244023323,
+        "pos_inter": -0.15019181091338396,
+        "neg_inter": 0.007611617649672553,
+        "weighted_correspondence": -0.13598722684400855
+      },
+      "loss_batches": [
+        {
+          "pos_intra": -0.1528790146112442,
+          "pos_inter": -0.15030577778816223,
+          "neg_inter": 0.0061155054718256,
+          "weighted_correspondence": -0.13615261578932403
+        },
+        {
+          "pos_intra": -0.15463657677173615,
+          "pos_inter": -0.14794805645942688,
+          "neg_inter": 0.009090959094464779,
+          "weighted_correspondence": -0.1348662163224071
+        },
+        {
+          "pos_intra": -0.147569939494133,
+          "pos_inter": -0.14526790380477905,
+          "neg_inter": 0.0072295814752578735,
+          "weighted_correspondence": -0.13063419908285143
+        },
+        {
+          "pos_intra": -0.1586676985025406,
+          "pos_inter": -0.1553986817598343,
+          "neg_inter": 0.008548762649297714,
+          "weighted_correspondence": -0.13977130796760323
+        },
+        {
+          "pos_intra": -0.15627144277095795,
+          "pos_inter": -0.1496826708316803,
+          "neg_inter": 0.006356748286634684,
+          "weighted_correspondence": -0.13811778294388205
+        },
+        {
+          "pos_intra": -0.1556137502193451,
+          "pos_inter": -0.15267859399318695,
+          "neg_inter": 0.007466393057256937,
+          "weighted_correspondence": -0.13772703351918605
+        },
+        {
+          "pos_intra": -0.15969401597976685,
+          "pos_inter": -0.15560653805732727,
+          "neg_inter": 0.008313952013850212,
+          "weighted_correspondence": -0.14065883545205
+        },
+        {
+          "pos_intra": -0.15284661948680878,
+          "pos_inter": -0.14985771477222443,
+          "neg_inter": 0.006065921857953072,
+          "weighted_correspondence": -0.13605013297870758
+        },
+        {
+          "pos_intra": -0.14779643714427948,
+          "pos_inter": -0.14180989563465118,
+          "neg_inter": 0.008676636964082718,
+          "weighted_correspondence": -0.12900980550795796
+        },
+        {
+          "pos_intra": -0.15141163766384125,
+          "pos_inter": -0.15132476389408112,
+          "neg_inter": 0.008755864575505257,
+          "weighted_correspondence": -0.13376079352572562
+        },
+        {
+          "pos_intra": -0.1547553539276123,
+          "pos_inter": -0.15204426646232605,
+          "neg_inter": 0.007086410652846098,
+          "weighted_correspondence": -0.1372327150357887
+        },
+        {
+          "pos_intra": -0.15334178507328033,
+          "pos_inter": -0.15112729370594025,
+          "neg_inter": 0.008624115027487278,
+          "weighted_correspondence": -0.1350876269582659
+        },
+        {
+          "pos_intra": -0.1545751839876175,
+          "pos_inter": -0.14998497068881989,
+          "neg_inter": 0.006244189105927944,
+          "weighted_correspondence": -0.13712777680717408
+        },
+        {
+          "pos_intra": -0.15387392044067383,
+          "pos_inter": -0.14997488260269165,
+          "neg_inter": 0.00867913942784071,
+          "weighted_correspondence": -0.13512138950638472
+        },
+        {
+          "pos_intra": -0.15375986695289612,
+          "pos_inter": -0.1492253839969635,
+          "neg_inter": 0.00723561504855752,
+          "weighted_correspondence": -0.13576701937709004
+        },
+        {
+          "pos_intra": -0.1576104760169983,
+          "pos_inter": -0.15083158016204834,
+          "neg_inter": 0.007296087685972452,
+          "weighted_correspondence": -0.1387103787297383
+        }
+      ],
+      "agreement": {
+        "ARI": 0.18777998559217912,
+        "NMI": 0.3577773520149408,
+        "contingency": [
+          [
+            184,
+            6529,
+            1042106,
+            53,
+            136737,
+            0,
+            0,
+            426
+          ],
+          [
+            779034,
+            1818973,
+            66029,
+            17481,
+            1271936,
+            2654,
+            42470,
+            12690
+          ],
+          [
+            113416,
+            1336,
+            1926,
+            526814,
+            4,
+            922210,
+            240624,
+            1464490
+          ],
+          [
+            646403,
+            813120,
+            21406,
+            7342,
+            538982,
+            4521,
+            60472,
+            129424
+          ],
+          [
+            1015253,
+            2102523,
+            45333,
+            8924,
+            1526799,
+            60,
+            19055,
+            29
+          ],
+          [
+            352273,
+            12323,
+            2,
+            1302838,
+            3,
+            404624,
+            250908,
+            44942
+          ],
+          [
+            696572,
+            3673,
+            69,
+            1416322,
+            4,
+            56011,
+            296456,
+            162
+          ],
+          [
+            967233,
+            1206579,
+            51929,
+            18274,
+            921311,
+            0,
+            46687,
+            226109
+          ]
+        ]
+      },
+      "labels": "None: objective uses fixed16 training image batches; monitors and ARI use all472 validation images/assignments without labels.",
+      "elapsed_seconds": 110.693292750002
+    },
+    {
+      "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=34-step=12000-mIoU=test/cluster/mIoU=46.1792.ckpt",
+      "batch": 4000,
+      "backbone_equal": true,
+      "feature_reuse_error": 0.0,
+      "code_reuse_error": 0.0,
+      "monitors": {
+        "code_std": 0.112646476869527,
+        "cross_image_cosine": 0.08183123062691709,
+        "cluster_usage": [
+          0.04969950688829557,
+          0.16724717975776116,
+          0.13712520064964545,
+          0.09863475481559149,
+          0.19780056404844776,
+          0.09945664988055604,
+          0.10482584353921653,
+          0.145210300420486
+        ],
+        "cluster_entropy": 2.015898724791955,
+        "images": 472
+      },
+      "losses": {
+        "pos_intra": -0.15419378876686096,
+        "pos_inter": -0.1502974797040224,
+        "neg_inter": 0.007692863175179809,
+        "weighted_correspondence": -0.13603770459943917
+      },
+      "loss_batches": [
+        {
+          "pos_intra": -0.1529034674167633,
+          "pos_inter": -0.15026059746742249,
+          "neg_inter": 0.005898200906813145,
+          "weighted_correspondence": -0.13629460596479478
+        },
+        {
+          "pos_intra": -0.15472999215126038,
+          "pos_inter": -0.1480240672826767,
+          "neg_inter": 0.00914447009563446,
+          "weighted_correspondence": -0.1349140954017639
+        },
+        {
+          "pos_intra": -0.14763419330120087,
+          "pos_inter": -0.14531567692756653,
+          "neg_inter": 0.007033719215542078,
+          "weighted_correspondence": -0.1308125856379047
+        },
+        {
+          "pos_intra": -0.15890753269195557,
+          "pos_inter": -0.1556629091501236,
+          "neg_inter": 0.00891536008566618,
+          "weighted_correspondence": -0.13976709733717144
+        },
+        {
+          "pos_intra": -0.15646147727966309,
+          "pos_inter": -0.14991211891174316,
+          "neg_inter": 0.006531718652695417,
+          "weighted_correspondence": -0.13819223675411194
+        },
+        {
+          "pos_intra": -0.15574957430362701,
+          "pos_inter": -0.15281999111175537,
+          "neg_inter": 0.007644484285265207,
+          "weighted_correspondence": -0.13774118746165187
+        },
+        {
+          "pos_intra": -0.15991391241550446,
+          "pos_inter": -0.15586283802986145,
+          "neg_inter": 0.008640489540994167,
+          "weighted_correspondence": -0.14066452241502703
+        },
+        {
+          "pos_intra": -0.15292347967624664,
+          "pos_inter": -0.14992235600948334,
+          "neg_inter": 0.005898204166442156,
+          "weighted_correspondence": -0.13622345176059752
+        },
+        {
+          "pos_intra": -0.1478738784790039,
+          "pos_inter": -0.14182153344154358,
+          "neg_inter": 0.008722405880689621,
+          "weighted_correspondence": -0.12903576623648405
+        },
+        {
+          "pos_intra": -0.15152859687805176,
+          "pos_inter": -0.15143892168998718,
+          "neg_inter": 0.00888781901448965,
+          "weighted_correspondence": -0.13378456435166297
+        },
+        {
+          "pos_intra": -0.15491916239261627,
+          "pos_inter": -0.15227004885673523,
+          "neg_inter": 0.007278595119714737,
+          "weighted_correspondence": -0.13727783609181643
+        },
+        {
+          "pos_intra": -0.15333011746406555,
+          "pos_inter": -0.15111298859119415,
+          "neg_inter": 0.008747197687625885,
+          "weighted_correspondence": -0.13499869130551814
+        },
+        {
+          "pos_intra": -0.15479877591133118,
+          "pos_inter": -0.15022435784339905,
+          "neg_inter": 0.00650439178571105,
+          "weighted_correspondence": -0.1371735024964437
+        },
+        {
+          "pos_intra": -0.1539514660835266,
+          "pos_inter": -0.14998450875282288,
+          "neg_inter": 0.008625458925962448,
+          "weighted_correspondence": -0.13520957034081219
+        },
+        {
+          "pos_intra": -0.15381154417991638,
+          "pos_inter": -0.14925728738307953,
+          "neg_inter": 0.007322166580706835,
+          "weighted_correspondence": -0.13575509150046855
+        },
+        {
+          "pos_intra": -0.15766344964504242,
+          "pos_inter": -0.1508694738149643,
+          "neg_inter": 0.007291128858923912,
+          "weighted_correspondence": -0.13875846853479745
+        }
+      ],
+      "agreement": {
+        "ARI": 0.1866285393363991,
+        "NMI": 0.35694074861802794,
+        "contingency": [
+          [
+            166,
+            6191,
+            1037570,
+            49,
+            132723,
+            0,
+            0,
+            338
+          ],
+          [
+            771026,
+            1795165,
+            65875,
+            17216,
+            1256713,
+            2535,
+            40767,
+            11630
+          ],
+          [
+            108717,
+            1315,
+            1995,
+            522738,
+            4,
+            919523,
+            239615,
+            1453639
+          ],
+          [
+            663251,
+            864613,
+            24030,
+            8071,
+            576474,
+            4880,
+            61812,
+            132843
+          ],
+          [
+            1011466,
+            2085317,
+            45017,
+            8887,
+            1515112,
+            60,
+            18637,
+            29
+          ],
+          [
+            346934,
+            11760,
+            2,
+            1295892,
+            1,
+            405785,
+            250128,
+            44937
+          ],
+          [
+            696712,
+            3733,
+            68,
+            1426550,
+            4,
+            57297,
+            298064,
+            170
+          ],
+          [
+            972096,
+            1196962,
+            54243,
+            18645,
+            914745,
+            0,
+            47649,
+            234686
+          ]
+        ]
+      },
+      "labels": "None: objective uses fixed16 training image batches; monitors and ARI use all472 validation images/assignments without labels.",
+      "elapsed_seconds": 122.31308700000227
+    }
+  ],
+  "elapsed_seconds": 122.31309133300965
+}

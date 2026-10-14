@@ -1,0 +1,16 @@
+{
+  "StageA": {
+    "label_mask_reads": 0,
+    "prior_mapping_score_reads": 0,
+    "inputs": "raw CT, windowed images, image association metadata, frozen features, centres, label-free fit metadata, local backbone/tokenizer",
+    "decisions": "N1/N2/N3 selections frozen once per fit own images"
+  },
+  "StageB": {
+    "label_use": "scoring, cluster precision/recall ranking, agreement against pre-existing assisted mappings and figure overlays only",
+    "mapping_reference": "inductive train16 stored labels/confusion; transductive other19 saved LOPO mappings",
+    "parameter_changes_after_start": false
+  },
+  "manifest_sha256": "ceb1f5e236980247444416469c03c86339348d4e73e51c2208de39f2d430416b",
+  "producer": "stage_a.py / seal.py / stage_b.py / report.py",
+  "reruns": "No scoring-driven rerun; pre-scoring execution repairs, if any, recorded in execution notes"
+}

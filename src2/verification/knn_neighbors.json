@@ -1,0 +1,14 @@
+{
+  "training_images": 1869,
+  "stored_neighbors": 30,
+  "uniform_sampling_topk": 7,
+  "self_matches": 0,
+  "exact_match_to_existing_448_neighbors": true,
+  "labels_read": false,
+  "training_batches": 0,
+  "feature_extractions": 0,
+  "neighbor_cache_files_written": 0,
+  "seconds": 6.765358624979854,
+  "reference": "/Users/navneetbavineni/STEGO/experiments/stego_biomedclip/logs/train_neighbors.npy",
+  "ordered_sample_ids_sha256": "04c6259360898cadbfd3eb9085b124a9d4c5cb56f120a784e67f69e7fc733cc8"
+}

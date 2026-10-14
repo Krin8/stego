@@ -1,0 +1,10 @@
+{
+  "experiments/stego_biomedclip/configs/locked.json": "defd959e1e09586cbc4eb7163b21347643d71153eb9286baea577915cb1968d2",
+  "experiments/stego_biomedclip/model.py": "95a2befc6c2b7a271596e442d0420771a01a4a8819bb1e68c4ca2a7c774dfe04",
+  "experiments/stego_biomedclip/reference_loss.py": "b86995be6db96c653cc5fa3c8cae23c3c3fb8b0f667fed5795de1f79b1cff3a6",
+  "experiments/stego_biomedclip/train.py": "5df71549a2adfdd0c4c6521435dd1d5b1a56ec38bb0a8559ae90b0c0e221e9d5",
+  "experiments/stego_biomedclip/resume_seed1.py": "3286ba8cad486f616d033f80dad5b49512415f547a434902ba04f5f94cbd40ed",
+  "experiments/stego_biomedclip/logs/seed0_train.jsonl": "d9bd4b6ea91788e762d3ee9b6708af77fe99732fe0ccb9382770e453e763cc17",
+  "experiments/stego_biomedclip/logs/seed1_train.jsonl": "5e8c15b159f84e7020a6426f51d390fc04fec32366abdb9627a4b6a1aa1ec567",
+  "experiments/stego_biomedclip/logs/seed2_train.jsonl": "de87bd577774e892d6540ba234518ee81f1ce953a031b46d16547cdadceb190f"
+}

@@ -1,0 +1,175 @@
+{
+  "script": "/Users/navneetbavineni/STEGO/audit/scratch/pairs/verify.py",
+  "status": "PASS",
+  "affinity_exposure_max_errors": {
+    "pos_intra_shift": 2.9802322387695312e-08,
+    "pos_inter_shift": 2.9802322387695312e-08,
+    "neg_inter_shift": 2.9802322387695312e-08
+  },
+  "source_hashes_unchanged": true,
+  "no_tracked_source_changes": true,
+  "purity_conservation_checks": "PASS",
+  "all_five_checkpoint_head_probe_reproductions": "PASS",
+  "code_fit_zero_majority_cases": [
+    [
+      "seed0",
+      "0",
+      "nearest"
+    ],
+    [
+      "seed0",
+      "0",
+      "matched_bilinear"
+    ],
+    [
+      "seed0",
+      "1",
+      "nearest"
+    ],
+    [
+      "seed0",
+      "1",
+      "matched_bilinear"
+    ],
+    [
+      "seed0",
+      "2",
+      "nearest"
+    ],
+    [
+      "seed0",
+      "2",
+      "matched_bilinear"
+    ],
+    [
+      "seed1",
+      "0",
+      "nearest"
+    ],
+    [
+      "seed1",
+      "0",
+      "matched_bilinear"
+    ],
+    [
+      "seed1",
+      "1",
+      "nearest"
+    ],
+    [
+      "seed1",
+      "1",
+      "matched_bilinear"
+    ],
+    [
+      "seed1",
+      "2",
+      "nearest"
+    ],
+    [
+      "seed1",
+      "2",
+      "matched_bilinear"
+    ],
+    [
+      "seed2",
+      "0",
+      "nearest"
+    ],
+    [
+      "seed2",
+      "0",
+      "matched_bilinear"
+    ],
+    [
+      "seed2",
+      "1",
+      "nearest"
+    ],
+    [
+      "seed2",
+      "1",
+      "matched_bilinear"
+    ],
+    [
+      "seed2",
+      "2",
+      "nearest"
+    ],
+    [
+      "seed2",
+      "2",
+      "matched_bilinear"
+    ],
+    [
+      "best600",
+      "0",
+      "nearest"
+    ],
+    [
+      "best600",
+      "0",
+      "matched_bilinear"
+    ],
+    [
+      "best600",
+      "1",
+      "nearest"
+    ],
+    [
+      "best600",
+      "1",
+      "matched_bilinear"
+    ],
+    [
+      "best600",
+      "2",
+      "nearest"
+    ],
+    [
+      "best600",
+      "2",
+      "matched_bilinear"
+    ],
+    [
+      "final",
+      "0",
+      "nearest"
+    ],
+    [
+      "final",
+      "0",
+      "matched_bilinear"
+    ],
+    [
+      "final",
+      "1",
+      "nearest"
+    ],
+    [
+      "final",
+      "1",
+      "matched_bilinear"
+    ],
+    [
+      "final",
+      "2",
+      "nearest"
+    ],
+    [
+      "final",
+      "2",
+      "matched_bilinear"
+    ]
+  ],
+  "code_script_runtimes": {
+    "seed0": 32.56021320800937,
+    "seed1": 30.670654499990633,
+    "seed2": 30.18052758400154,
+    "best600": 30.415551415993832,
+    "final": 30.336174875003053
+  },
+  "setup_runtime": 30.396979459008435,
+  "purity_runtime": 32.06529199999932,
+  "elapsed_seconds": 4.533747749999748
+}

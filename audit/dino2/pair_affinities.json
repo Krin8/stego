@@ -1,0 +1,67 @@
+{
+  "producer": "pair_affinities.py",
+  "labels_used": false,
+  "rows": 3304,
+  "pairs_per_row": 2048,
+  "pairs_per_source": 6766592,
+  "sources": [
+    "D2",
+    "D3",
+    "BiomedCLIP_B2_448"
+  ],
+  "thresholds": {
+    "D2": [
+      {
+        "budget": 0.05,
+        "threshold": 0.8114577293395993,
+        "attraction": 0.050000059113952784
+      },
+      {
+        "budget": 0.1,
+        "threshold": 0.7229893743991852,
+        "attraction": 0.10000011822790557
+      },
+      {
+        "budget": 0.2,
+        "threshold": 0.5790556430816651,
+        "attraction": 0.20000008867092917
+      }
+    ],
+    "D3": [
+      {
+        "budget": 0.05,
+        "threshold": 0.7881684303283691,
+        "attraction": 0.04999991132907082
+      },
+      {
+        "budget": 0.1,
+        "threshold": 0.6963184893131257,
+        "attraction": 0.10000011822790557
+      },
+      {
+        "budget": 0.2,
+        "threshold": 0.582740879058838,
+        "attraction": 0.20000008867092917
+      }
+    ],
+    "BiomedCLIP_B2_448": [
+      {
+        "budget": 0.05,
+        "threshold": 0.9141591787338257,
+        "attraction": 0.04999991132907082
+      },
+      {
+        "budget": 0.1,
+        "threshold": 0.8663409233093262,
+        "attraction": 0.10000011822790557
+      },
+      {
+        "budget": 0.2,
+        "threshold": 0.7954046726226807,
+        "attraction": 0.19999994088604722
+      }
+    ]
+  },
+  "selectivity_anchor_order_exact": true,
+  "seconds": 25.877736666996498
+}

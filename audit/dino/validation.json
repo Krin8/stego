@@ -1,0 +1,18 @@
+{
+  "producer": "validate.py",
+  "max_L2_error": 2.980232238769531e-07,
+  "all_declared_available_runs_complete": true,
+  "lopo_heldout_excluded": true,
+  "synthetic_hungarian_and_outside_crop_pass": true,
+  "score_source_hashes": {
+    "src/modules.py": "c0306a6df692bdd242ecc229c51c6cf5f05cc922b9c8b7eb7ecb2ac09ede61ea",
+    "src/dino/vision_transformer.py": "0a6ed13e805f40bc6c37d523d4b9957ef903896771160641fad755ba8705fbf9",
+    "audit/scratch/selectivity/score.py": "8dd39a64bdb09fd9eb302c5c4e9fcf1099e364b41b87651e4fddb1a348058bd9",
+    "audit/scratch/selectivity/affinities.py": "a04d61cdec0c2a2ddd2815cace57513e676afc840075359e901c97afafd124b6"
+  },
+  "state": {
+    "git_commit": "6f6f326a3d4c8ebe56900d75a9c7ad8eb27137f2",
+    "git_diff": "",
+    "git_status": "?? audit/dino/\n?? audit/final_pipeline/\n?? audit/improve/\n?? audit/improve2/\n"
+  }
+}

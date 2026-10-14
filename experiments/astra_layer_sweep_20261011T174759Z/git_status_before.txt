@@ -1,0 +1,17 @@
+ M audit/final_pipeline_n3/__pycache__/segment_ct.cpython-314.pyc
+ M experiments/stego_colocated/train.py
+?? .venv-crf/
+?? Dataset/LungCT_Negatives/
+?? PROJECT_MAP/
+?? README.md
+?? audit/dino2/weights/
+?? audit/mri/
+?? audit/project_review_20261005/
+?? log0.txt
+?? log0_check.txt
+?? log1.txt
+?? log1_check.txt
+?? log2.txt
+?? log2_check.txt
+?? optimized_p1_pipeline/
+?? src2/

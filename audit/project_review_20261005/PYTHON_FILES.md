@@ -1,0 +1,354 @@
+# Python file index
+
+All project Python files were read and AST-scanned without executing them. This catalog is not a claim of complete semantic or runtime verification. Detailed findings concern the final-pipeline dependency paths.
+
+- `audit/calibrated/calibrate.py` — 208 lines; guard:14, dump:44, read:45, sha:46, batch:65, monitors:68, diversity:74, core:92, extract:153.
+- `audit/calibrated/summarize.py` — 55 lines; read:5, table:6.
+- `audit/colocated/amended_calibration.py` — 77 lines; Capture:22.
+- `audit/colocated/check_loss.py` — 66 lines; top-level script.
+- `audit/colocated/common.py` — 86 lines; guard:23, read:52, dump:56, sha:60, ledger:68, feature_batch:83.
+- `audit/colocated/prepare_round.py` — 60 lines; digest:6, replace:11.
+- `audit/colocated/progress.py` — 21 lines; top-level script.
+- `audit/colocated/report_amendment.py` — 22 lines; top-level script.
+- `audit/colocated/report_final.py` — 60 lines; top-level script.
+- `audit/colocated/report_screen.py` — 27 lines; top-level script.
+- `audit/colocated/verify.py` — 102 lines; Capture:45.
+- `audit/colocated/verify2/builder.py` — 140 lines; build_table:3.
+- `audit/colocated/verify2/diagnostics.py` — 76 lines; get_soft_scores:18.
+- `audit/colocated/verify2/run_frozen.py` — 202 lines; largest:27, guided:33, score_fields_local:40.
+- `audit/colocated/verify2/run_untrained.py` — 202 lines; largest:27, guided:33, score_fields_local:40.
+- `audit/dino/common.py` — 46 lines; guard:7, reuse:29, confusion:38, dump:39, sha:40, elapsed:45, records:46.
+- `audit/dino/extract.py` — 27 lines; forward:10.
+- `audit/dino/figures.py` — 17 lines; top-level script.
+- `audit/dino/fit_score.py` — 39 lines; top-level script.
+- `audit/dino/pair_affinities.py` — 43 lines; capture:19.
+- `audit/dino/pair_score.py` — 15 lines; top-level script.
+- `audit/dino/prepare.py` — 31 lines; top-level script.
+- `audit/dino/report.py` — 54 lines; fmt:23.
+- `audit/dino/run_rest.py` — 9 lines; top-level script.
+- `audit/dino/validate.py` — 29 lines; top-level script.
+- `audit/dino2/common.py` — 46 lines; guard:7, reuse:29, confusion:38, dump:39, sha:40, elapsed:45, records:46.
+- `audit/dino2/extract.py` — 57 lines; forward:25, images:33.
+- `audit/dino2/figures.py` — 19 lines; top-level script.
+- `audit/dino2/fit_score.py` — 39 lines; top-level script.
+- `audit/dino2/pair_affinities.py` — 43 lines; capture:19.
+- `audit/dino2/pair_score.py` — 15 lines; top-level script.
+- `audit/dino2/report.py` — 64 lines; fmt:24.
+- `audit/dino2/run_all.py` — 23 lines; run:5.
+- `audit/dino2/validate.py` — 32 lines; top-level script.
+- `audit/dino2/verify_weights.py` — 26 lines; digest:8.
+- `audit/ensemble/generate_report.py` — 59 lines; top-level script.
+- `audit/ensemble/run_ensembles.py` — 277 lines; largest:17, guided:23, apply_f1:30, distances:38, Arm:61, embed_frozen:69, embed_untrained:77, embed_c448:89, embed_p1:101.
+- `audit/ensemble/verify/run.py` — 208 lines; largest:18, guided:24, apply_f1_path:32, postprocess_hard:40, embed_fn:61.
+- `audit/ensemble/verify4/generate_n2_viz.py` — 170 lines; embedding:33, StegoHead:39, apply_postprocessing:50.
+- `audit/ensemble/verify4/generate_p1_viz.py` — 171 lines; embedding:33, StegoHead:39, apply_postprocessing:50.
+- `audit/ensemble/verify4/run.py` — 397 lines; largest:18, apply_postprocessing:24, iou_dice:40, get_train_embeddings:63, get_val_embeddings:89, run_naming:102, process_arm:167, evaluate_patient:230.
+- `audit/ensemble/verify4/run_n2_only.py` — 150 lines; embedding:30, StegoHead:36, apply_postprocessing:47.
+- `audit/ensemble/verify4/run_optimized.py` — 273 lines; embedding:34, StegoHead:44, get_val_embeddings:55, process_arm:77, apply_postprocessing:195, evaluate_patient:213.
+- `audit/ensemble/verify4/run_optimized2.py` — 407 lines; largest:18, apply_postprocessing:24, iou_dice:40, get_train_embeddings:63, get_val_embeddings:89, run_naming:102, process_arm:167, evaluate_patient:230.
+- `audit/ensemble/verify4/run_optimized3.py` — 256 lines; embedding:33, StegoHead:43, get_val_embeddings:54, process_arm:71, apply_postprocessing:180, evaluate_patient:196.
+- `audit/ensemble/verify4/run_oracle.py` — 135 lines; embedding:29, StegoHead:39, get_val_embeddings:50, apply_postprocessing:64.
+- `audit/ensemble/verify4/run_p1_crf.py` — 191 lines; embedding:34, StegoHead:40, apply_postprocessing:51.
+- `audit/ensemble/verify4/run_p1_optimized.py` — 162 lines; embedding:30, StegoHead:36, apply_postprocessing:47.
+- `audit/final_pipeline/build_scripts.py` — 33 lines; top-level script.
+- `audit/final_pipeline/final_verify.py` — 32 lines; top-level script.
+- `audit/final_pipeline/package_check.py` — 35 lines; top-level script.
+- `audit/final_pipeline/report.py` — 69 lines; stats:5, fmt:8, pct:9, num:62.
+- `audit/final_pipeline/run_remaining.py` — 15 lines; top-level script.
+- `audit/final_pipeline/segment_ct.py` — 204 lines; body_box:23, crop_image:34, image_tensor:41, inverse_grid:47, resize224:58, largest:62, guided:69, contract:76, load_plane:89, load_extractor:106, extract:114, distances:121, predict_features:125, load_artifact:138, save_output:145, main:152.
+- `audit/final_pipeline/study.py` — 111 lines; guard:10, reuse:27, confusion:37, dump:38, records:39, identity:40, fit:48, mapping:66, evaluate:85.
+- `audit/final_pipeline/verify_cli.py` — 35 lines; call:9.
+- `audit/final_pipeline/write_readme.py` — 79 lines; top-level script.
+- `audit/final_pipeline_n3/build_scripts.py` — 33 lines; top-level script.
+- `audit/final_pipeline_n3/final_verify.py` — 32 lines; top-level script.
+- `audit/final_pipeline_n3/package_check.py` — 35 lines; top-level script.
+- `audit/final_pipeline_n3/report.py` — 69 lines; stats:5, fmt:8, pct:9, num:62.
+- `audit/final_pipeline_n3/run_remaining.py` — 15 lines; top-level script.
+- `audit/final_pipeline_n3/segment_ct.py` — 215 lines; body_box:23, crop_image:34, image_tensor:41, inverse_grid:47, resize224:58, largest:62, guided:69, contract:76, load_plane:89, load_extractor:106, extract:114, distances:121, predict_features:125, load_artifact:138, save_output:148, main:155.
+- `audit/final_pipeline_n3/study.py` — 111 lines; guard:10, reuse:27, confusion:37, dump:38, records:39, identity:40, fit:48, mapping:66, evaluate:85.
+- `audit/final_pipeline_n3/verify_cli.py` — 35 lines; call:9.
+- `audit/final_pipeline_n3/verify_naming.py` — 26 lines; top-level script.
+- `audit/final_pipeline_n3/write_readme.py` — 79 lines; top-level script.
+- `audit/improve/ceiling.py` — 43 lines; top-level script.
+- `audit/improve/checks.py` — 26 lines; top-level script.
+- `audit/improve/common.py` — 58 lines; guard:8, dump:35, elapsed:36, note:37, Dimensions:46, confusion:58.
+- `audit/improve/extract.py` — 50 lines; top-level script.
+- `audit/improve/figures.py` — 36 lines; top-level script.
+- `audit/improve/fit.py` — 34 lines; top-level script.
+- `audit/improve/pipeline.py` — 68 lines; metadata:8, body_box:9, crop_image:18, image_tensor:23, raw_image:27, inverse_grid:29, native_prediction:38, resize224:44, patient_stats:46, mapped_report:49, results_from_conf:54, features:62.
+- `audit/improve/postprocess.py` — 63 lines; largest:14, guided:19.
+- `audit/improve/prepare.py` — 35 lines; top-level script.
+- `audit/improve/report.py` — 139 lines; fmt:22.
+- `audit/improve/score.py` — 24 lines; top-level script.
+- `audit/improve/select_parent.py` — 11 lines; top-level script.
+- `audit/improve/soft_weights.py` — 21 lines; top-level script.
+- `audit/improve/validate.py` — 44 lines; top-level script.
+- `audit/improve2/common.py` — 59 lines; guard:6, reuse:28, dump:40, elapsed:41, metadata:42, surface:43, boundary_distances:44, boundary_summary:49.
+- `audit/improve2/figures.py` — 34 lines; top-level script.
+- `audit/improve2/report.py` — 130 lines; fmt:45, number:46.
+- `audit/improve2/run.py` — 82 lines; loss_stats:18.
+- `audit/improve2/validate.py` — 39 lines; top-level script.
+- `audit/naming/actual_predictions/extract_visualize.py` — 94 lines; no_pdf:9, save_npy:23, save_png:27.
+- `audit/naming/common.py` — 59 lines; guard:8, reuse:35, confusion:45, dump:46, sha:47, elapsed:52, raw_image:53, sealed_manifest:55.
+- `audit/naming/presentation.py` — 9 lines; top-level script.
+- `audit/naming/publication/audit_record.py` — 21 lines; top-level script.
+- `audit/naming/publication/finalize.py` — 22 lines; top-level script.
+- `audit/naming/publication/report_results.py` — 137 lines; write_json:9, stat:10, fmt:11, pd:12, csvwrite:13, table:15, avg:46.
+- `audit/naming/publication/reproduce.py` — 26 lines; top-level script.
+- `audit/naming/publication/stability.py` — 36 lines; calc:9.
+- `audit/naming/report.py` — 71 lines; fmt:18, agree:19.
+- `audit/naming/run_b.py` — 9 lines; top-level script.
+- `audit/naming/seal.py` — 11 lines; top-level script.
+- `audit/naming/stage_a.py` — 102 lines; top-level script.
+- `audit/naming/stage_b.py` — 65 lines; top-level script.
+- `audit/naming/validate.py` — 44 lines; top-level script.
+- `audit/preflight/diagnose.py` — 230 lines; guard:14, dump:44, read:45, sha:46, batch:65, monitors:68, diversity:74, core:92, extract:175.
+- `audit/preflight/report.py` — 105 lines; put:18, table:21.
+- `audit/scratch/backbone_checks.py` — 38 lines; checked:16.
+- `audit/scratch/baseline/common.py` — 70 lines; guard:8, dump:33, elapsed:34, note:35, Dimensions:44, confusion:56, evaluate:57.
+- `audit/scratch/baseline/extract.py` — 25 lines; patient:8.
+- `audit/scratch/baseline/final_checks.py` — 16 lines; top-level script.
+- `audit/scratch/baseline/heads.py` — 12 lines; top-level script.
+- `audit/scratch/baseline/kmeans.py` — 24 lines; top-level script.
+- `audit/scratch/baseline/proxies.py` — 56 lines; no_annotations:8.
+- `audit/scratch/baseline/report.py` — 97 lines; top-level script.
+- `audit/scratch/baseline/verify.py` — 36 lines; top-level script.
+- `audit/scratch/crosspatient/calibrate.py` — 38 lines; forbid_annotations:5, capture:12, quantiles:23.
+- `audit/scratch/crosspatient/common.py` — 70 lines; guard:8, dump:33, elapsed:34, note:35, Dimensions:44, confusion:56, evaluate:57.
+- `audit/scratch/crosspatient/engine.py` — 26 lines; reuse_pair_function:4, initialize:7, batches:20, image_id_codes:26.
+- `audit/scratch/crosspatient/neighbours.py` — 61 lines; ranked:14, ActualFeatureWrapper:25.
+- `audit/scratch/crosspatient/purity.py` — 50 lines; capture:22, summarize:33.
+- `audit/scratch/crosspatient/rank_check.py` — 13 lines; top-level script.
+- `audit/scratch/crosspatient/report.py` — 95 lines; enrich:6, comparison:7.
+- `audit/scratch/crosspatient/verify.py` — 34 lines; top-level script.
+- `audit/scratch/data_checks.py` — 31 lines; top-level script.
+- `audit/scratch/decision_cache_centering.py` — 36 lines; top-level script.
+- `audit/scratch/decision_cloud_weights.py` — 45 lines; top-level script.
+- `audit/scratch/decision_families.py` — 36 lines; top-level script.
+- `audit/scratch/decision_followup.py` — 37 lines; top-level script.
+- `audit/scratch/decision_geometry.py` — 49 lines; records:7, read_headers:11.
+- `audit/scratch/decision_guard.py` — 26 lines; audit:10, append:25.
+- `audit/scratch/decision_inventory.py` — 34 lines; expired:12, err:14.
+- `audit/scratch/decision_overlay_check.py` — 26 lines; top-level script.
+- `audit/scratch/decision_pickle_keys.py` — 18 lines; top-level script.
+- `audit/scratch/decision_runs.py` — 34 lines; top-level script.
+- `audit/scratch/decision_samples.py` — 80 lines; top-level script.
+- `audit/scratch/decision_summarize.py` — 197 lines; json_after:5.
+- `audit/scratch/diag_affinity.py` — 44 lines; top-level script.
+- `audit/scratch/diag_ceiling.py` — 70 lines; scores:19, upsample_assignments:23.
+- `audit/scratch/diag_collapse.py` — 30 lines; top-level script.
+- `audit/scratch/diag_common.py` — 39 lines; guard:12, dump:30, cfg:32, dataset:35, elapsed:39.
+- `audit/scratch/diag_extract.py` — 37 lines; capture:12.
+- `audit/scratch/diag_plan.py` — 33 lines; top-level script.
+- `audit/scratch/diag_report.py` — 81 lines; table:10, pct:11, fl:12, src:13, yn:14.
+- `audit/scratch/extract_lung.py` — 114 lines; main:19.
+- `audit/scratch/final_baseline/common.py` — 58 lines; guard:8, dump:35, elapsed:36, note:37, Dimensions:46, confusion:58.
+- `audit/scratch/final_baseline/fit.py` — 31 lines; top-level script.
+- `audit/scratch/final_baseline/report.py` — 113 lines; stats:7, table:31.
+- `audit/scratch/final_baseline/score.py` — 50 lines; stats:42.
+- `audit/scratch/final_baseline/validate.py` — 47 lines; sha:4.
+- `audit/scratch/final_baseline/verify.py` — 52 lines; sha:34.
+- `audit/scratch/final_smoke.py` — 40 lines; Metric:31.
+- `audit/scratch/fix_checks.py` — 257 lines; config:17, metrics:19, modules:24, chaos_class:26, finish:31.
+- `audit/scratch/fixes2_cache_check.py` — 60 lines; top-level script.
+- `audit/scratch/fixes2_centering_check.py` — 14 lines; top-level script.
+- `audit/scratch/fixes2_guard.py` — 32 lines; audit:11, definitions:26, record:31.
+- `audit/scratch/fixes2_loader_check.py` — 33 lines; top-level script.
+- `audit/scratch/fixes2_overlays.py` — 36 lines; top-level script.
+- `audit/scratch/fixes2_preprocess_check.py` — 39 lines; top-level script.
+- `audit/scratch/fixes2_smoke.py` — 46 lines; Metric:38.
+- `audit/scratch/fixes2_split_check.py` — 30 lines; top-level script.
+- `audit/scratch/fixes2_unsupervised_check.py` — 67 lines; NoUpdate:16, TinyNet:21, Harness:27, run:38.
+- `audit/scratch/fixes3_calibrate.py` — 58 lines; no_labels:12.
+- `audit/scratch/fixes3_common.py` — 27 lines; guard:8, record:26.
+- `audit/scratch/fixes3_experiment.py` — 71 lines; no_train_labels:12, BoundedRun:28, bounded_trainer:43.
+- `audit/scratch/fixes3_metric_check.py` — 19 lines; top-level script.
+- `audit/scratch/fixes3_monitor_check.py` — 24 lines; top-level script.
+- `audit/scratch/fixes3_results.py` — 22 lines; top-level script.
+- `audit/scratch/fixes3_select.py` — 34 lines; select:5.
+- `audit/scratch/fixes3_unlabeled_check.py` — 45 lines; deny:15, Opt:23, Net:28, Harness:31, run:39.
+- `audit/scratch/fixes3_visual_check.py` — 22 lines; top-level script.
+- `audit/scratch/fixes4/calibrate.py` — 65 lines; no_labels:15.
+- `audit/scratch/fixes4/common.py` — 27 lines; guard:8, record:26.
+- `audit/scratch/fixes4/evaluate.py` — 54 lines; no_train_labels:24.
+- `audit/scratch/fixes4/process_check.py` — 22 lines; check:4.
+- `audit/scratch/fixes4/report.py` — 69 lines; criterion:5, pct:19, pair:20, table:21.
+- `audit/scratch/fixes4/run.py` — 73 lines; no_train_labels:14, BoundedRun:34, bounded_trainer:54.
+- `audit/scratch/fixes4/verify_round.py` — 28 lines; top-level script.
+- `audit/scratch/fixes4/verify_runner.py` — 35 lines; FakePath:10, FakeTrainer:15.
+- `audit/scratch/fixes4/verify_scoring.py` — 15 lines; top-level script.
+- `audit/scratch/followup_cache_portability.py` — 43 lines; dataset:12, identity:14.
+- `audit/scratch/followup_crf_check.py` — 20 lines; top-level script.
+- `audit/scratch/followup_geometry_check.py` — 21 lines; top-level script.
+- `audit/scratch/forensics/backbone_check.py` — 9 lines; top-level script.
+- `audit/scratch/forensics/common.py` — 53 lines; guard:7, dump:29, elapsed:30, inventory:31, load:36, dataset:41, scores:43, mapping_report:46, note:52.
+- `audit/scratch/forensics/report.py` — 75 lines; put:12, table:13, pct:17, fmt:18.
+- `audit/scratch/forensics/task1.py` — 30 lines; top-level script.
+- `audit/scratch/forensics/task2.py` — 39 lines; agreement:6, compare:15.
+- `audit/scratch/forensics/task3.py` — 33 lines; top-level script.
+- `audit/scratch/forensics/task4.py` — 38 lines; TraceImages:6, train_label_guard:9.
+- `audit/scratch/forensics/task5.py` — 42 lines; top-level script.
+- `audit/scratch/full_c_aux_audit.py` — 56 lines; digest:48.
+- `audit/scratch/full_c_evaluate_saved.py` — 41 lines; top-level script.
+- `audit/scratch/full_c_postrun_audit.py` — 37 lines; simple:12.
+- `audit/scratch/full_c_write_summary.py` — 89 lines; add:18, metrics:19, mon:20, active:21, table:22.
+- `audit/scratch/future_baselines.py` — 65 lines; collect:30, score:59.
+- `audit/scratch/guard.py` — 41 lines; audit:14, record:25, definitions:29.
+- `audit/scratch/inventory.py` — 38 lines; role:6.
+- `audit/scratch/log_fix.py` — 15 lines; top-level script.
+- `audit/scratch/numeric_checks.py` — 57 lines; Metric:10.
+- `audit/scratch/pairs/codes.py` — 63 lines; from_diagnostic_features:12, cached_forward:15.
+- `audit/scratch/pairs/common.py` — 70 lines; guard:8, dump:33, elapsed:34, note:35, Dimensions:44, confusion:56, evaluate:57.
+- `audit/scratch/pairs/purity.py` — 74 lines; relations:16, spy_sample:20, hard_labels:25, capture:27, label_summary:62.
+- `audit/scratch/pairs/report.py` — 76 lines; top-level script.
+- `audit/scratch/pairs/setup.py` — 21 lines; top-level script.
+- `audit/scratch/pairs/verify.py` — 35 lines; top-level script.
+- `audit/scratch/provenance.py` — 22 lines; top-level script.
+- `audit/scratch/reference.py` — 10 lines; top-level script.
+- `audit/scratch/run_visual_collapse_check.py` — 50 lines; top-level script.
+- `audit/scratch/seed_support_check.py` — 16 lines; top-level script.
+- `audit/scratch/seed_validation_common.py` — 27 lines; guard:8, record:26.
+- `audit/scratch/seed_validation_experiment.py` — 74 lines; no_train_labels:13, BoundedRun:30, bounded_trainer:46.
+- `audit/scratch/selectivity/affinities.py` — 79 lines; no_labels:6, record_affinity:34, capture:38.
+- `audit/scratch/selectivity/common.py` — 41 lines; guard:8, dump:33, elapsed:34, note:35.
+- `audit/scratch/selectivity/extract.py` — 41 lines; no_labels:5, capture:16.
+- `audit/scratch/selectivity/report.py` — 71 lines; pct:8, table:9, add:11.
+- `audit/scratch/selectivity/score.py` — 59 lines; basic:12, envelope:16, summarize:21.
+- `audit/scratch/selectivity/verify.py` — 33 lines; top-level script.
+- `audit/scratch/test_dcm.py` — 12 lines; top-level script.
+- `audit/scratch/visual_checks.py` — 50 lines; top-level script.
+- `audit/stego_ideas/batch_shifts.py` — 33 lines; Capture:10.
+- `audit/stego_ideas/common.py` — 47 lines; guard:9, read:31, dump:32, sha:33, reuse:38, ledger:41, feature_batch:46.
+- `audit/stego_ideas/pair_plan.py` — 62 lines; make_pool:23.
+- `audit/stego_ideas/report.py` — 59 lines; put:10, table:11, pct:15, row:50.
+- `audit/stego_ideas/score.py` — 44 lines; summaries:19.
+- `dino/utils.py` — 619 lines; GaussianBlur:36, Solarization:57, load_pretrained_weights:71, clip_gradients:102, cancel_gradients_last_layer:114, restart_from_checkpoint:122, cosine_scheduler:157, bool_flag:171, fix_random_seeds:185, SmoothedValue:194, reduce_dict:256, MetricLogger:283, get_sha:373, is_dist_avail_and_initialized:393, get_world_size:401, get_rank:407, is_main_process:413, save_on_master:417, setup_for_distributed:422, init_distributed_mode:437, accuracy:472, _no_grad_trunc_normal_:482, trunc_normal_:518, LARS:523, MultiCropWrapper:564, get_params_groups:600, has_batchnorms:614.
+- `dino/vision_transformer.py` — 314 lines; drop_path:25, DropPath:36, Mlp:47, Attention:66, Block:94, PatchEmbed:117, VisionTransformer:135, vit_tiny:259, vit_small:266, vit_base:273, DINOHead:280.
+- `download_lung_ct.py` — 29 lines; generate_negatives:6.
+- `experiments/dense_stego_biomedclip/correspondence.py` — 36 lines; affine_batch:8, views:13, transform:19, invert:20, matched_locations:22, sample:30, loss:31.
+- `experiments/dense_stego_biomedclip/evaluate.py` — 73 lines; confusion:12.
+- `experiments/dense_stego_biomedclip/integration_checks.py` — 32 lines; top-level script.
+- `experiments/dense_stego_biomedclip/model.py` — 30 lines; Refine:5, UpsampleBlock:9, CorrespondenceModel:13.
+- `experiments/dense_stego_biomedclip/preflight.py` — 16 lines; top-level script.
+- `experiments/dense_stego_biomedclip/report.py` — 33 lines; fmt:6.
+- `experiments/dense_stego_biomedclip/run_suite.py` — 29 lines; overlap:8.
+- `experiments/dense_stego_biomedclip/runtime.py` — 69 lines; guard:9, sha:32, dump:37, read:39, reuse:40, records:49, load_image:51, seed_all:54, frozen_backbone:57, tokens:62, baseline_seal:65, ledger:69.
+- `experiments/dense_stego_biomedclip/sanity.py` — 20 lines; top-level script.
+- `experiments/dense_stego_biomedclip/seal_predictions.py` — 15 lines; top-level script.
+- `experiments/dense_stego_biomedclip/stages.py` — 82 lines; embedding:12, save_meta:20, score_fields:21.
+- `experiments/dense_stego_biomedclip/train.py` — 40 lines; image_batch:14.
+- `experiments/feature_head/run_ensemble.py` — 121 lines; load_plane:12, main:17.
+- `experiments/feature_head/train_cnn_head.py` — 136 lines; get_dice_loss:16, FeatureCNN:28, train_and_eval:42.
+- `experiments/self_training/evaluate.py` — 45 lines; top-level script.
+- `experiments/self_training/prepare_dataset.py` — 46 lines; prepare:14.
+- `experiments/self_training/runtime.py` — 74 lines; guard:14, sha:37, dump:42, read:44, reuse:45, records:54, load_image:56, seed_all:59, frozen_backbone:62, tokens:67, baseline_seal:70, ledger:74.
+- `experiments/self_training/score.py` — 42 lines; score:5.
+- `experiments/self_training/train_fcn.py` — 131 lines; MiniUNet:16, train:52, predict:90.
+- `experiments/self_training/train_gpu_end_to_end.py` — 100 lines; get_training_augmentation:19, CTDataset:28, train:52.
+- `experiments/stego_biomedclip/checks.py` — 72 lines; top-level script.
+- `experiments/stego_biomedclip/evaluate.py` — 94 lines; confusion:12.
+- `experiments/stego_biomedclip/geometry.py` — 23 lines; coordinate_image:11, alignment:17.
+- `experiments/stego_biomedclip/integration_checks.py` — 31 lines; top-level script.
+- `experiments/stego_biomedclip/model.py` — 36 lines; StegoHead:8, objective:28.
+- `experiments/stego_biomedclip/preflight.py` — 43 lines; top-level script.
+- `experiments/stego_biomedclip/record_trajectories.py` — 31 lines; rows:5.
+- `experiments/stego_biomedclip/reference/src/modules.py` — 469 lines; LambdaLayer:8, DinoFeaturizer:17, ResizeAndClassify:121, ClusterLookup:134, FeaturePyramidNet:164, DoubleConv:255, norm:275, average_norm:279, tensor_correlation:283, sample:287, super_perm:292, sample_nonzero_locations:298, ContrastiveCorrelationLoss:314, Decoder:401, NetWithActivations:416, ContrastiveCRFLoss:437.
+- `experiments/stego_biomedclip/reference/src/precompute_knns.py` — 102 lines; get_feats:15, my_app:25.
+- `experiments/stego_biomedclip/reference/src/train_segmentation.py` — 502 lines; get_class_labels:20, LitUnsupervisedSegmenter:53, my_app:387.
+- `experiments/stego_biomedclip/reference_loss.py` — 126 lines; norm:6, tensor_correlation:10, sample:14, super_perm:18, sample_nonzero_locations:24, ContrastiveCorrelationLoss:40.
+- `experiments/stego_biomedclip/report.py` — 46 lines; top-level script.
+- `experiments/stego_biomedclip/resume_seed1.py` — 64 lines; batch:29.
+- `experiments/stego_biomedclip/run_suite.py` — 32 lines; overlap:6, run:19.
+- `experiments/stego_biomedclip/runtime.py` — 69 lines; guard:9, sha:32, dump:37, read:39, reuse:40, records:49, load_image:51, seed_all:54, frozen_backbone:57, tokens:62, baseline_seal:65, ledger:69.
+- `experiments/stego_biomedclip/seal_predictions.py` — 19 lines; top-level script.
+- `experiments/stego_biomedclip/stages.py` — 79 lines; embedding:12, save_meta:17, score_fields:18.
+- `experiments/stego_biomedclip/train.py` — 94 lines; batch:41.
+- `experiments/stego_calibrated/check_state.py` — 28 lines; update:11.
+- `experiments/stego_calibrated/evaluate.py` — 45 lines; top-level script.
+- `experiments/stego_calibrated/model.py` — 36 lines; StegoHead:8, objective:28.
+- `experiments/stego_calibrated/reference_loss.py` — 126 lines; norm:6, tensor_correlation:10, sample:14, super_perm:18, sample_nonzero_locations:24, ContrastiveCorrelationLoss:40.
+- `experiments/stego_calibrated/run_stage2.py` — 24 lines; run:11.
+- `experiments/stego_calibrated/runtime.py` — 74 lines; guard:14, sha:37, dump:42, read:44, reuse:45, records:54, load_image:56, seed_all:59, frozen_backbone:62, tokens:67, baseline_seal:70, ledger:74.
+- `experiments/stego_calibrated/seal_all.py` — 24 lines; top-level script.
+- `experiments/stego_calibrated/seal_predictions.py` — 19 lines; top-level script.
+- `experiments/stego_calibrated/stages.py` — 80 lines; embedding:13, save_meta:18, score_fields:19.
+- `experiments/stego_calibrated/state.py` — 20 lines; capture:6, restore:14.
+- `experiments/stego_calibrated/train.py` — 82 lines; overlap_check:11, main:23.
+- `experiments/stego_colocated/check_state.py` — 29 lines; update:12.
+- `experiments/stego_colocated/evaluate.py` — 45 lines; top-level script.
+- `experiments/stego_colocated/loss.py` — 74 lines; ColocatedCorrelationLoss:6, adjacent_partners:55.
+- `experiments/stego_colocated/model.py` — 36 lines; StegoHead:8, objective:28.
+- `experiments/stego_colocated/reference_loss.py` — 126 lines; norm:6, tensor_correlation:10, sample:14, super_perm:18, sample_nonzero_locations:24, ContrastiveCorrelationLoss:40.
+- `experiments/stego_colocated/run_round.py` — 42 lines; read:6, run:7.
+- `experiments/stego_colocated/runtime.py` — 74 lines; guard:14, sha:37, dump:42, read:44, reuse:45, records:54, load_image:56, seed_all:59, frozen_backbone:62, tokens:67, baseline_seal:70, ledger:74.
+- `experiments/stego_colocated/seal_all.py` — 24 lines; top-level script.
+- `experiments/stego_colocated/stages.py` — 80 lines; embedding:13, save_meta:18, score_fields:19.
+- `experiments/stego_colocated/state.py` — 20 lines; capture:6, restore:14.
+- `experiments/stego_colocated/train.py` — 99 lines; overlap_check:13, main:25.
+- `experiments/stego_masked/check_state.py` — 28 lines; update:11.
+- `experiments/stego_masked/compute_masks.py` — 58 lines; records:11, largest:15, create_masks:22.
+- `experiments/stego_masked/compute_metrics.py` — 80 lines; get_step0_score:17, test_preflight_fractions:23.
+- `experiments/stego_masked/evaluate.py` — 45 lines; top-level script.
+- `experiments/stego_masked/model.py` — 42 lines; StegoHead:8, objective:34.
+- `experiments/stego_masked/reference_loss.py` — 126 lines; norm:6, tensor_correlation:10, sample:14, super_perm:18, sample_nonzero_locations:24, ContrastiveCorrelationLoss:40.
+- `experiments/stego_masked/run_stage2.py` — 21 lines; run:9.
+- `experiments/stego_masked/runtime.py` — 74 lines; guard:14, sha:37, dump:42, read:44, reuse:45, records:54, load_image:56, seed_all:59, frozen_backbone:62, tokens:67, baseline_seal:70, ledger:74.
+- `experiments/stego_masked/seal_all.py` — 22 lines; top-level script.
+- `experiments/stego_masked/seal_predictions.py` — 19 lines; top-level script.
+- `experiments/stego_masked/stages.py` — 80 lines; embedding:13, save_meta:18, score_fields:19.
+- `experiments/stego_masked/state.py` — 20 lines; capture:6, restore:14.
+- `experiments/stego_masked/train.py` — 89 lines; overlap_check:11, main:23.
+- `experiments/stego_residual/check_state.py` — 28 lines; update:11.
+- `experiments/stego_residual/evaluate.py` — 45 lines; top-level script.
+- `experiments/stego_residual/model.py` — 42 lines; StegoHead:8, objective:34.
+- `experiments/stego_residual/reference_loss.py` — 126 lines; norm:6, tensor_correlation:10, sample:14, super_perm:18, sample_nonzero_locations:24, ContrastiveCorrelationLoss:40.
+- `experiments/stego_residual/run_stage2.py` — 20 lines; run:9.
+- `experiments/stego_residual/runtime.py` — 74 lines; guard:14, sha:37, dump:42, read:44, reuse:45, records:54, load_image:56, seed_all:59, frozen_backbone:62, tokens:67, baseline_seal:70, ledger:74.
+- `experiments/stego_residual/seal_all.py` — 22 lines; top-level script.
+- `experiments/stego_residual/seal_predictions.py` — 19 lines; top-level script.
+- `experiments/stego_residual/stages.py` — 80 lines; embedding:13, save_meta:18, score_fields:19.
+- `experiments/stego_residual/state.py` — 20 lines; capture:6, restore:14.
+- `experiments/stego_residual/train.py` — 82 lines; overlap_check:11, main:23.
+- `patch.py` — 24 lines; top-level script.
+- `patch2.py` — 31 lines; top-level script.
+- `picie/backbone.py` — 346 lines; conv3x3:23, conv1x1:29, BasicBlock:34, Bottleneck:74, ResNet:123, _resnet:227, resnet18:236, resnet34:247, resnet50:258, resnet101:269, resnet152:280, resnext50_32x4d:291, resnext101_32x8d:304, wide_resnet50_2:317, wide_resnet101_2:333.
+- `picie/fpn.py` — 48 lines; PanopticFPN:7, FPNDecoder:19.
+- `src/__init__.py` — 0 lines; top-level script.
+- `src/chaos.py` — 134 lines; dicom_to_png:49, save_zero_mask:58, process_patient_slices:62.
+- `src/chaos_preprocessing.py` — 224 lines; canonical_json:21, digest:25, file_sha256:29, preprocessing_contract:37, normalize_pixels:45, dicom_modality:63, read_image:76, pair_series:86, plan_dataset:131, generate_derivatives:160, ChaosTransform:194, get_chaos_transform:223.
+- `src/chaos_splits.py` — 30 lines; validate_splits:8, load_splits:21, patient_split:25.
+- `src/collapse_monitor.py` — 50 lines; CollapseMonitor:6, CollapseStopper:42.
+- `src/count_empty_labels.py` — 25 lines; top-level script.
+- `src/crf.py` — 57 lines; dense_crf:9.
+- `src/crop_datasets.py` — 151 lines; _random_crops:14, RandomCropComputer:60, my_app:125.
+- `src/data.py` — 463 lines; bit_get:23, create_pascal_label_colormap:27, create_chaos_colormap:37, CHAOS:92, MaterializedDataset:245, ContrastiveSegDataset:273, NegativeImageDataset:424.
+- `src/demo_segmentation.py` — 286 lines; get_device:30, clean_segmentation:36, DicomImageFolder:53, build_assignment_lut:87, get_cluster_assignments:121, apply_cluster_mapping:196, my_app:209.
+- `src/dino/utils.py` — 619 lines; GaussianBlur:36, Solarization:57, load_pretrained_weights:71, clip_gradients:102, cancel_gradients_last_layer:114, restart_from_checkpoint:122, cosine_scheduler:157, bool_flag:171, fix_random_seeds:185, SmoothedValue:194, reduce_dict:256, MetricLogger:283, get_sha:373, is_dist_avail_and_initialized:393, get_world_size:401, get_rank:407, is_main_process:413, save_on_master:417, setup_for_distributed:422, init_distributed_mode:437, accuracy:472, _no_grad_trunc_normal_:482, trunc_normal_:518, LARS:523, MultiCropWrapper:564, get_params_groups:600, has_batchnorms:614.
+- `src/dino/vision_transformer.py` — 314 lines; drop_path:25, DropPath:36, Mlp:47, Attention:66, Block:94, PatchEmbed:117, VisionTransformer:135, vit_tiny:259, vit_small:266, vit_base:273, DINOHead:280.
+- `src/download_datasets.py` — 30 lines; my_app:9.
+- `src/download_models.py` — 31 lines; top-level script.
+- `src/eval_segmentation.py` — 150 lines; load_plane:17, main:22.
+- `src/knn_cache.py` — 108 lines; git_commit:17, expected_identity:25, cache_path:49, array_digest:53, validate_indices:57, cache_metadata:69, read_cache:75, prepare_target:93, write_cache:103.
+- `src/modules.py` — 646 lines; LambdaLayer:8, DinoFeaturizer:17, BiomedCLIPFeaturizer:122, ResizeAndClassify:249, ClusterLookup:263, FeaturePyramidNet:312, DoubleConv:403, norm:423, average_norm:427, tensor_correlation:431, sample:435, super_perm:440, sample_nonzero_locations:446, ContrastiveCorrelationLoss:462, Decoder:578, NetWithActivations:593, ContrastiveCRFLoss:614.
+- `src/picie/backbone.py` — 346 lines; conv3x3:23, conv1x1:29, BasicBlock:34, Bottleneck:74, ResNet:123, _resnet:227, resnet18:236, resnet34:247, resnet50:258, resnet101:269, resnet152:280, resnext50_32x4d:291, resnext101_32x8d:304, wide_resnet50_2:317, wide_resnet101_2:333.
+- `src/picie/fpn.py` — 48 lines; PanopticFPN:7, FPNDecoder:19.
+- `src/plot_dino_correspondence.py` — 254 lines; plot_heatmap:19, get_heatmaps:39, my_app:62.
+- `src/plot_potsdam.py` — 102 lines; my_app:12.
+- `src/plot_pr_curves.py` — 296 lines; super_perm:22, prep_fd_coord:28, prep_fd:34, prep_fd_2:40, plot_auc_raw:47, CRFModule:53, LitRecalibrator:70, my_app:227.
+- `src/precompute_knns.py` — 113 lines; get_feats:17, my_app:27.
+- `src/preprocess.py` — 290 lines; load_dicom_series_as_sitk:29, load_mask_stack_as_sitk:50, resample_volume:79, clip_and_normalize:109, resize_image:122, resize_mask:126, process_patient:134, process_chaos_dataset:186, build_train_augmentations:211, LiverCTDataset:236, parse_args:271.
+- `src/show_rgb.py` — 46 lines; top-level script.
+- `src/test_biomedclip.py` — 34 lines; main:7.
+- `src/test_timm.py` — 304 lines; load_example_images:18, compute_feature_similarity:58, visualize_self_correspondence:72, visualize_knn_correspondence:114, main:171.
+- `src/tests/conftest.py` — 65 lines; write_dicom:15, dicom_factory:50, read_dicom:64.
+- `src/tests/test_data.py` — 298 lines; _train_root:23, _add_ct_patient:29, _add_mr_patient:46, _simple_transforms:60, test_bit_get_and_colormaps:64, test_load_mask_maps_ct_and_mri_pixels_and_preserves_l_mode:82, test_load_dicom_as_pil_applies_fixed_abdominal_window_and_metadata_defaults:93, test_chaos_rejects_bad_modality_and_image_set:120, test_chaos_collects_ct_mr_modalities_and_missing_masks:127, test_chaos_patient_level_train_val_split_is_disjoint_and_complete:148, test_chaos_mri_getitem_returns_contract_and_maps_ignore_to_minus_one:163, test_chaos_preprocessed_collection_filters_names_and_getitem_contract:184, _TinyDataset:211, test_materialized_dataset_matches_underlying_items:222, test_negative_image_dataset_walks_sorted_dicom_paths_and_transforms:229, _preprocessed_contrastive_tree:242, test_contrastive_seg_dataset_keys_coords_positive_candidates_and_transforms:256.
+- `src/tests/test_modules.py` — 270 lines; test_norm_normalizes_rows_and_zero_rows_are_finite:10, test_average_norm_matches_hand_computed_value:18, test_tensor_correlation_matches_explicit_reference:24, test_sample_corner_coordinate_returns_corner_pixel_with_align_corners:39, test_super_perm_is_in_range_and_has_no_fixed_points:52, test_sample_nonzero_locations_stays_in_nonzero_quadrant_and_handles_empty:61, test_lambda_layer_applies_lambda:75, test_cluster_lookup_init_from_copies_truncates_and_zeroes_tail:80, test_cluster_lookup_reset_parameters_changes_weights:95, test_cluster_lookup_forward_one_hot_and_exact_loss:103, test_cluster_lookup_forward_softmax_and_log_probs:122, test_resize_and_classify_returns_log_probabilities_at_input_size:133, test_double_conv_preserves_spatial_shape:141, test_decoder_output_equals_linear_plus_nonlinear:146, test_net_with_activations_resolves_negative_layer_numbers:153, _corr_cfg:168, test_contrastive_correlation_standard_scale_has_zero_mean_unit_std:184, test_contrastive_correlation_helper_clamping_and_pointwise_modes:191, test_contrastive_correlation_forward_returns_expected_tuple_and_shapes:224, test_contrastive_correlation_forward_supports_salience:240, test_contrastive_crf_loss_shape_and_dimension_assertions:255, test_feature_pyramid_helper_resizes_to_56_and_adds_last_dimension:267.
+- `src/tests/test_preprocess.py` — 133 lines; _root:8, _ct_patient:15, _mr_patient:29, test_preprocess_ct_slice_windowed_uint8_and_constant_below_window:41, test_preprocess_mri_slice_constant_branch_and_n4_fallback:58, test_collect_samples_aligns_ct_by_index_and_mr_by_stem:83, test_process_full_dataset_writes_split_outputs_and_skips_corrupt_slice:107.
+- `src/tests/test_train_segmentation.py` — 33 lines; test_get_class_labels_for_chaos_and_rejects_unknown_dataset:9, test_train_import_is_hydra_guarded_and_add_spatial_coords_preserves_code:17.
+- `src/tests/test_utils.py` — 252 lines; test_one_hot_feats_has_expected_shape_dtype_and_values:15, test_resize_preserves_batch_channels_and_resizes_spatial_dimensions:27, test_shuffle_returns_a_permutation_of_rows:33, test_normalize_unnorm_round_trip_and_unnormalize_clones_input:41, test_prep_for_plot_resize_and_rescale_modes:51, test_to_target_tensor_converts_l_image_to_int64_chw:72, test_prep_args_normalizes_supported_cli_forms_and_rejects_bare_args:80, test_get_transform_crops_image_and_label_to_requested_resolution:95, test_get_transform_none_resizes_and_unknown_crop_type_raises:105, test_identity_transform_returns_same_object:114, test_load_model_unknown_type_raises_value_error:119, test_remove_axes_clears_ticks_for_one_and_two_dimensional_axes:125, _ImageWriter:138, test_add_plot_supports_single_writer_and_list_of_writers:146, test_unsupervised_metrics_perfect_predictions_return_prefixed_100_scores:167, test_unsupervised_metrics_hungarian_recovers_fixed_permutation:175, test_unsupervised_metrics_excludes_invalid_targets_and_predictions:183, test_unsupervised_metrics_extra_clusters_has_finite_scores_and_expected_histogram:191, test_unsupervised_metrics_map_clusters_matches_assignments_and_extra_branch:199, test_unsupervised_metrics_empty_update_returns_zero_scores:214, test_flexible_collate_tensor_and_unequal_shape_fallback:223, test_flexible_collate_numpy_arrays_scalars_and_numeric_types:230, test_flexible_collate_strings_dicts_and_sequences:240.
+- `src/train_crf.py` — 160 lines; norm:21, prep:24, entropy:30, my_app:36.
+- `src/train_segmentation.py` — 729 lines; get_class_labels:33, LitUnsupervisedSegmenter:40, my_app:591.
+- `src/unlabeled_training.py` — 23 lines; ImagesOnlyDataset:6.
+- `src/utils.py` — 353 lines; prep_for_plot:23, add_plot:35, shuffle:68, add_hparams_fixed:72, resize:82, one_hot_feats:86, load_model:90, UnNormalize:149, ToTargetTensor:167, prep_args:172, identity_transform:188, get_transform:191, _remove_axes:212, remove_axes:219, UnsupervisedMetrics:229, flexible_collate:307.
+- `src/validation_visuals.py` — 39 lines; fixed_validation_indices:8, plot_fixed_slices:17.
+- `src/vis_corr.py` — 743 lines; norm:44, tensor_correlation:49, sample:54, build_featurizer:61, SimpleNamespace:73, make_cfg:78, get_transform:89, find_sample_indices:118, extract_features:170, compute_correlation_map:182, compute_full_correlation:201, main:211.

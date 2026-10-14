@@ -1,0 +1,5 @@
+{
+  "base": "pipeline.yaml",
+  "fit_dir": "src2/runs/p1_seed0_fit",
+  "output": "src2/runs/p1_seed0_inference"
+}

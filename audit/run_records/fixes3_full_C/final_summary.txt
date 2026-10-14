@@ -1,0 +1,503 @@
+FINAL AUDIT: fixes3_full_C
+Verdict: completed training normally; representation did not collapse, but final liver segmentation failed under the approved evaluation-only majority mapping. Do not equate stable code diversity or92.36% pixel accuracy with liver segmentation success.
+No training, optimizer updates, source/config changes, cache regeneration or original-checkpoint modifications performed during this audit. Two inference-only CPU evaluations used the actual project model, preprocessing, cluster metric, monitor and overlay helper on472 validation CT slices from4 patients. No CRF. All numerical derivations are reproducible with the scripts listed below.
+
+RUN STATUS / PROVENANCE
+Source commit: e3c3ab0e396c194a7314d64546c81e9ba4973b72
+Current commit: e3c3ab0e396c194a7314d64546c81e9ba4973b72
+Command:
+Working directory: /Users/navneetbavineni/STEGO/src
+WANDB_MODE=offline HF_HUB_OFFLINE=1 caffeinate -i python3 -B train_segmentation.py "pytorch_data_dir=$PWD/pytorch_data_dir" experiment_name=fixes3_full_C max_steps=5000 seed=0 extra_clusters=6 collapse_early_stop=True pos_intra_shift=0.4584466218948364 pos_inter_shift=0.45247218012809753 neg_inter_shift=0.7459585666656494
+Stdout/stderr: train.log. Shell records exit_code.txt after process exits.
+
+Exit code:0. train.log:784 records Trainer.fit stopped: max_steps=15000 reached. Final checkpoint global_step=15000, manual optimizer completed15000, batches processed5000. Three optimizer steps per batch (src/train_segmentation.py:695); thus5000 batches completed. Checkpoint loop completed4999 is bookkeeping captured inside the last batch-end checkpoint hook, not evidence that only4999 optimizer batches ran. Final full training epoch42 partial86/117 is consistent with42*117+86=5000.
+collapse_early_stop=True; no trigger across85 validation checks; every consecutive_bad_checks value is0. Actual final checkpoint was saved, but no validation at batch5000 was logged. Latest in-training validation:4964. Read-only final-checkpoint evaluation below resolves that36-batch gap.
+Monitor heartbeat metadata currently PAUSED. Earlier summary.txt and monitor_summary.json were stale early-run records; use this final_summary.txt and postrun_evidence.json. No claim that the scheduled heartbeat executed is made.
+
+FINAL EXACT CHECKPOINT EVALUATION (batch5000, optimizer step15000)
+{
+  "checkpoint": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=42-step=15000-mIoU=test/cluster/mIoU=46.1792.ckpt",
+  "global_step": 15000,
+  "batches": 5000,
+  "strict_load": true,
+  "eval_mode": true,
+  "images": 472,
+  "monitors": {
+    "code_std": 0.11264951444789059,
+    "cross_image_cosine": 0.08160950741423995,
+    "cluster_usage": [
+      0.04863528684116655,
+      0.16408200760441888,
+      0.12694755139873745,
+      0.1178562054787487,
+      0.18841660406217572,
+      0.10151364654044881,
+      0.10843301916237894,
+      0.14411567891192495
+    ],
+    "cluster_entropy": 2.0244065580538315,
+    "images": 472
+  },
+  "metrics": {
+    "test/cluster/mIoU": 46.17916643619537,
+    "test/cluster/Accuracy": 92.35833287239075,
+    "test/cluster/liver_IoU": 0.0,
+    "test/cluster/liver_Dice": 0.0
+  },
+  "mapping": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "confusion": [
+    [
+      1151813,
+      20
+    ],
+    [
+      3884664,
+      1302
+    ],
+    [
+      1965682,
+      1040826
+    ],
+    [
+      2783146,
+      8051
+    ],
+    [
+      4462030,
+      254
+    ],
+    [
+      1787000,
+      617155
+    ],
+    [
+      2425875,
+      142152
+    ],
+    [
+      3413080,
+      22
+    ]
+  ],
+  "overlay": "/Users/navneetbavineni/STEGO/audit/run_records/fixes3_full_C/final_checkpoint_overlay.png",
+  "seconds": 19.86166208299983
+}
+Last recorded consecutive bad checks:0 at batch4964. Fresh final-checkpoint monitors satisfy both thresholds (cosine<=.99 and std>=.01); no representation-collapse condition.
+Final cluster usage percentages, IDs0..7: [4.863528684116655, 16.408200760441886, 12.694755139873745, 11.78562054787487, 18.84166040621757, 10.151364654044881, 10.843301916237893, 14.411567891192496]
+Final mapping: all clusters ->background. No cluster mapped to liver. No raw cluster has majority liver pixels: cluster2 contains1,040,826 liver /3,006,508 total pixels (34.619100%); its broad non-liver coverage prevents liver mapping. This is loss of liver-specific grouping, not single-cluster representation collapse. Final accuracy92.35833287239075% equals background prevalence; final mean IoU46.17916643619537% is the two-class mean with liver IoU0.
+
+LATEST IN-TRAINING VALIDATION (not final saved checkpoint metrics)
+{
+  "code_std": 0.11262698541628348,
+  "cross_image_cosine": 0.08197233496137245,
+  "cluster_usage": [
+    0.048666237217874435,
+    0.16447114631074888,
+    0.12702857973830423,
+    0.11738092929836129,
+    0.18827270381139743,
+    0.10168748378588724,
+    0.10818858296761501,
+    0.14430433686981148
+  ],
+  "cluster_entropy": 2.0243322533170804,
+  "images": 472,
+  "batches": 4964,
+  "optimizer_steps": 14892,
+  "consecutive_bad_checks": 0,
+  "early_stopped": false,
+  "metrics": {
+    "test/linear/mIoU": 20.465664565563202,
+    "test/linear/Accuracy": 35.71673333644867,
+    "test/linear/liver_IoU": 10.394484549760818,
+    "test/linear/liver_Dice": 18.831530213356018,
+    "test/cluster/mIoU": 46.17916643619537,
+    "test/cluster/Accuracy": 92.35833287239075,
+    "test/cluster/liver_IoU": 0.0,
+    "test/cluster/liver_Dice": 0.0
+  },
+  "fixed_samples": [
+    "CT_5_0048",
+    "CT_6_0047",
+    "CT_8_0059",
+    "CT_30_0139"
+  ],
+  "fixed_overlay_path": "../logs/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/lightning_logs/version_0/fixed_slices_batch_004964.png",
+  "cluster_to_class": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}
+
+BEST OBSERVED DURING FULL TRAINING (measurement, not a saved checkpoint)
+{
+  "code_std": 0.11219537679367458,
+  "cross_image_cosine": 0.04946466964624407,
+  "cluster_usage": [
+    0.056143814451098235,
+    0.14478582001524126,
+    0.08562183149213075,
+    0.06495280679803701,
+    0.00014208460794275338,
+    0.23817889841317882,
+    0.1761383404990704,
+    0.23403640372330076
+  ],
+  "cluster_entropy": 1.8182430768187812,
+  "images": 472,
+  "batches": 518,
+  "optimizer_steps": 1554,
+  "consecutive_bad_checks": 0,
+  "early_stopped": false,
+  "metrics": {
+    "test/linear/mIoU": 25.85301101207733,
+    "test/linear/Accuracy": 44.74764168262482,
+    "test/linear/liver_IoU": 11.014540493488312,
+    "test/linear/liver_Dice": 19.843418896198273,
+    "test/cluster/mIoU": 69.79522109031677,
+    "test/cluster/Accuracy": 93.99442672729492,
+    "test/cluster/liver_IoU": 45.91870307922363,
+    "test/cluster/liver_Dice": 62.937378883361816
+  },
+  "fixed_samples": [
+    "CT_5_0048",
+    "CT_6_0047",
+    "CT_8_0059",
+    "CT_30_0139"
+  ],
+  "fixed_overlay_path": "../logs/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/lightning_logs/version_0/fixed_slices_batch_000518.png",
+  "cluster_to_class": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}
+Maximum liver Dice occurred at batch518 and was 62.937378883361816%. Maximum cluster mIoU also occurred at batch518.
+No checkpoint at batch518/step1554 exists among the50 saved checkpoints. The best logged liver result must not be assigned to the recorded best saved checkpoint.
+Last nonzero liver IoU measurement: batch568. Every logged validation from batch635 through4964 has liver IoU/Dice0 (75 measurements).
+
+RECORDED BEST CHECKPOINT / SELECTION CRITERION
+ModelCheckpoint monitor=test/cluster/mIoU, mode=max, save_top_k=-1, every_n_train_steps=100 (src/train_segmentation.py:692-706). All50 saved checkpoints inspected using torch.load(map_location=cpu,mmap=True), metadata only for inventory. Final callback best_model_path: /Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=05-step=1800-mIoU=test/cluster/mIoU=69.3704.ckpt
+Stored best_model_score: 69.37039184570312%. Its weights are batch600/step1800; score comes from preceding validation batch568/step1704 (mIoU69.37039494514465%). Checkpoint saves occurred every100 training batches/300 optimizer steps in the actual files, while validation used different intervals. Consequently checkpoint scores/filenames lag their saved weights. The stored best means highest available monitored score at a SAVE event; it does not prove the saved model has that score or is the true highest-scoring saved model under fresh evaluation.
+Use this metadata-selected best checkpoint for evaluation/submission under the RECORDED selection criterion, not the terminal checkpoint. It loads strictly with no missing/unexpected keys and has a liver-mapped cluster in fresh evaluation. This recommendation is criterion-based, not a claim that it is clinically useful or the strongest among every saved checkpoint after re-evaluation; only selected-best and terminal weights were freshly evaluated.
+Fresh read-only evaluation of the selected best checkpoint:
+{
+  "checkpoint": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=05-step=1800-mIoU=test/cluster/mIoU=69.3704.ckpt",
+  "global_step": 1800,
+  "batches": 600,
+  "strict_load": true,
+  "eval_mode": true,
+  "images": 472,
+  "monitors": {
+    "code_std": 0.11158012777201123,
+    "cross_image_cosine": 0.07093274294949342,
+    "cluster_usage": [
+      0.059521627937456766,
+      0.17965794302360774,
+      0.09889709409319872,
+      0.041584807916810795,
+      0.002379969963356105,
+      0.1542972972425199,
+      0.22915971373983915,
+      0.23450154608321083
+    ],
+    "cluster_entropy": 1.8178745157518454,
+    "images": 472
+  },
+  "metrics": {
+    "test/cluster/mIoU": 68.63282918930054,
+    "test/cluster/Accuracy": 93.24977993965149,
+    "test/cluster/liver_IoU": 44.40049231052399,
+    "test/cluster/liver_Dice": 61.4963173866272
+  },
+  "mapping": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "confusion": [
+    [
+      1409653,
+      2
+    ],
+    [
+      4241990,
+      12862
+    ],
+    [
+      1065533,
+      1276654
+    ],
+    [
+      977722,
+      7134
+    ],
+    [
+      56359,
+      6
+    ],
+    [
+      3451675,
+      202559
+    ],
+    [
+      5116641,
+      310565
+    ],
+    [
+      5553717,
+      0
+    ]
+  ],
+  "overlay": "/Users/navneetbavineni/STEGO/audit/run_records/fixes3_full_C/best_checkpoint_overlay.png",
+  "seconds": 20.225680792005733
+}
+Checkpoint existence, exact bytes and SHA256:
+{
+  "best_original": {
+    "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=05-step=1800-mIoU=test/cluster/mIoU=69.3704.ckpt",
+    "exists": true,
+    "bytes": 792437477,
+    "sha256": "d200f27f414f3b7f4e691d249abe88552b807629612587f5f095c9e5494b896e"
+  },
+  "best_audit_copy": {
+    "path": "/Users/navneetbavineni/STEGO/audit/run_records/fixes3_full_C/best_checkpoint.ckpt",
+    "exists": true,
+    "bytes": 792437477,
+    "sha256": "d200f27f414f3b7f4e691d249abe88552b807629612587f5f095c9e5494b896e"
+  },
+  "final": {
+    "path": "/Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/checkpoint-epoch=42-step=15000-mIoU=test/cluster/mIoU=46.1792.ckpt",
+    "exists": true,
+    "bytes": 792455565,
+    "sha256": "e1c58ed7ae14a514c7bea58d1119d14db1217a5514201f68073e64212cbc5e02"
+  }
+}
+The best audit copy is byte-identical to its original; original files unchanged. Final checkpoint is the file withstep15000, not a last.ckpt alias (callback last_model_path is empty).
+
+SEED COMPARISON
+Seed0/1/2 measured at500 batches; Full C below is fresh evaluation of exact5000-batch checkpoint. All use472 val slices,4 patients, primary raw cluster probe, majority mapping fitted for evaluation. Metric unitspercent; active means>=1% of pixels. All four use8 clusters with nonzero counts; seed0 has only7 above1%.
+Metric | Seed0 | Seed1 | Seed2 | Full C (exact final)
+--- | --- | --- | --- | ---
+code std | 0.112303761 | 0.111622165 | 0.112866785 | 0.112649514
+cosine | 0.046337278 | 0.071908945 | 0.049499290 | 0.081609507
+entropy | 1.833084884 | 1.988681205 | 1.956188730 | 2.024406558
+active clusters (>=1%) | 7 | 8 | 8 | 8
+liver IoU | 43.748989701 | 0.000000000 | 0.000000000 | 0.000000000
+liver Dice | 60.868585110 | 0.000000000 | 0.000000000 | 0.000000000
+cluster mIoU | 68.854320049 | 46.179166436 | 46.179166436 | 46.179166436
+cluster accuracy | 94.230687618 | 92.358332872 | 92.358332872 | 92.358332872
+collapsed? | No | No | No | No
+Interpretation: stability reproduced across all seeds, liver specificity did not. Final Full C did not preserve seed0 liver quality and is not superior to B on final liver metrics (both0). Full-run peak slightly exceeded seed0 numerically but is selected over many evaluations on the same small validation set; it does not establish C superiority/generalization.
+
+VISUAL INSPECTION
+Same fixed slices: CT_5_0048, CT_6_0047, CT_8_0059, CT_30_0139. Raw colours are cluster IDs, not anatomical labels; red prediction overlay uses the evaluation-only mapping.
+Final exact-checkpoint overlay: /Users/navneetbavineni/STEGO/audit/run_records/fixes3_full_C/final_checkpoint_overlay.png
+Observed: no red predicted liver because all clusters map to background. Raw maps remain spatially coherent/coarse: most abdominal tissue is merged on three panels; the second panel has a broad green region across much of the abdomen. This is not accurate liver segmentation despite noncollapsed codes.
+Best exact-checkpoint overlay: /Users/navneetbavineni/STEGO/audit/run_records/fixes3_full_C/best_checkpoint_overlay.png
+Observed: green cluster2/red mapped region roughly locates liver but spills strongly into other tissue in CT_5_0048 and especially across the abdomen in CT_6_0047; CT_8_0059 covers only part of liver; CT_30_0139 undersegments. Boundaries are coarse. Meaningful organ information is present but quality is inadequate to call the output clean liver segmentation.
+Best LOGGED measurement overlay (batch518): /Users/navneetbavineni/STEGO/logs/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/lightning_logs/version_0/fixed_slices_batch_000518.png
+Latest LOGGED overlay (batch4964): /Users/navneetbavineni/STEGO/logs/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/lightning_logs/version_0/fixed_slices_batch_004964.png
+Seed0 overlay: /Users/navneetbavineni/STEGO/audit/scratch/fixes3/fixes3_C_seed0_final.png
+Seed1 overlay: /Users/navneetbavineni/STEGO/audit/scratch/fixes3/fixes3_C_seed1_final.png
+Seed2 overlay: /Users/navneetbavineni/STEGO/audit/scratch/fixes3/fixes3_C_seed2_final.png
+Direct comparison: seed0 and the full-run early-best overlays show similar liver-like grouping with substantial spill; seeds1/2 show broad body/abdominal groupings and no mapped liver. Final Full C resembles the latter failure in class mapping and is visibly worse than seed0 at isolating liver. No cross-seed cluster-ID equivalence is assumed.
+
+WARNINGS / EVIDENCE LIMITS
+No Traceback or training exception recorded; exit0 and max_steps stop confirm normal completion.50 manual-optimization checkpoint warnings state weights are saved AFTER optimization, so these are post-update weights. Material checkpoint issue: scores lag model weights because validation and save schedules differ; independently verified above. One TorchMetrics compute-before-update warning occurs near initialization;85 full validations and both independent evaluations still completed, and logs cross-check. Its exact originating initialization metric is UNVERIFIED, so no unsupported claim about its effect is made. Hydra version/working-directory compatibility warnings, pytree deprecation, low-worker performance hints and512 frozen modules in eval-mode warning appear; no termination or numerical failure is recorded from them. Full list with log line numbers: postrun_evidence.json/warnings and train.log.
+Primary sources: validation_diagnostics.jsonl has85 complete measurements and85 existing fixed panels;50 checkpoint files. TensorBoard three event files contain matching85 monitor records and85 non-initial cluster records plus one extra initial cluster record. 1275 metric/monitor values match JSONL within1e-5; no mismatches. W&B offline history has85 validation rows; 1275 values match within1e-5. W&B summary records latest validation4964 while trainer/global_step4999 reflects zero-based batch progress; do not interpret it as optimizer step. Rounded logger values differ in last digits from full-precision JSONL.
+Consecutive bad checks are historical state, not re-fit after loading. No final5000 in-training measurement exists; fresh audit evaluation explicitly supplies final checkpoint metrics. No test-set or external-patient generalization evaluation performed. No supervised probe newly fitted; current full-run linear-head logs are an unchanged diagnostic head and are not used as evidence of liver quality.
+
+EVERY IN-TRAINING VALIDATION MEASUREMENT
+Source: /Users/navneetbavineni/STEGO/logs/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58/lightning_logs/version_0/validation_diagnostics.jsonl; line number=measurement index. Units: metricspercent, cluster usagefractions, entropy natural-log units. Fixed overlay per row uses fixed_slices_batch_<six-digit batch>.png in the same directory. Original source also retains linear diagnostic metrics; postrun_evidence.json preserves every field.
+line | batch | opt_step | std | cosine | entropy | active>=1% | bad | stopped | liverIoU | liverDice | mIoU | accuracy | liver cluster IDs | usage IDs0..7
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
+1 | 50 | 150 | 0.105835590 | 0.142615050 | 1.603166851 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0116691,0.0521540,0.0466820,0.0903934,0.0311344,0.4266986,0.0916423,0.2496262
+2 | 100 | 300 | 0.110021644 | 0.072296040 | 1.573104806 | 7 | 0 | False | 30.644437671 | 46.912729740 | 62.146621943 | 93.822169304 | 2 | 0.0091062,0.0306885,0.0399545,0.0724612,0.0176597,0.3687332,0.1798333,0.2815633
+3 | 167 | 501 | 0.110912840 | 0.053837690 | 1.638282165 | 7 | 0 | False | 31.822445989 | 48.280769587 | 62.881547213 | 94.107311964 | 2 | 0.0235697,0.0487764,0.0375195,0.0906391,0.0035584,0.3070229,0.1963868,0.2925271
+4 | 217 | 651 | 0.111518395 | 0.043769754 | 1.619142350 | 7 | 0 | False | 30.026048422 | 46.184667945 | 62.021505833 | 94.166713953 | 2 | 0.0199183,0.0593540,0.0319779,0.0819810,0.0020307,0.3146554,0.2029335,0.2871492
+5 | 284 | 852 | 0.111824884 | 0.040413424 | 1.639009507 | 7 | 0 | False | 25.215554237 | 40.275433660 | 59.469664097 | 93.853855133 | 2 | 0.0251211,0.0627098,0.0264915,0.0925081,0.0004850,0.2671249,0.2382579,0.2873017
+6 | 334 | 1002 | 0.111923703 | 0.040755906 | 1.720029624 | 7 | 0 | False | 35.827714205 | 52.754646540 | 65.059018135 | 94.466716051 | 2 | 0.0372634,0.0891651,0.0407014,0.0897965,0.0004917,0.2768967,0.2072239,0.2584613
+7 | 401 | 1203 | 0.111351787 | 0.054682582 | 1.770048380 | 7 | 0 | False | 38.490489125 | 55.585747957 | 66.399759054 | 94.504731894 | 2 | 0.0480819,0.1187843,0.0473110,0.0927937,0.0007807,0.2943036,0.1792025,0.2187423
+8 | 451 | 1353 | 0.112192525 | 0.043042526 | 1.800333661 | 7 | 0 | False | 43.827959895 | 60.944980383 | 68.987989426 | 94.403547049 | 2 | 0.0536249,0.1262845,0.0668800,0.0741966,0.0002039,0.2496910,0.2049463,0.2241729
+9 | 518 | 1554 | 0.112195377 | 0.049464670 | 1.818243077 | 7 | 0 | False | 45.918703079 | 62.937378883 | 69.795221090 | 93.994426727 | 2 | 0.0561438,0.1447858,0.0856218,0.0649528,0.0001421,0.2381789,0.1761383,0.2340364
+10 | 568 | 1704 | 0.112123982 | 0.056844192 | 1.822581160 | 7 | 0 | False | 45.430696011 | 62.477451563 | 69.370394945 | 93.663036823 | 2 | 0.0576718,0.1618923,0.0924676,0.0543030,0.0004777,0.1951645,0.1942175,0.2438055
+11 | 635 | 1905 | 0.111305297 | 0.081312308 | 1.855060260 | 7 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0633430,0.2448831,0.1201164,0.0448893,0.0060581,0.1599271,0.1848697,0.1759135
+12 | 685 | 2055 | 0.112675865 | 0.061704238 | 1.861109145 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0615395,0.2435542,0.1262900,0.0381231,0.0123908,0.1418934,0.1798632,0.1963458
+13 | 752 | 2256 | 0.113030167 | 0.057934736 | 1.911945680 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0601043,0.2260304,0.1297991,0.0246547,0.0543156,0.1423054,0.1529504,0.2098401
+14 | 802 | 2406 | 0.113759040 | 0.047381346 | 1.953413448 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0613167,0.2210435,0.1413369,0.0216798,0.1077124,0.1317783,0.1493523,0.1657801
+15 | 869 | 2607 | 0.110398115 | 0.103682866 | 1.888218285 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0618701,0.2192448,0.1421354,0.0113459,0.2280999,0.0933234,0.1663882,0.0775923
+16 | 919 | 2757 | 0.110167242 | 0.109959767 | 1.896569887 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0619072,0.2121372,0.1367570,0.0144371,0.2215482,0.0857306,0.1854092,0.0820736
+17 | 986 | 2958 | 0.112654967 | 0.071130723 | 1.930996822 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0608737,0.1918619,0.1498345,0.0168743,0.2170657,0.1052497,0.1582039,0.1000363
+18 | 1036 | 3108 | 0.111268194 | 0.093221410 | 1.906302746 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0579280,0.2066431,0.1401007,0.0276240,0.2401559,0.0730019,0.1737877,0.0807586
+19 | 1103 | 3309 | 0.113187886 | 0.064198722 | 1.920674141 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0590421,0.2094167,0.1472005,0.0193040,0.2276433,0.1065257,0.1415042,0.0893635
+20 | 1153 | 3459 | 0.112026342 | 0.082616249 | 1.904577911 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0573077,0.2150927,0.1465239,0.0152980,0.2323617,0.1016753,0.1425198,0.0892207
+21 | 1220 | 3660 | 0.111855853 | 0.085825311 | 1.903782220 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0587162,0.2105828,0.1536240,0.0166266,0.2345903,0.0874127,0.1478132,0.0906342
+22 | 1270 | 3810 | 0.110674766 | 0.105173265 | 1.900029650 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0577106,0.2146161,0.1504774,0.0145090,0.2258737,0.0895269,0.1590439,0.0882424
+23 | 1337 | 4011 | 0.112348212 | 0.077801072 | 1.908689257 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0566031,0.2082169,0.1618843,0.0211531,0.2360567,0.0782933,0.1393321,0.0984605
+24 | 1387 | 4161 | 0.111986605 | 0.085381608 | 1.913437828 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0571187,0.2140292,0.1500100,0.0193104,0.2336274,0.0996647,0.1326622,0.0935774
+25 | 1454 | 4362 | 0.111249470 | 0.097255254 | 1.893935406 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0568673,0.2158974,0.1608399,0.0112369,0.2294671,0.0867921,0.1347138,0.1041856
+26 | 1504 | 4512 | 0.112798671 | 0.071955181 | 1.884130699 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0561995,0.2350438,0.1729314,0.0125120,0.2239180,0.0868981,0.1033416,0.1091557
+27 | 1571 | 4713 | 0.112260197 | 0.081835248 | 1.897935151 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0544626,0.2122717,0.1568191,0.0138800,0.2399544,0.0939053,0.1160101,0.1126968
+28 | 1621 | 4863 | 0.111159378 | 0.099988868 | 1.903056110 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0553533,0.2020723,0.1587091,0.0165966,0.2384965,0.0766070,0.1388257,0.1133394
+29 | 1688 | 5064 | 0.111542524 | 0.094036502 | 1.898439806 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0543874,0.2161592,0.1587257,0.0153986,0.2334125,0.0798266,0.1226106,0.1194794
+30 | 1738 | 5214 | 0.111905057 | 0.088470315 | 1.898761502 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0540120,0.2167926,0.1650675,0.0158327,0.2331029,0.0866748,0.1070541,0.1214634
+31 | 1805 | 5415 | 0.112468171 | 0.080009379 | 1.902110656 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0538437,0.2116735,0.1642573,0.0186249,0.2342839,0.0774117,0.1061958,0.1337093
+32 | 1855 | 5565 | 0.111855314 | 0.090751516 | 1.899998113 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0549339,0.2294220,0.1652653,0.0157670,0.2200163,0.0975542,0.0928809,0.1241605
+33 | 1922 | 5766 | 0.111930701 | 0.088575206 | 1.900767187 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0539934,0.2164118,0.1656164,0.0146871,0.2230099,0.0847459,0.1043996,0.1371358
+34 | 1972 | 5916 | 0.111757188 | 0.092863631 | 1.897946367 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0539666,0.2249352,0.1653012,0.0162829,0.2252655,0.0928295,0.0910845,0.1303346
+35 | 2039 | 6117 | 0.111324063 | 0.099179884 | 1.897342160 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0531544,0.2269042,0.1642387,0.0144814,0.2157913,0.0871854,0.0981594,0.1400852
+36 | 2089 | 6267 | 0.110844369 | 0.106600429 | 1.910767503 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0540768,0.2083064,0.1677830,0.0211464,0.2256150,0.0714946,0.1150316,0.1365463
+37 | 2156 | 6468 | 0.112150226 | 0.085929960 | 1.917766328 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0530405,0.2107325,0.1686616,0.0242059,0.2198724,0.0785253,0.1014786,0.1434831
+38 | 2206 | 6618 | 0.112848906 | 0.076029279 | 1.906816326 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0527200,0.2125894,0.1641827,0.0198777,0.2258695,0.0863638,0.0911667,0.1472303
+39 | 2273 | 6819 | 0.111384471 | 0.099180993 | 1.908600379 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0529359,0.2114288,0.1594976,0.0182540,0.2234921,0.0830297,0.1027932,0.1485686
+40 | 2323 | 6969 | 0.112372127 | 0.082976311 | 1.910442690 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0529421,0.2169675,0.1618889,0.0173144,0.2136568,0.0965849,0.0919469,0.1486984
+41 | 2390 | 7170 | 0.113522014 | 0.064650897 | 1.913225823 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0520696,0.2225358,0.1617942,0.0223593,0.2145601,0.0907137,0.0894048,0.1465624
+42 | 2440 | 7320 | 0.111831587 | 0.091949641 | 1.912247140 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0532194,0.2213412,0.1620655,0.0191286,0.2107374,0.0906280,0.0943872,0.1484927
+43 | 2507 | 7521 | 0.112700059 | 0.078242353 | 1.928595297 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0519541,0.2071963,0.1618589,0.0279434,0.2186884,0.0897892,0.0933451,0.1492246
+44 | 2557 | 7671 | 0.111871805 | 0.092133390 | 1.932103104 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0537643,0.2225487,0.1631795,0.0270115,0.1979429,0.0895767,0.0981077,0.1478687
+45 | 2624 | 7872 | 0.112256660 | 0.086330112 | 1.926559928 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0514062,0.2160247,0.1561848,0.0266686,0.2147070,0.0959148,0.0913614,0.1477325
+46 | 2674 | 8022 | 0.112714065 | 0.079023436 | 1.935705296 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0528668,0.2114298,0.1586849,0.0292128,0.2088952,0.0897039,0.0973828,0.1518239
+47 | 2741 | 8223 | 0.113005721 | 0.074751785 | 1.932779133 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0516793,0.2111891,0.1573632,0.0281553,0.2101912,0.0936340,0.0939564,0.1538316
+48 | 2791 | 8373 | 0.112551739 | 0.081365404 | 1.944598940 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0512094,0.2098570,0.1560873,0.0364326,0.2120969,0.0914159,0.0956579,0.1472429
+49 | 2858 | 8574 | 0.113209519 | 0.070847542 | 1.944299874 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0514340,0.2059695,0.1576206,0.0362166,0.2145149,0.0910237,0.0947663,0.1484543
+50 | 2908 | 8724 | 0.112768271 | 0.077989613 | 1.951765925 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0518067,0.2046387,0.1555912,0.0381433,0.2079701,0.0903580,0.0993068,0.1521853
+51 | 2975 | 8925 | 0.111953025 | 0.091194560 | 1.948838132 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0516064,0.2122272,0.1558267,0.0367830,0.2039990,0.0921386,0.0981566,0.1492626
+52 | 3025 | 9075 | 0.111855753 | 0.093407634 | 1.949631714 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0516370,0.2025972,0.1523460,0.0345339,0.2096990,0.0963074,0.0998427,0.1530368
+53 | 3092 | 9276 | 0.112300950 | 0.085467174 | 1.958367766 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0512963,0.2034450,0.1532213,0.0412828,0.2056418,0.0938383,0.0995176,0.1517568
+54 | 3142 | 9426 | 0.112295332 | 0.086154581 | 1.968816103 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0515741,0.2028435,0.1520716,0.0496181,0.2047755,0.0946949,0.0979555,0.1464669
+55 | 3209 | 9627 | 0.111815275 | 0.094173043 | 1.976741891 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0511396,0.1909072,0.1485863,0.0546703,0.2088273,0.0946224,0.1006049,0.1506421
+56 | 3259 | 9777 | 0.112713419 | 0.079750881 | 1.975920268 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0513726,0.1918085,0.1491394,0.0530812,0.2075701,0.0956517,0.1003355,0.1510410
+57 | 3326 | 9978 | 0.112014085 | 0.091278050 | 1.985748318 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0509352,0.1913454,0.1483286,0.0649044,0.2046298,0.0911400,0.1012416,0.1474749
+58 | 3376 | 10128 | 0.113000915 | 0.075566383 | 1.990603191 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0505172,0.1765629,0.1472237,0.0688943,0.2112184,0.0929557,0.1021006,0.1505272
+59 | 3443 | 10329 | 0.111724788 | 0.095836344 | 1.990721190 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0506384,0.1799829,0.1478220,0.0666107,0.2055964,0.0928759,0.1036824,0.1527913
+60 | 3493 | 10479 | 0.111879320 | 0.093450845 | 1.996077699 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0508251,0.1838375,0.1439834,0.0718518,0.2031786,0.0957712,0.1033012,0.1472512
+61 | 3560 | 10680 | 0.112616476 | 0.082073796 | 2.002164141 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0500946,0.1681971,0.1434846,0.0820564,0.2080665,0.0917189,0.1061118,0.1502702
+62 | 3610 | 10830 | 0.112685401 | 0.080660080 | 2.005480320 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0503001,0.1747414,0.1430368,0.0811214,0.2006570,0.0994053,0.1028279,0.1479102
+63 | 3677 | 11031 | 0.112823085 | 0.078246193 | 2.007054654 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0503847,0.1667486,0.1450071,0.0875057,0.2045705,0.0923974,0.1055787,0.1478073
+64 | 3727 | 11181 | 0.112297591 | 0.086679430 | 2.007927038 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0502637,0.1725672,0.1414983,0.0846381,0.1991212,0.0969371,0.1048783,0.1500961
+65 | 3794 | 11382 | 0.112797573 | 0.078643587 | 2.011695426 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0501582,0.1668208,0.1410218,0.0932117,0.2029539,0.0962526,0.1056262,0.1439547
+66 | 3844 | 11532 | 0.112477637 | 0.084219576 | 2.015440836 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0501782,0.1730770,0.1380439,0.0953217,0.1939793,0.1002731,0.1041998,0.1449271
+67 | 3911 | 11733 | 0.112450852 | 0.084729734 | 2.014581457 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0500560,0.1707431,0.1371588,0.0955344,0.1977557,0.1003665,0.1039972,0.1443882
+68 | 3961 | 11883 | 0.113091055 | 0.074453484 | 2.014030313 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0495494,0.1643371,0.1364329,0.0964725,0.2014356,0.0989066,0.1054207,0.1474453
+69 | 4028 | 12084 | 0.112493357 | 0.084167432 | 2.015483227 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0497001,0.1669049,0.1361852,0.0963215,0.1975608,0.1001753,0.1054241,0.1477282
+70 | 4078 | 12234 | 0.112704655 | 0.080256286 | 2.016071007 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0494859,0.1614504,0.1361371,0.1027664,0.2022643,0.0965230,0.1074456,0.1439274
+71 | 4145 | 12435 | 0.112546995 | 0.083294602 | 2.016992286 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0494402,0.1634168,0.1347951,0.1019262,0.2002708,0.1008056,0.1051052,0.1442402
+72 | 4195 | 12585 | 0.112886724 | 0.077539525 | 2.019299553 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0495119,0.1636699,0.1338827,0.1059652,0.1972753,0.0997609,0.1064764,0.1434577
+73 | 4262 | 12786 | 0.112382491 | 0.085984777 | 2.019993787 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0493805,0.1642550,0.1333416,0.1059559,0.1955245,0.1006141,0.1068096,0.1441188
+74 | 4312 | 12936 | 0.112905836 | 0.077334234 | 2.019456472 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0492369,0.1655704,0.1331831,0.1063064,0.1953754,0.1003875,0.1059385,0.1440018
+75 | 4379 | 13137 | 0.112782414 | 0.079420756 | 2.020665063 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0492053,0.1653476,0.1328592,0.1077549,0.1933903,0.1009983,0.1059202,0.1445241
+76 | 4429 | 13287 | 0.112641678 | 0.081642528 | 2.021636209 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0492886,0.1672021,0.1324980,0.1083574,0.1913688,0.1021623,0.1059688,0.1431540
+77 | 4496 | 13488 | 0.112560196 | 0.082894997 | 2.020922630 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0490428,0.1657885,0.1312508,0.1086435,0.1927183,0.1007738,0.1067933,0.1449890
+78 | 4546 | 13638 | 0.112667960 | 0.081185695 | 2.021911547 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0490741,0.1677208,0.1305151,0.1100864,0.1901888,0.1018140,0.1062053,0.1443954
+79 | 4613 | 13839 | 0.112606232 | 0.082298684 | 2.022435109 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0489791,0.1667126,0.1299589,0.1115289,0.1901880,0.1019785,0.1065208,0.1441334
+80 | 4663 | 13989 | 0.112727757 | 0.080377966 | 2.022181080 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0489517,0.1666147,0.1295830,0.1103279,0.1903047,0.1024181,0.1065242,0.1452757
+81 | 4730 | 14190 | 0.112636168 | 0.081826220 | 2.023066886 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0489109,0.1671669,0.1288277,0.1127583,0.1888443,0.1022239,0.1069648,0.1443033
+82 | 4780 | 14340 | 0.112716126 | 0.080595493 | 2.023180088 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0488329,0.1655800,0.1284197,0.1132296,0.1895727,0.1020380,0.1075241,0.1448030
+83 | 4847 | 14541 | 0.112539441 | 0.083384124 | 2.024361442 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0488243,0.1647657,0.1281491,0.1167487,0.1884815,0.1013225,0.1084631,0.1432451
+84 | 4897 | 14691 | 0.112559471 | 0.083061706 | 2.024315331 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0487697,0.1646076,0.1275648,0.1167959,0.1884797,0.1017875,0.1080651,0.1439297
+85 | 4964 | 14892 | 0.112626985 | 0.081972335 | 2.024332253 | 8 | 0 | False | 0.000000000 | 0.000000000 | 46.179166436 | 92.358332872 | none | 0.0486662,0.1644711,0.1270286,0.1173809,0.1882727,0.1016875,0.1081886,0.1443043
+
+EVERY SAVED CHECKPOINT
+Paths are relative to /Users/navneetbavineni/STEGO/checkpoints/chaos/chaos_fixes3_full_C_date_Sep30_19-47-58. Metric shown is stored current_score at save, not fresh evaluation. Source: postrun_evidence.json/checkpoints; all50 loaded successfully for metadata. Every file exists with its recorded byte size.
+batch | opt_step | preceding validation | stored mIoU | bytes | path
+--- | --- | --- | --- | --- | ---
+100 | 300 | 100 | 46.17916488647461 | 792435439 | checkpoint-epoch=00-step=0300-mIoU=test/cluster/mIoU=46.1792.ckpt
+200 | 600 | 167 | 62.88154602050781 | 792435821 | checkpoint-epoch=01-step=0600-mIoU=test/cluster/mIoU=62.8815.ckpt
+300 | 900 | 284 | 59.46966552734375 | 792436267 | checkpoint-epoch=02-step=0900-mIoU=test/cluster/mIoU=59.4697.ckpt
+400 | 1200 | 334 | 65.05902099609375 | 792436649 | checkpoint-epoch=03-step=1200-mIoU=test/cluster/mIoU=65.0590.ckpt
+500 | 1500 | 451 | 68.98799133300781 | 792437095 | checkpoint-epoch=04-step=1500-mIoU=test/cluster/mIoU=68.9880.ckpt
+600 | 1800 | 568 | 69.37039184570312 | 792437477 | checkpoint-epoch=05-step=1800-mIoU=test/cluster/mIoU=69.3704.ckpt
+700 | 2100 | 685 | 46.17916488647461 | 792437923 | checkpoint-epoch=05-step=2100-mIoU=test/cluster/mIoU=46.1792.ckpt
+800 | 2400 | 752 | 46.17916488647461 | 792438305 | checkpoint-epoch=06-step=2400-mIoU=test/cluster/mIoU=46.1792.ckpt
+900 | 2700 | 869 | 46.17916488647461 | 792438687 | checkpoint-epoch=07-step=2700-mIoU=test/cluster/mIoU=46.1792.ckpt
+1000 | 3000 | 986 | 46.17916488647461 | 792439133 | checkpoint-epoch=08-step=3000-mIoU=test/cluster/mIoU=46.1792.ckpt
+1100 | 3300 | 1036 | 46.17916488647461 | 792439515 | checkpoint-epoch=09-step=3300-mIoU=test/cluster/mIoU=46.1792.ckpt
+1200 | 3600 | 1153 | 46.17916488647461 | 792439961 | checkpoint-epoch=10-step=3600-mIoU=test/cluster/mIoU=46.1792.ckpt
+1300 | 3900 | 1270 | 46.17916488647461 | 792440343 | checkpoint-epoch=11-step=3900-mIoU=test/cluster/mIoU=46.1792.ckpt
+1400 | 4200 | 1387 | 46.17916488647461 | 792440789 | checkpoint-epoch=11-step=4200-mIoU=test/cluster/mIoU=46.1792.ckpt
+1500 | 4500 | 1454 | 46.17916488647461 | 792441171 | checkpoint-epoch=12-step=4500-mIoU=test/cluster/mIoU=46.1792.ckpt
+1600 | 4800 | 1571 | 46.17916488647461 | 792441553 | checkpoint-epoch=13-step=4800-mIoU=test/cluster/mIoU=46.1792.ckpt
+1700 | 5100 | 1688 | 46.17916488647461 | 792441999 | checkpoint-epoch=14-step=5100-mIoU=test/cluster/mIoU=46.1792.ckpt
+1800 | 5400 | 1738 | 46.17916488647461 | 792442381 | checkpoint-epoch=15-step=5400-mIoU=test/cluster/mIoU=46.1792.ckpt
+1900 | 5700 | 1855 | 46.17916488647461 | 792442827 | checkpoint-epoch=16-step=5700-mIoU=test/cluster/mIoU=46.1792.ckpt
+2000 | 6000 | 1972 | 46.17916488647461 | 792443209 | checkpoint-epoch=17-step=6000-mIoU=test/cluster/mIoU=46.1792.ckpt
+2100 | 6300 | 2089 | 46.17916488647461 | 792443655 | checkpoint-epoch=17-step=6300-mIoU=test/cluster/mIoU=46.1792.ckpt
+2200 | 6600 | 2156 | 46.17916488647461 | 792444037 | checkpoint-epoch=18-step=6600-mIoU=test/cluster/mIoU=46.1792.ckpt
+2300 | 6900 | 2273 | 46.17916488647461 | 792444483 | checkpoint-epoch=19-step=6900-mIoU=test/cluster/mIoU=46.1792.ckpt
+2400 | 7200 | 2390 | 46.17916488647461 | 792444865 | checkpoint-epoch=20-step=7200-mIoU=test/cluster/mIoU=46.1792.ckpt
+2500 | 7500 | 2440 | 46.17916488647461 | 792445247 | checkpoint-epoch=21-step=7500-mIoU=test/cluster/mIoU=46.1792.ckpt
+2600 | 7800 | 2557 | 46.17916488647461 | 792445693 | checkpoint-epoch=22-step=7800-mIoU=test/cluster/mIoU=46.1792.ckpt
+2700 | 8100 | 2674 | 46.17916488647461 | 792446075 | checkpoint-epoch=23-step=8100-mIoU=test/cluster/mIoU=46.1792.ckpt
+2800 | 8400 | 2791 | 46.17916488647461 | 792446521 | checkpoint-epoch=23-step=8400-mIoU=test/cluster/mIoU=46.1792.ckpt
+2900 | 8700 | 2858 | 46.17916488647461 | 792446903 | checkpoint-epoch=24-step=8700-mIoU=test/cluster/mIoU=46.1792.ckpt
+3000 | 9000 | 2975 | 46.17916488647461 | 792447349 | checkpoint-epoch=25-step=9000-mIoU=test/cluster/mIoU=46.1792.ckpt
+3100 | 9300 | 3092 | 46.17916488647461 | 792447731 | checkpoint-epoch=26-step=9300-mIoU=test/cluster/mIoU=46.1792.ckpt
+3200 | 9600 | 3142 | 46.17916488647461 | 792448113 | checkpoint-epoch=27-step=9600-mIoU=test/cluster/mIoU=46.1792.ckpt
+3300 | 9900 | 3259 | 46.17916488647461 | 792448559 | checkpoint-epoch=28-step=9900-mIoU=test/cluster/mIoU=46.1792.ckpt
+3400 | 10200 | 3376 | 46.17916488647461 | 792448941 | checkpoint-epoch=29-step=10200-mIoU=test/cluster/mIoU=46.1792.ckpt
+3500 | 10500 | 3493 | 46.17916488647461 | 792449387 | checkpoint-epoch=29-step=10500-mIoU=test/cluster/mIoU=46.1792.ckpt
+3600 | 10800 | 3560 | 46.17916488647461 | 792449769 | checkpoint-epoch=30-step=10800-mIoU=test/cluster/mIoU=46.1792.ckpt
+3700 | 11100 | 3677 | 46.17916488647461 | 792450215 | checkpoint-epoch=31-step=11100-mIoU=test/cluster/mIoU=46.1792.ckpt
+3800 | 11400 | 3794 | 46.17916488647461 | 792450597 | checkpoint-epoch=32-step=11400-mIoU=test/cluster/mIoU=46.1792.ckpt
+3900 | 11700 | 3844 | 46.17916488647461 | 792451043 | checkpoint-epoch=33-step=11700-mIoU=test/cluster/mIoU=46.1792.ckpt
+4000 | 12000 | 3961 | 46.17916488647461 | 792451425 | checkpoint-epoch=34-step=12000-mIoU=test/cluster/mIoU=46.1792.ckpt
+4100 | 12300 | 4078 | 46.17916488647461 | 792451871 | checkpoint-epoch=35-step=12300-mIoU=test/cluster/mIoU=46.1792.ckpt
+4200 | 12600 | 4195 | 46.17916488647461 | 792452253 | checkpoint-epoch=35-step=12600-mIoU=test/cluster/mIoU=46.1792.ckpt
+4300 | 12900 | 4262 | 46.17916488647461 | 792452635 | checkpoint-epoch=36-step=12900-mIoU=test/cluster/mIoU=46.1792.ckpt
+4400 | 13200 | 4379 | 46.17916488647461 | 792453081 | checkpoint-epoch=37-step=13200-mIoU=test/cluster/mIoU=46.1792.ckpt
+4500 | 13500 | 4496 | 46.17916488647461 | 792453463 | checkpoint-epoch=38-step=13500-mIoU=test/cluster/mIoU=46.1792.ckpt
+4600 | 13800 | 4546 | 46.17916488647461 | 792453909 | checkpoint-epoch=39-step=13800-mIoU=test/cluster/mIoU=46.1792.ckpt
+4700 | 14100 | 4663 | 46.17916488647461 | 792454291 | checkpoint-epoch=40-step=14100-mIoU=test/cluster/mIoU=46.1792.ckpt
+4800 | 14400 | 4780 | 46.17916488647461 | 792454737 | checkpoint-epoch=41-step=14400-mIoU=test/cluster/mIoU=46.1792.ckpt
+4900 | 14700 | 4897 | 46.17916488647461 | 792455119 | checkpoint-epoch=41-step=14700-mIoU=test/cluster/mIoU=46.1792.ckpt
+5000 | 15000 | 4964 | 46.17916488647461 | 792455565 | checkpoint-epoch=42-step=15000-mIoU=test/cluster/mIoU=46.1792.ckpt
+
+REPRODUCTION / FILES
+/Users/navneetbavineni/STEGO/audit/scratch/full_c_postrun_audit.py
+/Users/navneetbavineni/STEGO/audit/scratch/full_c_evaluate_saved.py
+/Users/navneetbavineni/STEGO/audit/scratch/full_c_aux_audit.py
+/Users/navneetbavineni/STEGO/audit/scratch/full_c_write_summary.py
+Evidence files: postrun_evidence.json (all raw validations and checkpoint metadata), saved_checkpoint_evaluation.json (exact selected-best/final inference), auxiliary_verification.json (SHA256/file existence/logger checks), tensorboard_validation_scalars.json, wandb_validation_scalars.json. Seed evidence: /Users/navneetbavineni/STEGO/audit/run_records/fixes3_C_seed_validation/comparison.json
+Current worktree status:
+?? audit/run_records/fixes3_C_seed_validation/
+?? audit/run_records/fixes3_full_C/
+?? audit/scratch/fixes3/experiments/
+?? audit/scratch/fixes3/fixed_selection_synthetic.png
+?? audit/scratch/fixes3/fixes3_C_seed1_final.png
+?? audit/scratch/fixes3/fixes3_C_seed1_result.json
+?? audit/scratch/fixes3/fixes3_C_seed2_final.png
+?? audit/scratch/fixes3/fixes3_C_seed2_result.json
+?? audit/scratch/fixes3/mpl/
+?? audit/scratch/full_c_aux_audit.py
+?? audit/scratch/full_c_evaluate_saved.py
+?? audit/scratch/full_c_postrun_audit.py
+?? audit/scratch/full_c_write_summary.py
+
+Source diff at post-run audit (should be empty):
+

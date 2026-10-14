@@ -1,0 +1,12 @@
+{
+  "source_matches_sealed": {
+    "model.py": true,
+    "reference_loss.py": true,
+    "train.py": true
+  },
+  "backbone_matches_sealed": true,
+  "center_matches_fit": true,
+  "config_sha256": "defd959e1e09586cbc4eb7163b21347643d71153eb9286baea577915cb1968d2",
+  "threads": 2,
+  "labels_opened": false
+}
